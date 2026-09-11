@@ -370,6 +370,30 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 .footer-contact a:hover { text-decoration: underline; }
 .footer-copy { font-size: 0.8rem; color: #a9bcac; margin: 0; }
 
+/* ---------- WhatsApp float ---------- */
+
+.whatsapp-float {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+  z-index: 50;
+  transition: transform 0.15s ease;
+}
+.whatsapp-float:hover { transform: scale(1.08); color: #fff; }
+@media (max-width: 640px) {
+  .whatsapp-float { width: 48px; height: 48px; right: 1rem; bottom: 1rem; }
+  .whatsapp-float svg { width: 26px; height: 26px; }
+}
+
 /* ---------- Mobile ---------- */
 
 @media (max-width: 640px) {
