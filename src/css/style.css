@@ -61,12 +61,17 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 }
 
 .brand {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: var(--accent-dark);
-  letter-spacing: 0.01em;
+}
+.brand img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 640px) {
+  .brand img { height: 44px; }
 }
 
 .nav-toggle {
