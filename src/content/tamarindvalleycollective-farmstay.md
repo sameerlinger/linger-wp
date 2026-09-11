@@ -5,6 +5,37 @@ slug: "tamarindvalleycollective-farmstay"
 
 # Tamarind Valley Collective
 
+The Tamarind Valley Farming Collective is a farm that spans about a 100 acres on a hillside, and is perfect for those who love the outdoors!
+
+---
+
+## The Campsite @ TVC
+
+![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2020-01-31-at-13.51.34.jpeg)
+![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2019-12-25-at-13.41.20-1024x592.jpeg)
+![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2019-12-19-at-14.26.02-1024x768.jpeg)
+![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2019-12-19-at-14.25.14-1024x768.jpeg)
+
+The campsite at the farm offers bamboo cottages as well as tented accommodations on a large deck, with a set of common bathrooms close by.
+
+![](/images/tamarindvalleycollective-farmstay/2022-10-02-15.03.02-1024x666.jpg)
+
+- Bamboo Cottages are at Rs.4300/- per couple per night. Extended Stay (Sat morning to Sunday evening, for instance) at 5950/-
+- Tented accommodation is at Rs.4300/- per couple for a night. Extended Stay at 5950/-
+- Kids upto 5 at 750/- per night. Kids 5-12 at 50%
+- Extra person pricing is Rs.2150/- for the weekend
+- BYOTent option at Rs.2450/- per person for the weekend
+
+- *(Pricing valid upto March 31st 2021, except over Dec 17th – Jan 2nd)*
+- **Pricing is per couple, *seriously* all inclusive, including taxes.**
+- Extra tents provided as necessary.
+
+This includes everything at the property, including all the meals, hikes, bonfire.
+
+We also do [day farm trips](https://tamarindvalleycollective-farmstay.linger.in/day-trippicnic-at-the-farm/) at the property.
+
+Reservations : stay@linger.in or +91-959-005-0001
+
 ---
 
 ## The Farm in Pictures
@@ -27,37 +58,6 @@ slug: "tamarindvalleycollective-farmstay"
 
 
 - ![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2019-12-25-at-13.41.20-3-1024x592.jpeg)
-
----
-
-## The Campsite @ TVC
-
-The Tamarind Valley Farming Collective is a farm that spans about a 100 acres on a hillside, and is perfect for those who love the outdoors!
-
-![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2020-01-31-at-13.51.34.jpeg)
-![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2019-12-25-at-13.41.20-1024x592.jpeg)
-![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2019-12-19-at-14.26.02-1024x768.jpeg)
-![](/images/tamarindvalleycollective-farmstay/WhatsApp-Image-2019-12-19-at-14.25.14-1024x768.jpeg)
-
-The campsite at the farm offers bamboo cottages as well as tented accommodations on a large deck, with a set of common bathrooms close by.
-
-![](/images/tamarindvalleycollective-farmstay/2022-10-02-15.03.02-1024x666.jpg)
-
-- Bamboo Cottages are at Rs.4300/- per couple per night. Extended Stay (Sat morning to Sunday evening, for instance) at 5950/-
-- Tented accommodation is at Rs.4300/- per couple for a night. Extended Stay at 5950/-
-- Kids upto 5 at 750/- per night. Kids 5-12 at 50%
-- Extra person pricing is Rs.2150/- for the weekend
-- BYOTent option at Rs.2450/- per person for the weekend
-
-- *(Pricing valid upto March 31st 2021, except over Dec 17th – Jan 2nd)*
-- **Pricing is per couple, *seriously* all inclusive, including taxes.**
-- Extra tents provided as necessary.
-
-This includes everything at the property, including all the meals, hikes, bonfire.
-
-We also do [day farm trips](https://tamarindvalleycollective-farmstay.linger.in/day-trippicnic-at-the-farm/) at the property.
-
-Reservations : stay@linger.in or +91-959-005-0001
 
 ---
 

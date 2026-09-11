@@ -21,37 +21,6 @@ Originally designed as a family home, Naimisha Aranya is especially lovely for g
 
 ---
 
-## The Place in Pictures
-
-![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.26.15.jpeg)
-![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.38.47-2-1024x768.jpeg)
-![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.25.22-2.jpeg)
-
-![](/images/naimisha-aranya-nelamangala/cropped-WhatsApp-Image-2026-06-24-at-14.20.41-1024x613.jpeg)
-
-![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.16.57-576x1024.jpeg)
-![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.25.16-768x1024.jpeg)
-
----
-
-## Activities at Naimisha Aranya
-
-You're in a farm restored to natural, regenerative abundance from a really barren state! Walk around the farm, observe, have conversations around natural farming, and learn how nature can be a great ally. Given the abundance and diversity - over 200 fruit trees, including 25 varieties of bananas and 40+ varieties of guavas - the farm is a magnet for birds and if you enjoy birdwatching, it's perfect. Leisurely walks around the quiet neighbourhood also give you a peek into rural life not far from the otherwise bustling, mad city. There's also a small library, board games and outdoor games to keep things fun.
-If the weather permits, we'll setup a bonfire in the evenings, though given wood is a scarce resource, we request your help to keep it small and short.
-There are 3 friendly resident dogs who love company and can keep your entertained throughout your stay all by themselves :) If you bring pets, though, it's good to first figure out the dynamics between them and take a call on how much interaction is desirable.
-Quiet corners to read, relax and simply slow down, of course, because that's what we'd love you to do most on a Linger vacation....
-The meals are fresh, simple, wholesome, and the cuisine local and vegetarian with eggs, using fresh seasonal ingredients wherever possible. You're at a natural farm and we try our best to add ingredients from right there whenever we can!
-
----
-
-## Getting To Naimisha Aranya
-
-https://maps.app.goo.gl/TxTZLx78XVr997Mj7
-Take the Tumkur Road and turn off on to the Mangalore Highway. You have to get off the highway in barely 4 kms and in about 6 kms more, you get to the farm. It's unbelievably close to the city!
-It's also fairly close to the T.G.Halli Reservoir, into which the Kumudavati River that originates in Shivagange flows, passing close by to the farm.
-
----
-
 ## Accommodations & Tariff at Naimisha Aranya
 
 Designed in harmony with the rest of the home, all four bedrooms are airy, naturally cool and filled with abundant daylight. The rooms feature large windows that invite in the breeze and the views of the surrounding greenery. Each room opens out to the central courtyard. Spacious bathrooms with skylights.
@@ -105,3 +74,34 @@ Pets are welcome (for a small charge) provided they stay off the linen/furniture
 We offer long stay discounts and special pricing for multi-week stays.
 
 Do write in for more.
+
+---
+
+## The Place in Pictures
+
+![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.26.15.jpeg)
+![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.38.47-2-1024x768.jpeg)
+![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.25.22-2.jpeg)
+
+![](/images/naimisha-aranya-nelamangala/cropped-WhatsApp-Image-2026-06-24-at-14.20.41-1024x613.jpeg)
+
+![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.16.57-576x1024.jpeg)
+![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.25.16-768x1024.jpeg)
+
+---
+
+## Activities at Naimisha Aranya
+
+You're in a farm restored to natural, regenerative abundance from a really barren state! Walk around the farm, observe, have conversations around natural farming, and learn how nature can be a great ally. Given the abundance and diversity - over 200 fruit trees, including 25 varieties of bananas and 40+ varieties of guavas - the farm is a magnet for birds and if you enjoy birdwatching, it's perfect. Leisurely walks around the quiet neighbourhood also give you a peek into rural life not far from the otherwise bustling, mad city. There's also a small library, board games and outdoor games to keep things fun.
+If the weather permits, we'll setup a bonfire in the evenings, though given wood is a scarce resource, we request your help to keep it small and short.
+There are 3 friendly resident dogs who love company and can keep your entertained throughout your stay all by themselves :) If you bring pets, though, it's good to first figure out the dynamics between them and take a call on how much interaction is desirable.
+Quiet corners to read, relax and simply slow down, of course, because that's what we'd love you to do most on a Linger vacation....
+The meals are fresh, simple, wholesome, and the cuisine local and vegetarian with eggs, using fresh seasonal ingredients wherever possible. You're at a natural farm and we try our best to add ingredients from right there whenever we can!
+
+---
+
+## Getting To Naimisha Aranya
+
+https://maps.app.goo.gl/TxTZLx78XVr997Mj7
+Take the Tumkur Road and turn off on to the Mangalore Highway. You have to get off the highway in barely 4 kms and in about 6 kms more, you get to the farm. It's unbelievably close to the city!
+It's also fairly close to the T.G.Halli Reservoir, into which the Kumudavati River that originates in Shivagange flows, passing close by to the farm.

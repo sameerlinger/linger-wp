@@ -1,6 +1,87 @@
 const markdownIt = require("markdown-it");
 const fs = require("fs");
 const path = require("path");
+const cheerio = require("cheerio");
+
+// Detect a <p> or list whose only real content is one or more images
+// (optionally link-wrapped), i.e. an inline "gallery" left over from the
+// WordPress migration. Returns an ordered list of {src, alt}, or null.
+function imagesInBlock($, el) {
+  const tag = el.tagName;
+  if (tag === "p") {
+    const images = [];
+    for (const child of el.children) {
+      if (child.type === "text") {
+        if (child.data.trim() !== "") return null;
+        continue;
+      }
+      if (child.type !== "tag") return null;
+      if (child.tagName === "img") {
+        images.push(child);
+      } else if (child.tagName === "a" && child.children.length === 1 && child.children[0].tagName === "img") {
+        images.push(child.children[0]);
+      } else {
+        return null;
+      }
+    }
+    if (!images.length) return null;
+    return images.map((img) => ({ src: img.attribs.src, alt: img.attribs.alt || "" }));
+  }
+  if (tag === "ul" || tag === "ol") {
+    const items = $(el).children("li").toArray();
+    if (!items.length) return null;
+    let all = [];
+    for (const li of items) {
+      const liP = { tagName: "p", children: li.children };
+      const imgs = imagesInBlock($, liP);
+      if (!imgs) return null;
+      all = all.concat(imgs);
+    }
+    return all;
+  }
+  return null;
+}
+
+function carouselHtml(images) {
+  const imgTags = images
+    .map((i) => `<img src="${i.src}" alt="${i.alt}" loading="lazy">`)
+    .join("");
+  return `<div class="carousel"><div class="carousel-track">${imgTags}</div><button type="button" class="carousel-btn carousel-prev" aria-label="Previous photo">&#8249;</button><button type="button" class="carousel-btn carousel-next" aria-label="Next photo">&#8250;</button></div>`;
+}
+
+function singleImageHtml(image) {
+  return `<div class="content-image"><img src="${image.src}" alt="${image.alt}" loading="lazy"></div>`;
+}
+
+function groupInlineGalleries(content) {
+  const $ = cheerio.load(content, null, false);
+  $(".prose, .post-body").each((_, container) => {
+    const children = $(container).children().toArray();
+    let i = 0;
+    while (i < children.length) {
+      const imgs = imagesInBlock($, children[i]);
+      if (!imgs) {
+        i++;
+        continue;
+      }
+      const run = [children[i]];
+      let runImages = imgs.slice();
+      let j = i + 1;
+      while (j < children.length) {
+        const nextImgs = imagesInBlock($, children[j]);
+        if (!nextImgs) break;
+        run.push(children[j]);
+        runImages = runImages.concat(nextImgs);
+        j++;
+      }
+      const replacement = runImages.length > 1 ? carouselHtml(runImages) : singleImageHtml(runImages[0]);
+      $(run[0]).replaceWith(replacement);
+      for (let k = 1; k < run.length; k++) $(run[k]).remove();
+      i = j;
+    }
+  });
+  return $.html();
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt({ html: true, breaks: false, linkify: true }));
@@ -84,6 +165,12 @@ module.exports = function (eleventyConfig) {
     } catch (e) {
       return [];
     }
+  });
+
+  eleventyConfig.addTransform("inlineGalleries", function (content) {
+    if (!this.page || !this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+    if (!content.includes('class="prose"') && !content.includes('class="post-body"')) return content;
+    return groupInlineGalleries(content);
   });
 
   return {

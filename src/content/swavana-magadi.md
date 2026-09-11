@@ -5,11 +5,11 @@ slug: "swavana-magadi"
 
 # SwaVana by SwaYYam
 
+Gorgeous private places. Completely organic food. And an amazing time in nature. All included!
+
 ---
 
 ## Accommodation & Tariff
-
-Gorgeous private places. Completely organic food. And an amazing time in nature. All included!
 
 **The Designers' Studio**
 

@@ -7,7 +7,7 @@ slug: "three-wooded-acres-coorg"
 
 ---
 
-## Sample Page
+## Three Wooded Acres, Coorg
 
 For those who love nature, with hundreds of local trees and young coffee plants, Three Wooded Acres, 8km from Madikeri in Coorg, is amazingly green and serene. Look forward to lazing in your own private patio in front of your room, over a cup of brew of your choice, read a book or bond with family and friends over one of many board games from the Library. This quaint little place also has its own weather station (<http://bedi.co.in/~twaws>) and you can get your personal weather forecast!
 

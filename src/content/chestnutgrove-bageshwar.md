@@ -17,44 +17,9 @@ slug: "chestnutgrove-bageshwar"
 
 ---
 
-## Accommodations at Chestnut Grove, Vijaypur (near Chaukori)
-
-4 rooms in 2 eco-huts.
-[![DSC00035](/images/chestnutgrove-bageshwar/DSC00035-150x150.jpg)](http://chestnutgrove-bageshwar.linger.in/wp-content/uploads/sites/10/DSC00035.jpg) [![mist](/images/chestnutgrove-bageshwar/mist-150x150.jpg)](http://chestnutgrove-bageshwar.linger.in/wp-content/uploads/sites/10/mist.jpg) [![room](/images/chestnutgrove-bageshwar/room-150x150.jpg)](http://chestnutgrove-bageshwar.linger.in/wp-content/uploads/sites/10/room.jpg) [![new trip 013](/images/chestnutgrove-bageshwar/new-trip-013-150x150.jpg)](http://chestnutgrove-bageshwar.linger.in/wp-content/uploads/sites/10/new-trip-013.jpg)
-2 rooms in the main building, with the restaurant overlooking the pine forest
-
----
-
-## Around Chestnut Grove, Vijaypur
-
-Walks & Hikes
-Temples
-Tea
-
----
-
-## The Weather at Vijaypur, near Chaukori, Uttarakhand
-
----
-
-## Getting to Chestnut Grove, Vijaypur (near Chaukori)
-
-**From Delhi**
-Leaving Early out of Delhi is highly recommended due to the remote location of the Lodge. One can also take a break in between to have a relaxed and comfortable journey.
-Get on the Nizamuddin Bridge and on-wards toward the Delhi – UP Border
-Drive straight to Moradabad. En route you will pass Hapur, Garh Ganga, Gajraula (Best midway stop with numerous options for meal and restroom use) and Joya.Take the Moradabad By pass just before Moradabad continue till Rampur. From Rampur, just after the Railway Station turn left for Bilaspur - Rudrapur - Haldwani. From Haldwani start climbing up towards Bhimtal - Bhowali - Almora. From Almora you can either go via Kausani Bageshwer - Kanda - Vijaypur or Takula - Bageshwar - Kanda - Vijaypur.
-This is about 17 km before Chaukori.
-**From Ramnagar/Corbett/Ranikhet/Kausani**
-Drive through Mohan-Ranikhet-Vinta-Someshwar-Kausani-Baijnath-Bageshwar-Kanda-Vijaypur
-From Pithoragarh/Berinag – Drive through Ghat-Panar-Gangolihaat-Berinag-Chaukori-Kameridevi-Vijaypur
-From Munsiyari/Thal/Dharchula/Chaukori- Drive through Thal-Chaukori-Kameridevi-Vijaypur.
-**By Train**
-Preferred by most regulars since it is comfortable, convenient and economical. Ranikhet Express has First Class AC 2 and 3 Tier and departs every day from Delhi (Old) station at about 10:30 PM and arrives at Kathgodam, at 5:300 AM. Since Kathgodam is the last station, coach attendants give you a wake-up call if instructed. This train departs back to Delhi at 8:40 PM everyday and arrives Delhi at 4:30 AM. This Train gives you the option of optimising your time in the hills..
-The other train option is ANVT Shatabdi Express, departing Anand Vihar Terminal at 6:15 AM and arrives Kathgfodam at 11:30 AM. The train departs Kathgodam at 3:45 PM and arrives Anand Vihar Terminal, Delhi at 9:30 PM.
-
----
-
 ## Tariff and Accommodation
+
+4 rooms in 2 eco-huts, and 2 rooms in the main building, with the restaurant overlooking the pine forest.
 
 [![](/images/chestnutgrove-bageshwar/IMG_20190224_152617076-1024x576.jpg)](https://chestnutgrove-bageshwar.linger.in/wp-content/uploads/sites/10/IMG_20190224_152617076.jpg)
 [![](/images/chestnutgrove-bageshwar/2019-02-24-15.14.55-658x1024.jpg)](https://chestnutgrove-bageshwar.linger.in/wp-content/uploads/sites/10/2019-02-24-15.14.55.jpg)
@@ -98,3 +63,32 @@ Once you get to Vijaypur, spend 4 nights there. And here's all the things to do 
 - 1 Day Trek : Drive 22 km and trek 6km one way up to the Shikhar Peak - the highest point in the area with gorgeous views around
 
 If you need a cab pickup/drop from Kathgodam, and for local trips, let us know. We'll connect with reliable local vendors who you can pay the fares directly to.
+
+---
+
+## Around Chestnut Grove, Vijaypur
+
+Walks & Hikes
+Temples
+Tea
+
+---
+
+## Getting to Chestnut Grove, Vijaypur (near Chaukori)
+
+**From Delhi**
+Leaving Early out of Delhi is highly recommended due to the remote location of the Lodge. One can also take a break in between to have a relaxed and comfortable journey.
+Get on the Nizamuddin Bridge and on-wards toward the Delhi – UP Border
+Drive straight to Moradabad. En route you will pass Hapur, Garh Ganga, Gajraula (Best midway stop with numerous options for meal and restroom use) and Joya.Take the Moradabad By pass just before Moradabad continue till Rampur. From Rampur, just after the Railway Station turn left for Bilaspur - Rudrapur - Haldwani. From Haldwani start climbing up towards Bhimtal - Bhowali - Almora. From Almora you can either go via Kausani Bageshwer - Kanda - Vijaypur or Takula - Bageshwar - Kanda - Vijaypur.
+This is about 17 km before Chaukori.
+**From Ramnagar/Corbett/Ranikhet/Kausani**
+Drive through Mohan-Ranikhet-Vinta-Someshwar-Kausani-Baijnath-Bageshwar-Kanda-Vijaypur
+From Pithoragarh/Berinag – Drive through Ghat-Panar-Gangolihaat-Berinag-Chaukori-Kameridevi-Vijaypur
+From Munsiyari/Thal/Dharchula/Chaukori- Drive through Thal-Chaukori-Kameridevi-Vijaypur.
+**By Train**
+Preferred by most regulars since it is comfortable, convenient and economical. Ranikhet Express has First Class AC 2 and 3 Tier and departs every day from Delhi (Old) station at about 10:30 PM and arrives at Kathgodam, at 5:300 AM. Since Kathgodam is the last station, coach attendants give you a wake-up call if instructed. This train departs back to Delhi at 8:40 PM everyday and arrives Delhi at 4:30 AM. This Train gives you the option of optimising your time in the hills..
+The other train option is ANVT Shatabdi Express, departing Anand Vihar Terminal at 6:15 AM and arrives Kathgfodam at 11:30 AM. The train departs Kathgodam at 3:45 PM and arrives Anand Vihar Terminal, Delhi at 9:30 PM.
+
+---
+
+## The Weather at Vijaypur, near Chaukori, Uttarakhand

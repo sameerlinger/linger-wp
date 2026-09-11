@@ -5,6 +5,19 @@ slug: "open-shell-farm-bandipur"
 
 # Open Shell Farm, Bandipur
 
+**OUR STORY**
+
+Open Shell farm, one of swaYYam's pilot projects set in a picturesque location at the foothills of the mighty Nilgiris, is a learning, experimentation and demonstration site for Permaculture and Regenerative living.
+
+![](/images/open-shell-farm-bandipur/lPDTDg0dzeP80P7xktOIM5cArZzmOfIYy69Ap7qbjaDQ1Lg2HVAOaqqAtXnXbFP88r4Rx6vaUtk9Ju7El1JTTB83Cb51pEGFqBHVw2Cxa1jOqC4xbN0puwCfVHtbNYlhlH0yRk5E4pSxQF_E2GUnsVc)
+
+What was once a denuded, overgrazed land with exposed sub-soils in 2014, today abounds with a multitude of species of birds, insects, butterflies and reptiles, with peacocks and wild hare as our regular visitors and occasional sightings of elephants and wild boars outside the site. The farm is bustling with over 5000 local, drought tolerant tree saplings and over 400 species of mixed forest, timber, fruit, medicinal and fibre trees, shrubs and bushes.
+
+Permaculture and Agroecology principles were applied over these years to the land to conserve water and soil and regenerate the ecosystem, leading to about 70% of our food needs currently being satisfied by this land.
+
+![](/images/open-shell-farm-bandipur/RBQqQNklaiRgBiXUv4KM9u5pt41NIMiFPgC_87el3bgvtJ51kjz3b3-6ocaSYEZpk5IltgPDlSxEqvETIKoLV3UiECaLHdeStrzenNZHyOQ6iqAXRBDA2PF-zS4V4eOkV5tpV9rkh0rVjjV_iYZLmF8)  
+We’re always ‘learning by doing’, come see for yourself!
+
 ---
 
 ## Accommodation & Tariffs
@@ -46,22 +59,7 @@ Pricing is inclusive of all meals, tours, learning and activities at/around the 
 
 ---
 
-## About OSF
-
-**OUR STORY**
-
-Open Shell farm, one of swaYYam's pilot projects set in a picturesque location at the foothills of the mighty Nilgiris, is a learning, experimentation and demonstration site for Permaculture and Regenerative living.
-
-![](/images/open-shell-farm-bandipur/lPDTDg0dzeP80P7xktOIM5cArZzmOfIYy69Ap7qbjaDQ1Lg2HVAOaqqAtXnXbFP88r4Rx6vaUtk9Ju7El1JTTB83Cb51pEGFqBHVw2Cxa1jOqC4xbN0puwCfVHtbNYlhlH0yRk5E4pSxQF_E2GUnsVc)
-
-What was once a denuded, overgrazed land with exposed sub-soils in 2014, today abounds with a multitude of species of birds, insects, butterflies and reptiles, with peacocks and wild hare as our regular visitors and occasional sightings of elephants and wild boars outside the site. The farm is bustling with over 5000 local, drought tolerant tree saplings and over 400 species of mixed forest, timber, fruit, medicinal and fibre trees, shrubs and bushes.
-
-Permaculture and Agroecology principles were applied over these years to the land to conserve water and soil and regenerate the ecosystem, leading to about 70% of our food needs currently being satisfied by this land.
-
-![](/images/open-shell-farm-bandipur/RBQqQNklaiRgBiXUv4KM9u5pt41NIMiFPgC_87el3bgvtJ51kjz3b3-6ocaSYEZpk5IltgPDlSxEqvETIKoLV3UiECaLHdeStrzenNZHyOQ6iqAXRBDA2PF-zS4V4eOkV5tpV9rkh0rVjjV_iYZLmF8)  
-We’re always ‘learning by doing’, come see for yourself!
-
-**LOCATION & GETTING THERE**
+## Location & Getting There
 
 Yelachatti village  
 Hangala Hobli  

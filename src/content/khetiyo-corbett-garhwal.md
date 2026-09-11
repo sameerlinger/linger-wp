@@ -7,12 +7,6 @@ slug: "khetiyo-corbett-garhwal"
 
 ---
 
-## Estate Stay at Golden Wood, Harley Estate, Sakleshpur
-
- 
-
----
-
 ## Golden Wood, an Introduction
 
 Lothlorien, from the Lord of The Rings, is described thus:

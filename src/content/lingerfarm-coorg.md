@@ -11,7 +11,7 @@ slug: "lingerfarm-coorg"
 
 Welcome to Your Retreat at The Linger Farm. A quiet escape in Coorg - four cottages, nature all around, and the simplicity of doing nothing.
 
-# **Cottages & Rates**
+## **Cottages & Rates**
 
 |  |  |  |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ Welcome to Your Retreat at The Linger Farm. A quiet escape in Coorg - four cotta
 - **Payment Options:** We accept UPI and bank transfer.
 - **Cancellations** made **up to 7 days** before arrival receive a **75% refund**. Cancellations **up to 48 hours** before arrival receive a **50% refund**. Unfortunately, **no refund** can be provided for cancellations made **within 48 hours** of arrival.
 
-# **Halemane — The Old House**
+## **Halemane — The Old House**
 
 Halemane is a charming two-room house with plenty of space for families or small groups.  
 The **master bedroom** features a king-sized bed, while the **living room** includes an attic loft with a queen-sized bed — perfect for two more guests. Both rooms come with **large bathrooms** finished in yellow and black oxide, giving the space a rustic, earthy feel.
@@ -57,7 +57,7 @@ Master bedroom
 
 [![](/images/lingerfarm-coorg/Halemane-view-1-1024x768.jpg)](https://lingerfarm-coorg.linger.in/wp-content/uploads/sites/6/Halemane-view-1.jpg)
 
-# **Kaapimane - The Writer's Cottage**
+## **Kaapimane - The Writer's Cottage**
 
 A stand-alone cottage tucked between coffee plants and tall silver oaks.  
 With big windows and warm sunlight filtering in, Coffee Canopy feels airy, quiet, and deeply connected to the outdoors. A favourite among couples looking for privacy and a forest-view porch to unwind in. Good internet and a small work-table to keep your creative juices flowing. We'll get the coffee...
@@ -71,7 +71,7 @@ With big windows and warm sunlight filtering in, Coffee Canopy feels airy, quiet
 [![](/images/lingerfarm-coorg/2026-07-18-14.21.38-1024x768.jpg)](https://lingerfarm-coorg.linger.in/wp-content/uploads/sites/6/2026-07-18-14.21.38-scaled.jpg)
 [![](/images/lingerfarm-coorg/2025-12-20-10.27.08-1024x768.jpg)](http://lingerfarm-coorg.linger.in/wp-content/uploads/sites/6/2025-12-20-10.27.08-scaled.jpg)
 
-# **Gaddemane — The Garden & Paddy View House**
+## **Gaddemane — The Garden & Paddy View House**
 
 Gaddemane sits at the edge of the farm overlooking serene **paddy fields**, making it one of the most scenic spots on the property.  
 The cottage has **two independent rooms**, each designed with simplicity and quiet comfort in mind. Every room includes an **attic space with a spare bed**, making it ideal for small families or groups travelling together.
@@ -83,7 +83,7 @@ With open views, soft breezes, and easy access to garden pathways, Gaddemane is 
 [![](/images/lingerfarm-coorg/WhatsApp-Image-2020-12-20-at-8.14.01-AM-1024x768.jpeg)](https://lingerfarm-coorg.linger.in/wp-content/uploads/sites/6/WhatsApp-Image-2020-12-20-at-8.14.01-AM.jpeg)
 [![](/images/lingerfarm-coorg/GaddemaneCloser-1024x682.jpeg)](https://lingerfarm-coorg.linger.in/wp-content/uploads/sites/6/GaddemaneCloser.jpeg)
 
-# **The Work Pad @ Hosamane**
+## **The Work Pad @ Hosamane**
 
 **The Hosamane** has a pretty Guest Room (strictly for a couple, no extra persons) on the first floor of the house higher up in the estate, with large, airy windows overlooking the green canopy, and a verandah and a large living/dining/working lounge on the ground floor (now with a high speed BSNL fiber internet connection). You also have access to a basic kitchen should you want to cook or make coffee (though Harish will arrange that anyway), and a work table there! The whole space is very private and the early morning chorus of the birds around has to be experienced to be believed!
 
@@ -99,7 +99,7 @@ With open views, soft breezes, and easy access to garden pathways, Gaddemane is 
 
 **[How to reach The Linger Farm](https://lingerfarm-coorg.linger.in/directions-to-the-linger-farm-coorg/ "How to reach The Linger Farm")**
 
-# **Book Your Stay**
+## **Book Your Stay**
 
 For any inquiries or to explore your holiday further, we invite you to contact our team on Whatsapp 8548065772 or email your travel dates to stay@linger.in. We’ll send you availability, confirm your cottage, and guide you through the next steps.
 
@@ -149,7 +149,7 @@ Madikeri (18 km) • Bhagamandala (6 km) • Napoklu (12 km) • Kushalnagar (35
 ![](/images/lingerfarm-coorg/Linger_Coorg-13-1-1024x684.jpg)
 ![](/images/lingerfarm-coorg/Linger_Coorg-1-1-1024x684.jpg)
 
-# **Driving Directions**
+## **Driving Directions**
 
 **Madikeri → Bhagamandala Road**  
 • At *Thimmiah Circle* in Madikeri, take the **left turn at the Petrol Pump** towards Mangalore.  
@@ -195,7 +195,7 @@ Once you arrive in Madikeri, you can catch a local bus to **Bhagamandala**. The 
 **Carry some local cash**, since remote areas may not always have reliable UPI / card connectivity.  
 **Network may be patchy** on hilly / rural routes, so download maps or take offline directions.
 
-# **We’re Waiting to Welcome You**
+## **We’re Waiting to Welcome You**
 
 Call Harish when you're near **Madikeri** so he can guide you or come meet you at the bus stop to ensure a smooth arrival.
 

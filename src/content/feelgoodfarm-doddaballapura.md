@@ -5,11 +5,11 @@ slug: "feelgoodfarm-doddaballapura"
 
 # The Feel-Good-Farm
 
+The farm house is set in the backdrop of Ujjani hills and the Sulikunte state forest.
+
 ---
 
 ## Accommodations & Tariff
-
-The farm house is set in the backdrop of Ujjani hills and the Sulikunte state forest.
 
 There are three rooms, each with it's own access from the outside and with attached bathrooms. All Rooms have comfortable twin beds, 2 easy chairs and cupboards.
 

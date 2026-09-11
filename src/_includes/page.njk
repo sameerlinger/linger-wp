@@ -1,12 +1,16 @@
 ---
 layout: base.njk
 ---
-{% set gallery = page.fileSlug | galleryImages(8) %}
+{% set gallery = page.fileSlug | galleryImages(10) %}
 {% if (page.fileSlug | isProperty(properties)) and gallery.length %}
-<div class="gallery-grid">
-{% for img in gallery %}
-  <a href="{{ img }}"><img src="{{ img }}" loading="lazy" alt=""></a>
-{% endfor %}
+<div class="carousel carousel-top">
+  <div class="carousel-track">
+  {% for img in gallery %}
+    <img src="{{ img }}" alt="" loading="lazy">
+  {% endfor %}
+  </div>
+  <button type="button" class="carousel-btn carousel-prev" aria-label="Previous photo">&#8249;</button>
+  <button type="button" class="carousel-btn carousel-next" aria-label="Next photo">&#8250;</button>
 </div>
 {% endif %}
 <div class="prose">

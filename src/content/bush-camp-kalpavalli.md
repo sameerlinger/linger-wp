@@ -5,6 +5,8 @@ slug: "bush-camp-kalpavalli"
 
 # Bush Camp, Kalpavalli
 
+At Bush Camp, Kalpavalli, there's plenty of opportunities to spend time with nature - observing, hiking and soaking it in! Set amidst restored grasslands, it's a simple, back-to-basics camping getaway close to Bangalore.
+
 ---
 
 ## Accommodations & Tariff
@@ -41,8 +43,6 @@ If you have a car that can do mild off roading and has ok ground clearance, go a
 ---
 
 ## At Bush Camp, Kalpavalli
-
-At Bush Camp, Kalpavalli, there's plenty of opportunities to spend time with nature - observing, hiking and soaking it in!
 
 - ![](/images/bush-camp-kalpavalli/Welcome.jpg)
 - ![](/images/bush-camp-kalpavalli/242016318_10159582076544798_7482196533309946033_n.jpg)
