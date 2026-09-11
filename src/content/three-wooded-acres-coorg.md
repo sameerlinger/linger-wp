@@ -19,6 +19,15 @@ In the small library you will also find an interesting collection of old and new
 
 ## Acccommodations & Tariff
 
+|  |  |  |
+| --- | --- | --- |
+| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Indian Aspen & Jackfruit** (2 rooms w/ loft) | ₹8,500 for a couple | Extra person: ₹3,000 |
+| **Red Cedar** (private cottage) | ₹8,500 for a couple | Sleeps 2 + a kid; Extra person: ₹3,000 |
+
+- **Child Policy:** Under 5 at no charge, 5–12 at 50%.
+- **Long Stay Benefit:** From the 2nd night, 10%, 15%, 20% discount.
+
 **Indian Aspen & Jackfuit : 2 rooms with loft spaces**
 
 In a very quiet, private cottage in the woods are 2 rooms to choose from. Each room has a large bed, and a very attractive attic space with an additional bed so a family of 4 can easily be comfortable in there. A common verandah connects both rooms, and there are individual sitouts for both as well.

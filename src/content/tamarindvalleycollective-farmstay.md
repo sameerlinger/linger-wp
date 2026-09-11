@@ -18,6 +18,15 @@ The Tamarind Valley Farming Collective is a farm that spans about a 100 acres on
 
 The campsite at the farm offers bamboo cottages as well as tented accommodations on a large deck, with a set of common bathrooms close by.
 
+|  |  |  |
+| --- | --- | --- |
+| **Accommodation** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Bamboo Cottages** | ₹4,300 for a couple | Extended stay: ₹5,950 |
+| **Tented Accommodation** | ₹4,300 for a couple | Extended stay: ₹5,950; BYOTent: ₹2,450/person |
+
+- **Child Policy:** Kids up to 5 at ₹750/night, 5–12 at 50%.
+- **Extra Person:** ₹2,150 for the weekend.
+
 ![](/images/tamarindvalleycollective-farmstay/2022-10-02-15.03.02-1024x666.jpg)
 
 - Bamboo Cottages are at Rs.4300/- per couple per night. Extended Stay (Sat morning to Sunday evening, for instance) at 5950/-

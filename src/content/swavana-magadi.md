@@ -11,6 +11,16 @@ Gorgeous private places. Completely organic food. And an amazing time in nature.
 
 ## Accommodation & Tariff
 
+|  |  |  |
+| --- | --- | --- |
+| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **The Designers' Studio** | ₹12,980 for a couple | Extra person: ₹3,950 |
+| **The Musicians' Studio** | ₹10,620 for a couple | Extra person: ₹3,950 |
+| **The Artists' Studio** | ₹10,620 for a couple | Extra person: ₹3,950 |
+
+- **Child Policy:** Kids 5–12 at 50%, under 5 at no charge.
+- **Long Stay Benefit:** Applies from the 3rd night, as always.
+
 **The Designers' Studio**
 
 ![](/images/swavana-magadi/IMG_2444-768x1024.jpg)

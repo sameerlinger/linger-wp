@@ -19,6 +19,15 @@ slug: "chestnutgrove-bageshwar"
 
 ## Tariff and Accommodation
 
+|  |  |  |
+| --- | --- | --- |
+| **Room Type** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Eco-hut Room** (4 rooms in 2 eco-huts) | ₹6,250 for a couple | Extra person: ₹2,450/night |
+| **Main Building Room** (2 rooms, restaurant view) | ₹6,250 for a couple | Extra person: ₹2,450/night |
+
+- **Long Stay Benefit:** Subsequent nights at 10%, 15%, 20% and 25% discount.
+- **Child Policy:** Up to 2 kids under 5 complimentary, kids 5–12 at 50%.
+
 4 rooms in 2 eco-huts, and 2 rooms in the main building, with the restaurant overlooking the pine forest.
 
 [![](/images/chestnutgrove-bageshwar/IMG_20190224_152617076-1024x576.jpg)](https://chestnutgrove-bageshwar.linger.in/wp-content/uploads/sites/10/IMG_20190224_152617076.jpg)

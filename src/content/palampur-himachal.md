@@ -25,6 +25,15 @@ Two ecologically built Earth Houses house a total of 6 rooms. The construction e
 
 ## Tariff (Homestay & Campsite)
 
+|  |  |  |
+| --- | --- | --- |
+| **Accommodation** | **Rate** | **Extra Guests / Notes** |
+| **The Earth House 1 & 2** (Homestay) | 2D/1N: ₹5,800 · 3D/2N: ₹11,020 · 4D/3N: ₹15,950 · 5D/4N: ₹20,590 | Extra person: ₹1,885/night |
+| **Camping** | ₹1,450 per person per night | Min 4, upto 8 guests in 4 tents |
+
+- **Child Policy:** Up to 5 complimentary, 5–12 at 50% (homestay); ₹750/day flat at the campsite.
+- *(Pricing valid upto March 31st 2024, except over Dec 15th – Jan 2nd)*
+
 [![LongShot2](/images/palampur-himachal/LongShot2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot2.jpg) [![Room](/images/palampur-himachal/Room-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Room.jpg) [![LongShot3](/images/palampur-himachal/LongShot3-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot3.jpg)
 **Homestays : The Earth House 1 & 2:**
 

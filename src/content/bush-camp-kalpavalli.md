@@ -11,6 +11,16 @@ At Bush Camp, Kalpavalli, there's plenty of opportunities to spend time with nat
 
 ## Accommodations & Tariff
 
+|  |  |  |
+| --- | --- | --- |
+| **Room Type** | **Rate** | **Notes** |
+| **Private hut-rooms** | ₹2,450 per person per night | Twin sharing, 11am checkin/checkout |
+| **Dormitories** | ₹1,650 per person per night | Min 6 people, 6–10 per hut, up to 25 overall |
+
+- **Meals & Activities:** All meals, tea, buttermilk, walks, hikes and bonfire included. Transport from the park is at actuals.
+- **Extended Stay:** Checkin by 9am, checkout 4–5pm, at 35% more.
+- **Child Policy:** Kids 5–12 at 50% of tariff. Under 5 accompanied by adults at ₹750/- each.
+
 ![](/images/bush-camp-kalpavalli/AllSetuUp2-1024x629.jpeg)
 
 **Private hut-rooms**

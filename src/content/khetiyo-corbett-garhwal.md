@@ -19,6 +19,14 @@ The 500 acres of green and a gurgling stream at Harley Estate feel quite as ench
 
 ## Accommodation : Deep inside the Corbett forest
 
+|  |  |  |
+| --- | --- | --- |
+| **Accommodation** | **Rate (whole hut, upto 4)** | **Extra Guests / Notes** |
+| **The First Mistake** (2 rooms, shared bath, kitchenette) | 2D/1N: ₹11,750 · 3D/2N: ₹22,325 · 4D/3N: ₹31,725 | Extra person: ₹1,950/night |
+
+- **Child Policy:** Kids up to 10 are our guests at no charge.
+- *Pricing valid upto Mar 31st 2017 except over Dec 17th – Jan 2nd.*
+
 ![1stmistake](/images/khetiyo-corbett-garhwal/1stmistake-300x225.jpeg) ![2016-03-07 14.59.19](/images/khetiyo-corbett-garhwal/2016-03-07-14.59.19-300x169.jpeg)
 **The First Mistake :**
 This one's well specced out pre-fab structure. 2 rooms, a shared bathroom, a small living space and even a tiny kitchenette! What's with the name? We think it's awesome to stay in - just a little out of place :) But hey, we're glad it's there now it's there.

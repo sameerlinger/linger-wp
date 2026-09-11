@@ -25,6 +25,16 @@ Originally designed as a family home, Naimisha Aranya is especially lovely for g
 
 Designed in harmony with the rest of the home, all four bedrooms are airy, naturally cool and filled with abundant daylight. The rooms feature large windows that invite in the breeze and the views of the surrounding greenery. Each room opens out to the central courtyard. Spacious bathrooms with skylights.
 
+|  |  |  |
+| --- | --- | --- |
+| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Manasu – Master Bedroom** | ₹10,500 for a couple | Up to 4 adults; Extra person: ₹3,500 |
+| **Hasiru** | ₹8,500 for a couple | 2 Adults + 1 Child |
+| **Usiru** | ₹8,500 for a couple | 2 Adults + 1 Child |
+| **Kanasu** | ₹8,500 for a couple | 2 Adults + 1 Child |
+
+- **Child Policy:** Children 5–12 at 50% of adult pricing.
+
 ## **Manasu – Master Bedroom**
 
 ![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.25.20-1024x768.jpeg)

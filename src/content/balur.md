@@ -11,6 +11,16 @@ Balur Estate is a 400 acre coffee plantation since the 1840s. The Planter’s Bu
 
 ## Accommodations & Tariff
 
+|  |  |  |
+| --- | --- | --- |
+| **Accommodation** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Heritage Bungalow** (Planter's Room / Guest Suite) | ₹9,800 for a couple | Extra person: ₹3,185 |
+| **Cardamom Suites** (3 rooms) | ₹9,800 for a couple | Extra person: ₹3,185 |
+| **The Coffee Cottage** (private dining & service) | ₹11,600 for a couple | Extra person: ₹3,770 |
+
+- **Child Policy:** Up to 2 kids under 5 complimentary, 5–12 at 50%.
+- **Long Stay Benefit:** After the 2nd night, 10%, 15%, 20% discount.
+
 **The Heritage Bungalow** has two options
 
 - The Planter’s Room : This can accommodate 2 guests comfortably, and additionally 2 kids as well.

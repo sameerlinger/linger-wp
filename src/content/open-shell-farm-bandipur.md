@@ -24,6 +24,15 @@ We’re always ‘learning by doing’, come see for yourself!
 
 The Open Shell Farm hosts visitors to help them to get introduced to permaculture and learn about sustainable living. There's an introduction to the farm, the principles and techniques that have helped create a beautiful, productive space in what otherwise is a water stressed region. You can also volunteer to help with the farm activities - the list varies by season and the current plans at the farm.
 
+|  |  |  |
+| --- | --- | --- |
+| **Accommodation** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **The Mann Mane** | ₹10,000 for a couple | Sleeps up to 4; Extra person: ₹3,250 |
+| **Thotadh Mane** | ₹7,670 for a couple | Couple + kid; Extra person: ₹2,750 (not recommended) |
+
+- **Child Policy:** Up to 5 free, 5–12 at 50%. Not pet-friendly (unleashed farm dogs).
+- Lower pricing from the 2nd night onwards.
+
 **The Mann Mane**
 
 A beautiful, home built naturally with adobe blocks made from de-silting the neighbouring pond. The home is solar passive and energy efficient, with a large living room, a guest room and a loft that can accommodate a total of 4 people, Stunning sunsets from the balcony and views of the Nilgiri Mountains in the distance make it perfect for a family break!

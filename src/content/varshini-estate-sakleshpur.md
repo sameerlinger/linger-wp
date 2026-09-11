@@ -21,6 +21,15 @@ The views are stunning all around. The wind a constant companion. And the walks 
 ![](/images/varshini-estate-sakleshpur/NewCottageRoom-2-1024x768.jpeg)
 ![](/images/varshini-estate-sakleshpur/NewCottageRoom-1-1024x768.jpeg)
 
+|  |  |  |
+| --- | --- | --- |
+| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Heritage House Room** (3 available) | ₹8,500 for a couple | Sleeps 2 + possible 3rd; Extra person: ₹3,000 |
+| **Cottages in the Woods** (2 larger + 1 small) | ₹8,500 for a couple | Sleeps 2–4; Extra person: ₹3,000 |
+
+- **Child Policy:** Up to 2 kids under 5 complimentary, 5–12 at 50%.
+- **Long Stay Benefit:** From the 3rd night, 10%, 15%, 20% discount.
+
 Three rooms in the heritage style house atop the hill can sleep 2 each, with a possible third extra person option. Each room opens into common verandah surrounding the central courtyard, and there are individual sitouts facing the outside as well.
 
 Two private Cottages in the woods in the local architectural style are larger and spacious, and can sleep upto a full family of 2-4 each. An additional smaller cottage in the local style can accommodate a couple. There are individual sitouts for both as well as outdoor space that's private to each cottage.

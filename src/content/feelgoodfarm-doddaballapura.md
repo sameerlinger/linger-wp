@@ -11,6 +11,16 @@ The farm house is set in the backdrop of Ujjani hills and the Sulikunte state fo
 
 ## Accommodations & Tariff
 
+|  |  |  |
+| --- | --- | --- |
+| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Rose & Lotus** (Ground Level, 2 rooms) | ₹7,500 for a couple | Wraparound verandah, field views |
+| **Tulip** (Upper Level, 1 room) | ₹7,500 for a couple | Spacious terrace overlooking fields & hill |
+
+- **Extra Person:** ₹2,500 per night.
+- **Child Policy:** Up to 5 free, 5–12 at 50% (with 1 adult).
+- Price drops from the 2nd night, as at all Linger places.
+
 There are three rooms, each with it's own access from the outside and with attached bathrooms. All Rooms have comfortable twin beds, 2 easy chairs and cupboards.
 
 Guests are provided with handmade soap, shampoo and scrubbers made with natural ingredients.
