@@ -11,10 +11,25 @@
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<div class="contact-bar">
+  <a href="mailto:stay@linger.in">stay@linger.in</a>
+  <a href="tel:+919590050001">+91-959-005-0001</a>
+  <a href="https://wa.me/918548065772">WhatsApp 8548065772</a>
+</div>
 <header class="site-header">
   <a class="brand" href="/">Linger</a>
   <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
   <nav class="site-nav">
+    <details class="nav-drop">
+      <summary>Reservations</summary>
+      <ul>
+        <li><a href="mailto:stay@linger.in">stay@linger.in</a></li>
+        <li><a href="https://wa.me/918548065772">WhatsApp 8548065772</a></li>
+        <li><a href="tel:+919590050001">+91-959-005-0001</a></li>
+        <li><a href="/long-stays-workations/">Long Stays &amp; Workations</a></li>
+        <li><a href="/vacation-offer-deal/">Offers</a></li>
+      </ul>
+    </details>
     {% for region in regions %}
     <details class="nav-drop">
       <summary>{{ region.name }}</summary>
@@ -32,16 +47,6 @@
         <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
         {% endfor %}
         <li><a href="/events-linger/">Events!</a></li>
-      </ul>
-    </details>
-    <details class="nav-drop">
-      <summary>Reservations</summary>
-      <ul>
-        <li><a href="mailto:stay@linger.in">stay@linger.in</a></li>
-        <li><a href="https://wa.me/918548065772">WhatsApp 8548065772</a></li>
-        <li><a href="tel:+919590050001">+91-959-005-0001</a></li>
-        <li><a href="/long-stays-workations/">Long Stays &amp; Workations</a></li>
-        <li><a href="/vacation-offer-deal/">Offers</a></li>
       </ul>
     </details>
     <details class="nav-drop">
