@@ -1,11 +1,10 @@
 ---
-title: "Three Wooded Acres, Coorg"
-slug: "three-wooded-acres-coorg"
+title: Three Wooded Acres, Coorg
+slug: three-wooded-acres-coorg
 ---
-
 # Three Wooded Acres, Coorg
 
----
+- - -
 
 ## Three Wooded Acres, Coorg
 
@@ -15,42 +14,46 @@ The afternoons at Three Wooded Acres come alive with loud musical Cicadas. The g
 
 In the small library you will also find an interesting collection of old and new books and maps on Coorg including a copy of the first survey map of Coorg in 1816.
 
----
+- - -
 
 ## Acccommodations & Tariff
 
-|  |  |  |
-| --- | --- | --- |
-| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
-| **Indian Aspen & Jackfruit** (2 rooms w/ loft) | ₹8,500 for a couple | Extra person: ₹3,000 |
-| **Red Cedar** (private cottage) | ₹8,500 for a couple | Sleeps 2 + a kid; Extra person: ₹3,000 |
+|                                                |                      |                                        |
+| ---------------------------------------------- | -------------------- | -------------------------------------- |
+| **Room**                                       | **Rate (1st Night)** | **Extra Guests / Notes**               |
+| **Indian Aspen & Jackfruit** (2 rooms w/ loft) | ₹8,500 for a couple  | Extra person: ₹3,000                   |
+| **Red Cedar** (private cottage)                | ₹8,500 for a couple  | Sleeps 2 + a kid; Extra person: ₹3,000 |
 
-- **Child Policy:** Under 5 at no charge, 5–12 at 50%.
-- **Long Stay Benefit:** From the 2nd night, 10%, 15%, 20% discount.
+* **Child Policy:** Under 5 at no charge, 5–12 at 50%.
+* **Long Stay Benefit:** From the 2nd night, 10%, 15%, 20% discount.
 
 **Indian Aspen & Jackfuit : 2 rooms with loft spaces**
 
 In a very quiet, private cottage in the woods are 2 rooms to choose from. Each room has a large bed, and a very attractive attic space with an additional bed so a family of 4 can easily be comfortable in there. A common verandah connects both rooms, and there are individual sitouts for both as well.
 
 ![](/images/three-wooded-acres-coorg/2017-11-24-08.32.51-768x1024.jpg)
+
 ![](/images/three-wooded-acres-coorg/e8cb030f-574a-4483-a95d-a5f004f3b20b-1024x768.jpeg)
+
 ![](/images/three-wooded-acres-coorg/Sit-out-2-1-1024x680.jpg)
 
-**Red Cedar : A private c****ottage deep in the woods**
+**Red Cedar : A private c\*\***ottage deep in the woods\*\*
 
 Deeper in the woods is the newest cottage, with mud plastered walls, Mangalore tiles and a huge canopy that provides a huge variety of birds a  home throughout the day.  This can sleep a small family of 2 + a kid.
 
 ![](/images/three-wooded-acres-coorg/RedCedar.jpg)
+
 ![](/images/three-wooded-acres-coorg/sunthrutrees2-1024x512.jpg)
+
 ![](/images/three-wooded-acres-coorg/Redcedar-2-1024x692.jpg)
 
 **Pricing, per couple**
 
-- Rs.8500/- for a night’s stay, meals and walks for a couple
-- Extra person in the room : Rs. 3000/-
-- (kids under 5 years of age at no charge, and 5-12 at 50% of the tariff)
-- After the 2nd night, subsequent nights at 10%, 15%, 20% long stay benefit.
-- Pricing valid upto 31st Mar, except over 15 Dec - 2nd Jan
+* Rs.8500/- for a night’s stay, meals and walks for a couple
+* Extra person in the room : Rs. 3000/-
+* (kids under 5 years of age at no charge, and 5-12 at 50% of the tariff)
+* After the 2nd night, subsequent nights at 10%, 15%, 20% long stay benefit.
+* Pricing valid upto 31st Mar, except over 15 Dec - 2nd Jan
 
 Pricing is per couple, *seriously* all inclusive, including taxes. This includes everything at the property : all the meals, unlimited tea/coffee/non-packaged juices and snacks whenever your tummy grumbles, walks and treks around the property, bonfire, use of the library etc.
 
@@ -60,37 +63,32 @@ Kids upto 5 years of age are our guests at no charge and those between 5-10 at 5
 
 We offer long stay discounts and special pricing for multi-week stays. There's also a discount for seniors, as well as women-only groups of 3 or more. Do write in for more.
 
----
+- - -
 
 ## Three Wooded Acres Pictures
 
-- ![](/images/three-wooded-acres-coorg/The-rare-Malabar-Trogon-at-TWA.jpg)
-- ![](/images/three-wooded-acres-coorg/mushroomsontree.jpg)
-- ![](/images/three-wooded-acres-coorg/RedCedar-1.jpg)
-- ![](/images/three-wooded-acres-coorg/woodsmorning.jpg)
+* ![](/images/three-wooded-acres-coorg/The-rare-Malabar-Trogon-at-TWA.jpg)
+* ![](/images/three-wooded-acres-coorg/mushroomsontree.jpg)
+* ![](/images/three-wooded-acres-coorg/RedCedar-1.jpg)
+* ![](/images/three-wooded-acres-coorg/woodsmorning.jpg)
+* ![](/images/three-wooded-acres-coorg/festival.jpg)
+* ![](/images/three-wooded-acres-coorg/greyhornbill.jpg)
+* ![](/images/three-wooded-acres-coorg/sunthrutrees2-1024x512-1.jpg)
+* ![](/images/three-wooded-acres-coorg/CottageRear.jpg)
+* ![](/images/three-wooded-acres-coorg/2017-11-24-08.32.51-768x1024.jpg)
+* ![](/images/three-wooded-acres-coorg/Sit-out-2-1-1024x680.jpg)
+* ![](/images/three-wooded-acres-coorg/Room-view-2-1024x680.jpg)
+* ![](/images/three-wooded-acres-coorg/Attic-bed-1-1024x680.jpg)
+* ![](/images/three-wooded-acres-coorg/Village-1.jpg)
+* ![](/images/three-wooded-acres-coorg/ForestWalk2.jpg)
+* ![](/images/three-wooded-acres-coorg/OldBhadrakaliAiyappaTemple3.jpg)
+* ![]()
+* ![](/images/three-wooded-acres-coorg/woods.jpg)
+* ![](/images/three-wooded-acres-coorg/hike-1024x768.jpg)
+* ![](/images/three-wooded-acres-coorg/paddyfields-1024x768.jpg)
+* ![](/images/three-wooded-acres-coorg/TWA-Logo-Transparent.png)
 
-- ![](/images/three-wooded-acres-coorg/festival.jpg)
-- ![](/images/three-wooded-acres-coorg/greyhornbill.jpg)
-- ![](/images/three-wooded-acres-coorg/sunthrutrees2-1024x512-1.jpg)
-
-- ![](/images/three-wooded-acres-coorg/CottageRear.jpg)
-- ![](/images/three-wooded-acres-coorg/2017-11-24-08.32.51-768x1024.jpg)
-
-- ![](/images/three-wooded-acres-coorg/Sit-out-2-1-1024x680.jpg)
-- ![](/images/three-wooded-acres-coorg/Room-view-2-1024x680.jpg)
-- ![](/images/three-wooded-acres-coorg/Attic-bed-1-1024x680.jpg)
-
-- ![](/images/three-wooded-acres-coorg/Village-1.jpg)
-
-- ![](/images/three-wooded-acres-coorg/ForestWalk2.jpg)
-- ![](/images/three-wooded-acres-coorg/OldBhadrakaliAiyappaTemple3.jpg)
-- ![](/images/three-wooded-acres-coorg/2017-11-23-18.51.21-768x1024.jpg)
-- ![](/images/three-wooded-acres-coorg/woods.jpg)
-- ![](/images/three-wooded-acres-coorg/hike-1024x768.jpg)
-- ![](/images/three-wooded-acres-coorg/paddyfields-1024x768.jpg)
-- ![](/images/three-wooded-acres-coorg/TWA-Logo-Transparent.png)
-
----
+- - -
 
 ## Getting There
 
@@ -102,17 +100,22 @@ From Madikeri - head past Raja's Seat - towards Club Mahindra.
 Here's the directions from Raja's Seat - the signals may be iffy so save in offline mode : <https://goo.gl/maps/wWnpFAtwx4D2>
 ![mapdetails](/images/three-wooded-acres-coorg/MapDetails.png)
 
----
+- - -
 
 ## Activities Around There
 
 **Things to do Nearby**
 
 ![](/images/three-wooded-acres-coorg/flower.jpg)
+
 ![](/images/three-wooded-acres-coorg/greyhornbill-1.jpg)
+
 ![](/images/three-wooded-acres-coorg/ForestWalk2-1.jpg)
+
 ![](/images/three-wooded-acres-coorg/Bhadra-Kali-Temple-2.jpg)
+
 ![](/images/three-wooded-acres-coorg/kootholereservoir.jpg)
+
 ![](/images/three-wooded-acres-coorg/woodsmorning-1.jpg)
 
 Kishan's gardens are the best across all Linger properties and his knowledge around this really good! He'll happily take you through the garden and the woods and help identify (through local names) the trees, flowers and plants.
