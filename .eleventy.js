@@ -51,13 +51,13 @@ function imagesInBlock($, el) {
 
 function carouselHtml(images) {
   const imgTags = images
-    .map((i) => `<a href="${i.src}" target="_blank" rel="noopener"><img src="${i.src}" alt="${i.alt}" loading="lazy"></a>`)
+    .map((i) => `<a href="${i.src}" class="lightbox-trigger"><img src="${i.src}" alt="${i.alt}" loading="lazy"></a>`)
     .join("");
   return `<div class="carousel"><div class="carousel-track">${imgTags}</div><button type="button" class="carousel-btn carousel-prev" aria-label="Previous photo">&#8249;</button><button type="button" class="carousel-btn carousel-next" aria-label="Next photo">&#8250;</button></div>`;
 }
 
 function singleImageHtml(image) {
-  return `<div class="content-image"><a href="${image.src}" target="_blank" rel="noopener"><img src="${image.src}" alt="${image.alt}" loading="lazy"></a></div>`;
+  return `<div class="content-image"><a href="${image.src}" class="lightbox-trigger"><img src="${image.src}" alt="${image.alt}" loading="lazy"></a></div>`;
 }
 
 function groupInlineGalleries(content) {
