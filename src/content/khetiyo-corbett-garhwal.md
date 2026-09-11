@@ -7,13 +7,9 @@ slug: "khetiyo-corbett-garhwal"
 
 ---
 
-## Golden Wood, an Introduction
+## Khetiyo, an Introduction
 
-Lothlorien, from the Lord of The Rings, is described thus:
-
-*"There are no trees like the trees of that land. For in the autumn their leaves fall not, but turn to gold. Not till the spring and the new green opens do they fall, and then the boughs are laden with yellow flowers; and the floor of the wood is golden, and golden is the roof, and its pillars are of silver, for the bark of the trees is smooth and grey."*
-
-The 500 acres of green and a gurgling stream at Harley Estate feel quite as enchanting, and the perfect place for a totally relaxed weekend.
+Deep in the Corbett landscape, along the Mandal river and the Ramganga valley, in Garhwali village country - at Khetiyo it's just you, the forest, and a river close by. 100s of square kilometres of wilderness around, with walks into the forest, birds to spot, and villages like Chamsen and Jhurungoo within hiking distance. The perfect place for a totally relaxed weekend doing, well, nothing.
 
 ---
 
