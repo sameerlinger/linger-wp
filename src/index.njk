@@ -4,9 +4,15 @@ title: Home
 permalink: /index.html
 ---
 <section class="hero">
-  <h1>Linger</h1>
-  <p>Delightfully local weekends. Authentic. Low-density. Quiet. Pet friendly.</p>
+  <div class="hero-inner">
+    <p class="hero-kicker">Delightfully local weekends</p>
+    <h1>Linger a while.</h1>
+    <p class="hero-sub">Authentic. Low-density. Quiet. Pet friendly. Homestays and farm-stays across Coorg, near Bangalore, Bandipur and the Himalayas.</p>
+    <a class="hero-cta" href="#regions">Explore properties &darr;</a>
+  </div>
 </section>
+
+<div id="regions"></div>
 
 {% for region in regions %}
 <section class="region-section">

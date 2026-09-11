@@ -9,7 +9,7 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
-    label: "Pages"
+    label: "Properties & Pages"
     folder: "src/content"
     create: false
     delete: false
@@ -18,4 +18,19 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Categories", name: "categories", widget: "list", default: [] }
       - { label: "Body", name: "body", widget: "markdown" }

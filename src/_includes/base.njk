@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }} · Linger</title>
 <meta name="description" content="Delightfully local weekends. Authentic, low-density, quiet, pet-friendly homestays and farm-stays across Coorg, near Bangalore, Bandipur and the Himalayas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -59,7 +62,16 @@
   {{ content | safe }}
 </main>
 <footer class="site-footer">
-  <p>&copy; {{ currentYear }} Linger</p>
+  <div class="site-footer-inner">
+    <div class="footer-brand">Linger</div>
+    <p class="footer-tagline">Delightfully local weekends.</p>
+    <p class="footer-contact">
+      <a href="mailto:stay@linger.in">stay@linger.in</a> &middot;
+      <a href="https://wa.me/918548065772">WhatsApp 8548065772</a> &middot;
+      <a href="tel:+919590050001">+91-959-005-0001</a>
+    </p>
+    <p class="footer-copy">&copy; {{ currentYear }} Linger</p>
+  </div>
 </footer>
 </body>
 </html>
