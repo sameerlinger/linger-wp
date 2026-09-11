@@ -35,7 +35,7 @@ Designed in harmony with the rest of the home, all four bedrooms are airy, natur
 
 - **Child Policy:** Children 5–12 at 50% of adult pricing.
 
-## **Manasu – Master Bedroom**
+### **Manasu – Master Bedroom**
 
 ![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.25.20-1024x768.jpeg)
 ![](/images/naimisha-aranya-nelamangala/WhatsApp-Image-2026-06-24-at-14.25.16-768x1024.jpeg)
@@ -71,7 +71,7 @@ The most spacious room in the house, Manasu can comfortably accommodate up to fo
 **Occupancy:** 2 Adults + 1 Child  
 **Tariff:** ₹8,500 per couple
 
-## **Children pricing**
+### **Children pricing**
 
 Children between 5 and 12 years are charged at 50% of an adult pricing.
 
