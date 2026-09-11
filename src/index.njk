@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: Home
+permalink: /index.html
+---
+<section class="hero">
+  <h1>Linger</h1>
+  <p>Delightfully local weekends. Pick a property below.</p>
+</section>
+
+<section class="property-grid">
+  {% for p in properties %}
+  <a class="property-card" href="/{{ p.slug }}/">{{ p.title }}</a>
+  {% endfor %}
+</section>
+
+<section class="main-pages">
+  <h2>More about Linger</h2>
+  <ul>
+  {% for p in mainpages %}
+    <li><a href="/{{ p.slug }}/">{{ p.title }}</a></li>
+  {% endfor %}
+  </ul>
+</section>

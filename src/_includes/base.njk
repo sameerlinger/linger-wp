@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} · Linger</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/">Linger</a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+  <nav class="site-nav">
+    <a href="/">Home</a>
+    <a href="/all-linger-homestays-accommodation-options/">Properties</a>
+    <a href="/about/">About</a>
+    <a href="/get-in-touch/">Contact</a>
+  </nav>
+</header>
+<main class="content">
+  {{ content | safe }}
+</main>
+<footer class="site-footer">
+  <p>&copy; {{ currentYear }} Linger</p>
+</footer>
+</body>
+</html>

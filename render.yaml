@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: linger-wp
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: _site
+    buildFilter:
+      ignoredPaths:
+        - oauth-provider/**
+
+  - type: web
+    name: linger-wp-oauth
+    runtime: node
+    plan: free
+    rootDir: oauth-provider
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GITHUB_OAUTH_CLIENT_ID
+        sync: false
+      - key: GITHUB_OAUTH_CLIENT_SECRET
+        sync: false
