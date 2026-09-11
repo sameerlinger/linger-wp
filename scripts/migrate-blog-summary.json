@@ -1,0 +1,306 @@
+{
+  "categories": [
+    {
+      "slug": "art",
+      "name": "Art",
+      "count": 2
+    },
+    {
+      "slug": "camping",
+      "name": "Camping",
+      "count": 2
+    },
+    {
+      "slug": "gift",
+      "name": "Gift",
+      "count": 5
+    },
+    {
+      "slug": "merchandize",
+      "name": "Merchandize",
+      "count": 3
+    },
+    {
+      "slug": "partnership",
+      "name": "partnership",
+      "count": 5
+    },
+    {
+      "slug": "philosophy",
+      "name": "philosophy",
+      "count": 15
+    },
+    {
+      "slug": "plans",
+      "name": "plans",
+      "count": 4
+    },
+    {
+      "slug": "slider-posts",
+      "name": "Slider Posts",
+      "count": 0
+    },
+    {
+      "slug": "travel",
+      "name": "travel",
+      "count": 21
+    },
+    {
+      "slug": "trips",
+      "name": "trips",
+      "count": 7
+    },
+    {
+      "slug": "uncategorized",
+      "name": "Uncategorized",
+      "count": 16
+    }
+  ],
+  "posts": [
+    {
+      "slug": "doing-nothing-what-is-it",
+      "title": "Doing Nothing : What Is It?",
+      "images": 37
+    },
+    {
+      "slug": "vacation-ideas-a-week-under-the-dhauladhars-art-history-adventure-nature",
+      "title": "Vacation Ideas : A Week Under the Dhauladhars – Art, History, Adventure, Nature",
+      "images": 2
+    },
+    {
+      "slug": "team-offsites-at-linger-a-better-connect",
+      "title": "Team Offsites at Linger : A Better Connect",
+      "images": 1
+    },
+    {
+      "slug": "workations-linger-be-productive",
+      "title": "Workations! Go Linger AND Be Productive",
+      "images": 2
+    },
+    {
+      "slug": "having-a-great-team-our-usp",
+      "title": "Having A Great Team – our USP!",
+      "images": 0
+    },
+    {
+      "slug": "5-must-do-things-vacation",
+      "title": "5 Must Do things on your vacation! Never miss…",
+      "images": 1
+    },
+    {
+      "slug": "kids-day-camp-life-skills-urbanclimbers",
+      "title": "Kids Day Out at the Campsite. Life Skills and Fun!",
+      "images": 2
+    },
+    {
+      "slug": "visiting-karnataka-linger-itinerary-hampi",
+      "title": "Visiting Karnataka : Coffee, Beaches and Hampi",
+      "images": 2
+    },
+    {
+      "slug": "do-nothing-vacation-just-what-doctor-ordered",
+      "title": "A Do Nothing Vacation is Just What The Doctor Ordered",
+      "images": 4
+    },
+    {
+      "slug": "our-valuation-love-it",
+      "title": "Our Valuation. And We Love It.",
+      "images": 5
+    },
+    {
+      "slug": "do-nothing-vacation-philosophy",
+      "title": "So what is “Do Nothing”, really?",
+      "images": 3
+    },
+    {
+      "slug": "campsite-near-bangalore",
+      "title": "Linger’s Second Campsite near Bangalore is live!!",
+      "images": 4
+    },
+    {
+      "slug": "kerala-weekends-vacations-chennai",
+      "title": "Kerala Weekends – From Chennai",
+      "images": 1
+    },
+    {
+      "slug": "travel-deeper-india",
+      "title": "Experience the Deeper India",
+      "images": 2
+    },
+    {
+      "slug": "birdwatching-at-coorg-a-recent-guests-list-of-species",
+      "title": "Birdwatching At Coorg – A Recent Guest’s List Of Species",
+      "images": 3
+    },
+    {
+      "slug": "linger-tour-of-nilgiris-tfn-team-outing",
+      "title": "Linger <3 TFN. And we loved hosting the rockstars - the volunteers!",
+      "images": 2
+    },
+    {
+      "slug": "weekend-family-fun-overnight-camping-around-bangalore",
+      "title": "Weekend Family Fun : Overnight Camping Around Bangalore",
+      "images": 2
+    },
+    {
+      "slug": "our-sustainable-architecture-partners-biome-environmental-solutions",
+      "title": "Our Sustainable Architecture Partners : Biome Environmental Solutions",
+      "images": 5
+    },
+    {
+      "slug": "the-palathra-heritage-at-mararikula.-getting-there-and-around",
+      "title": "The Palathra Heritage at Mararikulam. Getting there, and Around",
+      "images": 1
+    },
+    {
+      "slug": "getting-to-our-kumaon-properties-corbett-and-vijaypur",
+      "title": "Getting to our Kumaon Properties – Corbett and Vijaypur",
+      "images": 4
+    },
+    {
+      "slug": "the-himalayas-wildlife-and-kerala-linger-grows",
+      "title": "The Himalayas, Wildlife and Kerala! Linger grows",
+      "images": 9
+    },
+    {
+      "slug": "art-artists-artflute-at-linger",
+      "title": "Art, Artists and ArtFlute. At Linger.",
+      "images": 2
+    },
+    {
+      "slug": "gokarna-a-lot-can-happen-in-february",
+      "title": "Gokarna : A lot can happen in February!",
+      "images": 1
+    },
+    {
+      "slug": "feb-2014-specials-authors-seniors-lingerfolk-vacations",
+      "title": "Feb 2014. With love to all! (Authors, Seniors, LingerFolk)",
+      "images": 2
+    },
+    {
+      "slug": "climbing-bouldering-hiking-and-camping-urbanclimbers-weekend-at-camplinger",
+      "title": "Climbing, bouldering, hiking and camping? UrbanClimbers weekend at CampLinger!",
+      "images": 0
+    },
+    {
+      "slug": "vacation-feedback-coorg-gokarna-campsite",
+      "title": "What a great start to a week. Thank you!",
+      "images": 0
+    },
+    {
+      "slug": "replace-plastic-water-bottles-recycle-environment",
+      "title": "On A Mission To Replace Your Plastic Water Bottles!",
+      "images": 5
+    },
+    {
+      "slug": "surfing-at-gokarna.-even-for-beginners",
+      "title": "Surfing at Gokarna. Even for Beginners!",
+      "images": 2
+    },
+    {
+      "slug": "the-kind-of-payment-that-lifts-your-spirits",
+      "title": "The Kind of Payment That Lifts Your Spirits",
+      "images": 1
+    },
+    {
+      "slug": "entrepreneurs-your-need-vacations-too.-and-a-break.",
+      "title": "Entrepreneurs, your need vacations too. And a break.",
+      "images": 1
+    },
+    {
+      "slug": "in-support-of-indian-authors-one-pick-a-month-at-our-libraries",
+      "title": "In Support of Indian Authors – One Pick A Month At Our Libraries",
+      "images": 1
+    },
+    {
+      "slug": "a-better-working-relationship-with-travel-partners",
+      "title": "A Better Working Relationship With Travel Partners",
+      "images": 0
+    },
+    {
+      "slug": "getting-to-gokarna-and-beach-bumming",
+      "title": "Getting To Gokarna (and beach bumming!)",
+      "images": 1
+    },
+    {
+      "slug": "differently-done-birthday-camping-trip",
+      "title": "Differently Done Birthday : Camping Trip!",
+      "images": 0
+    },
+    {
+      "slug": "what-we-stand-for-or-the-ethos-of-linger-guesthouses",
+      "title": "What we stand for or the Ethos of Linger Guesthouses",
+      "images": 0
+    },
+    {
+      "slug": "2-years-of-linger-thank-you",
+      "title": "2 Years of Linger : Thank You!",
+      "images": 0
+    },
+    {
+      "slug": "the-do-nothing-tee",
+      "title": "The Do Nothing Tee",
+      "images": 0
+    },
+    {
+      "slug": "keep-linger-in-new-site-and-mail-id",
+      "title": "Keep linger.in – New site and mail id",
+      "images": 0
+    },
+    {
+      "slug": "world-tourism-day",
+      "title": "World Tourism Day",
+      "images": 0
+    },
+    {
+      "slug": "gift-a-linger-vacation",
+      "title": "Gift a Linger Vacation",
+      "images": 0
+    },
+    {
+      "slug": "linger-ing-for-our-seniors-a-heartfelt-offer",
+      "title": "Linger-ing – for our Seniors : A heartfelt offer.",
+      "images": 0
+    },
+    {
+      "slug": "the-monsoon-and-coming-soon",
+      "title": "The Monsoon and Coming Soon!",
+      "images": 0
+    },
+    {
+      "slug": "keeping-quiet-pablo-neruda",
+      "title": "Keeping Quiet (Pablo Neruda)",
+      "images": 0
+    },
+    {
+      "slug": "farm-more-important-things",
+      "title": "Farm More Important Things",
+      "images": 0
+    },
+    {
+      "slug": "with-love-for-and-from-the-world-champions",
+      "title": "With love, for and from the World Champions!",
+      "images": 0
+    },
+    {
+      "slug": "a-year-of-lingering",
+      "title": "A Year of Lingering",
+      "images": 0
+    },
+    {
+      "slug": "birdwatching-weekend-at-coorg",
+      "title": "Birdwatching Weekend at Coorg",
+      "images": 1
+    },
+    {
+      "slug": "doing-nothing-on-the-saddle",
+      "title": "Doing nothing on the Saddle",
+      "images": 0
+    },
+    {
+      "slug": "especially-blissful-lingering",
+      "title": "Especially Blissful Lingering",
+      "images": 0
+    }
+  ]
+}

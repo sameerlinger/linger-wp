@@ -1,4 +1,4 @@
 module.exports = {
-  layout: "base.njk",
+  layout: "page.njk",
   permalink: "/{{ slug }}/index.html",
 };

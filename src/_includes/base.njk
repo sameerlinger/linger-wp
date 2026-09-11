@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }} · Linger</title>
+<meta name="description" content="Delightfully local weekends. Authentic, low-density, quiet, pet-friendly homestays and farm-stays across Coorg, near Bangalore, Bandipur and the Himalayas.">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -11,10 +12,47 @@
   <a class="brand" href="/">Linger</a>
   <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
   <nav class="site-nav">
-    <a href="/">Home</a>
-    <a href="/all-linger-homestays-accommodation-options/">Properties</a>
-    <a href="/about/">About</a>
-    <a href="/get-in-touch/">Contact</a>
+    {% for region in regions %}
+    <details class="nav-drop">
+      <summary>{{ region.name }}</summary>
+      <ul>
+        {% for slug in region.properties %}
+        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endfor %}
+    <details class="nav-drop">
+      <summary>Featured</summary>
+      <ul>
+        {% for slug in featured %}
+        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
+        {% endfor %}
+        <li><a href="/events-linger/">Events!</a></li>
+      </ul>
+    </details>
+    <details class="nav-drop">
+      <summary>Reservations</summary>
+      <ul>
+        <li><a href="mailto:stay@linger.in">stay@linger.in</a></li>
+        <li><a href="https://wa.me/918548065772">WhatsApp 8548065772</a></li>
+        <li><a href="tel:+919590050001">+91-959-005-0001</a></li>
+        <li><a href="/long-stays-workations/">Long Stays &amp; Workations</a></li>
+        <li><a href="/vacation-offer-deal/">Offers</a></li>
+      </ul>
+    </details>
+    <details class="nav-drop">
+      <summary>Know Us</summary>
+      <ul>
+        <li><a href="/what-to-expect/">What To Expect</a></li>
+        <li><a href="/responsible-ethical-travel/">Travelling Responsibly</a></li>
+        <li><a href="/blog/">Our Blog</a></li>
+        <li><a href="/team-linger/">Team Linger</a></li>
+        <li><a href="/testimonials-they-loved-linger/">Testimonials</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/get-in-touch/">Contact</a></li>
+      </ul>
+    </details>
   </nav>
 </header>
 <main class="content">

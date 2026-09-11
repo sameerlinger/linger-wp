@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Coffee Estates",
+    "slug": "coffee-estates",
+    "properties": ["three-wooded-acres-coorg", "lingerfarm-coorg", "balur", "varshini-estate-sakleshpur", "camrose-sakleshpur"]
+  },
+  {
+    "name": "Near Bangalore",
+    "slug": "near-bangalore",
+    "properties": ["naimisha-aranya-nelamangala", "swavana-magadi", "bush-camp-kalpavalli", "feelgoodfarm-doddaballapura", "tamarindvalleycollective-farmstay", "camping-bangalore-devarayanadurga", "camp"]
+  },
+  {
+    "name": "Bandipur",
+    "slug": "bandipur",
+    "properties": ["open-shell-farm-bandipur"]
+  },
+  {
+    "name": "Himalayas",
+    "slug": "himalayas",
+    "properties": ["palampur-himachal", "chestnutgrove-bageshwar", "khetiyo-corbett-garhwal"]
+  }
+]

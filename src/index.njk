@@ -5,14 +5,23 @@ permalink: /index.html
 ---
 <section class="hero">
   <h1>Linger</h1>
-  <p>Delightfully local weekends. Pick a property below.</p>
+  <p>Delightfully local weekends. Authentic. Low-density. Quiet. Pet friendly.</p>
 </section>
 
-<section class="property-grid">
-  {% for p in properties %}
-  <a class="property-card" href="/{{ p.slug }}/">{{ p.title }}</a>
+{% for region in regions %}
+<section class="region-section">
+  <h2>{{ region.name }}</h2>
+  <div class="property-grid">
+  {% for slug in region.properties %}
+    <a class="property-card" href="/{{ slug }}/">
+      {% set cover = slug | coverImage %}
+      {% if cover %}<img src="{{ cover }}" alt="{{ slug | propertyTitle(properties) }}" loading="lazy">{% endif %}
+      <span class="property-card-title">{{ slug | propertyTitle(properties) }}</span>
+    </a>
   {% endfor %}
+  </div>
 </section>
+{% endfor %}
 
 <section class="main-pages">
   <h2>More about Linger</h2>

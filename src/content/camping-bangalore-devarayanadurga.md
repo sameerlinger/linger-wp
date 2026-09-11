@@ -9,22 +9,14 @@ slug: "camping-bangalore-devarayanadurga"
 
 ## Campsite in the Devarayanadurga Hills near Bangalore
 
-[![NewTank](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/NewTank-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/NewTank.jpg) [![viewfromtop](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/viewfromtop1-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/viewfromtop1.jpg) [![IMG_20141212_104418](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_104418-150x150.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_104418.jpeg)
-
-[![IMG_20141212_105714](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_105714-150x150.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_105714.jpeg) [![IMG_20141212_115412](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_115412-150x150.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_115412.jpeg) [![IMG_20141212_115946](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_115946-150x150.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_115946.jpeg)
-
-[![viewfromtop](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/viewfromtop-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/viewfromtop.jpg) [![2013-11-29 12.23.08](/images/camping-bangalore-devarayanadurga/2013-11-29-12.23.08-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-11-29-12.23.08.jpg) [![Lets go trek](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/P1130278-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/P1130278.jpg)
-
-[![2013-07-13 11.54.27](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.54.27-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.54.27.jpg) [![2013-07-13 11.34.15](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.34.15-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.34.15.jpg) [![2013-07-13 14.11.31](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-14.11.31-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-14.11.31.jpg)
-
-[![2013-07-14 12.22.53](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-14-12.22.53-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-14-12.22.53.jpg) [![P1120600](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/P1120600-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/P1120600.jpg) [![P1120599](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/P1120599-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/P1120599.jpg)
+ [![2013-11-29 12.23.08](/images/camping-bangalore-devarayanadurga/2013-11-29-12.23.08-150x150.jpg)](/images/camping-bangalore-devarayanadurga/2013-11-29-12.23.08-150x150.jpg)
 
 ---
 
 ## Accommodations at Camp Linger, Devarayanadurga Hills
 
 5 family sized tents placed under thatched huts around a campfire can accommodate 5 families. We also have a few spare tents for larger groups, or if the kids want to setup their own.
-[![IMG_20141212_115946](/images/camping-bangalore-devarayanadurga/IMG_20141212_115946-300x225.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/IMG_20141212_115946.jpeg)
+[![IMG_20141212_115946](/images/camping-bangalore-devarayanadurga/IMG_20141212_115946-300x225.jpeg)](/images/camping-bangalore-devarayanadurga/IMG_20141212_115946-300x225.jpeg)
 
 ---
 
@@ -41,19 +33,19 @@ A little later you’ll cross Urdigere – stick to the road going straight – 
 
 **The Outdoors : Treks, Hikes, Running, Riding**
 There's a lake a short walk away at the base of two hills that make for moderately challenging hikes to the top where there's a temple, and fantastic views.
-[![](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.34.15-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.34.15.jpg)[![](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/viewfromtop-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/viewfromtop.jpg)[![](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.54.27-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/2013-07-13-11.54.27.jpg)
+
 **Farming and the Gherkin Factory**
 A gherkin and other agri produce processing unit just 2 kms away is a must see. We can arrange permissions when the factory is in operation, and someone there will be happy to explain to you and the kids how food is sourced, cleaned and hygienically processed before it hits the store shelves and finds its way onto your plate or pizza.
 **Temples and History**
-[caption id="attachment\_117" align="alignnone" width="150"][![](/images/camping-bangalore-devarayanadurga/Narasimha_Temple_Devarayanadurga-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/Narasimha_Temple_Devarayanadurga.jpg) By Srinivasa83 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7876189[/caption]
+[caption id="attachment\_117" align="alignnone" width="150"][![](/images/camping-bangalore-devarayanadurga/Narasimha_Temple_Devarayanadurga-150x150.jpg)](/images/camping-bangalore-devarayanadurga/Narasimha_Temple_Devarayanadurga-150x150.jpg) By Srinivasa83 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7876189[/caption]
  
 This is an ancient area. The [Devarayanadurga Temple](https://en.wikipedia.org/wiki/Devarayanadurga) is a popular one visited by numerous devotees. It's also perched atop a hill with fantastic views of the forest and landscape around.
 [Namada Chilume](https://en.wikipedia.org/wiki/Namada_Chilume), a natural spring, has mythical origins. It considered sacred and is also considered the origin of the Jayamangali and Shimsha rivers.
 **Madhugiri**
-[![](/images/camping-bangalore-devarayanadurga/madhugiri-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/madhugiri.jpg)
+[![](/images/camping-bangalore-devarayanadurga/madhugiri-150x150.jpg)](/images/camping-bangalore-devarayanadurga/madhugiri-150x150.jpg)
 [An old fort](https://en.wikipedia.org/wiki/Madhugiri) dating back to 1670 AD, with multiple levels and layers of protection atop Asia's second largest monolithic rock is fascinating both for history buffs, and those who like a good hike. Parts of the climb are extremely steep and dangerous during the rains, and we advise you to exercise caution and do it only in good weather with no rain and low wind speeds.
 **Siddarabetta**
-[![](/images/camping-bangalore-devarayanadurga/siddarabetta-150x150.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/siddarabetta.jpg)
+[![](/images/camping-bangalore-devarayanadurga/siddarabetta-150x150.jpg)](/images/camping-bangalore-devarayanadurga/siddarabetta-150x150.jpg)
 A cave shrine atop a hill close to Korategere makes for a good walk up the numerous steps, and a sense of adventure as you walk through the natural boulder-created cave.  Avoid during festivals and big weekends since it tends to get crowded up there.
 
 ---
@@ -68,13 +60,13 @@ You're in a very special region! Kenneth Anderson wrote about the Tiger of Devar
 
 So of course, sensible precautions are the smart thing to do
 
-[![](/images/camping-bangalore-devarayanadurga/Bear-Precautions-1024x1024.png)](https://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/Bear-Precautions.png)
+[![](/images/camping-bangalore-devarayanadurga/Bear-Precautions-1024x1024.png)](/images/camping-bangalore-devarayanadurga/Bear-Precautions-1024x1024.png)
 
 The area also has lovely old temples and forts, and moderate, fun hikes to them
 
 - [![](/images/camping-bangalore-devarayanadurga/dd-temple.jpeg)](/images/camping-bangalore-devarayanadurga/dd-temple.jpeg)
 - [![](/images/camping-bangalore-devarayanadurga/siddarabetta-1.jpg)](/images/camping-bangalore-devarayanadurga/siddarabetta-1.jpg)
-- [![](/images/camping-bangalore-devarayanadurga/P1130376-768x1024.jpg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/P1130376.jpg)
+- [![](/images/camping-bangalore-devarayanadurga/P1130376-768x1024.jpg)](/images/camping-bangalore-devarayanadurga/P1130376-768x1024.jpg)
 
 ---
 
@@ -86,31 +78,25 @@ The area also has lovely old temples and forts, and moderate, fun hikes to them
 
 [![](/images/camping-bangalore-devarayanadurga/DroneShot.jpg)](/images/camping-bangalore-devarayanadurga/DroneShot.jpg)
 
-
 - [![](/images/camping-bangalore-devarayanadurga/hilltoptrees.jpg)](/images/camping-bangalore-devarayanadurga/hilltoptrees.jpg)
 - [![](/images/camping-bangalore-devarayanadurga/viewshike.jpg)](/images/camping-bangalore-devarayanadurga/viewshike.jpg)
 - [![](/images/camping-bangalore-devarayanadurga/hilltoptemple.jpg)](/images/camping-bangalore-devarayanadurga/hilltoptemple.jpg)
 
-
 - [![](/images/camping-bangalore-devarayanadurga/ae6a7e65-ed58-498d-b3b8-392458bd9eb4-1024x619.jpeg)](/images/camping-bangalore-devarayanadurga/ae6a7e65-ed58-498d-b3b8-392458bd9eb4-1024x619.jpeg)
 - [![](/images/camping-bangalore-devarayanadurga/tentthatch.jpg)](/images/camping-bangalore-devarayanadurga/tentthatch.jpg)
-
 
 - [![](/images/camping-bangalore-devarayanadurga/bonfire.jpg)](/images/camping-bangalore-devarayanadurga/bonfire.jpg)
 - [![](/images/camping-bangalore-devarayanadurga/hilltop.jpg)](/images/camping-bangalore-devarayanadurga/hilltop.jpg)
 - [![](/images/camping-bangalore-devarayanadurga/milking.jpg)](/images/camping-bangalore-devarayanadurga/milking.jpg)
 
+-
+-
 
-- [![](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/bathroom.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/bathroom.jpeg)
-- [![](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/65b9c214-3a6b-4f56-a9f2-ba6ad2e25a3f-1024x702.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/65b9c214-3a6b-4f56-a9f2-ba6ad2e25a3f.jpeg)
-
-
-- [![](/images/camping-bangalore-devarayanadurga/MomKids-1024x768.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/MomKids.jpeg)
-- [![](/images/camping-bangalore-devarayanadurga/Washbasins-1024x768.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/Washbasins.jpeg)
+- [![](/images/camping-bangalore-devarayanadurga/MomKids-1024x768.jpeg)](/images/camping-bangalore-devarayanadurga/MomKids-1024x768.jpeg)
+- [![](/images/camping-bangalore-devarayanadurga/Washbasins-1024x768.jpeg)](/images/camping-bangalore-devarayanadurga/Washbasins-1024x768.jpeg)
 - [![](/images/camping-bangalore-devarayanadurga/sunset.jpeg)](/images/camping-bangalore-devarayanadurga/sunset.jpeg)
 
-
-- [![](/images/camping-bangalore-devarayanadurga/lonetree-1024x622.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/lonetree-scaled.jpeg)
+- [![](/images/camping-bangalore-devarayanadurga/lonetree-1024x622.jpeg)](/images/camping-bangalore-devarayanadurga/lonetree-1024x622.jpeg)
 - [![](/images/camping-bangalore-devarayanadurga/baybridgehills.jpg)](/images/camping-bangalore-devarayanadurga/baybridgehills.jpg)
 
 ---
@@ -145,14 +131,12 @@ Extra tents provided as necessary. This includes everything at the property :
 
 Quiet, private farm getaway in partnership with [Tenpy](http://tenpy.co)
 
+- [![](/images/camping-bangalore-devarayanadurga/tenpy_logoralewaysBold-04-2-300x129.png)](/images/camping-bangalore-devarayanadurga/tenpy_logoralewaysBold-04-2-300x129.png)
 
-
-- [![](/images/camping-bangalore-devarayanadurga/tenpy_logoralewaysBold-04-2-300x129.png)](https://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/tenpy_logoralewaysBold-04-2.png)
-
-[![](/images/camping-bangalore-devarayanadurga/65b9c214-3a6b-4f56-a9f2-ba6ad2e25a3f-1024x702.jpeg)](https://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/65b9c214-3a6b-4f56-a9f2-ba6ad2e25a3f.jpeg)
+[![](/images/camping-bangalore-devarayanadurga/65b9c214-3a6b-4f56-a9f2-ba6ad2e25a3f-1024x702.jpeg)](/images/camping-bangalore-devarayanadurga/65b9c214-3a6b-4f56-a9f2-ba6ad2e25a3f-1024x702.jpeg)
 [![](/images/camping-bangalore-devarayanadurga/bathroom.jpeg)](/images/camping-bangalore-devarayanadurga/bathroom.jpeg)
 
-[![](/images/camping-bangalore-devarayanadurga/ae6a7e65-ed58-498d-b3b8-392458bd9eb4-1024x619.jpeg)](http://camping-bangalore-devarayanadurga.linger.in/wp-content/uploads/sites/12/ae6a7e65-ed58-498d-b3b8-392458bd9eb4.jpeg)
+[![](/images/camping-bangalore-devarayanadurga/ae6a7e65-ed58-498d-b3b8-392458bd9eb4-1024x619.jpeg)](/images/camping-bangalore-devarayanadurga/ae6a7e65-ed58-498d-b3b8-392458bd9eb4-1024x619.jpeg)
 
 - Per day (24 hours) pricing for accommodation for a couple + experiences  : Rs.4800/- + GST (Payable to Tenpy)
 - Food at 850/- per day per person.

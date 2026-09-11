@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: Blog
+pagination:
+  data: collections.blogposts
+  size: 9
+  alias: posts
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber | plus1 }}/{% endif %}index.html"
+eleventyComputed:
+  title: "Blog{% if pagination.pageNumber > 0 %} · Page {{ pagination.pageNumber | plus1 }}{% endif %}"
+---
+<section class="blog-hero">
+  <h1>The Linger Blog</h1>
+  <p>Stories from doing (mostly) nothing.</p>
+  {% set cats = collections.blogCategories %}
+  {% if cats.length %}
+  <div class="category-filter">
+    {% for c in cats %}<a class="category-pill" href="/blog/category/{{ c.slug }}/">{{ c.name }}</a>{% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<div class="blog-grid">
+{% for post in posts %}
+  <article class="blog-card">
+    {% set imgs = ("blog/" + post.data.slug) | galleryImages(1) %}
+    {% set cover = imgs[0] if imgs.length else null %}
+    <a href="/{{ post.data.slug }}/" class="blog-card-link">
+      {% if cover %}<img src="{{ cover }}" alt="" loading="lazy">{% endif %}
+      <h2>{{ post.data.title }}</h2>
+    </a>
+    <p class="post-meta"><time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time></p>
+    {% if post.data.categories.length %}
+    <p class="post-categories">
+      {% for c in post.data.categories %}<span class="category-pill">{{ c }}</span>{% endfor %}
+    </p>
+    {% endif %}
+    <p>{{ post.templateContent | excerpt(140) }}</p>
+    <a class="read-more" href="/{{ post.data.slug }}/">Read more &rarr;</a>
+  </article>
+{% endfor %}
+</div>
+
+<nav class="pager">
+  {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">&larr; Newer</a>{% endif %}
+  <span>Page {{ pagination.pageNumber | plus1 }} of {{ pagination.pages.length }}</span>
+  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older &rarr;</a>{% endif %}
+</nav>

@@ -1,0 +1,28 @@
+---
+layout: base.njk
+pagination:
+  data: collections.blogCategories
+  size: 1
+  alias: category
+permalink: "/blog/category/{{ category.slug }}/index.html"
+eleventyComputed:
+  title: "{{ category.name }} · Blog"
+---
+<section class="blog-hero">
+  <h1>{{ category.name }}</h1>
+  <p><a href="/blog/">&larr; All posts</a></p>
+</section>
+
+<div class="blog-grid">
+{% for post in category.posts %}
+  <article class="blog-card">
+    {% set imgs = ("blog/" + post.data.slug) | galleryImages(1) %}
+    <a href="/{{ post.data.slug }}/" class="blog-card-link">
+      {% if imgs.length %}<img src="{{ imgs[0] }}" alt="" loading="lazy">{% endif %}
+      <h2>{{ post.data.title }}</h2>
+    </a>
+    <p class="post-meta"><time datetime="{{ post.data.date }}">{{ post.data.date | dateDisplay }}</time></p>
+    <a class="read-more" href="/{{ post.data.slug }}/">Read more &rarr;</a>
+  </article>
+{% endfor %}
+</div>

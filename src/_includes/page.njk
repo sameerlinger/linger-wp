@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+{% set gallery = page.fileSlug | galleryImages(8) %}
+{% if (page.fileSlug | isProperty(properties)) and gallery.length %}
+<div class="gallery-grid">
+{% for img in gallery %}
+  <a href="{{ img }}"><img src="{{ img }}" loading="lazy" alt=""></a>
+{% endfor %}
+</div>
+{% endif %}
+<div class="prose">
+{{ content | safe }}
+</div>

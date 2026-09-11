@@ -48,7 +48,6 @@ But hey, we have a small, growing library, board games and you don't really need
 
 ## Getting To Varshini Estate, Sakleshpur
 
-![](http://guddadamane-sakleshpur.linger.in/wp-content/uploads/sites/23/2017/03/gettingthere-221x300.jpg)
 Take the Mangalore highway which is 4 laned upto Hassan, and then it narrows down to an undivided but wide road upto Sakleshpur. Cross Sakleshpur town and get to where the Shiradi Ghats start, the Manjirabad Fort is on your left and a small road goes uphill towards Kodlipet.
 As you turn in right from this road after 7 kms towards Bugadahalli (warning, kuchha road from here) - you'll come to a point where a road forks left downhill at 90 degrees to the road you're on, and there's a banana plantation on your right immediately as you take this left turn. Continue downhill, enter the gate then drive all the way to the top of the hill. All cars can do this, but in the wetter season, be careful to not rev too hard and not lose momentum driving up.
 Location on Google Maps : https://goo.gl/maps/uDqVUeMk4oD2
