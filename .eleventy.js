@@ -32,7 +32,14 @@ function imagesInBlock($, el) {
     if (!items.length) return null;
     let all = [];
     for (const li of items) {
-      const liP = { tagName: "p", children: li.children };
+      // A "loose" list (blank lines between items) wraps each <li>'s
+      // content in its own <p> - unwrap that before checking.
+      let liChildren = li.children;
+      const elementChildren = liChildren.filter((c) => c.type === "tag");
+      if (elementChildren.length === 1 && elementChildren[0].tagName === "p") {
+        liChildren = elementChildren[0].children;
+      }
+      const liP = { tagName: "p", children: liChildren };
       const imgs = imagesInBlock($, liP);
       if (!imgs) return null;
       all = all.concat(imgs);

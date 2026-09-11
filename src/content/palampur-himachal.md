@@ -34,8 +34,9 @@ Two ecologically built Earth Houses house a total of 6 rooms. The construction e
 - **Child Policy:** Up to 5 complimentary, 5–12 at 50% (homestay); ₹750/day flat at the campsite.
 - *(Pricing valid upto March 31st 2024, except over Dec 15th – Jan 2nd)*
 
-[![LongShot2](/images/palampur-himachal/LongShot2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot2.jpg) [![Room](/images/palampur-himachal/Room-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Room.jpg) [![LongShot3](/images/palampur-himachal/LongShot3-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot3.jpg)
 **Homestays : The Earth House 1 & 2:**
+
+[![LongShot2](/images/palampur-himachal/LongShot2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot2.jpg) [![Room](/images/palampur-himachal/Room-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Room.jpg) [![LongShot3](/images/palampur-himachal/LongShot3-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot3.jpg)
 
 - 2 days/1 night : Rs.5,800/-
 - 3 days/2 nights : Rs.11,020/-
@@ -45,8 +46,10 @@ Two ecologically built Earth Houses house a total of 6 rooms. The construction e
 - *(Pricing valid upto March 31st 2024, except over Dec 15th - Jan 2nd)*
 
 Pricing is per couple, all inclusive, including taxes, on twin occupancy in a room. This includes *everything* at the property : all the meals, unlimited tea/non-packaged juices and snacks whenever your tummy grumbles, walks and treks around the property, bonfire, use of the library etc.
-[![](/images/palampur-himachal/Camping-150x150.jpeg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Camping.jpeg) [![](/images/palampur-himachal/hikeview2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/hikeview2.jpg)[![](/images/palampur-himachal/hdr-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/hdr.jpg)
+
 **Launching Camping :**
+
+[![](/images/palampur-himachal/Camping-150x150.jpeg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Camping.jpeg) [![](/images/palampur-himachal/hikeview2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/hikeview2.jpg)[![](/images/palampur-himachal/hdr-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/hdr.jpg)
 
 - ~~1950/-~~ Intro pricing 1450/- per person per night for min 4. Upto 8 in 4 tents in all. A room with a bathroom in the Riverside cottage will also be dedicated for you. You can pick from 4 different camping spots in the valley and hillside!
 

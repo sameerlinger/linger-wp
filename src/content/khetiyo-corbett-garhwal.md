@@ -27,8 +27,10 @@ The 500 acres of green and a gurgling stream at Harley Estate feel quite as ench
 - **Child Policy:** Kids up to 10 are our guests at no charge.
 - *Pricing valid upto Mar 31st 2017 except over Dec 17th – Jan 2nd.*
 
-![1stmistake](/images/khetiyo-corbett-garhwal/1stmistake-300x225.jpeg) ![2016-03-07 14.59.19](/images/khetiyo-corbett-garhwal/2016-03-07-14.59.19-300x169.jpeg)
 **The First Mistake :**
+
+![1stmistake](/images/khetiyo-corbett-garhwal/1stmistake-300x225.jpeg) ![2016-03-07 14.59.19](/images/khetiyo-corbett-garhwal/2016-03-07-14.59.19-300x169.jpeg)
+
 This one's well specced out pre-fab structure. 2 rooms, a shared bathroom, a small living space and even a tiny kitchenette! What's with the name? We think it's awesome to stay in - just a little out of place :) But hey, we're glad it's there now it's there.
 
 - 2 rooms to be rented together with a living area, shred bathroom.
