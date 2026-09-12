@@ -82,7 +82,7 @@ We offer long stay discounts and special pricing for multi-week stays. There's a
 * ![](/images/three-wooded-acres-coorg/Village-1.jpg)
 * ![](/images/three-wooded-acres-coorg/ForestWalk2.jpg)
 * ![](/images/three-wooded-acres-coorg/OldBhadrakaliAiyappaTemple3.jpg)
-* ![]()
+* ![](/images/three-wooded-acres-coorg/2017-11-23-18.51.21-768x1024.jpg)
 * ![](/images/three-wooded-acres-coorg/woods.jpg)
 * ![](/images/three-wooded-acres-coorg/hike-1024x768.jpg)
 * ![](/images/three-wooded-acres-coorg/paddyfields-1024x768.jpg)
