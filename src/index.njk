@@ -3,7 +3,7 @@ layout: base.njk
 title: Home
 permalink: /index.html
 ---
-<section class="hero">
+<section class="hero" id="hero">
   <div class="hero-inner">
     <p class="hero-kicker">Delightfully local weekends</p>
     <h1>Linger a while.</h1>
@@ -12,6 +12,22 @@ permalink: /index.html
   </div>
   <a class="scroll-hint" href="#regions" aria-label="Scroll down to explore properties">&darr;</a>
 </section>
+<script>
+(function () {
+  var images = {{ heroImages | dump | safe }};
+  if (!images.length) return;
+  var last = null;
+  try { last = sessionStorage.getItem("heroImage"); } catch (e) {}
+  var choices = images.length > 1 ? images.filter(function (src) { return src !== last; }) : images;
+  var pick = choices[Math.floor(Math.random() * choices.length)];
+  try { sessionStorage.setItem("heroImage", pick); } catch (e) {}
+  var img = new Image();
+  img.onload = function () {
+    document.getElementById("hero").style.setProperty("--hero-image", 'url("' + pick + '")');
+  };
+  img.src = pick;
+})();
+</script>
 
 <div id="regions"></div>
 
