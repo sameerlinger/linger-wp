@@ -121,6 +121,51 @@ lightbox.addEventListener("click", function (e) {
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") closeLightbox();
 });
+
+var ENQUIRY_ENDPOINT = "https://linger-booking-engine.onrender.com/api/public/enquiry";
+document.querySelectorAll(".enquiry-form").forEach(function (form) {
+  var status = form.querySelector(".enquiry-status");
+  var button = form.querySelector(".enquiry-submit");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var checkIn = form.checkIn.value;
+    var checkOut = form.checkOut.value;
+    if (checkOut <= checkIn) {
+      status.dataset.state = "error";
+      status.textContent = "Check-out must be after check-in.";
+      return;
+    }
+    button.disabled = true;
+    status.dataset.state = "";
+    status.textContent = "Sending…";
+    fetch(ENQUIRY_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        propertySlug: form.dataset.propertySlug,
+        propertyName: form.dataset.propertyName,
+        name: form.name.value,
+        email: form.email.value,
+        checkIn: checkIn,
+        checkOut: checkOut,
+        honeypot: form.company.value,
+      }),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("request failed");
+        status.dataset.state = "ok";
+        status.textContent = "Thanks! We've got your enquiry and will get back to you by email shortly.";
+        form.reset();
+      })
+      .catch(function () {
+        status.dataset.state = "error";
+        status.textContent = "Something went wrong — please write to us at stay@linger.in instead.";
+      })
+      .finally(function () {
+        button.disabled = false;
+      });
+  });
+});
 </script>
 </body>
 </html>

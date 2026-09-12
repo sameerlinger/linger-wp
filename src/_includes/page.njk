@@ -4,3 +4,26 @@ layout: base.njk
 <div class="prose">
 {{ content | safe }}
 </div>
+{% if page.fileSlug | isProperty(properties) %}
+<section class="enquiry">
+  <div class="enquiry-inner">
+    <h2>Check availability</h2>
+    <p class="enquiry-sub">Tell us your dates and we'll get back to you by email.</p>
+    <form class="enquiry-form" data-property-slug="{{ page.fileSlug }}" data-property-name="{{ page.fileSlug | propertyTitle(properties) }}">
+      <div class="enquiry-row">
+        <label>Name<input type="text" name="name" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <div class="enquiry-row">
+        <label>Check-in<input type="date" name="checkIn" required></label>
+        <label>Check-out<input type="date" name="checkOut" required></label>
+      </div>
+      <!-- Honeypot: hidden from real visitors, invisible to screen readers, but a
+           bot filling every field will fill this too — see the server-side check. -->
+      <input type="text" name="company" class="enquiry-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="enquiry-submit">Check availability</button>
+      <p class="enquiry-status" role="status"></p>
+    </form>
+  </div>
+</section>
+{% endif %}

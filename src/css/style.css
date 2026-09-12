@@ -231,6 +231,64 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 }
 .page-nav a:hover { background: rgba(58, 107, 74, 0.16); }
 
+/* ---------- Enquiry form ---------- */
+
+.enquiry { max-width: 760px; margin: 0 auto 4rem; padding: 0 1.25rem; }
+.enquiry-inner {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+  text-align: center;
+}
+.enquiry-inner h2 { margin: 0 0 0.4rem; font-size: 1.5rem; }
+.enquiry-sub { color: var(--muted); margin: 0 0 1.5rem; }
+.enquiry-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.enquiry-row label {
+  flex: 1 1 200px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.enquiry-row input {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.95rem;
+  font-family: var(--sans);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--fg);
+}
+.enquiry-row input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.enquiry-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.enquiry-submit {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.enquiry-submit:hover { background: var(--accent-dark); }
+.enquiry-submit:disabled { opacity: 0.6; cursor: default; }
+.enquiry-status { margin: 0.9rem 0 0; font-size: 0.88rem; min-height: 1.2em; }
+.enquiry-status[data-state="ok"] { color: var(--accent-dark); font-weight: 600; }
+.enquiry-status[data-state="error"] { color: #a4342a; font-weight: 600; }
+
 /* ---------- Hero ---------- */
 
 .hero {
