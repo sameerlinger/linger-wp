@@ -2,12 +2,12 @@
   {
     "name": "Coffee Estates",
     "slug": "coffee-estates",
-    "properties": ["three-wooded-acres-coorg", "lingerfarm-coorg", "balur", "varshini-estate-sakleshpur"]
+    "properties": ["three-wooded-acres-coorg", "lingerfarm-coorg", "balur", "varshini-estate-sakleshpur", "tstop-coorg"]
   },
   {
     "name": "Near Bangalore",
     "slug": "near-bangalore",
-    "properties": ["naimisha-aranya-nelamangala", "swavana-magadi", "bush-camp-kalpavalli", "feelgoodfarm-doddaballapura", "tamarindvalleycollective-farmstay"]
+    "properties": ["naimisha-aranya-nelamangala", "swavana-magadi", "bush-camp-kalpavalli", "feelgoodfarm-doddaballapura", "tamarindvalleycollective-farmstay", "bekkinakaadu-magadi", "bamboo-rustles-krishnagiri"]
   },
   {
     "name": "Bandipur",
