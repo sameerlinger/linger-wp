@@ -92,6 +92,7 @@ function groupInlineGalleries(content) {
 
 const properties = require("./src/_data/source/properties.json");
 const propertySlugs = new Set(properties.map((p) => p.slug));
+const contentSlugs = require("./lib/contentSlugs");
 
 function slugifyHeading(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -198,6 +199,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isProperty", (slug, properties) =>
     (properties || []).some((p) => p.slug === slug)
   );
+
+  // Guards a hardcoded nav/footer link to a src/content/*.md page (as
+  // opposed to one built from regions/featured/mainpages data, which is
+  // already filtered - see those _data/*.js files) so deleting that page via
+  // the CMS can't leave a dead link. "blog" is a real destination with no
+  // matching content file (it's generated from src/blog/index.njk).
+  eleventyConfig.addFilter("pageExists", (slug) => slug === "blog" || contentSlugs().has(slug));
 
   eleventyConfig.addFilter("dateDisplay", (iso) => {
     const d = new Date(iso);
