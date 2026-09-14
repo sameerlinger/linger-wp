@@ -1,6 +1,7 @@
 ---
-title: "Naimisha Aranya"
-slug: "naimisha-aranya-nelamangala"
+title: Naimisha Aranya
+slug: naimisha-aranya-nelamangala
+cover: /images/naimisha-aranya/whatsapp-image-2026-06-24-at-14.26.15.jpeg
 ---
 
 # Naimisha Aranya
