@@ -17,10 +17,11 @@ Welcome to Your Retreat at The Linger Farm. A quiet escape in Coorg - four cotta
 |  |  |  |
 | --- | --- | --- |
 | **Cottage** | **Rate (1st Night)** | **Extra Guests / Notes** |
-| **Kaapimane - The Writer's Cottage** | ₹8,950 for a couple ₹32,500 for a week | Extra person: ₹2,950 per night |
-| **Gaddemane** - **A 2 room Cottage by The Paddy Fields** | ₹8,950 for a couple | Extra person: ₹2,950 per night |
-| **Halemane - **The Old House**** | ₹8,950 for a couple | Extra person: ₹2,950 per night |
-| **The Work Pad @ Hosamane** | ₹7,450 for a couple. ₹28,500 for a week | - |
+| **Halemane Entire House** | ₹8,950 for a couple | Sleeps up to 6; Extra person: ₹2,950 per night |
+| **Kaapimane - Writer's Pad** | ₹8,950 for a couple | Sleeps 3; Extra person: ₹2,950 per night |
+| **Gaddemane - Mango** | ₹8,950 for a couple | Sleeps 2 |
+| **Gaddemane - Coconut** | ₹8,950 for a couple | Sleeps 2 |
+| **Hosamane Guest Room - Workpad** | ₹7,950 for a couple | Sleeps 2; no extra guests |
 
 - **Long Stay Benefit:** Subsequent nights the 3rd night onwards come with a discount (10%, 15%, 20%, or 25%), depending on the length of stay.
 - **Child Policy:** Up to 2 kids under 5 stay free. For children aged 5–12, the rate is 50% of adult tariff.
