@@ -1,6 +1,7 @@
 ---
-title: "Bekkinakaadu, Magadi"
-slug: "bekkinakaadu-magadi"
+title: Bekkinakaadu, Magadi
+slug: bekkinakaadu-magadi
+cover: /images/bekkinakaadu-magadi/Steps.jpeg
 ---
 
 # Bekkinakaadu, Magadi
