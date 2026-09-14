@@ -1,6 +1,7 @@
 ---
 title: Three Wooded Acres, Coorg
 slug: three-wooded-acres-coorg
+cover: /images/three-wooded-acres-coorg/frontcottage.jpeg
 ---
 # Three Wooded Acres, Coorg
 

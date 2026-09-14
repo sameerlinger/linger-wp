@@ -1,6 +1,7 @@
 ---
-title: "Bush Camp, Kalpavalli"
-slug: "bush-camp-kalpavalli"
+title: Bush Camp, Kalpavalli
+slug: bush-camp-kalpavalli
+cover: /images/bush-camp-kalpavalli/AllSetuUp-1024x665.jpeg
 ---
 
 # Bush Camp, Kalpavalli

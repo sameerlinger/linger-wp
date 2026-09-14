@@ -1,6 +1,7 @@
 ---
-title: "The Linger Farm, Chettimani"
-slug: "lingerfarm-coorg"
+title: The Linger Farm, Chettimani
+slug: lingerfarm-coorg
+cover: /images/the-linger-farm-chettimani/2026-09-13-09.16.18.jpg
 ---
 
 # The Linger Farm, Chettimani
