@@ -1,5 +1,5 @@
 ---
-title: The Earth House, Palampur
+title: The Earth House, Palampur (Himachal)
 slug: palampur-himachal
 cover: /images/the-earth-house-palampur/teh1rainyday.jpg
 ---
