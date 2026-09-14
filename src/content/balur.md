@@ -1,5 +1,5 @@
 ---
-title: Linger, Balur Estate
+title: Linger, Balur Estate (Chikmagalur)
 slug: balur
 cover: /images/linger-balur-estate/2026-09-12-07.26.38.jpg
 ---
