@@ -14,7 +14,7 @@ permalink: /index.html
 </section>
 <script>
 (function () {
-  var images = {{ heroImages | dump | safe }};
+  var images = {{ heroImages.images | dump | safe }};
   if (!images.length) return;
   var last = null;
   try { last = sessionStorage.getItem("heroImage"); } catch (e) {}

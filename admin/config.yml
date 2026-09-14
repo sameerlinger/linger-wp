@@ -12,13 +12,33 @@ collections:
     label: "Properties & Pages"
     folder: "src/content"
     create: false
-    delete: false
+    delete: true
     extension: "md"
     format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Cover photo"
+        name: "cover"
+        widget: "image"
+        required: false
+        media_folder: "/src/images/{{slug}}"
+        public_folder: "/images/{{slug}}"
+        hint: "Shown on the homepage property grid and in the nav. Leave blank to keep using the first photo in this page's gallery."
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "hero"
+        label: "Homepage Hero Photos"
+        file: "src/_data/heroImages.json"
+        fields:
+          - label: "Photos"
+            name: "images"
+            widget: "list"
+            hint: "One of these is shown at random behind the homepage headline on each visit. Add or remove photos here."
+            field: { label: "Photo", name: "image", widget: "image" }
 
   - name: "posts"
     label: "Blog Posts"

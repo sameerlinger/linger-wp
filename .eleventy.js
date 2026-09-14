@@ -90,7 +90,7 @@ function groupInlineGalleries(content) {
   return $.html();
 }
 
-const properties = require("./src/_data/properties.json");
+const properties = require("./src/_data/source/properties.json");
 const propertySlugs = new Set(properties.map((p) => p.slug));
 
 function slugifyHeading(text) {
@@ -216,8 +216,21 @@ module.exports = function (eleventyConfig) {
     return text.length > length ? text.slice(0, length).trim() + "…" : text;
   });
 
+  // Populated by the "pageFrontmatter" collection below, before any
+  // template renders - lets coverImage() prefer a cover set via the CMS
+  // over the folder-scan fallback.
+  const pageCoverBySlug = new Map();
+  eleventyConfig.addCollection("pageFrontmatter", (api) => {
+    const items = api.getFilteredByGlob("src/content/*.md");
+    for (const item of items) {
+      if (item.data.cover) pageCoverBySlug.set(item.fileSlug, item.data.cover);
+    }
+    return items;
+  });
+
   const imageCache = new Map();
   eleventyConfig.addFilter("coverImage", (slug) => {
+    if (pageCoverBySlug.has(slug)) return pageCoverBySlug.get(slug);
     if (imageCache.has(slug)) return imageCache.get(slug);
     const dir = path.join(__dirname, "src", "images", slug);
     let result = null;
