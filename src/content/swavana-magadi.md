@@ -1,6 +1,8 @@
 ---
-title: "SwaVana by SwaYYam"
-slug: "swavana-magadi"
+title: SwaVana by SwaYYam
+slug: swavana-magadi
+summary: A little wilderness pad near Savanadurga.
+location: Magadi, near Bangalore
 ---
 
 # SwaVana by SwaYYam
