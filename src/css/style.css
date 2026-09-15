@@ -402,7 +402,10 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   padding: 1rem 1.1rem;
   font-family: var(--serif);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 1.0rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .property-card-summary {
   display: block;
