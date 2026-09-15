@@ -1,8 +1,11 @@
 ---
-title: Khetiyo, Corbett
+title: Khetiyo, Unexplored Corbett
 slug: khetiyo-corbett-garhwal
-categories: ["himalayas"]
+categories:
+  - himalayas
+cover: /images/khetiyo-corbett/river.jpeg
 summary: Deep inside the unexplored side of Corbett....
+location: Corbett NP, Uttarakhand
 ---
 
 # Khetiyo, Corbett
