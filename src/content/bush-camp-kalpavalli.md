@@ -2,7 +2,7 @@
 title: Timbaktu Bush Camp
 slug: bush-camp-kalpavalli
 cover: /images/bush-camp-kalpavalli/AllSetuUp-1024x665.jpeg
-summary: Have you been to a savanna "forest"?
+summary: A fascinating grassland, jusy 3 hrs from Bangalore
 location: Kalpavalli Hills, near Penukonda
 ---
 
