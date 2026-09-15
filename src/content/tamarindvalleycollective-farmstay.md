@@ -1,9 +1,11 @@
 ---
 title: Tamarind Valley Collective
 slug: tamarindvalleycollective-farmstay
-categories: ["near-bangalore"]
-cover: /images/tamarind-valley-collective/tvc-collageinsta.png
+categories:
+  - near-bangalore
+cover: /images/tamarind-valley-collective/2024-12-28-10.37.18.jpg
 summary: 100 acre forested-farm, just 90km from Bangalore.
+location: Melagiri Hills, 90km from Bangalore
 ---
 
 # Tamarind Valley Collective
