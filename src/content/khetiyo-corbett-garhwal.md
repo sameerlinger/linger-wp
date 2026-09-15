@@ -1,6 +1,7 @@
 ---
-title: "Khetiyo, Corbett"
-slug: "khetiyo-corbett-garhwal"
+title: Khetiyo, Corbett
+slug: khetiyo-corbett-garhwal
+summary: Deep inside the unexplored side of Corbett....
 ---
 
 # Khetiyo, Corbett
