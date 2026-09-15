@@ -2,6 +2,7 @@
 title: Bush Camp, Kalpavalli
 slug: bush-camp-kalpavalli
 cover: /images/bush-camp-kalpavalli/AllSetuUp-1024x665.jpeg
+summary: A gorgeous 4000 acre grassland protected and managed by the community!
 ---
 
 # Bush Camp, Kalpavalli
