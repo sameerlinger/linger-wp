@@ -1,6 +1,8 @@
 ---
-title: "Varshini Estate, Sakleshpur"
-slug: "varshini-estate-sakleshpur"
+title: "Varshini Estate : Hill Top Bliss"
+slug: varshini-estate-sakleshpur
+summary: An architectural marvel, 40 acres of a very diverse terrain estate.
+location: Sakleshpur
 ---
 
 # Varshini Estate, Sakleshpur
