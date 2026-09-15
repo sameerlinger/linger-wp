@@ -1,7 +1,9 @@
 ---
 title: Chestnut Grove, Uttarakhand
 slug: chestnutgrove-bageshwar
-summary: Kumaon at its best.
+cover: /images/chestnut-grove-uttarakhand/2019-02-25-15.02.41-1.jpg
+summary: In the middle of pretty nowhere. Kumaon at its best.
+location: Vijaypur, 190 km from Kathgodam.
 ---
 
 # Chestnut Grove, Uttarakhand
