@@ -1,8 +1,9 @@
 ---
-title: The Linger Farm, Coorg
+title: The Linger Farm
 slug: lingerfarm-coorg
 cover: /images/the-linger-farm-chettimani/2021-09-22-14.31.33.jpg
 summary: Local flavours, the slow paced Coorg life and biodiversity!
+location: Chettimani, Coorg
 ---
 
 # The Linger Farm, Chettimani
