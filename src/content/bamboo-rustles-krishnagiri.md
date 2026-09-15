@@ -1,9 +1,10 @@
 ---
 title: Bamboo Rustles
 slug: bamboo-rustles-krishnagiri
-categories: ["near-bangalore"]
 summary: Pit Viper research, and gecko capital of the region!
 location: Krishnagiri Hills
+categories:
+  - wilderness
 ---
 
 # Bamboo Rustles, Krishnagiri Hills
