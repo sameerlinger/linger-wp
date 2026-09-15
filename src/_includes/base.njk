@@ -157,13 +157,16 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
         return res.json();
       })
       .then(function (data) {
+        var tryElsewhere = " Do check out the other locations we have, or pick a different date.";
         if (data && data.full) {
           status.dataset.state = "error";
-          status.textContent = "Oops, we seem to be full across rooms for then, please try another date!";
+          status.textContent = (data.reason === "capacity"
+            ? "Sorry, we can't accommodate that many folks at this time."
+            : "Oops, we seem to be full on those dates.") + tryElsewhere;
           return;
         }
         status.dataset.state = "ok";
-        status.textContent = "Thanks! We've got your enquiry and will get back to you by email shortly.";
+        status.textContent = "We do seem to have availability - have logged a query and you'll hear from us soon!";
         form.reset();
       })
       .catch(function () {
