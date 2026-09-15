@@ -1,6 +1,7 @@
 ---
-title: "The Feel-Good-Farm"
-slug: "feelgoodfarm-doddaballapura"
+title: The Feel-Good-Farm
+slug: feelgoodfarm-doddaballapura
+summary: Natural Farm to table, so near Bangalore.
 ---
 
 # The Feel-Good-Farm
