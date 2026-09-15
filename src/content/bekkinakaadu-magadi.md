@@ -1,8 +1,9 @@
 ---
-title: Bekkinakaadu, Magadi
+title: Bekkinakaadu
 slug: bekkinakaadu-magadi
 cover: /images/bekkinakaadu-magadi/Steps.jpeg
 summary: 25 acres of earthy wilderness just an hour from Bangalore!
+location: Magadi, near Savanadurga
 ---
 
 # Bekkinakaadu, Magadi
