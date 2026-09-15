@@ -1,8 +1,9 @@
 ---
-title: Bush Camp, Kalpavalli
+title: Timbaktu Bush Camp
 slug: bush-camp-kalpavalli
 cover: /images/bush-camp-kalpavalli/AllSetuUp-1024x665.jpeg
 summary: Have you been to a savanna "forest"?
+location: Kalpavalli Hills, near Penukonda
 ---
 
 # Bush Camp, Kalpavalli
