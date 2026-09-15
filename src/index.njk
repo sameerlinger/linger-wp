@@ -38,7 +38,13 @@ permalink: /index.html
   {% for slug in region.properties %}
     <a class="property-card" href="/{{ slug }}/">
       {% set cover = slug | coverImage %}
-      {% if cover %}<img src="{{ cover }}" alt="{{ slug | propertyTitle(properties) }}" loading="lazy">{% endif %}
+      {% set location = slug | pageLocation %}
+      {% if cover %}
+      <div class="property-card-media">
+        <img src="{{ cover }}" alt="{{ slug | propertyTitle(properties) }}" loading="lazy">
+        {% if location %}<span class="property-card-location">{{ location }}</span>{% endif %}
+      </div>
+      {% endif %}
       <span class="property-card-title">{{ slug | propertyTitle(properties) }}</span>
       {% set summary = slug | pageSummary %}
       {% if summary %}<span class="property-card-summary">{{ summary }}</span>{% endif %}

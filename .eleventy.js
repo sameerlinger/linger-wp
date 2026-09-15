@@ -231,17 +231,20 @@ module.exports = function (eleventyConfig) {
   const pageCoverBySlug = new Map();
   const pageSummaryBySlug = new Map();
   const pageTitleBySlug = new Map();
+  const pageLocationBySlug = new Map();
   eleventyConfig.addCollection("pageFrontmatter", (api) => {
     const items = api.getFilteredByGlob("src/content/*.md");
     for (const item of items) {
       if (item.data.cover) pageCoverBySlug.set(item.fileSlug, item.data.cover);
       if (item.data.summary) pageSummaryBySlug.set(item.fileSlug, item.data.summary);
       if (item.data.title) pageTitleBySlug.set(item.fileSlug, item.data.title);
+      if (item.data.location) pageLocationBySlug.set(item.fileSlug, item.data.location);
     }
     return items;
   });
 
   eleventyConfig.addFilter("pageSummary", (slug) => pageSummaryBySlug.get(slug) || null);
+  eleventyConfig.addFilter("pageLocation", (slug) => pageLocationBySlug.get(slug) || null);
 
   const imageCache = new Map();
   eleventyConfig.addFilter("coverImage", (slug) => {

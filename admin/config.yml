@@ -30,6 +30,11 @@ collections:
         widget: "string"
         required: false
         hint: "Shown on the homepage under this property's photo. Leave blank to show nothing."
+      - label: "Location"
+        name: "location"
+        widget: "string"
+        required: false
+        hint: "Shown as a small label over this property's photo on the homepage, e.g. \"Coorg, Karnataka\". Leave blank to show nothing."
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "homepage"
