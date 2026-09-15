@@ -1,6 +1,7 @@
 ---
-title: "Bamboo Rustles, Krishnagiri Hills"
-slug: "bamboo-rustles-krishnagiri"
+title: Bamboo Rustles, Krishnagiri Hills
+slug: bamboo-rustles-krishnagiri
+summary: Pit Viper research, and gecko capital of the region!
 ---
 
 # Bamboo Rustles, Krishnagiri Hills
