@@ -192,6 +192,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("plus1", (n) => n + 1);
 
   eleventyConfig.addFilter("propertyTitle", (slug, properties) => {
+    if (pageTitleBySlug.has(slug)) return pageTitleBySlug.get(slug);
     const found = (properties || []).find((p) => p.slug === slug);
     return found ? found.title : slug;
   });
@@ -229,11 +230,13 @@ module.exports = function (eleventyConfig) {
   // over the folder-scan fallback.
   const pageCoverBySlug = new Map();
   const pageSummaryBySlug = new Map();
+  const pageTitleBySlug = new Map();
   eleventyConfig.addCollection("pageFrontmatter", (api) => {
     const items = api.getFilteredByGlob("src/content/*.md");
     for (const item of items) {
       if (item.data.cover) pageCoverBySlug.set(item.fileSlug, item.data.cover);
       if (item.data.summary) pageSummaryBySlug.set(item.fileSlug, item.data.summary);
+      if (item.data.title) pageTitleBySlug.set(item.fileSlug, item.data.title);
     }
     return items;
   });
