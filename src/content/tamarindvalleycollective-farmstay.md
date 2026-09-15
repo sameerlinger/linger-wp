@@ -1,6 +1,7 @@
 ---
-title: "Tamarind Valley Collective"
-slug: "tamarindvalleycollective-farmstay"
+title: Tamarind Valley Collective
+slug: tamarindvalleycollective-farmstay
+cover: /images/tamarind-valley-collective/tvc-collageinsta.png
 ---
 
 # Tamarind Valley Collective
