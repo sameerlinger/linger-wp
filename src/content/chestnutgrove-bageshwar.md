@@ -1,6 +1,7 @@
 ---
-title: "Chestnut Grove, Uttarakhand"
-slug: "chestnutgrove-bageshwar"
+title: Chestnut Grove, Uttarakhand
+slug: chestnutgrove-bageshwar
+summary: Kumaon at its best.
 ---
 
 # Chestnut Grove, Uttarakhand
