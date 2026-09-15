@@ -1,8 +1,11 @@
 ---
 title: The Feel-Good-Farm
 slug: feelgoodfarm-doddaballapura
-categories: ["near-bangalore"]
+cover: /images/the-feel-good-farm/f6640892-2cc8-4ffc-97b1-f40a1ca006a7.jpeg
 summary: Natural Farm to table, so near Bangalore.
+location: Doddaballapura, near Bangalore
+categories:
+  - near-bangalore
 ---
 
 # The Feel-Good-Farm
