@@ -2,7 +2,7 @@
 title: Naimisha Aranya
 slug: naimisha-aranya-nelamangala
 cover: /images/naimisha-aranya/whatsapp-image-2026-06-24-at-14.26.15.jpeg
-summary: An unwind weekend option at a diverse, organic vegetarian farm.
+summary: Uwind weekends at a diverse, organic vegetarian farm.
 location: Nelamangala, Bangalore
 ---
 
