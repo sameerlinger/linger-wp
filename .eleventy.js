@@ -228,13 +228,17 @@ module.exports = function (eleventyConfig) {
   // template renders - lets coverImage() prefer a cover set via the CMS
   // over the folder-scan fallback.
   const pageCoverBySlug = new Map();
+  const pageSummaryBySlug = new Map();
   eleventyConfig.addCollection("pageFrontmatter", (api) => {
     const items = api.getFilteredByGlob("src/content/*.md");
     for (const item of items) {
       if (item.data.cover) pageCoverBySlug.set(item.fileSlug, item.data.cover);
+      if (item.data.summary) pageSummaryBySlug.set(item.fileSlug, item.data.summary);
     }
     return items;
   });
+
+  eleventyConfig.addFilter("pageSummary", (slug) => pageSummaryBySlug.get(slug) || null);
 
   const imageCache = new Map();
   eleventyConfig.addFilter("coverImage", (slug) => {

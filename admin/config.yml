@@ -25,6 +25,11 @@ collections:
         media_folder: "/src/images/{{slug}}"
         public_folder: "/images/{{slug}}"
         hint: "Shown on the homepage property grid and in the nav. Leave blank to keep using the first photo in this page's gallery."
+      - label: "One-line description"
+        name: "summary"
+        widget: "string"
+        required: false
+        hint: "Shown on the homepage under this property's photo. Leave blank to show nothing."
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "homepage"
