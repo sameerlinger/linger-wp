@@ -2,6 +2,7 @@
 title: Three Wooded Acres, Coorg
 slug: three-wooded-acres-coorg
 cover: /images/three-wooded-acres-coorg/frontcottage.jpeg
+summary: A slide of the pristine Western Ghats tucked away right next to Madikeri!
 ---
 # Three Wooded Acres, Coorg
 
