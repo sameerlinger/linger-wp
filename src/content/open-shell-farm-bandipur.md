@@ -1,9 +1,11 @@
 ---
 title: Open Shell Farm
 slug: open-shell-farm-bandipur
-categories: ["bandipur"]
 summary: A permaculture farm adjoining the Bandipura forest.
 location: Bandipur, 4 hrs from Bangalore.
+categories:
+  - near-bangalore
+  - wilderness
 ---
 
 # Open Shell Farm, Bandipur
