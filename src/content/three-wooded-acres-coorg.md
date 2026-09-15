@@ -1,8 +1,9 @@
 ---
-title: Three Wooded Acres, Coorg
+title: Three Wooded Acres
 slug: three-wooded-acres-coorg
 cover: /images/three-wooded-acres-coorg/frontcottage.jpeg
 summary: Quiet. Bird haven. Right next to Madikeri!
+location: Monnengeri, near Madikeri (Coorg)
 ---
 # Three Wooded Acres, Coorg
 
