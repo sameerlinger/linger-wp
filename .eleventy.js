@@ -176,6 +176,36 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByGlob("src/content/blog/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // Categories ("regions" on the homepage) live as their own small CMS
+  // collection (src/content/categories/*.md, excluded from page output by
+  // categories.11tydata.js) so they're addable/editable/deletable, and a
+  // property opts into one or more of them via its own "categories"
+  // frontmatter list (a relation-widget field in admin/config.yml) rather
+  // than a category owning a fixed property list - so one property can
+  // belong to several sections at once.
+  eleventyConfig.addCollection("regions", (api) => {
+    const categoryDocs = api
+      .getFilteredByGlob("src/content/categories/*.md")
+      .filter((item) => item.data.slug && item.data.title)
+      .sort((a, b) => {
+        const orderA = typeof a.data.order === "number" ? a.data.order : 999;
+        const orderB = typeof b.data.order === "number" ? b.data.order : 999;
+        return orderA - orderB || a.data.title.localeCompare(b.data.title);
+      });
+    const propertyDocs = api.getFilteredByGlob("src/content/*.md").filter((item) => propertySlugs.has(item.fileSlug));
+    return categoryDocs
+      .map((cat) => ({
+        name: cat.data.title,
+        slug: cat.data.slug,
+        properties: propertyDocs
+          .filter((p) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug))
+          .map((p) => p.fileSlug),
+      }))
+      // A freshly-created category with no properties assigned to it yet
+      // would otherwise show up as an empty heading with nothing under it.
+      .filter((region) => region.properties.length > 0);
+  });
+
   eleventyConfig.addCollection("blogCategories", (api) => {
     const posts = api.getFilteredByGlob("src/content/blog/*.md").sort((a, b) => b.date - a.date);
     const bySlug = new Map();

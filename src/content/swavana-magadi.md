@@ -1,6 +1,7 @@
 ---
 title: SwaVana by SwaYYam
 slug: swavana-magadi
+categories: ["near-bangalore"]
 summary: A little wilderness pad near Savanadurga.
 location: Magadi, near Bangalore
 ---

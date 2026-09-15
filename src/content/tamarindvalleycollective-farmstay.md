@@ -1,6 +1,7 @@
 ---
 title: Tamarind Valley Collective
 slug: tamarindvalleycollective-farmstay
+categories: ["near-bangalore"]
 cover: /images/tamarind-valley-collective/tvc-collageinsta.png
 summary: 100 acre forested-farm, just 90km from Bangalore.
 ---

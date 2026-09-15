@@ -35,7 +35,34 @@ collections:
         widget: "string"
         required: false
         hint: "Shown as a small label over this property's photo on the homepage, e.g. \"Coorg, Karnataka\". Leave blank to show nothing."
+      - label: "Categories"
+        name: "categories"
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["title"]
+        value_field: "slug"
+        display_fields: ["title"]
+        multiple: true
+        required: false
+        hint: "Which homepage sections this property appears under (pick one or more). Manage the list of sections themselves under \"Categories\" below. Leave blank to leave this property off the homepage grid."
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "categories"
+    label: "Categories"
+    folder: "src/content/categories"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Shown as the section heading on the homepage." }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Used internally to link properties to this section - lowercase, hyphenated, no spaces." }
+      - label: "Order"
+        name: "order"
+        widget: "number"
+        required: false
+        hint: "Controls left-to-right/top-to-bottom order on the homepage - lower numbers come first. Leave blank to sort after all the numbered ones."
 
   - name: "homepage"
     label: "Homepage"

@@ -1,6 +1,7 @@
 ---
 title: The Earth House
 slug: palampur-himachal
+categories: ["himalayas"]
 cover: /images/the-earth-house-palampur/teh1rainyday.jpg
 summary: Quiet, private, riverside, at the base of the Dhuladhars
 location: Palampur, Himachal

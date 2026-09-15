@@ -1,6 +1,7 @@
 ---
 title: The Feel-Good-Farm
 slug: feelgoodfarm-doddaballapura
+categories: ["near-bangalore"]
 summary: Natural Farm to table, so near Bangalore.
 ---
 

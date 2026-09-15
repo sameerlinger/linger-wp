@@ -1,6 +1,7 @@
 ---
 title: Balur Estate, since 1840
 slug: balur
+categories: ["coffee-estates"]
 cover: /images/linger-balur-estate/2026-09-12-07.26.38.jpg
 summary: 400 acres of coffee heritage...
 location: Chikmagalur

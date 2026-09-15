@@ -1,6 +1,7 @@
 ---
 title: Khetiyo, Corbett
 slug: khetiyo-corbett-garhwal
+categories: ["himalayas"]
 summary: Deep inside the unexplored side of Corbett....
 ---
 

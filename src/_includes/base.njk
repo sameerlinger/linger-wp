@@ -33,7 +33,7 @@
         {% if "vacation-offer-deal" | pageExists %}<li><a href="/vacation-offer-deal/">Offers</a></li>{% endif %}
       </ul>
     </details>
-    {% for region in regions %}
+    {% for region in collections.regions %}
     <details class="nav-drop">
       <summary>{{ region.name }}</summary>
       <ul>
