@@ -2,6 +2,7 @@
 title: Bekkinakaadu, Magadi
 slug: bekkinakaadu-magadi
 cover: /images/bekkinakaadu-magadi/Steps.jpeg
+summary: 25 acres of earthy wilderness just an hour from Bangalore!
 ---
 
 # Bekkinakaadu, Magadi
