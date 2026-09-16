@@ -1,7 +1,9 @@
 const contentSlugs = require("../../lib/contentSlugs");
+const dormantSlugs = require("../../lib/dormantSlugs");
 const raw = require("./source/featured.json");
 
 module.exports = () => {
   const slugs = contentSlugs();
-  return raw.filter((slug) => slugs.has(slug));
+  const dormant = dormantSlugs();
+  return raw.filter((slug) => slugs.has(slug) && !dormant.has(slug));
 };

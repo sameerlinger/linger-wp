@@ -192,7 +192,9 @@ module.exports = function (eleventyConfig) {
         const orderB = typeof b.data.order === "number" ? b.data.order : 999;
         return orderA - orderB || a.data.title.localeCompare(b.data.title);
       });
-    const propertyDocs = api.getFilteredByGlob("src/content/*.md").filter((item) => propertySlugs.has(item.fileSlug));
+    const propertyDocs = api
+      .getFilteredByGlob("src/content/*.md")
+      .filter((item) => propertySlugs.has(item.fileSlug) && !item.data.dormant);
     return categoryDocs
       .map((cat) => ({
         name: cat.data.title,

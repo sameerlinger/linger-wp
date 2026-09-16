@@ -158,6 +158,11 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
       })
       .then(function (data) {
         var tryElsewhere = " Do check out the other locations we have, or pick a different date.";
+        if (data && data.dormant) {
+          status.dataset.state = "error";
+          status.textContent = "Sorry, this property isn't currently taking bookings.";
+          return;
+        }
         if (data && data.full) {
           status.dataset.state = "error";
           status.textContent = (data.reason === "capacity"

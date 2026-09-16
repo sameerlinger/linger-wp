@@ -7,6 +7,10 @@ layout: base.njk
 {% if page.fileSlug | isProperty(properties) %}
 <section class="enquiry">
   <div class="enquiry-inner">
+    {% if dormant %}
+    <h2>Check availability</h2>
+    <p class="enquiry-sub">This property isn't currently taking bookings.</p>
+    {% else %}
     <h2>Check availability</h2>
     <p class="enquiry-sub">Tell us your dates and we'll get back to you by email.</p>
     <form class="enquiry-form" data-property-slug="{{ page.fileSlug }}" data-property-name="{{ page.fileSlug | propertyTitle(properties) }}">
@@ -25,6 +29,7 @@ layout: base.njk
       <button type="submit" class="enquiry-submit">Check availability</button>
       <p class="enquiry-status" role="status"></p>
     </form>
+    {% endif %}
   </div>
 </section>
 {% endif %}
