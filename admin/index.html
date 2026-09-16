@@ -29,8 +29,14 @@
   // dormant toggle made in Folio shows up here without waiting for an
   // unrelated CMS edit to trigger one. ---
   function initSyncButton() {
+    // Bottom-right, not top-right: Decap's own header (collection title,
+    // search, "New entry"/user menu) lives up there, and a fixed overlay in
+    // that corner was covering it. This isn't literally inside Decap's own
+    // toolbar - that would mean writing to its internal DOM, which isn't a
+    // documented extension point and could break silently on a Decap
+    // update - just out of the way of it.
     var bar = el("div", {
-      position: "fixed", top: "8px", right: "8px", zIndex: 9999,
+      position: "fixed", bottom: "8px", right: "8px", zIndex: 9999,
       display: "flex", alignItems: "center", gap: "8px",
       background: "#fff", border: "1px solid #ccc", borderRadius: "6px",
       padding: "6px 10px", font: "13px sans-serif", boxShadow: "0 1px 4px rgba(0,0,0,0.15)",
