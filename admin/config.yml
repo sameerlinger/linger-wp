@@ -18,12 +18,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
-      - label: "Dormant"
-        name: "dormant"
-        widget: "boolean"
-        default: false
-        required: false
-        hint: "Removes this page from the homepage grid and nav and turns off new enquiries, without deleting it - it stays live at its direct URL. Use this instead of just clearing Categories so it's unambiguous this was intentional. Also flag the matching property as dormant in the booking engine's admin so staff/reports see it there too - the two aren't linked automatically."
       - label: "Cover photo"
         name: "cover"
         widget: "image"

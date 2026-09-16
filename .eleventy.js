@@ -93,6 +93,7 @@ function groupInlineGalleries(content) {
 const properties = require("./src/_data/source/properties.json");
 const propertySlugs = new Set(properties.map((p) => p.slug));
 const contentSlugs = require("./lib/contentSlugs");
+const dormantSlugs = require("./lib/dormantSlugs");
 
 function slugifyHeading(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -183,7 +184,8 @@ module.exports = function (eleventyConfig) {
   // frontmatter list (a relation-widget field in admin/config.yml) rather
   // than a category owning a fixed property list - so one property can
   // belong to several sections at once.
-  eleventyConfig.addCollection("regions", (api) => {
+  eleventyConfig.addCollection("regions", async (api) => {
+    const dormant = await dormantSlugs();
     const categoryDocs = api
       .getFilteredByGlob("src/content/categories/*.md")
       .filter((item) => item.data.slug && item.data.title)
@@ -194,7 +196,7 @@ module.exports = function (eleventyConfig) {
       });
     const propertyDocs = api
       .getFilteredByGlob("src/content/*.md")
-      .filter((item) => propertySlugs.has(item.fileSlug) && !item.data.dormant);
+      .filter((item) => propertySlugs.has(item.fileSlug) && !dormant.has(item.fileSlug));
     return categoryDocs
       .map((cat) => ({
         name: cat.data.title,

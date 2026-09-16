@@ -7,7 +7,7 @@ layout: base.njk
 {% if page.fileSlug | isProperty(properties) %}
 <section class="enquiry">
   <div class="enquiry-inner">
-    {% if dormant %}
+    {% if page.fileSlug in dormantSlugs %}
     <h2>Check availability</h2>
     <p class="enquiry-sub">This property isn't currently taking bookings.</p>
     {% else %}
