@@ -7,5 +7,93 @@
 </head>
 <body>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+// Two small additions bolted on outside Decap's own app, deliberately not
+// using Decap's custom-widget/preview APIs - this keeps them isolated from
+// (and unable to break) the actual entry form Decap renders, at the cost of
+// not being a "real" integrated field. See linger-wp memory: Folio
+// (booking-engine-app) is the single source of truth for dormant status,
+// not this CMS - these are read-only conveniences, not editing controls.
+(function () {
+  var SYNC_ENDPOINT = "https://linger-wp-oauth.onrender.com/sync-deploy";
+  var DORMANT_ENDPOINT = "https://linger-booking-engine.onrender.com/api/public/dormant-properties";
+
+  function el(tag, styles, text) {
+    var e = document.createElement(tag);
+    Object.assign(e.style, styles);
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  // --- "Sync properties": forces a fresh linger-wp build/deploy so a
+  // dormant toggle made in Folio shows up here without waiting for an
+  // unrelated CMS edit to trigger one. ---
+  function initSyncButton() {
+    var bar = el("div", {
+      position: "fixed", top: "8px", right: "8px", zIndex: 9999,
+      display: "flex", alignItems: "center", gap: "8px",
+      background: "#fff", border: "1px solid #ccc", borderRadius: "6px",
+      padding: "6px 10px", font: "13px sans-serif", boxShadow: "0 1px 4px rgba(0,0,0,0.15)",
+    });
+    var button = el("button", { cursor: "pointer" }, "Sync properties");
+    var status = el("span", { color: "#666" }, "");
+    bar.appendChild(button);
+    bar.appendChild(status);
+    document.body.appendChild(bar);
+
+    button.addEventListener("click", function () {
+      button.disabled = true;
+      status.textContent = "Syncing…";
+      fetch(SYNC_ENDPOINT, { method: "POST" })
+        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+        .then(function (result) {
+          status.textContent = result.ok ? "Triggered — live in ~1 min" : (result.data && result.data.error) || "Failed";
+        })
+        .catch(function () {
+          status.textContent = "Failed — check your connection";
+        })
+        .finally(function () {
+          button.disabled = false;
+          setTimeout(function () { status.textContent = ""; }, 6000);
+        });
+    });
+  }
+
+  // --- Dormant banner: shown while editing a property that's currently
+  // dormant in Folio, since Decap has no idea (this CMS no longer stores
+  // dormant status at all). ---
+  function initDormantBanner() {
+    var banner = el("div", {
+      display: "none", position: "fixed", top: "0", left: "0", right: "0", zIndex: 9998,
+      background: "#8a5a2a", color: "#fff", textAlign: "center",
+      padding: "6px", font: "13px sans-serif",
+    }, "Dormant — set in the booking engine's admin, not editable here.");
+    document.body.appendChild(banner);
+
+    var dormantSlugs = null; // fetched lazily, cached for the page's lifetime
+    function currentEntrySlug() {
+      // Decap's default hash route for editing an entry in the "pages"
+      // collection: #/collections/pages/entries/<slug>
+      var m = location.hash.match(/^#\/collections\/pages\/entries\/([^/?]+)/);
+      return m ? decodeURIComponent(m[1]) : null;
+    }
+    function refresh() {
+      var slug = currentEntrySlug();
+      if (!slug) { banner.style.display = "none"; return; }
+      var apply = function () { banner.style.display = dormantSlugs && dormantSlugs.indexOf(slug) !== -1 ? "block" : "none"; };
+      if (dormantSlugs) { apply(); return; }
+      fetch(DORMANT_ENDPOINT)
+        .then(function (res) { return res.json(); })
+        .then(function (data) { dormantSlugs = Array.isArray(data.slugs) ? data.slugs : []; apply(); })
+        .catch(function () { /* fail quiet - this is an informational nicety, not core CMS function */ });
+    }
+    window.addEventListener("hashchange", refresh);
+    refresh();
+  }
+
+  initSyncButton();
+  initDormantBanner();
+})();
+</script>
 </body>
 </html>

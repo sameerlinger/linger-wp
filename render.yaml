@@ -20,3 +20,5 @@ services:
         sync: false
       - key: GITHUB_OAUTH_CLIENT_SECRET
         sync: false
+      - key: LINGER_WP_DEPLOY_HOOK_URL
+        sync: false

@@ -7,11 +7,65 @@ const crypto = require("crypto");
 const app = express();
 app.set("trust proxy", true);
 
-const { GITHUB_OAUTH_CLIENT_ID, GITHUB_OAUTH_CLIENT_SECRET } = process.env;
+const { GITHUB_OAUTH_CLIENT_ID, GITHUB_OAUTH_CLIENT_SECRET, LINGER_WP_DEPLOY_HOOK_URL } = process.env;
 
 const pendingStates = new Set();
 
 app.get("/", (req, res) => res.send("linger-wp-oauth: ok"));
+
+// Lets the "Sync properties" button on the Decap CMS admin page (see
+// admin/index.html) force a fresh linger-wp build/deploy on demand, instead
+// of waiting for the next unrelated CMS edit to pick up a dormant-status
+// change made in Folio. Deliberately unauthenticated (same trust level as
+// any other visitor-facing action on this static site) since triggering a
+// rebuild isn't destructive or sensitive - just rate-limited so it can't be
+// hammered. The actual secret (the Render deploy hook URL) stays
+// server-side; the browser never sees it.
+const SYNC_ALLOWED_ORIGINS = [
+  "https://linger.in",
+  "https://www.linger.in",
+  "https://linger-wp.onrender.com",
+  "http://localhost:8080",
+];
+const SYNC_RATE_LIMIT_WINDOW_MS = 2 * 60 * 1000;
+let lastSyncAt = 0;
+
+function applySyncCors(req, res) {
+  const origin = req.headers.origin;
+  if (origin && SYNC_ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+    res.setHeader("Vary", "Origin");
+  }
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+}
+
+app.options("/sync-deploy", (req, res) => {
+  applySyncCors(req, res);
+  res.status(204).end();
+});
+
+app.post("/sync-deploy", async (req, res) => {
+  applySyncCors(req, res);
+
+  if (!LINGER_WP_DEPLOY_HOOK_URL) {
+    return res.status(500).json({ error: "Not configured - missing LINGER_WP_DEPLOY_HOOK_URL" });
+  }
+
+  const now = Date.now();
+  if (now - lastSyncAt < SYNC_RATE_LIMIT_WINDOW_MS) {
+    return res.status(429).json({ error: "A sync was just triggered - please wait a couple of minutes and try again" });
+  }
+  lastSyncAt = now;
+
+  try {
+    const hookRes = await fetch(LINGER_WP_DEPLOY_HOOK_URL, { method: "POST" });
+    if (!hookRes.ok) throw new Error(`deploy hook responded ${hookRes.status}`);
+    return res.status(200).json({ ok: true });
+  } catch (err) {
+    console.error("[sync-deploy]", err.message);
+    return res.status(502).json({ error: "Could not trigger a redeploy" });
+  }
+});
 
 app.get("/auth", (req, res) => {
   if (!GITHUB_OAUTH_CLIENT_ID) {
