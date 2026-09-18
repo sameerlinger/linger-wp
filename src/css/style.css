@@ -28,6 +28,39 @@ img { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 
+/* ---------- Announcement banner ---------- */
+
+.site-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.6rem 2.5rem;
+  text-align: center;
+}
+.site-banner-text { margin: 0; }
+.site-banner a { color: #fff; text-decoration: underline; font-weight: 600; }
+.site-banner a:hover { color: #fff; opacity: 0.85; }
+.site-banner-close {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+.site-banner-close:hover { opacity: 0.75; }
+
 /* ---------- Contact bar ---------- */
 
 .contact-bar {

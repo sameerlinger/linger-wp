@@ -11,6 +11,15 @@
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+{% if banner.enabled and banner.message %}
+<div class="site-banner" id="site-banner" data-message="{{ banner.message }}">
+  <p class="site-banner-text">
+    {{ banner.message }}
+    {% if banner.linkUrl %}<a href="{{ banner.linkUrl }}">{{ banner.linkText or "Learn more" }}</a>{% endif %}
+  </p>
+  <button type="button" class="site-banner-close" aria-label="Dismiss">&times;</button>
+</div>
+{% endif %}
 <div class="contact-bar">
   <a href="mailto:stay@linger.in">stay@linger.in</a>
   <a href="tel:+919590050001">+91-959-005-0001</a>
@@ -91,6 +100,19 @@
   <img src="" alt="">
 </div>
 <script>
+var siteBanner = document.getElementById("site-banner");
+if (siteBanner) {
+  var bannerMsg = siteBanner.dataset.message || "";
+  try {
+    if (sessionStorage.getItem("bannerDismissed") === bannerMsg) siteBanner.remove();
+  } catch (e) {}
+  var bannerClose = siteBanner.querySelector(".site-banner-close");
+  if (bannerClose) bannerClose.addEventListener("click", function () {
+    siteBanner.remove();
+    try { sessionStorage.setItem("bannerDismissed", bannerMsg); } catch (e) {}
+  });
+}
+
 document.querySelectorAll(".carousel-track").forEach(function (track) {
   var prev = track.parentElement.querySelector(".carousel-prev");
   var next = track.parentElement.querySelector(".carousel-next");

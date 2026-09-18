@@ -77,6 +77,32 @@ collections:
             hint: "One of these is shown at random behind the homepage headline on each visit. Add or remove photos here."
             field: { label: "Photo", name: "image", widget: "image" }
 
+      - name: "banner"
+        label: "Offers / Announcement Banner"
+        file: "src/_data/banner.json"
+        fields:
+          - label: "Show banner"
+            name: "enabled"
+            widget: "boolean"
+            default: false
+            hint: "Turn on to show the banner at the top of every page. Turn off to hide it without losing the text below."
+          - label: "Message"
+            name: "message"
+            widget: "string"
+            required: false
+            hint: "e.g. \"Diwali special: 15% off stays booked before Oct 20.\""
+          - label: "Link URL"
+            name: "linkUrl"
+            widget: "string"
+            required: false
+            hint: "Where the banner links to, e.g. https://linger.in/vacation-offer-deal/. Leave blank for plain text with no link."
+          - label: "Link text"
+            name: "linkText"
+            widget: "string"
+            required: false
+            default: "Learn more"
+            hint: "Only shown if Link URL is set above."
+
   - name: "posts"
     label: "Blog Posts"
     folder: "src/content/blog"
