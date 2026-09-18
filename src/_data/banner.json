@@ -1,6 +1,6 @@
 {
-  "enabled": true,
-  "message": "Diwali special: 15% off stays booked before Oct 20.",
-  "linkUrl": "/vacation-offer-deal/",
-  "linkText": "See the offer"
+  "enabled": false,
+  "message": "",
+  "linkUrl": "",
+  "linkText": "Learn more"
 }
