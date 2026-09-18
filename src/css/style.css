@@ -579,6 +579,54 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   .whatsapp-float svg { width: 26px; height: 26px; }
 }
 
+/* ---------- Floating announcement banner ---------- */
+
+.site-banner {
+  position: fixed;
+  right: 1.5rem;
+  bottom: calc(1.5rem + 56px + 0.75rem);
+  z-index: 49;
+  width: 260px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  padding: 0.85rem 2rem 0.85rem 1rem;
+}
+.site-banner-text {
+  margin: 0;
+  color: var(--fg);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+.site-banner-text a {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.site-banner-close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+.site-banner-close:hover { color: var(--fg); }
+@media (max-width: 640px) {
+  .site-banner {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    bottom: calc(1rem + 48px + 0.6rem);
+  }
+}
+
 /* ---------- Mobile ---------- */
 
 @media (max-width: 640px) {

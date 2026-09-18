@@ -81,6 +81,15 @@
     <p class="footer-copy">&copy; {{ currentYear }} Linger</p>
   </div>
 </footer>
+{% if banner.enabled and banner.message %}
+<div class="site-banner" id="site-banner" data-message="{{ banner.message }}">
+  <button type="button" class="site-banner-close" aria-label="Dismiss">&times;</button>
+  <p class="site-banner-text">
+    {{ banner.message }}
+    {% if banner.linkUrl %}<a href="{{ banner.linkUrl }}">{{ banner.linkText or "Learn more" }}</a>{% endif %}
+  </p>
+</div>
+{% endif %}
 <a class="whatsapp-float" href="https://wa.me/918548065772" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
   <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true">
     <path d="M16.005 3C9.373 3 3.995 8.377 3.995 15c0 2.31.638 4.47 1.75 6.32L3.5 29l7.86-2.06A11.94 11.94 0 0 0 16.005 27C22.637 27 28 21.623 28 15S22.637 3 16.005 3zm0 21.75c-1.9 0-3.68-.5-5.23-1.38l-.375-.22-4.66 1.22 1.24-4.54-.24-.39A9.7 9.7 0 0 1 5.245 15c0-5.9 4.8-10.7 10.76-10.7S26.755 9.1 26.755 15 21.965 24.75 16.005 24.75zm5.9-8.02c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.22.32-.83 1.05-1.02 1.26-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.6-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.55-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.54-.73-.55-.19-.01-.4-.01-.62-.01-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.06 1.29 3.27c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.51 1.8.66.76.24 1.45.21 1.99.13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"/>
@@ -91,6 +100,19 @@
   <img src="" alt="">
 </div>
 <script>
+var siteBanner = document.getElementById("site-banner");
+if (siteBanner) {
+  var bannerMsg = siteBanner.dataset.message || "";
+  try {
+    if (sessionStorage.getItem("bannerDismissed") === bannerMsg) siteBanner.remove();
+  } catch (e) {}
+  var bannerClose = siteBanner.querySelector(".site-banner-close");
+  if (bannerClose) bannerClose.addEventListener("click", function () {
+    siteBanner.remove();
+    try { sessionStorage.setItem("bannerDismissed", bannerMsg); } catch (e) {}
+  });
+}
+
 document.querySelectorAll(".carousel-track").forEach(function (track) {
   var prev = track.parentElement.querySelector(".carousel-prev");
   var next = track.parentElement.querySelector(".carousel-next");
