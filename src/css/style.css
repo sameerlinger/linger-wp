@@ -396,6 +396,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
+/* Categories with a CMS "Card colour" get a tinted panel behind their cards */
+.property-grid[style*="--category-bg"] {
+  background: var(--category-bg);
+  border-radius: 18px;
+  padding: 1.5rem;
+}
 
 .property-card {
   display: flex;
@@ -405,7 +411,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   border-radius: 14px;
   text-decoration: none;
   color: var(--fg);
-  background: var(--category-bg, var(--card-bg));
+  background: var(--card-bg);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .property-card:hover { box-shadow: 0 14px 32px rgba(20,30,20,0.14); transform: translateY(-3px); }
@@ -662,7 +668,9 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   .hero h1 { font-size: 2.3rem; }
   .hero-sub { font-size: 1rem; }
 
+  .region-section { padding: 0 0.75rem; }
   .property-grid { grid-template-columns: repeat(auto-fill, 150px); justify-content: center; gap: 0.6rem; }
+  .property-grid[style*="--category-bg"] { padding: 0.6rem; border-radius: 14px; }
   .property-card img { aspect-ratio: 1 / 1; }
   .property-card-title { padding: 0.55rem 0.6rem; font-size: 0.82rem; }
   .property-card-summary { display: none; }
