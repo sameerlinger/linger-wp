@@ -67,7 +67,7 @@ collections:
         name: "color"
         widget: "color"
         required: false
-        hint: "Background colour of the property boxes in this section on the homepage (not the heading). Light, soft shades read best. Leave blank for plain white."
+        hint: "Background colour of the panel behind this section's property boxes on the homepage (not the heading). Light, soft shades read best. Leave blank for plain white."
 
   - name: "homepage"
     label: "Homepage"
