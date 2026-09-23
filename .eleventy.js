@@ -201,6 +201,8 @@ module.exports = function (eleventyConfig) {
       .map((cat) => ({
         name: cat.data.title,
         slug: cat.data.slug,
+        // Only pass through a plain hex colour - it ends up in an inline style.
+        color: /^#[0-9a-fA-F]{3,8}$/.test(cat.data.color || "") ? cat.data.color : null,
         properties: propertyDocs
           .filter((p) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug))
           .map((p) => p.fileSlug),

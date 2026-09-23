@@ -63,6 +63,11 @@ collections:
         widget: "number"
         required: false
         hint: "Controls left-to-right/top-to-bottom order on the homepage - lower numbers come first. Leave blank to sort after all the numbered ones."
+      - label: "Card colour"
+        name: "color"
+        widget: "color"
+        required: false
+        hint: "Background colour of the property boxes in this section on the homepage (not the heading). Light, soft shades read best. Leave blank for plain white."
 
   - name: "homepage"
     label: "Homepage"
