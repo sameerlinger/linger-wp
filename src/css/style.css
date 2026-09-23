@@ -405,7 +405,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   border-radius: 14px;
   text-decoration: none;
   color: var(--fg);
-  background: var(--card-bg);
+  background: var(--category-bg, var(--card-bg));
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .property-card:hover { box-shadow: 0 14px 32px rgba(20,30,20,0.14); transform: translateY(-3px); }

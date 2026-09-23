@@ -34,7 +34,7 @@ permalink: /index.html
 {% for region in collections.regions %}
 <section class="region-section">
   <h2>{{ region.name }}</h2>
-  <div class="property-grid" id="grid-{{ region.slug }}">
+  <div class="property-grid" id="grid-{{ region.slug }}"{% if region.color %} style="--category-bg: {{ region.color }}"{% endif %}>
   {% for slug in region.properties %}
     <a class="property-card" href="/{{ slug }}/">
       {% set cover = slug | coverImage %}
