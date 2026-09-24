@@ -24,11 +24,10 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - label: "Slug"
-        name: "slug"
+      - label: "Title"
+        name: "title"
         widget: "string"
-        hint: "The page's web address - e.g. monsoon-offers becomes linger.in/monsoon-offers/. Lowercase, hyphens, no spaces. Don't change it on an existing page: old links to it would break."
+        hint: "A new page's web address is made from its title when it's first saved (e.g. \"Monsoon Offers\" becomes linger.in/monsoon-offers/) and stays the same after, even if the title changes."
       - label: "Cover photo"
         name: "cover"
         widget: "image"
