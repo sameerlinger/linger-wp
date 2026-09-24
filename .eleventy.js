@@ -95,6 +95,58 @@ const propertySlugs = new Set(properties.map((p) => p.slug));
 const contentSlugs = require("./lib/contentSlugs");
 const dormantSlugs = require("./lib/dormantSlugs");
 
+const BUILTIN_MENUS = ["reservations", "featured", "know-us"];
+
+// Read fresh on every build (not require()d) so a CMS edit is picked up in
+// --serve too. Shape: {"items": [{"type": "builtin", "menu": "..."} |
+// {"type": "category", "category": "<category slug>"}]}.
+function readMenuOrder() {
+  try {
+    const items = JSON.parse(fs.readFileSync(path.join(__dirname, "src/_data/menu.json"), "utf8")).items;
+    return Array.isArray(items) ? items.filter((i) => i && typeof i === "object") : [];
+  } catch {
+    return [];
+  }
+}
+
+// Categories ("regions") with the pages in each, in Menu order position;
+// categories not in the menu list come after, by their old Order number
+// then title. Used by both the homepage sections and the top menu.
+async function buildRegions(api) {
+  const dormant = await dormantSlugs();
+  const menuPosition = new Map();
+  readMenuOrder()
+    .filter((i) => i.type === "category")
+    .forEach((i, n) => { if (!menuPosition.has(i.category)) menuPosition.set(i.category, n); });
+  const rank = (item) => (menuPosition.has(item.data.slug) ? menuPosition.get(item.data.slug) : Infinity);
+  const legacyOrder = (item) => (typeof item.data.order === "number" ? item.data.order : 999);
+  const categoryDocs = api
+    .getFilteredByGlob("src/content/categories/*.md")
+    .filter((item) => item.data.slug && item.data.title)
+    .sort((a, b) =>
+      rank(a) - rank(b) || legacyOrder(a) - legacyOrder(b) || a.data.title.localeCompare(b.data.title)
+    );
+  // Any page given a category shows up, not just properties - e.g. an
+  // "Experiences" section of ordinary pages. (Being a property is what
+  // adds the booking enquiry form, see isProperty; that's separate.)
+  const propertyDocs = api
+    .getFilteredByGlob("src/content/*.md")
+    .filter((item) => !dormant.has(item.fileSlug));
+  return categoryDocs
+    .map((cat) => ({
+      name: cat.data.title,
+      slug: cat.data.slug,
+      // Only pass through a plain hex colour - it ends up in an inline style.
+      color: /^#[0-9a-fA-F]{3,8}$/.test(cat.data.color || "") ? cat.data.color : null,
+      properties: propertyDocs
+        .filter((p) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug))
+        .map((p) => p.fileSlug),
+    }))
+    // A freshly-created category with no properties assigned to it yet
+    // would otherwise show up as an empty heading with nothing under it.
+    .filter((region) => region.properties.length > 0);
+}
+
 function slugifyHeading(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
@@ -184,35 +236,33 @@ module.exports = function (eleventyConfig) {
   // frontmatter list (a relation-widget field in admin/config.yml) rather
   // than a category owning a fixed property list - so one property can
   // belong to several sections at once.
-  eleventyConfig.addCollection("regions", async (api) => {
-    const dormant = await dormantSlugs();
-    const categoryDocs = api
-      .getFilteredByGlob("src/content/categories/*.md")
-      .filter((item) => item.data.slug && item.data.title)
-      .sort((a, b) => {
-        const orderA = typeof a.data.order === "number" ? a.data.order : 999;
-        const orderB = typeof b.data.order === "number" ? b.data.order : 999;
-        return orderA - orderB || a.data.title.localeCompare(b.data.title);
-      });
-    // Any page given a category shows up, not just properties - e.g. an
-    // "Experiences" section of ordinary pages. (Being a property is what
-    // adds the booking enquiry form, see isProperty; that's separate.)
-    const propertyDocs = api
-      .getFilteredByGlob("src/content/*.md")
-      .filter((item) => !dormant.has(item.fileSlug));
-    return categoryDocs
-      .map((cat) => ({
-        name: cat.data.title,
-        slug: cat.data.slug,
-        // Only pass through a plain hex colour - it ends up in an inline style.
-        color: /^#[0-9a-fA-F]{3,8}$/.test(cat.data.color || "") ? cat.data.color : null,
-        properties: propertyDocs
-          .filter((p) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug))
-          .map((p) => p.fileSlug),
-      }))
-      // A freshly-created category with no properties assigned to it yet
-      // would otherwise show up as an empty heading with nothing under it.
-      .filter((region) => region.properties.length > 0);
+  eleventyConfig.addCollection("regions", (api) => buildRegions(api));
+
+  // The top menu, left to right: the built-in dropdowns plus one per
+  // category, in the order set under Homepage -> Menu order in the CMS
+  // (src/_data/menu.json). Anything missing from that list still shows -
+  // a new category right after the last listed one, a built-in at the end -
+  // so nothing silently disappears from the menu.
+  eleventyConfig.addCollection("menuItems", async (api) => {
+    const regions = await buildRegions(api);
+    const bySlug = new Map(regions.map((r) => [r.slug, r]));
+    const items = [];
+    const used = new Set();
+    for (const entry of readMenuOrder()) {
+      if (entry.type === "builtin" && BUILTIN_MENUS.includes(entry.menu) && !used.has(entry.menu)) {
+        items.push({ kind: "builtin", id: entry.menu });
+        used.add(entry.menu);
+      } else if (entry.type === "category" && bySlug.has(entry.category) && !used.has(`cat:${entry.category}`)) {
+        items.push({ kind: "category", region: bySlug.get(entry.category) });
+        used.add(`cat:${entry.category}`);
+      }
+    }
+    const unlisted = regions.filter((r) => !used.has(`cat:${r.slug}`)).map((region) => ({ kind: "category", region }));
+    let lastCategory = -1;
+    items.forEach((item, i) => { if (item.kind === "category") lastCategory = i; });
+    items.splice(lastCategory === -1 ? items.length : lastCategory + 1, 0, ...unlisted);
+    for (const id of BUILTIN_MENUS) if (!used.has(id)) items.push({ kind: "builtin", id });
+    return items;
   });
 
   // Published as /property-categories.json (src/property-categories.njk)

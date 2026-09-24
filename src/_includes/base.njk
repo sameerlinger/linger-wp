@@ -32,6 +32,18 @@
   </a>
   <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
   <nav class="site-nav">
+    {# Order comes from Homepage -> Menu order in the CMS (menuItems in .eleventy.js). #}
+    {% for item in collections.menuItems %}
+    {% if item.kind == "category" %}
+    <details class="nav-drop">
+      <summary>{{ item.region.name }}</summary>
+      <ul>
+        {% for slug in item.region.properties %}
+        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% elif item.id == "reservations" %}
     <details class="nav-drop">
       <summary>Reservations</summary>
       <ul>
@@ -42,16 +54,7 @@
         {% if "vacation-offer-deal" | pageExists %}<li><a href="/vacation-offer-deal/">Offers</a></li>{% endif %}
       </ul>
     </details>
-    {% for region in collections.regions %}
-    <details class="nav-drop">
-      <summary>{{ region.name }}</summary>
-      <ul>
-        {% for slug in region.properties %}
-        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
-        {% endfor %}
-      </ul>
-    </details>
-    {% endfor %}
+    {% elif item.id == "featured" %}
     <details class="nav-drop">
       <summary>Featured</summary>
       <ul>
@@ -61,6 +64,7 @@
         {% if "events-linger" | pageExists %}<li><a href="/events-linger/">Events!</a></li>{% endif %}
       </ul>
     </details>
+    {% elif item.id == "know-us" %}
     <details class="nav-drop">
       <summary>Know Us</summary>
       <ul>
@@ -73,6 +77,8 @@
         {% if "get-in-touch" | pageExists %}<li><a href="/get-in-touch/">Contact</a></li>{% endif %}
       </ul>
     </details>
+    {% endif %}
+    {% endfor %}
   </nav>
 </header>
 <main class="content">
