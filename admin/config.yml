@@ -85,9 +85,8 @@ collections:
         fields:
           - label: "Photos"
             name: "images"
-            widget: "list"
-            hint: "One of these is shown at random behind the homepage headline on each visit. Add or remove photos here."
-            field: { label: "Photo", name: "image", widget: "image" }
+            widget: "photogrid"
+            hint: "One of these is shown at random behind the homepage headline on each visit. Add, replace, reorder or remove photos with the buttons on each one."
 
       - name: "menu"
         label: "Menu order"
