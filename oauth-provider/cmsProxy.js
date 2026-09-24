@@ -9,10 +9,10 @@
 // what an Author is allowed to touch on the way. Commits are authored as
 // the team member.
 //
-// Levels come from Folio's team access grid ("Website (CMS)" column, lib/
-// access.js in booking-engine-app): "full" can save anything and delete;
-// "author" can edit/add pages and blog posts and upload photos, nothing
-// else.
+// Levels come from Folio (cmsLevelFor in booking-engine-app's lib/
+// cmsTicket.js): admins get "full" - save anything, and delete; people an
+// admin ticked as "Website author" in Users & access get "author" - edit/
+// add pages and blog posts and upload photos, nothing else.
 const crypto = require("crypto");
 
 const REPO = "sameerlinger/linger-wp";
