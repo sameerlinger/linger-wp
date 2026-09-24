@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "type": "builtin", "menu": "reservations" },
+    { "type": "category", "category": "Curated experiences at the properties" },
+    { "type": "category", "category": "coffee-estates" },
+    { "type": "category", "category": "near-bangalore" },
+    { "type": "category", "category": "himalayas" },
+    { "type": "category", "category": "wilderness" },
+    { "type": "builtin", "menu": "featured" },
+    { "type": "builtin", "menu": "know-us" }
+  ]
+}

@@ -60,6 +60,7 @@ collections:
   - name: "categories"
     label: "Categories"
     folder: "src/content/categories"
+    description: "To change the order of these on the homepage and in the menu, use Homepage > Menu order."
     create: true
     delete: true
     slug: "{{slug}}"
@@ -68,11 +69,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "Shown as the section heading on the homepage." }
       - { label: "Slug", name: "slug", widget: "string", hint: "Used internally to link properties to this section - lowercase, hyphenated, no spaces." }
-      - label: "Order"
-        name: "order"
-        widget: "number"
-        required: false
-        hint: "Controls left-to-right/top-to-bottom order on the homepage - lower numbers come first. Leave blank to sort after all the numbered ones."
       - label: "Card colour"
         name: "color"
         widget: "color"
@@ -91,6 +87,42 @@ collections:
             widget: "list"
             hint: "One of these is shown at random behind the homepage headline on each visit. Add or remove photos here."
             field: { label: "Photo", name: "image", widget: "image" }
+
+      - name: "menu"
+        label: "Menu order"
+        file: "src/_data/menu.json"
+        fields:
+          - label: "Top menu, left to right"
+            name: "items"
+            label_singular: "menu item"
+            widget: "list"
+            collapsed: true
+            hint: "Drag to reorder. Categories appear on the homepage in this same order. A new category shows up after the last one listed here until you place it; anything removed from this list goes to the end of the menu rather than disappearing."
+            types:
+              - label: "Category"
+                name: "category"
+                widget: "object"
+                summary: "Category: {{fields.category}}"
+                fields:
+                  - label: "Category"
+                    name: "category"
+                    widget: "relation"
+                    collection: "categories"
+                    search_fields: ["title"]
+                    value_field: "slug"
+                    display_fields: ["title"]
+              - label: "Built-in menu"
+                name: "builtin"
+                widget: "object"
+                summary: "Menu: {{fields.menu}}"
+                fields:
+                  - label: "Menu"
+                    name: "menu"
+                    widget: "select"
+                    options:
+                      - { label: "Reservations", value: "reservations" }
+                      - { label: "Featured", value: "featured" }
+                      - { label: "Know Us", value: "know-us" }
 
       - name: "banner"
         label: "Offers / Announcement Banner"
