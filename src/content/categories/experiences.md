@@ -1,5 +1,6 @@
 ---
 title: Experiences
 slug: Curated experiences at the properties
-order: 6
+order: ""
+color: "#a75656"
 ---
