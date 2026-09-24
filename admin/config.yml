@@ -4,8 +4,9 @@ backend:
   branch: main
   # Team members sign in with their Folio (booking admin) account, not
   # GitHub: linger-wp-oauth vouches for them via Folio and makes the GitHub
-  # calls itself - see oauth-provider/cmsProxy.js. What each person can
-  # change is their "Website (CMS)" level in Folio's Users & access.
+  # calls itself - see oauth-provider/cmsProxy.js. Admins get full access;
+  # anyone else only if an admin ticked "Website author" for them in
+  # Folio's Users & access (then: pages, blog posts and photos only).
   base_url: https://linger-wp-oauth.onrender.com
   auth_endpoint: folio-auth
   api_root: https://linger-wp-oauth.onrender.com/github

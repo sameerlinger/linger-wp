@@ -13,7 +13,8 @@
 // Starts Decap ourselves (CMS_MANUAL_INIT) so the config can depend on who's
 // signed in. Everyone signs in with their Folio account (see config.yml's
 // backend comment); the token linger-wp-oauth hands back carries their
-// "Website (CMS)" level from Folio's team access grid. An "author" gets a
+// level from Folio - "full" for admins, "author" for people an admin
+// ticked as "Website author" in Users & access. An "author" gets a
 // trimmed CMS - no Homepage settings, Categories hidden (still needed
 // behind the scenes for the property Categories picker), nothing
 // deletable. This is only the menus: linger-wp-oauth refuses those saves
