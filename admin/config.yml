@@ -2,7 +2,14 @@ backend:
   name: github
   repo: sameerlinger/linger-wp
   branch: main
+  # All sign-in and GitHub calls go through linger-wp-oauth (see
+  # oauth-provider/cmsProxy.js). Its sign-in screen offers: team member ->
+  # Folio account, only if an admin ticked "Website author" for them in
+  # Folio's Users & access (then pages, blog posts and photos only); or
+  # admin -> their own GitHub account (full access).
   base_url: https://linger-wp-oauth.onrender.com
+  auth_endpoint: folio-auth
+  api_root: https://linger-wp-oauth.onrender.com/github
 
 media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
@@ -11,13 +18,17 @@ collections:
   - name: "pages"
     label: "Properties & Pages"
     folder: "src/content"
-    create: false
+    create: true
     delete: true
+    slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+        hint: "The page's web address - e.g. monsoon-offers becomes linger.in/monsoon-offers/. Lowercase, hyphens, no spaces. Don't change it on an existing page: old links to it would break."
       - label: "Cover photo"
         name: "cover"
         widget: "image"

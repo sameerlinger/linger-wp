@@ -9,7 +9,89 @@
 <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
+<script>window.CMS_MANUAL_INIT = true;</script>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script src="https://unpkg.com/js-yaml@4/dist/js-yaml.min.js"></script>
+<script>
+// Starts Decap ourselves (CMS_MANUAL_INIT) so the config can depend on who's
+// signed in. Everyone signs in with their Folio account (see config.yml's
+// backend comment); the token linger-wp-oauth hands back carries their
+// level from Folio - "full" for admins, "author" for people an admin
+// ticked as "Website author" in Users & access. An "author" gets a
+// trimmed CMS - no Homepage settings, Categories hidden (still needed
+// behind the scenes for the property Categories picker), nothing
+// deletable. This is only the menus: linger-wp-oauth refuses those saves
+// for an author regardless.
+(function () {
+  var USER_KEY = "decap-cms-user";
+
+  function storedSession() {
+    try {
+      var token = JSON.parse(localStorage.getItem(USER_KEY) || "null").token;
+      // An admin's own GitHub sign-in (no "." in GitHub tokens): full access.
+      if (token && token.indexOf(".") === -1) return { level: "full", github: true };
+      var body = token.split(".")[0].replace(/-/g, "+").replace(/_/g, "/");
+      var claims = JSON.parse(atob(body));
+      return claims.typ === "session" ? claims : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  var session = storedSession();
+  // An expired Folio sign-in would otherwise surface as a confusing "repo
+  // not found" - drop it so the login button shows.
+  if (!session || (!session.github && session.exp < Date.now() / 1000)) {
+    try { localStorage.removeItem(USER_KEY); } catch (e) {}
+    session = null;
+  }
+  var isAuthor = !!session && session.level !== "full";
+
+  function trimForAuthor(config) {
+    config.collections = config.collections
+      .filter(function (c) { return c.name !== "homepage"; })
+      .map(function (c) {
+        c.delete = false;
+        if (c.name === "categories") { c.hide = true; c.create = false; }
+        return c;
+      });
+    return config;
+  }
+
+  // Absolute: /admin (no trailing slash) serves this same page.
+  fetch("/admin/config.yml", { cache: "no-cache" })
+    .then(function (res) { return res.text(); })
+    .then(function (text) {
+      var config = jsyaml.load(text);
+      config.load_config_file = false;
+      CMS.init({ config: isAuthor ? trimForAuthor(config) : config });
+    });
+
+  // Right after signing in, re-open with the menus that fit their level.
+  if (!session) {
+    var watch = setInterval(function () {
+      var s = storedSession();
+      if (!s) return;
+      clearInterval(watch);
+      if (s.level !== "full") location.reload();
+    }, 1000);
+  }
+
+  // Decap's login button says "Login with GitHub" and there's no setting
+  // for it; it now opens a choice of Folio (team) or GitHub (admin).
+  new MutationObserver(function () {
+    var buttons = document.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      var nodes = buttons[i].childNodes;
+      for (var j = 0; j < nodes.length; j++) {
+        if (nodes[j].nodeType === 3 && /Login with GitHub/i.test(nodes[j].textContent)) {
+          nodes[j].textContent = "Sign in";
+        }
+      }
+    }
+  }).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 <script>
 // Two small additions bolted on outside Decap's own app, deliberately not
 // using Decap's custom-widget/preview APIs - this keeps them isolated from
