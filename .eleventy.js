@@ -194,9 +194,12 @@ module.exports = function (eleventyConfig) {
         const orderB = typeof b.data.order === "number" ? b.data.order : 999;
         return orderA - orderB || a.data.title.localeCompare(b.data.title);
       });
+    // Any page given a category shows up, not just properties - e.g. an
+    // "Experiences" section of ordinary pages. (Being a property is what
+    // adds the booking enquiry form, see isProperty; that's separate.)
     const propertyDocs = api
       .getFilteredByGlob("src/content/*.md")
-      .filter((item) => propertySlugs.has(item.fileSlug) && !dormant.has(item.fileSlug));
+      .filter((item) => !dormant.has(item.fileSlug));
     return categoryDocs
       .map((cat) => ({
         name: cat.data.title,
