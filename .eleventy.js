@@ -308,6 +308,15 @@ module.exports = function (eleventyConfig) {
     return found ? found.title : slug;
   });
 
+  // Properties taking bookings (not dormant), by display name - the
+  // enquiry form's Property dropdown.
+  eleventyConfig.addFilter("bookableProperties", (properties, dormantSlugs) =>
+    (properties || [])
+      .filter((p) => !(dormantSlugs || []).includes(p.slug))
+      .map((p) => ({ slug: p.slug, title: pageTitleBySlug.get(p.slug) || p.title }))
+      .sort((a, b) => a.title.localeCompare(b.title))
+  );
+
   eleventyConfig.addFilter("isProperty", (slug, properties) =>
     (properties || []).some((p) => p.slug === slug)
   );

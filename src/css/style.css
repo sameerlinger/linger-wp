@@ -269,7 +269,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   font-weight: 600;
   color: var(--muted);
 }
-.enquiry-row input {
+.enquiry-row input,
+.enquiry-row select {
   display: block;
   width: 100%;
   margin-top: 0.35rem;
@@ -281,7 +282,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   background: var(--bg);
   color: var(--fg);
 }
-.enquiry-row input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.enquiry-row input:focus,
+.enquiry-row select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 .enquiry-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .enquiry-submit {
   display: inline-block;
