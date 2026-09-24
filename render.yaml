@@ -24,6 +24,15 @@ services:
         sync: false
       - key: LINGER_WP_DEPLOY_HOOK_URL
         sync: false
+      # Folio team sign-in for the CMS (oauth-provider/cmsProxy.js).
+      # CMS_SSO_SECRET must match the same var on linger-booking-engine.
+      - key: CMS_SSO_SECRET
+        sync: false
+      # Fine-grained GitHub token: sameerlinger/linger-wp only, Contents read/write.
+      - key: GITHUB_CONTENT_TOKEN
+        sync: false
+      - key: FOLIO_URL
+        value: https://linger-booking-engine.onrender.com
 
 previews:
   generation: automatic
