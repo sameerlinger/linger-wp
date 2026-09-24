@@ -13,10 +13,21 @@ layout: base.njk
     {% else %}
     <h2>Check availability</h2>
     <p class="enquiry-sub">Tell us your dates and we'll get back to you by email.</p>
-    <form class="enquiry-form" data-property-slug="{{ page.fileSlug }}" data-property-name="{{ page.fileSlug | propertyTitle(properties) }}">
+    <form class="enquiry-form">
+      <div class="enquiry-row">
+        {# Starts on this page's own property; "any" is handled by LingerApp's
+           /api/public/enquiry as an open enquiry (no one property to check). #}
+        <label>Property<select name="property">
+          <option value="any">Any property</option>
+          {% for p in properties | bookableProperties(dormantSlugs) %}
+          <option value="{{ p.slug }}"{% if p.slug == page.fileSlug %} selected{% endif %}>{{ p.title }}</option>
+          {% endfor %}
+        </select></label>
+      </div>
       <div class="enquiry-row">
         <label>Name<input type="text" name="name" required autocomplete="name"></label>
         <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel" maxlength="30"></label>
       </div>
       <div class="enquiry-row">
         <label>Check-in<input type="date" name="checkIn" required></label>

@@ -181,17 +181,19 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
       status.textContent = "Check-out must be after check-in.";
       return;
     }
+    var property = form.property.options[form.property.selectedIndex];
     button.disabled = true;
     status.dataset.state = "";
-    status.textContent = "Checking availability…";
+    status.textContent = property.value === "any" ? "Sending…" : "Checking availability…";
     fetch(ENQUIRY_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        propertySlug: form.dataset.propertySlug,
-        propertyName: form.dataset.propertyName,
+        propertySlug: property.value,
+        propertyName: property.text,
         name: form.name.value,
         email: form.email.value,
+        phone: form.phone.value,
         checkIn: checkIn,
         checkOut: checkOut,
         guests: Number(form.guests.value),
@@ -206,7 +208,7 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
         var tryElsewhere = " Do check out the other locations we have, or pick a different date.";
         if (data && data.dormant) {
           status.dataset.state = "error";
-          status.textContent = "Sorry, this property isn't currently taking bookings.";
+          status.textContent = "Sorry, this property isn't currently taking bookings. Do try another one, or pick \"Any property\".";
           return;
         }
         if (data && data.full) {
@@ -217,7 +219,9 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
           return;
         }
         status.dataset.state = "ok";
-        status.textContent = "We do seem to have availability - have logged a query and you'll hear from us soon!";
+        status.textContent = data && data.anyProperty
+          ? "Thanks - we've logged your query and will get back to you soon with properties that are free on those dates!"
+          : "We do seem to have availability - have logged a query and you'll hear from us soon!";
         form.reset();
       })
       .catch(function () {
