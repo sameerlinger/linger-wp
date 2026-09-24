@@ -170,7 +170,7 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
 <title>Sign in - Linger website</title></head>
 <body style="font-family: system-ui, sans-serif; max-width: 22rem; margin: 3rem auto; padding: 0 1rem; text-align: center">
 <h1 style="font-size: 1.2rem; margin-bottom: 1.5rem">Sign in to edit linger.in</h1>
-<a href="/folio-auth?via=folio" style="display: block; padding: .8rem; border-radius: 6px; background: #2f5d3a; color: #fff; text-decoration: none; font-weight: 600">Team member &mdash; sign in with Folio</a>
+<a href="/folio-auth?via=folio" style="display: block; padding: .8rem; border-radius: 6px; background: #2f5d3a; color: #fff; text-decoration: none; font-weight: 600">Team member &mdash; sign in with LingerApp</a>
 <p style="color: #666; font-size: .85rem; margin: .5rem 0 1.5rem">Same Google or phone + PIN login as the booking admin.</p>
 <a href="/auth" style="display: block; padding: .7rem; border-radius: 6px; border: 1px solid #bbb; color: #333; text-decoration: none">Admin &mdash; sign in with GitHub</a>
 </body></html>`);
