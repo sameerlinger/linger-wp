@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <title>Linger CMS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Absolute, so /admin (no trailing slash - served as this same page)
+     doesn't look for /config.yml and fail with a 404. -->
+<link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
