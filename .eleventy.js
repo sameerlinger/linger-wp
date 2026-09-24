@@ -212,6 +212,28 @@ module.exports = function (eleventyConfig) {
       .filter((region) => region.properties.length > 0);
   });
 
+  // Published as /property-categories.json (src/property-categories.njk)
+  // for the booking engine's Reports tab, which compares a property against
+  // the others in its category. Unlike "regions" above it keeps dormant
+  // properties and empty categories - a report looks back at past years, and
+  // a property going dormant today shouldn't drop out of last year's numbers.
+  eleventyConfig.addCollection("propertyCategoryFeed", (api) => {
+    const categories = api
+      .getFilteredByGlob("src/content/categories/*.md")
+      .filter((item) => item.data.slug && item.data.title)
+      .map((item) => ({
+        slug: item.data.slug,
+        title: item.data.title,
+        order: typeof item.data.order === "number" ? item.data.order : null,
+      }));
+    const properties = {};
+    for (const item of api.getFilteredByGlob("src/content/*.md")) {
+      if (!propertySlugs.has(item.fileSlug)) continue;
+      properties[item.fileSlug] = Array.isArray(item.data.categories) ? item.data.categories : [];
+    }
+    return { categories, properties };
+  });
+
   eleventyConfig.addCollection("blogCategories", (api) => {
     const posts = api.getFilteredByGlob("src/content/blog/*.md").sort((a, b) => b.date - a.date);
     const bySlug = new Map();
