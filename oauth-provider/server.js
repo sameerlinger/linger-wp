@@ -3,11 +3,19 @@
 // https://decapcms.org/docs/github-backend/#using-an-external-oauth-client
 const express = require("express");
 const crypto = require("crypto");
+const { mountCmsProxy } = require("./cmsProxy");
 
 const app = express();
 app.set("trust proxy", true);
 
-const { GITHUB_OAUTH_CLIENT_ID, GITHUB_OAUTH_CLIENT_SECRET, LINGER_WP_DEPLOY_HOOK_URL } = process.env;
+const {
+  GITHUB_OAUTH_CLIENT_ID,
+  GITHUB_OAUTH_CLIENT_SECRET,
+  LINGER_WP_DEPLOY_HOOK_URL,
+  CMS_SSO_SECRET,
+  GITHUB_CONTENT_TOKEN,
+  FOLIO_URL = "https://linger-booking-engine.onrender.com",
+} = process.env;
 
 const pendingStates = new Set();
 
@@ -67,6 +75,22 @@ app.post("/sync-deploy", async (req, res) => {
   }
 });
 
+// Where the CMS admin page can be opened from: the live site, and Render's
+// PR previews of it (so a CMS change can be tried before merging).
+const ADMIN_ORIGIN = /^(https:\/\/(www\.)?linger\.in|https:\/\/linger-wp(-pr-\d+)?\.onrender\.com|http:\/\/localhost:8080)$/;
+
+// Folio team sign-in + GitHub API proxy — see cmsProxy.js. Big limit for
+// base64 photo uploads.
+app.use("/github", express.json({ limit: "40mb" }));
+mountCmsProxy(app, {
+  secret: CMS_SSO_SECRET,
+  githubToken: GITHUB_CONTENT_TOKEN,
+  folioUrl: FOLIO_URL,
+  isAllowedOrigin: ADMIN_ORIGIN,
+});
+
+// The original personal-GitHub-account sign-in (/auth + /callback). Unused
+// once admin/config.yml points at /folio-auth; kept until that's live.
 app.get("/auth", (req, res) => {
   if (!GITHUB_OAUTH_CLIENT_ID) {
     return res.status(500).send("Missing GITHUB_OAUTH_CLIENT_ID");
