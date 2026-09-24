@@ -55,7 +55,8 @@
     return config;
   }
 
-  fetch("config.yml", { cache: "no-cache" })
+  // Absolute: /admin (no trailing slash) serves this same page.
+  fetch("/admin/config.yml", { cache: "no-cache" })
     .then(function (res) { return res.text(); })
     .then(function (text) {
       var config = jsyaml.load(text);
