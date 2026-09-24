@@ -10,12 +10,15 @@ const REPO = "/repos/sameerlinger/linger-wp";
 function fakeGithub() {
   const gh = express();
   gh.use(express.json({ limit: "40mb" }));
-  const state = { head: "c0", tree: "t0", n: 0, commits: {}, calls: [] };
+  const state = { head: "c0", tree: "t0", n: 0, commits: {}, calls: [], auths: new Set() };
   gh.use((req, res, next) => {
     state.calls.push(`${req.method} ${req.originalUrl}`);
+    state.auths.add(req.headers.authorization);
     next();
   });
-  gh.get(`${REPO}`, (req, res) => res.json({ owner: { login: "sameerlinger" }, permissions: { push: false } }));
+  // "gho_admin" is a GitHub user with push access; "gho_stranger" isn't.
+  gh.get(`${REPO}`, (req, res) => res.json({ owner: { login: "sameerlinger" }, permissions: { push: req.headers.authorization === "Bearer gho_admin" } }));
+  gh.get("/user", (req, res) => res.json({ id: 7, login: req.headers.authorization === "Bearer gho_admin" ? "sameerlinger" : "stranger", name: "Sameer" }));
   gh.get(`${REPO}/branches/main`, (req, res) => res.json({ commit: { sha: state.head, commit: { tree: { sha: state.tree } } } }));
   gh.get(`${REPO}/contents/x`, (req, res) => res.set("Link", `<http://${req.get("host")}${REPO}/contents/x?page=2>; rel="next"`).json([]));
   gh.post(`${REPO}/git/blobs`, (req, res) => res.status(201).json({ sha: `b${++state.n}` }));
@@ -205,7 +208,11 @@ test("only a tree/commit made through the proxy, on the current head, can land",
 test("sign-in callback only accepts a fresh Folio ticket for a state it issued", async () => {
   const t = await start();
   try {
-    const auth = await fetch(`${t.base}/folio-auth`, { redirect: "manual" });
+    const chooser = await (await fetch(`${t.base}/folio-auth`)).text();
+    assert.match(chooser, /href="\/folio-auth\?via=folio"/);
+    assert.match(chooser, /href="\/auth"/);
+
+    const auth = await fetch(`${t.base}/folio-auth?via=folio`, { redirect: "manual" });
     const state = new URL(auth.headers.get("location")).searchParams.get("state");
     assert.match(auth.headers.get("location"), /^https:\/\/folio\.example\/api\/cms\/authorize\?state=[a-f0-9]{32}$/);
 
@@ -223,6 +230,31 @@ test("sign-in callback only accepts a fresh Folio ticket for a state it issued",
     // and the token it hands Decap works against the proxy
     const token = JSON.parse(JSON.parse(html.match(/success:' \+ ("(?:[^"\\]|\\.)*")/)[1])).token;
     assert.equal((await api(t.base, token)("GET", "/user")).json.level, "author");
+  } finally {
+    t.close();
+  }
+});
+
+test("an admin's own GitHub login works as full access, using their token", async () => {
+  const t = await start();
+  try {
+    const call = api(t.base, "gho_admin");
+    assert.equal((await call("GET", "/user")).json.login, "sameerlinger");
+    t.state.auths.clear();
+    assert.equal((await save(call, [file("src/_data/banner.json")])).status, 200);
+    assert.equal((await save(call, [file("src/content/balur.md", null)])).status, 200);
+    // committed as them (no author override), and only ever with their token
+    assert.equal(t.state.commits[t.state.head].author, undefined);
+    assert.deepEqual([...t.state.auths], ["Bearer gho_admin"]);
+  } finally {
+    t.close();
+  }
+});
+
+test("a GitHub login without push access to the repo is refused", async () => {
+  const t = await start();
+  try {
+    assert.equal((await api(t.base, "gho_stranger")("GET", "/user")).status, 401);
   } finally {
     t.close();
   }

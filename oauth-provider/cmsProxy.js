@@ -13,6 +13,11 @@
 // cmsTicket.js): admins get "full" - save anything, and delete; people an
 // admin ticked as "Website author" in Users & access get "author" - edit/
 // add pages and blog posts and upload photos, nothing else.
+//
+// Admins can instead sign in with their own GitHub account (the original
+// /auth flow in server.js): a GitHub token with push access to the repo is
+// accepted here as "full", and its calls are made with that token, so
+// commits are theirs on GitHub as before.
 const crypto = require("crypto");
 
 const REPO = "sameerlinger/linger-wp";
@@ -20,6 +25,7 @@ const BRANCH = "main";
 const GITHUB_API = "https://api.github.com";
 const SESSION_TTL_SECONDS = 12 * 60 * 60;
 const PENDING_TTL_MS = 10 * 60 * 1000;
+const GITHUB_LOGIN_CACHE_MS = 5 * 60 * 1000;
 
 // Same format as booking-engine-app's lib/cmsTicket.js (duplicated rather
 // than shared): base64url(JSON) + "." + base64url(HMAC-SHA256).
@@ -123,11 +129,12 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
   const commits = createLedger();
   const repoPrefix = `/github/repos/${REPO}`;
 
-  async function github(method, path, { body, accept } = {}) {
+  // `as`: a signed-in admin's own GitHub token; otherwise the service's.
+  async function github(method, path, { body, accept, as } = {}) {
     return fetch(`${githubApi}${path}`, {
       method,
       headers: {
-        Authorization: `Bearer ${githubToken}`,
+        Authorization: `Bearer ${as || githubToken}`,
         Accept: accept || "application/vnd.github+json",
         "User-Agent": "linger-wp-oauth",
         ...(body ? { "Content-Type": "application/json" } : {}),
@@ -136,8 +143,8 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
     });
   }
 
-  async function headOfMain() {
-    const res = await github("GET", `/repos/${REPO}/branches/${BRANCH}`);
+  async function headOfMain(as) {
+    const res = await github("GET", `/repos/${REPO}/branches/${BRANCH}`, { as });
     if (!res.ok) throw new Error(`branch lookup ${res.status}`);
     const json = await res.json();
     return { commit: json.commit.sha, tree: json.commit.commit.tree.sha };
@@ -156,6 +163,18 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
   const deny = (res, status, message) => res.status(status).json({ message });
 
   // --- Sign-in: Decap opens this in a popup (backend.auth_endpoint). ---
+  // Decap only has one login button, so this first asks which way in.
+  app.get("/folio-auth", (req, res, next) => {
+    if (req.query.via === "folio") return next();
+    res.send(`<!doctype html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in - Linger website</title></head>
+<body style="font-family: system-ui, sans-serif; max-width: 22rem; margin: 3rem auto; padding: 0 1rem; text-align: center">
+<h1 style="font-size: 1.2rem; margin-bottom: 1.5rem">Sign in to edit linger.in</h1>
+<a href="/folio-auth?via=folio" style="display: block; padding: .8rem; border-radius: 6px; background: #2f5d3a; color: #fff; text-decoration: none; font-weight: 600">Team member &mdash; sign in with Folio</a>
+<p style="color: #666; font-size: .85rem; margin: .5rem 0 1.5rem">Same Google or phone + PIN login as the booking admin.</p>
+<a href="/auth" style="display: block; padding: .7rem; border-radius: 6px; border: 1px solid #bbb; color: #333; text-decoration: none">Admin &mdash; sign in with GitHub</a>
+</body></html>`);
+  });
   app.get("/folio-auth", (req, res) => {
     if (!secret || !githubToken) return res.status(500).send("CMS sign-in isn't configured yet (CMS_SSO_SECRET / GITHUB_CONTENT_TOKEN)");
     const state = crypto.randomBytes(16).toString("hex");
@@ -192,8 +211,27 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
 </body></html>`);
   });
 
+  // An admin's own GitHub token (from /auth): accepted as "full" if it can
+  // push to the repo. Checked with GitHub, then remembered for a few minutes.
+  const githubLogins = new Map();
+  async function sessionFromGithubToken(token) {
+    const cached = githubLogins.get(token);
+    if (cached && Date.now() - cached.at < GITHUB_LOGIN_CACHE_MS) return cached.session;
+    const [repoRes, userRes] = await Promise.all([
+      github("GET", `/repos/${REPO}`, { as: token }),
+      github("GET", "/user", { as: token }),
+    ]);
+    if (!repoRes.ok || !userRes.ok) return null;
+    const [repo, user] = await Promise.all([repoRes.json(), userRes.json()]);
+    if (!repo.permissions || !repo.permissions.push) return null;
+    const session = { sub: `github:${user.id}`, level: "full", githubToken: token };
+    githubLogins.set(token, { session, at: Date.now() });
+    for (const [k, v] of githubLogins) if (Date.now() - v.at > GITHUB_LOGIN_CACHE_MS) githubLogins.delete(k);
+    return session;
+  }
+
   // --- GitHub API proxy (backend.api_root) ---
-  app.use("/github", (req, res, next) => {
+  app.use("/github", async (req, res, next) => {
     const origin = req.headers.origin;
     if (origin && isAllowedOrigin.test(origin)) {
       res.setHeader("Access-Control-Allow-Origin", origin);
@@ -205,14 +243,24 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
     if (req.method === "OPTIONS") return res.status(204).end();
 
     const [keyword, token] = (req.headers.authorization || "").split(" ");
-    const session = keyword && keyword.toLowerCase() === "token" ? verifySession(token, secret) : null;
+    let session = null;
+    if (keyword && keyword.toLowerCase() === "token" && token) {
+      try {
+        // Our own session tokens contain a "."; GitHub's never do.
+        session = token.includes(".") ? verifySession(token, secret) : await sessionFromGithubToken(token);
+      } catch (err) {
+        console.error("[cms-proxy auth]", err.message);
+        return deny(res, 502, "GitHub request failed");
+      }
+    }
     if (!session) return deny(res, 401, "Please sign in again");
     req.cmsSession = session;
     next();
   });
 
-  app.get("/github/user", (req, res) => {
+  app.get("/github/user", async (req, res) => {
     const s = req.cmsSession;
+    if (s.githubToken) return relay(res, await github("GET", "/user", { as: s.githubToken }), req);
     res.json({ login: s.email, name: s.name, email: s.email, avatar_url: "", level: s.level });
   });
 
@@ -228,7 +276,7 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
       return deny(res, 403, "Not available from the CMS");
     }
     try {
-      const ghRes = await github("GET", url.pathname + url.search, { accept: req.headers.accept });
+      const ghRes = await github("GET", url.pathname + url.search, { accept: req.headers.accept, as: req.cmsSession.githubToken });
       // Decap refuses to load unless the token "has push access".
       const isRepoRoot = url.pathname === `/repos/${REPO}`;
       await relay(res, ghRes, req, isRepoRoot ? (repo) => ({ ...repo, permissions: { ...repo.permissions, push: true } }) : null);
@@ -242,7 +290,7 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
     try {
       const { content, encoding } = req.body || {};
       if (typeof content !== "string") return deny(res, 400, "Missing content");
-      relay(res, await github("POST", `/repos/${REPO}/git/blobs`, { body: { content, encoding } }), req);
+      relay(res, await github("POST", `/repos/${REPO}/git/blobs`, { body: { content, encoding }, as: req.cmsSession.githubToken }), req);
     } catch (err) {
       console.error("[cms-proxy blob]", err.message);
       deny(res, 502, "GitHub request failed");
@@ -255,11 +303,11 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
     const problem = checkTreeEntries(tree, s.level);
     if (problem) return deny(res, 403, problem);
     try {
-      const head = await headOfMain();
+      const head = await headOfMain(s.githubToken);
       if (baseTree !== head.commit && baseTree !== head.tree) {
         return deny(res, 409, "The site changed while you were editing - reload the CMS and try again");
       }
-      const ghRes = await github("POST", `/repos/${REPO}/git/trees`, { body: { base_tree: baseTree, tree } });
+      const ghRes = await github("POST", `/repos/${REPO}/git/trees`, { body: { base_tree: baseTree, tree }, as: s.githubToken });
       if (!ghRes.ok) return relay(res, ghRes, req);
       const created = await ghRes.json();
       trees.add(created.sha, { sub: s.sub, parent: head.commit });
@@ -283,8 +331,10 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
           message: String(message || "Update from CMS").slice(0, 1000),
           tree,
           parents,
-          author: { name: s.name, email: s.email, date: new Date().toISOString() },
+          // A GitHub sign-in commits as that GitHub user already.
+          ...(s.githubToken ? {} : { author: { name: s.name, email: s.email, date: new Date().toISOString() } }),
         },
+        as: s.githubToken,
       });
       if (!ghRes.ok) return relay(res, ghRes, req);
       const created = await ghRes.json();
@@ -304,7 +354,7 @@ function mountCmsProxy(app, { secret, githubToken, folioUrl, isAllowedOrigin, gi
     try {
       // Never forced: if main moved since the tree was built, GitHub
       // rejects this as a non-fast-forward rather than losing that change.
-      relay(res, await github("PATCH", `/repos/${REPO}/git/refs/heads/${BRANCH}`, { body: { sha, force: false } }), req);
+      relay(res, await github("PATCH", `/repos/${REPO}/git/refs/heads/${BRANCH}`, { body: { sha, force: false }, as: req.cmsSession.githubToken }), req);
     } catch (err) {
       console.error("[cms-proxy ref]", err.message);
       deny(res, 502, "GitHub request failed");

@@ -89,8 +89,9 @@ mountCmsProxy(app, {
   isAllowedOrigin: ADMIN_ORIGIN,
 });
 
-// The original personal-GitHub-account sign-in (/auth + /callback). Unused
-// once admin/config.yml points at /folio-auth; kept until that's live.
+// Admins' own-GitHub-account sign-in (/auth + /callback), reached from the
+// "Admin - sign in with GitHub" choice on /folio-auth (cmsProxy.js). The
+// token it hands Decap is then used through the /github proxy.
 app.get("/auth", (req, res) => {
   if (!GITHUB_OAUTH_CLIENT_ID) {
     return res.status(500).send("Missing GITHUB_OAUTH_CLIENT_ID");
@@ -136,6 +137,7 @@ app.get("/callback", async (req, res) => {
 <script>
 (function() {
   function receiveMessage(e) {
+    if (!${ADMIN_ORIGIN}.test(e.origin)) return;
     window.opener.postMessage(
       'authorization:github:success:${payload.replace(/'/g, "\\'")}',
       e.origin
