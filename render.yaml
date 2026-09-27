@@ -32,7 +32,7 @@ services:
       - key: GITHUB_CONTENT_TOKEN
         sync: false
       - key: FOLIO_URL
-        value: https://linger-booking-engine.onrender.com
+        value: https://booking.linger.in
 
 previews:
   generation: automatic

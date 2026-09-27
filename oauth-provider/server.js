@@ -14,7 +14,7 @@ const {
   LINGER_WP_DEPLOY_HOOK_URL,
   CMS_SSO_SECRET,
   GITHUB_CONTENT_TOKEN,
-  FOLIO_URL = "https://linger-booking-engine.onrender.com",
+  FOLIO_URL = "https://booking.linger.in",
 } = process.env;
 
 const pendingStates = new Set();
