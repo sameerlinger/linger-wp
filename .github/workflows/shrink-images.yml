@@ -1,0 +1,44 @@
+# Shrinks oversized photos pushed to main (usually CMS uploads) and commits the
+# smaller files back. Pushes made with GITHUB_TOKEN don't re-trigger workflows,
+# so this can't loop. Render then deploys the shrunk commit as usual.
+name: Shrink images
+
+on:
+  push:
+    branches: [main]
+    paths: ["src/images/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shrink-images
+  cancel-in-progress: false
+
+jobs:
+  shrink:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-save --no-package-lock sharp@0.34
+      - run: node scripts/shrink-images.js
+      - name: Commit shrunk images
+        run: |
+          if git diff --quiet -- src/images; then
+            echo "Nothing to shrink."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add src/images
+          git commit -m "Shrink oversized images for the web"
+          # The CMS may have pushed meanwhile; rebase onto it and retry.
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
