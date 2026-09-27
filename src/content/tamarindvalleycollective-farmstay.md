@@ -78,6 +78,6 @@ Reservations : stay@linger.in or +91-959-005-0001
 
 ## Day Trip/Picnic at the Farm
 
-![](/images/tamarindvalleycollective-farmstay/TVCDayTrip-small.png)
+![](/images/tamarindvalleycollective-farmstay/TVCDayTrip-small.jpg)
 
 Reservations : stay@linger.in or +91-959-005-0001
