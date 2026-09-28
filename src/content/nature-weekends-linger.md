@@ -11,12 +11,32 @@ Watch this space for the next one, or write to us if you want to participate and
 
 **The Western Ghats Edition** 
 
+
+
+<div class="photo-text photo-left"><img src="/images/uploads/11-12th-july.png" alt=""><div class="photo-text-body">
+
 We did the last one on 11-12th July at The Linger Farm, Chettimani. 
+
+Vishaal from The Naturalist School led us on multiple walks exploring the amazing, rich biodiversity around. We walked in the rain, we walked at night, we uploaded on iNaturalist - including the first one of a particular mantis from India! We loved it, and learned a lot!
+
+</div></div>
 
 **The Grasslands Edition**
 
+<div class="photo-text photo-left"><img src="/images/uploads/bush-camp-kalpavalli-2-.png" alt=""><div class="photo-text-body">
+
 The last Grasslands Exploration was at The Timbaktu Bush Camp, Kalpavalli over the 15th & 16th of August.
+
+You normally think of wilderness as a forest canopy, but this one is a vaaaast grassland that's 1000s of acres in extent. Protected by a cooperative from across 10 villages, enabled by the Timbaktu Collective, this is truly the story of a magical transformation, of conservation of a grassy wonderland full of life, and hope.
+
+</div></div>
 
 **The Melagiris - the Eastern Ghats meet the Western Ghats!**
 
 **Foraging Day @ TVC : Be Picky About Your Food!**
+
+<div class="photo-text photo-left"><img src="/images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg" alt=""><div class="photo-text-body">
+
+This is at the Tamarind Valley Collective where 50+ members came together and enabled a really ravaged, desertified landscape to be regenerated. It is now habitat for a 100 bird species, 25+ reptile species, gaur, elephants and various other fauna, while it's green and also provides a lot of naturally grown, organic food. Come learn to forage the wild for your food on this very special journey!
+
+</div></div>
