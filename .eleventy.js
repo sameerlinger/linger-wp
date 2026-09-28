@@ -60,6 +60,38 @@ function singleImageHtml(image) {
   return `<div class="content-image"><a href="${image.src}" class="lightbox-trigger"><img src="${image.src}" alt="${image.alt}" loading="lazy"></a></div>`;
 }
 
+// "Want to know more?" form on experience pages (src/_includes/page.njk):
+// its event dropdown lists the page's own section titles - headings, and
+// paragraphs that are nothing but bold text ("**The Grasslands Edition**"),
+// including ones inside a "Photo + text" block. Bold lines ending in ":"
+// ("To know more or book:") are labels, not events. A page's "formEvents"
+// list in the CMS replaces this; a page with neither gets just its title.
+function fillEventChoices(content) {
+  const $ = cheerio.load(content, null, false);
+  $("select[data-event-choices]").each((_, select) => {
+    let titles = [];
+    try {
+      titles = JSON.parse($(select).attr("data-event-choices") || "[]");
+    } catch {}
+    if (!titles.length) {
+      $(".prose").find("h2, h3, p").each((_, el) => {
+        const text = $(el).text().replace(/\s+/g, " ").trim();
+        if (!text || text.endsWith(":")) return;
+        if (el.tagName === "p") {
+          const kids = $(el).contents().toArray().filter((c) => !(c.type === "text" && !c.data.trim()));
+          if (kids.length !== 1 || !["strong", "b"].includes(kids[0].tagName)) return;
+        }
+        if (!titles.includes(text)) titles.push(text);
+      });
+    }
+    if (!titles.length) titles = [$(select).attr("data-page-title")];
+    for (const t of titles) $(select).append($("<option></option>").attr("value", t).text(t));
+    $(select).append('<option value="Something else / anything coming up">Something else / anything coming up</option>');
+    $(select).removeAttr("data-event-choices");
+  });
+  return $.html();
+}
+
 function groupInlineGalleries(content) {
   const $ = cheerio.load(content, null, false);
   // "Photo + text" blocks: tap the photo to open it full size.
@@ -330,6 +362,20 @@ module.exports = function (eleventyConfig) {
   // already filtered - see those _data/*.js files) so deleting that page via
   // the CMS can't leave a dead link. "blog" is a real destination with no
   // matching content file (it's generated from src/blog/index.njk).
+  // True for a page listed under the Experiences category - the one whose
+  // file is src/content/categories/experiences.md, matched by its Slug (what
+  // a page's "categories" list holds). Read fresh each build, like menu.json.
+  eleventyConfig.addFilter("inExperiences", (categories) => {
+    if (!Array.isArray(categories) || !categories.length) return false;
+    try {
+      const text = fs.readFileSync(path.join(__dirname, "src/content/categories/experiences.md"), "utf8");
+      const m = /^slug:[ \t]*(.*)$/m.exec(text);
+      const slug = m && m[1].trim().replace(/^(["'])(.*)\1$/, "$2");
+      return !!slug && categories.includes(slug);
+    } catch {
+      return false;
+    }
+  });
   eleventyConfig.addFilter("pageExists", (slug) => slug === "blog" || contentSlugs().has(slug));
 
   eleventyConfig.addFilter("dateDisplay", (iso) => {
@@ -407,6 +453,12 @@ module.exports = function (eleventyConfig) {
     if (!this.page || !this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
     if (!content.includes('class="prose"') && !content.includes('class="post-body"')) return content;
     return groupInlineGalleries(content);
+  });
+
+  eleventyConfig.addTransform("eventChoices", function (content) {
+    if (!this.page || !this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+    if (!content.includes("data-event-choices")) return content;
+    return fillEventChoices(content);
   });
 
   eleventyConfig.addTransform("propertyPageLayout", function (content) {
