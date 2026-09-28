@@ -60,12 +60,56 @@ function singleImageHtml(image) {
   return `<div class="content-image"><a href="${image.src}" class="lightbox-trigger"><img src="${image.src}" alt="${image.alt}" loading="lazy"></a></div>`;
 }
 
+// An event title: a heading, or a paragraph that is nothing but bold text
+// ("**The Grasslands Edition**"). Bold lines ending in ":" ("To know more or
+// book:") are labels, not events.
+function isEventTitle($, el) {
+  if (!el || el.type !== "tag" || !["h2", "h3", "p"].includes(el.tagName)) return false;
+  const text = $(el).text().replace(/\s+/g, " ").trim();
+  if (!text || text.endsWith(":")) return false;
+  if (el.tagName === "p") {
+    const kids = $(el).contents().toArray().filter((c) => !(c.type === "text" && !c.data.trim()));
+    if (kids.length !== 1 || !["strong", "b"].includes(kids[0].tagName)) return false;
+  }
+  return true;
+}
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function formatEventDate(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${d} ${MONTHS[m - 1]} ${y}`;
+}
+
+// "Photo + text" blocks with an event date (data-date, set in the CMS) are
+// shown newest first: each dated block - together with the bold title line
+// just above it, since that's how pages are written - swaps into the slots
+// the dated blocks already occupy. Undated blocks and other text stay put.
+// Each dated block also gets its date as a small label above its text.
+function sortDatedEvents($, container) {
+  const units = [];
+  for (const el of $(container).children(".photo-text[data-date]").toArray()) {
+    const date = $(el).attr("data-date");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) continue;
+    $(el).find(".photo-text-body").first().prepend(`<p class="event-date">${formatEventDate(date)}</p>`);
+    const prev = $(el).prev().get(0);
+    units.push({ date, els: isEventTitle($, prev) ? [prev, el] : [el] });
+  }
+  if (units.length < 2) return;
+  const sorted = units.slice().sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  const slots = units.map((u) => $('<span class="event-slot"></span>').insertBefore(u.els[0]));
+  for (const u of units) for (const el of u.els) $(el).remove();
+  slots.forEach((slot, i) => {
+    for (const el of sorted[i].els) slot.before(el);
+    slot.remove();
+  });
+}
+
 // "Want to know more?" form on experience pages (src/_includes/page.njk):
-// its event dropdown lists the page's own section titles - headings, and
-// paragraphs that are nothing but bold text ("**The Grasslands Edition**"),
-// including ones inside a "Photo + text" block. Bold lines ending in ":"
-// ("To know more or book:") are labels, not events. A page's "formEvents"
-// list in the CMS replaces this; a page with neither gets just its title.
+// its event dropdown lists the page's own event titles (isEventTitle),
+// including ones inside a "Photo + text" block. A title belonging to a dated
+// block (inside it, or the line just above it) shows its date, and dated
+// events come first, newest first. A page's "formEvents" list in the CMS
+// replaces this; a page with neither gets just its title.
 function fillEventChoices(content) {
   const $ = cheerio.load(content, null, false);
   $("select[data-event-choices]").each((_, select) => {
@@ -74,15 +118,19 @@ function fillEventChoices(content) {
       titles = JSON.parse($(select).attr("data-event-choices") || "[]");
     } catch {}
     if (!titles.length) {
+      const found = [];
       $(".prose").find("h2, h3, p").each((_, el) => {
+        if (!isEventTitle($, el)) return;
         const text = $(el).text().replace(/\s+/g, " ").trim();
-        if (!text || text.endsWith(":")) return;
-        if (el.tagName === "p") {
-          const kids = $(el).contents().toArray().filter((c) => !(c.type === "text" && !c.data.trim()));
-          if (kids.length !== 1 || !["strong", "b"].includes(kids[0].tagName)) return;
-        }
-        if (!titles.includes(text)) titles.push(text);
+        if (found.some((f) => f.text === text)) return;
+        const block = $(el).closest(".photo-text[data-date]").get(0) || $(el).next(".photo-text[data-date]").get(0);
+        const inBlock = block && $(block).attr("data-date");
+        // Only the first title per block counts as the block's own.
+        const date = inBlock && !found.some((f) => f.block === block) ? inBlock : null;
+        found.push({ text, date, block: date ? block : null });
       });
+      const dated = found.filter((f) => f.date).sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+      titles = dated.map((f) => `${f.text} (${formatEventDate(f.date)})`).concat(found.filter((f) => !f.date).map((f) => f.text));
     }
     if (!titles.length) titles = [$(select).attr("data-page-title")];
     for (const t of titles) $(select).append($("<option></option>").attr("value", t).text(t));
@@ -94,6 +142,7 @@ function fillEventChoices(content) {
 
 function groupInlineGalleries(content) {
   const $ = cheerio.load(content, null, false);
+  $(".prose, .post-body").each((_, container) => sortDatedEvents($, container));
   // "Photo + text" blocks: tap the photo to open it full size.
   $(".photo-text > img").each((_, img) => {
     $(img).wrap($('<a class="lightbox-trigger"></a>').attr("href", $(img).attr("src")));
