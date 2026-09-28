@@ -11,7 +11,7 @@ Watch this space for the next one, or write to us if you want to participate and
 
 **The Western Ghats Edition** 
 
-<div class="photo-text photo-left"><img src="/images/uploads/11-12th-july.png" alt=""><div class="photo-text-body">
+<div class="photo-text photo-left" data-date="2026-07-11"><img src="/images/uploads/11-12th-july.png" alt=""><div class="photo-text-body">
 
 We did the last one on 11-12th July at The Linger Farm, Chettimani. 
 
@@ -21,7 +21,7 @@ Vishaal from The Naturalist School led us on multiple walks exploring the amazin
 
 **The Grasslands Edition**
 
-<div class="photo-text photo-left"><img src="/images/uploads/bush-camp-kalpavalli-2-.png" alt=""><div class="photo-text-body">
+<div class="photo-text photo-left" data-date="2026-08-15"><img src="/images/uploads/bush-camp-kalpavalli-2-.png" alt=""><div class="photo-text-body">
 
 The last Grasslands Exploration was at The Timbaktu Bush Camp, Kalpavalli over the 15th & 16th of August.
 
@@ -31,7 +31,7 @@ You normally think of wilderness as a forest canopy, but this one is a vaaaast g
 
 **3Bs&1H in The Melagiris - the Eastern Ghats meet the Western Ghats!**
 
-<div class="photo-text photo-left"><img src="/images/uploads/tvc3b1h.jpg" alt=""><div class="photo-text-body">
+<div class="photo-text photo-left" data-date="2026-10-03"><img src="/images/uploads/tvc3b1h.jpg" alt=""><div class="photo-text-body">
 
 This 3-4th October, The Tamarind Valley Collective is repeating the very popular biodiversity weekend! Deepa Mohan, an avid birder and nature educator, from Bangalore, and our own resident naturalist Madhavan will lead guided walks to watch and identify birds, butterflies, insects, and herps around the property.
 
@@ -39,7 +39,7 @@ This 3-4th October, The Tamarind Valley Collective is repeating the very popular
 
 **Foraging Day @ TVC : Be Picky About Your Food!**
 
-<div class="photo-text photo-left"><img src="/images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg" alt=""><div class="photo-text-body">
+<div class="photo-text photo-left" data-date="2026-10-10"><img src="/images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg" alt=""><div class="photo-text-body">
 
 This 10th of October, come pick your food from the wild!
 

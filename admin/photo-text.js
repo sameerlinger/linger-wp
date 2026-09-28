@@ -1,9 +1,11 @@
 // "Photo + text" block for page and blog bodies: one photo on the left or
 // right with its own text alongside (stacked on phones - see .photo-text in
 // style.css). Saved into the markdown as plain HTML that markdown-it renders
-// as-is, with the text in between left as markdown:
+// as-is, with the text in between left as markdown (data-date only when an
+// event date is set - the site build sorts dated blocks newest first, see
+// sortDatedEvents in .eleventy.js):
 //
-//   <div class="photo-text photo-left"><img src="..." alt="..."><div class="photo-text-body">
+//   <div class="photo-text photo-left" data-date="2026-10-10"><img src="..." alt="..."><div class="photo-text-body">
 //
 //   Some **markdown** text
 //
@@ -13,7 +15,7 @@
 // checked from Node (module.exports at the bottom).
 (function (root) {
   // Decap anchors this at the start of a block itself; no "m" flag allowed.
-  var BLOCK_PATTERN = /^<div class="photo-text photo-(left|right)"><img src="([^"]*)" alt="([^"]*)"><div class="photo-text-body">\n\n([\s\S]*?)\n*<\/div><\/div>/;
+  var BLOCK_PATTERN = /^<div class="photo-text photo-(left|right)"(?: data-date="(\d{4}-\d{2}-\d{2})")?><img src="([^"]*)" alt="([^"]*)"><div class="photo-text-body">\n\n([\s\S]*?)\n*<\/div><\/div>/;
 
   function attr(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/\n/g, " ");
@@ -24,13 +26,14 @@
   }
 
   function parseBlock(match) {
-    return { side: match[1], photo: unattr(match[2]), alt: unattr(match[3]), text: match[4].replace(/\s+$/, "") };
+    return { side: match[1], date: match[2] || "", photo: unattr(match[3]), alt: unattr(match[4]), text: match[5].replace(/\s+$/, "") };
   }
 
   function serializeBlock(data) {
     var side = data.side === "right" ? "right" : "left";
     var text = String(data.text || "").trim();
-    return '<div class="photo-text photo-' + side + '"><img src="' + attr(data.photo) + '" alt="' + attr(data.alt) + '"><div class="photo-text-body">\n\n' +
+    var date = /^\d{4}-\d{2}-\d{2}$/.test(data.date || "") ? ' data-date="' + data.date + '"' : "";
+    return '<div class="photo-text photo-' + side + '"' + date + '><img src="' + attr(data.photo) + '" alt="' + attr(data.alt) + '"><div class="photo-text-body">\n\n' +
       (text ? text + "\n\n" : "") + "</div></div>";
   }
 
@@ -49,6 +52,11 @@
       {
         label: "Photo side", name: "side", widget: "select", default: "left",
         options: [{ label: "Left", value: "left" }, { label: "Right", value: "right" }],
+      },
+      {
+        label: "Event date", name: "date", widget: "datetime", required: false,
+        format: "YYYY-MM-DD", date_format: "D MMM YYYY", time_format: false, picker_utc: true,
+        hint: "Optional. Shown above the text, and dated blocks are sorted newest first on the page and in the \"Want to know more?\" form.",
       },
       { label: "Text beside the photo", name: "text", widget: "markdown", buttons: ["bold", "italic", "link", "heading-three", "bulleted-list", "numbered-list"], editor_components: [] },
     ],
