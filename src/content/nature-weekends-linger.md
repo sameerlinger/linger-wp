@@ -29,7 +29,7 @@ You normally think of wilderness as a forest canopy, but this one is a vaaaast g
 
 </div></div>
 
-**\#Bs&1H in The Melagiris - the Eastern Ghats meet the Western Ghats!**
+**3Bs&1H in The Melagiris - the Eastern Ghats meet the Western Ghats!**
 
 <div class="photo-text photo-left"><img src="/images/uploads/tvc3b1h.jpg" alt=""><div class="photo-text-body">
 
