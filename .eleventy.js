@@ -182,7 +182,7 @@ const propertySlugs = new Set(properties.map((p) => p.slug));
 const contentSlugs = require("./lib/contentSlugs");
 const dormantSlugs = require("./lib/dormantSlugs");
 
-const BUILTIN_MENUS = ["reservations", "featured", "know-us"];
+const BUILTIN_MENUS = ["reservations", "know-us"];
 
 // Read fresh on every build (not require()d) so a CMS edit is picked up in
 // --serve too. Shape: {"items": [{"type": "builtin", "menu": "..."} |
@@ -408,11 +408,6 @@ module.exports = function (eleventyConfig) {
     (properties || []).some((p) => p.slug === slug)
   );
 
-  // Guards a hardcoded nav/footer link to a src/content/*.md page (as
-  // opposed to one built from regions/featured/mainpages data, which is
-  // already filtered - see those _data/*.js files) so deleting that page via
-  // the CMS can't leave a dead link. "blog" is a real destination with no
-  // matching content file (it's generated from src/blog/index.njk).
   // True for a page listed under the Experiences category - the one whose
   // file is src/content/categories/experiences.md, matched by its Slug (what
   // a page's "categories" list holds). Read fresh each build, like menu.json.
@@ -427,6 +422,12 @@ module.exports = function (eleventyConfig) {
       return false;
     }
   });
+
+  // Guards a hardcoded nav/footer link to a src/content/*.md page (as
+  // opposed to one built from regions/mainpages data, which is
+  // already filtered - see those _data/*.js files) so deleting that page via
+  // the CMS can't leave a dead link. "blog" is a real destination with no
+  // matching content file (it's generated from src/blog/index.njk).
   eleventyConfig.addFilter("pageExists", (slug) => slug === "blog" || contentSlugs().has(slug));
 
   eleventyConfig.addFilter("dateDisplay", (iso) => {
