@@ -62,6 +62,10 @@ function singleImageHtml(image) {
 
 function groupInlineGalleries(content) {
   const $ = cheerio.load(content, null, false);
+  // "Photo + text" blocks: tap the photo to open it full size.
+  $(".photo-text > img").each((_, img) => {
+    $(img).wrap($('<a class="lightbox-trigger"></a>').attr("href", $(img).attr("src")));
+  });
   $(".prose, .post-body").each((_, container) => {
     const children = $(container).children().toArray();
     let i = 0;

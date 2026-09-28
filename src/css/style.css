@@ -224,6 +224,18 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 
 .prose h2[id] { scroll-margin-top: 80px; }
 
+/* "Photo + text" CMS block: photo on one side, its text on the other. */
+.photo-text { display: flex; gap: 1.5rem; align-items: flex-start; margin: 1.75rem 0; }
+.photo-text.photo-right { flex-direction: row-reverse; }
+.photo-text > a, .photo-text > img { flex: 0 0 42%; cursor: zoom-in; }
+.photo-text img { display: block; width: 100%; border-radius: 12px; box-shadow: 0 4px 14px rgba(20, 30, 20, 0.1); }
+.photo-text-body { flex: 1; min-width: 0; }
+.photo-text-body > :first-child { margin-top: 0; }
+@media (max-width: 640px) {
+  .photo-text, .photo-text.photo-right { flex-direction: column; gap: 0.75rem; }
+  .photo-text > a, .photo-text > img { flex: none; width: 100%; }
+}
+
 .page-nav {
   display: flex;
   flex-wrap: wrap;
