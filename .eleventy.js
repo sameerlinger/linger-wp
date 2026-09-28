@@ -80,20 +80,26 @@ function formatEventDate(iso) {
   return `${d} ${MONTHS[m - 1]} ${y}`;
 }
 
-// "Photo + text" blocks with an event date (data-date, set in the CMS) are
-// shown newest first: each dated block - together with the bold title line
-// just above it, since that's how pages are written - swaps into the slots
-// the dated blocks already occupy. Undated blocks and other text stay put.
-// Each dated block also gets its date as a small label above its text.
+// Events with an "Event date" line (<p class="event-date" data-date=...>,
+// the CMS's Event date block, placed right after the event's title) are
+// shown newest first. An event is its title, its date line and everything
+// after them up to the next event title; dated events swap into the slots
+// dated events already occupy, so the intro and undated events stay put.
 function sortDatedEvents($, container) {
-  const units = [];
-  for (const el of $(container).children(".photo-text[data-date]").toArray()) {
-    const date = $(el).attr("data-date");
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) continue;
-    $(el).find(".photo-text-body").first().prepend(`<p class="event-date">${formatEventDate(date)}</p>`);
-    const prev = $(el).prev().get(0);
-    units.push({ date, els: isEventTitle($, prev) ? [prev, el] : [el] });
+  const isDateLine = (el) => el && el.type === "tag" && el.tagName === "p" && /^\d{4}-\d{2}-\d{2}$/.test($(el).attr("data-date") || "") && $(el).hasClass("event-date");
+  const sections = [];
+  let current = null;
+  for (const el of $(container).children().toArray()) {
+    const startsEvent = isEventTitle($, el) || (isDateLine(el) && !(current && current.els.length === 1 && isEventTitle($, current.els[0])));
+    if (startsEvent) {
+      current = { els: [], date: null };
+      sections.push(current);
+    }
+    if (!current) continue; // intro before the first event
+    if (!current.date && current.els.length <= 1 && isDateLine(el)) current.date = $(el).attr("data-date");
+    current.els.push(el);
   }
+  const units = sections.filter((sec) => sec.date);
   if (units.length < 2) return;
   const sorted = units.slice().sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   const slots = units.map((u) => $('<span class="event-slot"></span>').insertBefore(u.els[0]));
@@ -106,9 +112,8 @@ function sortDatedEvents($, container) {
 
 // "Want to know more?" form on experience pages (src/_includes/page.njk):
 // its event dropdown lists the page's own event titles (isEventTitle),
-// including ones inside a "Photo + text" block. A title belonging to a dated
-// block (inside it, or the line just above it) shows its date, and dated
-// events come first, newest first. A page's "formEvents" list in the CMS
+// including ones inside a "Photo + text" block. A title followed by an
+// Event date line shows that date, and dated events come first, newest first. A page's "formEvents" list in the CMS
 // replaces this; a page with neither gets just its title.
 function fillEventChoices(content) {
   const $ = cheerio.load(content, null, false);
@@ -123,11 +128,8 @@ function fillEventChoices(content) {
         if (!isEventTitle($, el)) return;
         const text = $(el).text().replace(/\s+/g, " ").trim();
         if (found.some((f) => f.text === text)) return;
-        const block = $(el).closest(".photo-text[data-date]").get(0) || $(el).next(".photo-text[data-date]").get(0);
-        const inBlock = block && $(block).attr("data-date");
-        // Only the first title per block counts as the block's own.
-        const date = inBlock && !found.some((f) => f.block === block) ? inBlock : null;
-        found.push({ text, date, block: date ? block : null });
+        const date = $(el).next("p.event-date").attr("data-date");
+        found.push({ text, date: /^\d{4}-\d{2}-\d{2}$/.test(date || "") ? date : null });
       });
       const dated = found.filter((f) => f.date).sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
       titles = dated.map((f) => `${f.text} (${formatEventDate(f.date)})`).concat(found.filter((f) => !f.date).map((f) => f.text));
