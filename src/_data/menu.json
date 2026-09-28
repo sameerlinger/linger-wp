@@ -26,10 +26,6 @@
     },
     {
       "type": "builtin",
-      "menu": "featured"
-    },
-    {
-      "type": "builtin",
       "menu": "know-us"
     }
   ]

@@ -54,16 +54,6 @@
         {% if "vacation-offer-deal" | pageExists %}<li><a href="/vacation-offer-deal/">Offers</a></li>{% endif %}
       </ul>
     </details>
-    {% elif item.id == "featured" %}
-    <details class="nav-drop">
-      <summary>Featured</summary>
-      <ul>
-        {% for slug in featured %}
-        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
-        {% endfor %}
-        {% if "events-linger" | pageExists %}<li><a href="/events-linger/">Events!</a></li>{% endif %}
-      </ul>
-    </details>
     {% elif item.id == "know-us" %}
     <details class="nav-drop">
       <summary>Know Us</summary>

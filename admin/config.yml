@@ -127,7 +127,6 @@ collections:
                     widget: "select"
                     options:
                       - { label: "Reservations", value: "reservations" }
-                      - { label: "Featured", value: "featured" }
                       - { label: "Know Us", value: "know-us" }
 
       - name: "banner"
