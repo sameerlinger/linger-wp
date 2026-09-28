@@ -11,8 +11,6 @@ Watch this space for the next one, or write to us if you want to participate and
 
 **The Western Ghats Edition** 
 
-
-
 <div class="photo-text photo-left"><img src="/images/uploads/11-12th-july.png" alt=""><div class="photo-text-body">
 
 We did the last one on 11-12th July at The Linger Farm, Chettimani. 
@@ -31,11 +29,19 @@ You normally think of wilderness as a forest canopy, but this one is a vaaaast g
 
 </div></div>
 
-**The Melagiris - the Eastern Ghats meet the Western Ghats!**
+**\#Bs&1H in The Melagiris - the Eastern Ghats meet the Western Ghats!**
+
+<div class="photo-text photo-left"><img src="/images/uploads/tvc3b1h.jpg" alt=""><div class="photo-text-body">
+
+This 3-4th October, The Tamarind Valley Collective is repeating the very popular biodiversity weekend! Deepa Mohan, an avid birder and nature educator, from Bangalore, and our own resident naturalist Madhavan will lead guided walks to watch and identify birds, butterflies, insects, and herps around the property.
+
+</div></div>
 
 **Foraging Day @ TVC : Be Picky About Your Food!**
 
 <div class="photo-text photo-left"><img src="/images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg" alt=""><div class="photo-text-body">
+
+This 10th of October, come pick your food from the wild!
 
 This is at the Tamarind Valley Collective where 50+ members came together and enabled a really ravaged, desertified landscape to be regenerated. It is now habitat for a 100 bird species, 25+ reptile species, gaur, elephants and various other fauna, while it's green and also provides a lot of naturally grown, organic food. Come learn to forage the wild for your food on this very special journey!
 
