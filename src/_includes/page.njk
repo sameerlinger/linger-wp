@@ -44,3 +44,26 @@ layout: base.njk
   </div>
 </section>
 {% endif %}
+{% if categories | inExperiences %}
+<section class="enquiry" id="want-to-know-more">
+  <div class="enquiry-inner">
+    <h2>Want to know more?</h2>
+    <p class="enquiry-sub">Leave your name and number and we'll get in touch.</p>
+    <form class="interest-form" data-page-title="{{ title }}">
+      <div class="enquiry-row">
+        {# Options are filled in at build time from the page's own section
+           titles (fillEventChoices in .eleventy.js), or its formEvents list. #}
+        <label>I'm interested in<select name="event" required data-page-title="{{ title }}" data-event-choices="{{ (formEvents or []) | dump }}"></select></label>
+      </div>
+      <div class="enquiry-row">
+        <label>Name<input type="text" name="name" required autocomplete="name" maxlength="200"></label>
+        <label>Phone<input type="tel" name="phone" required autocomplete="tel" minlength="6" maxlength="30"></label>
+      </div>
+      <input type="text" name="company" class="enquiry-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="enquiry-submit">Tell me more!</button>
+      <p class="enquiry-status" role="status"></p>
+    </form>
+  </div>
+</section>
+<a href="#want-to-know-more" class="query-floater">Send Query <span aria-hidden="true">&darr;</span></a>
+{% endif %}

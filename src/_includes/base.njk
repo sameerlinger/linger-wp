@@ -233,6 +233,59 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
       });
   });
 });
+
+// "Send Query" floater on experience pages: jumps to the form, and hides
+// while the form is on screen.
+var floater = document.querySelector(".query-floater");
+var interestSection = document.getElementById("want-to-know-more");
+if (floater && interestSection && "IntersectionObserver" in window) {
+  new IntersectionObserver(function (entries) {
+    floater.classList.toggle("hidden", entries[0].isIntersecting);
+  }).observe(interestSection);
+}
+if (floater && interestSection) {
+  floater.addEventListener("click", function (e) {
+    e.preventDefault();
+    interestSection.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+var INTEREST_ENDPOINT = "https://linger-booking-engine.onrender.com/api/public/event-interest";
+document.querySelectorAll(".interest-form").forEach(function (form) {
+  var status = form.querySelector(".enquiry-status");
+  var button = form.querySelector(".enquiry-submit");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    button.disabled = true;
+    status.dataset.state = "";
+    status.textContent = "Sending…";
+    fetch(INTEREST_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        pageTitle: form.dataset.pageTitle,
+        pageUrl: location.href,
+        event: form.event.value,
+        name: form.name.value,
+        phone: form.phone.value,
+        honeypot: form.company.value,
+      }),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("request failed");
+        status.dataset.state = "ok";
+        status.textContent = "Thanks! We'll call or WhatsApp you soon.";
+        form.reset();
+      })
+      .catch(function () {
+        status.dataset.state = "error";
+        status.textContent = "Something went wrong — please write to us at stay@linger.in or WhatsApp 8548065772 instead.";
+      })
+      .finally(function () {
+        button.disabled = false;
+      });
+  });
+});
 </script>
 </body>
 </html>

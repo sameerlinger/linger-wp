@@ -56,6 +56,12 @@ collections:
         multiple: true
         required: false
         hint: "Which homepage sections this property appears under (pick one or more). Manage the list of sections themselves under \"Categories\" below. Leave blank to leave this property off the homepage grid."
+      - label: "\"Want to know more?\" form choices"
+        name: "formEvents"
+        widget: "list"
+        field: { label: "Event", name: "event", widget: "string" }
+        required: false
+        hint: "Only for pages in the Experiences category, which get a \"Want to know more?\" form at the bottom. Leave blank to list this page's bold headings automatically; add names here to use your own list instead."
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "categories"
