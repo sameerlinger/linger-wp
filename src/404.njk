@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: Page not found
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+{# Render serves this for any path that doesn't exist (old WordPress links,
+   retired properties). It keeps the 404 status, so search engines drop the
+   dead URL, and sends people on to the homepage. #}
+<div class="prose">
+<h1>This page has moved on</h1>
+<p>We couldn't find that page &mdash; it may belong to a property that's no longer with us. Taking you to the <a href="/">homepage</a>&hellip;</p>
+</div>
+<script>setTimeout(function () { location.replace("/"); }, 3000);</script>
