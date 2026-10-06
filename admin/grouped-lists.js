@@ -109,19 +109,52 @@
     return { menus: list, unplaced: unplaced };
   }
 
+  // Front-matter text edits. Only the one key is touched, so the rest of the
+  // file stays byte-for-byte as it was (no re-serialising through a YAML lib).
+  function yamlScalar(v) {
+    return /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(v) ? v : JSON.stringify(v);
+  }
+
+  // Replace (or drop, if lines is empty) the top-level `key` and its value in
+  // the front matter; if it isn't there yet, add it at the end.
+  function setKey(text, key, lines) {
+    var m = /^(---\r?\n)([\s\S]*?)(\r?\n---)/.exec(text);
+    if (!m) throw new Error("No front matter");
+    var re = new RegExp("^" + key + ":[^\\n]*(?:\\r?\\n[ \\t]*-[^\\n]*)*", "m");
+    var yaml = m[2];
+    if (re.test(yaml)) {
+      yaml = lines.length
+        ? yaml.replace(re, function () { return lines.join("\n"); })
+        : yaml.replace(re, "").replace(/\n{2,}/g, "\n").replace(/^\n|\n$/g, "");
+    } else if (lines.length) {
+      yaml = yaml + "\n" + lines.join("\n");
+    }
+    return m[1] + yaml + m[3] + text.slice(m[0].length);
+  }
+
+  function setCategories(text, slugs) {
+    return setKey(text, "categories", slugs.length ? ["categories:"].concat(slugs.map(function (s) { return "  - " + yamlScalar(s); })) : []);
+  }
+
+  function setNavMenu(text, slug) {
+    return setKey(text, "navMenu", slug ? ["navMenu: " + yamlScalar(slug)] : []);
+  }
+
   if (typeof module !== "undefined" && module.exports) {
-    module.exports = { parseFrontmatter: parseFrontmatter, groupProperties: groupProperties, groupPages: groupPages };
+    module.exports = { parseFrontmatter: parseFrontmatter, groupProperties: groupProperties, groupPages: groupPages, setCategories: setCategories, setNavMenu: setNavMenu };
   }
   if (typeof document === "undefined") return;
 
   // ---------------------------------------------------------------- browser
 
-  var API = "https://linger-wp-oauth.onrender.com/github/repos/sameerlinger/linger-wp";
+  var REPO_API = "https://linger-wp-oauth.onrender.com/github/repos/sameerlinger/linger-wp";
   var LIST_ROUTE = /^#\/collections\/(properties|pages)\/?(\?.*)?$/;
   var blobCache = {}; // blob sha -> text; a file's sha changes whenever it does
-  var panel = null;
-  var showing = null;
-  var plain = false; // "Plain list" pressed: leave Decap's own list alone
+  var host = null; // our container inside Decap's <main>
+  var hostKind = null;
+  var model = null; // last loaded repo data
+  var plain = false; // "Plain list" chosen: leave Decap's own list showing
+  var saving = Promise.resolve(); // saves run one at a time
 
   function token() {
     try { return JSON.parse(localStorage.getItem("decap-cms-user") || "null").token; } catch (e) { return null; }
@@ -139,22 +172,29 @@
     }
   }
 
-  function gh(path, accept) {
-    return fetch(API + path, { headers: { Authorization: "token " + token(), Accept: accept || "application/vnd.github+json" } })
+  function api(method, path, opts) {
+    opts = opts || {};
+    var headers = { Authorization: "token " + token(), Accept: opts.accept || "application/vnd.github+json" };
+    if (opts.body) headers["Content-Type"] = "application/json";
+    return fetch(REPO_API + path, { method: method, headers: headers, body: opts.body ? JSON.stringify(opts.body) : undefined })
       .then(function (res) {
-        if (!res.ok) throw new Error("GitHub " + res.status);
-        return accept ? res.text() : res.json();
+        if (!res.ok) {
+          return res.json().catch(function () { return {}; }).then(function (j) {
+            throw new Error(j.message || j.error || "GitHub " + res.status);
+          });
+        }
+        return opts.accept ? res.text() : res.json();
       });
   }
 
   function loadAll() {
-    return gh("/git/trees/main?recursive=1").then(function (tree) {
+    return api("GET", "/git/trees/main?recursive=1").then(function (tree) {
       var files = tree.tree.filter(function (f) {
         return f.type === "blob" && (/^src\/content\/(categories\/|menus\/)?[^/]+\.md$/.test(f.path) || f.path === "src/_data/menu.json");
       });
       return Promise.all(files.map(function (f) {
         if (blobCache[f.sha] != null) return { path: f.path, text: blobCache[f.sha] };
-        return gh("/git/blobs/" + f.sha, "application/vnd.github.raw").then(function (text) {
+        return api("GET", "/git/blobs/" + f.sha, { accept: "application/vnd.github.raw" }).then(function (text) {
           blobCache[f.sha] = text;
           return { path: f.path, text: text };
         });
@@ -174,6 +214,43 @@
     });
   }
 
+  // The same calls Decap makes to save: blob, tree, commit, move main. The
+  // file is re-read from main's current head right before editing, so a
+  // change made elsewhere meanwhile isn't overwritten.
+  function commitEdit(file, edit, message) {
+    var path = "src/content/" + file + ".md";
+    return api("GET", "/branches/main").then(function (branch) {
+      var head = branch.commit.sha;
+      return api("GET", "/contents/" + path + "?ref=" + head, { accept: "application/vnd.github.raw" }).then(function (text) {
+        return api("POST", "/git/blobs", { body: { content: edit(text), encoding: "utf-8" } });
+      }).then(function (blob) {
+        return api("POST", "/git/trees", { body: { base_tree: head, tree: [{ path: path, mode: "100644", type: "blob", sha: blob.sha }] } });
+      }).then(function (tree) {
+        return api("POST", "/git/commits", { body: { message: message, tree: tree.sha, parents: [head] } });
+      }).then(function (commit) {
+        return api("PATCH", "/git/refs/heads/main", { body: { sha: commit.sha } });
+      });
+    });
+  }
+
+  // ------------------------------------------------------------------ view
+
+  var COLOR = { text: "#313d3e", muted: "#798291", link: "#3a69c7" };
+  var SHADOW = "rgba(68, 74, 87, 0.05) 0px 2px 6px 0px, rgba(68, 74, 87, 0.1) 0px 1px 3px 0px";
+  var STYLE_ID = "grouped-lists-css";
+
+  function ensureStyle() {
+    if (document.getElementById(STYLE_ID)) return;
+    var st = document.createElement("style");
+    st.id = STYLE_ID;
+    st.textContent =
+      'html[data-grouped-view="on"] main[class*="CollectionMain"] > :not(:first-child):not([data-grouped-host]) { display: none !important; }' +
+      '[data-grouped-host] a:hover { text-decoration: underline; }' +
+      '[data-grouped-host] .gl-drop { outline: 2px dashed ' + COLOR.link + '; outline-offset: 2px; }' +
+      '[data-grouped-host] li[draggable="true"] { cursor: grab; }';
+    document.head.appendChild(st);
+  }
+
   function h(tag, attrs, children) {
     var e = document.createElement(tag);
     Object.keys(attrs || {}).forEach(function (k) {
@@ -185,115 +262,252 @@
     return e;
   }
 
-  var MUTED = { color: "#6b6b6b", fontSize: "13px" };
-  var BTN = {
-    display: "inline-block", padding: "4px 10px", border: "1px solid #bbb", borderRadius: "4px",
-    background: "#fff", color: "#222", textDecoration: "none", font: "13px sans-serif", cursor: "pointer",
-  };
-  var PRIMARY = Object.assign({}, BTN, { background: "#2e6a4f", borderColor: "#2e6a4f", color: "#fff" });
-
-  function link(text, hash, style) {
-    return h("a", { href: hash, text: text, style: style || BTN });
+  function textLink(text, hash) {
+    return h("a", { href: hash, text: text, style: { color: COLOR.link, fontSize: "14px", fontWeight: "500", textDecoration: "none" } });
   }
 
-  function section(title, editHash, addHash, rows, structural, addLabel, emptyText) {
-    var head = h("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap", margin: "28px 0 8px", borderBottom: "1px solid #ddd", paddingBottom: "6px" } }, [
-      h("h2", { text: title, style: { margin: "0 8px 0 0", font: "600 18px sans-serif" } }),
-      editHash && structural ? link("Edit", editHash) : null,
-      addHash ? link(addLabel, addHash) : null,
-    ]);
-    var body = rows.length ? h("ul", { style: { listStyle: "none", margin: 0, padding: 0 } }, rows)
-      : h("p", { text: emptyText, style: Object.assign({ margin: "8px 0" }, MUTED) });
-    return h("section", {}, [head, body]);
+  function textButton(text, onClick, active) {
+    var b = h("button", { type: "button", text: text, style: {
+      background: "none", border: "none", padding: "0", margin: "0 4px", cursor: "pointer",
+      color: active ? COLOR.link : COLOR.muted, fontSize: "14px", fontWeight: "500",
+    } });
+    b.addEventListener("click", onClick);
+    return b;
   }
 
-  function row(title, hash, note) {
-    return h("li", { style: { padding: "6px 0", borderBottom: "1px solid #f0f0f0" } }, [
-      h("a", { href: hash, text: title, style: { color: "#1a4d8f", textDecoration: "none", font: "15px sans-serif" } }),
-      note ? h("span", { text: "  " + note, style: MUTED }) : null,
-    ]);
+  var lastStatus = { text: "", bad: false }; // survives the list re-rendering after a save
+  function status(text, bad) {
+    lastStatus = { text: text, bad: !!bad };
+    var s = host && host.querySelector("[data-gl-status]");
+    if (s) { s.textContent = text; s.style.color = bad ? "#d0021b" : COLOR.muted; }
   }
 
-  function renderProperties(data, structural) {
-    var g = groupProperties(data.content, data.categories, data.menuOrder);
-    var parts = g.categories.map(function (c) {
-      var rows = c.properties.map(function (p) {
-        var others = p.categories.filter(function (s) { return s !== c.slug; }).map(function (s) { return g.titles[s].title; });
-        var note = [p.location, others.length ? "also in " + others.join(", ") : ""].filter(Boolean).join(" · ");
-        return row(p.title, "#/collections/properties/entries/" + encodeURIComponent(p.file), note);
-      });
-      return section(c.title, "#/collections/categories/entries/" + encodeURIComponent(c.file), "#/collections/properties/new", rows, structural, "+ Add property", "No properties in this category yet.");
+  // targets: [{slug, title}] the row can go to; here: the section it's in.
+  function rowEl(item, entryHash, note, here, targets, onMove) {
+    var li = h("li", { draggable: "true", style: {
+      background: "#fff", borderRadius: "5px", boxShadow: SHADOW, margin: "0 0 10px", listStyle: "none",
+      display: "flex", alignItems: "center", gap: "12px", padding: "0 12px 0 0",
+    } });
+    li.appendChild(h("a", { href: entryHash, style: { flex: "1", padding: "16px 20px", textDecoration: "none", minWidth: "0" } }, [
+      h("span", { text: item.title, style: { color: COLOR.text, fontSize: "14px", fontWeight: "500" } }),
+      note ? h("span", { text: "  " + note, style: { color: COLOR.muted, fontSize: "13px" } }) : null,
+    ]));
+    var sel = h("select", { "aria-label": "Move " + item.title, style: { font: "13px system-ui, sans-serif", color: COLOR.muted, border: "1px solid #dfdfe3", borderRadius: "5px", padding: "4px 6px", background: "#fff", maxWidth: "130px" } });
+    sel.appendChild(h("option", { value: "", text: "Move…" }));
+    var move = h("optgroup", { label: "Move to" });
+    var add = h("optgroup", { label: "Also add to" });
+    targets.forEach(function (t) {
+      if (t.slug === here) return;
+      move.appendChild(h("option", { value: "move:" + t.slug, text: t.title }));
+      if (item.categories && item.categories.indexOf(t.slug) === -1) add.appendChild(h("option", { value: "add:" + t.slug, text: t.title }));
     });
-    if (g.uncategorised.length) {
-      parts.push(section("No category", null, null, g.uncategorised.map(function (p) {
-        return row(p.title, "#/collections/properties/entries/" + encodeURIComponent(p.file), p.location);
-      }), structural, "", ""));
-    }
-    return parts;
-  }
-
-  function renderPages(data, structural) {
-    var g = groupPages(data.content, data.menus);
-    var pageRow = function (p) {
-      return row(p.title, "#/collections/pages/entries/" + encodeURIComponent(p.file), p.label && p.label !== p.title ? "shown as “" + p.label + "”" : "");
-    };
-    var parts = g.menus.map(function (m) {
-      return section(m.title, "#/collections/menus/entries/" + encodeURIComponent(m.file), "#/collections/pages/new", m.pages.map(pageRow), structural, "+ Add page", "No pages in this menu yet.");
+    sel.appendChild(move);
+    if (add.children.length) sel.appendChild(add);
+    if (here) sel.appendChild(h("option", { value: "remove:", text: item.categories ? "Remove from this category" : "Take out of this menu" }));
+    sel.addEventListener("change", function () {
+      var v = sel.value.split(":");
+      sel.value = "";
+      if (v[0]) onMove(item, here, v[0], v[1]);
     });
-    parts.push(section("Not in a menu", null, "#/collections/pages/new", g.unplaced.map(pageRow), structural, "+ Add page", "Every page is in a menu."));
-    return parts;
+    li.appendChild(sel);
+    li.addEventListener("dragstart", function (ev) {
+      ev.dataTransfer.setData("text/plain", JSON.stringify({ file: item.file, from: here || "" }));
+      ev.dataTransfer.effectAllowed = "copyMove";
+    });
+    return li;
   }
 
-  function close() {
-    if (panel && panel.parentNode) panel.parentNode.removeChild(panel);
-    panel = null;
-    showing = null;
+  function sectionEl(title, here, buttons, rows, emptyText, onDropItem) {
+    var head = h("div", { style: { display: "flex", alignItems: "baseline", gap: "14px", margin: "26px 0 10px" } }, [
+      h("h2", { text: title, style: { margin: "0", color: COLOR.text, fontSize: "18px", fontWeight: "600" } }),
+    ].concat(buttons));
+    var list = rows.length ? h("ul", { style: { margin: "0", padding: "0" } }, rows)
+      : h("p", { text: emptyText, style: { margin: "0 0 10px", color: COLOR.muted, fontSize: "14px" } });
+    var sec = h("section", { "data-gl-section": here || "" }, [head, list]);
+    sec.addEventListener("dragover", function (ev) { ev.preventDefault(); sec.classList.add("gl-drop"); });
+    sec.addEventListener("dragleave", function (ev) { if (!sec.contains(ev.relatedTarget)) sec.classList.remove("gl-drop"); });
+    sec.addEventListener("drop", function (ev) {
+      ev.preventDefault();
+      sec.classList.remove("gl-drop");
+      var d;
+      try { d = JSON.parse(ev.dataTransfer.getData("text/plain")); } catch (e) { return; }
+      onDropItem(d, here, ev.altKey || ev.ctrlKey);
+    });
+    return sec;
   }
 
-  function open(kind) {
-    close();
-    showing = kind;
-    var structural = canEditStructure();
-    var isProps = kind === "properties";
-    var content = h("div", { style: { maxWidth: "820px", margin: "0 auto", padding: "20px 16px 80px" } }, [
-      h("p", { text: "Loading…", style: MUTED }),
-    ]);
-    var plainBtn = h("button", { text: "Plain list", style: BTN });
-    plainBtn.addEventListener("click", function () { plain = true; close(); });
-    panel = h("div", { style: { position: "fixed", inset: "0", zIndex: "9990", background: "#fafafa", overflowY: "auto", font: "14px sans-serif" } }, [
-      h("div", { style: { background: "#fff", borderBottom: "1px solid #ddd", padding: "10px 16px", display: "flex", gap: "8px", alignItems: "center", flexWrap: "wrap", position: "sticky", top: "0" } }, [
-        h("strong", { text: "Linger CMS", style: { marginRight: "12px" } }),
-        link("Properties", "#/collections/properties", isProps ? PRIMARY : BTN),
-        link("Pages", "#/collections/pages", isProps ? BTN : PRIMARY),
-        structural ? link(isProps ? "+ Add category" : "+ Add menu", isProps ? "#/collections/categories/new" : "#/collections/menus/new", BTN) : null,
-        link(isProps ? "+ Add property" : "+ Add page", "#/collections/" + kind + "/new", BTN),
-        h("span", { style: { flex: "1" } }),
-        link("Blog & more", "#/collections/posts", BTN),
-        plainBtn,
-      ]),
-      content,
-    ]);
-    document.body.appendChild(panel);
-    loadAll().then(function (data) {
-      if (showing !== kind) return; // navigated away meanwhile
-      content.textContent = "";
-      (isProps ? renderProperties(data, structural) : renderPages(data, structural)).forEach(function (s) { content.appendChild(s); });
+  function onMoveProperty(p, from, action, to) {
+    var next = (p.categories || []).filter(function (s) { return s !== (action === "add" ? "" : from); });
+    if (action === "move" || action === "add") { if (next.indexOf(to) === -1) next.push(to); }
+    var titles = model && model.titleOf || {};
+    var msg = action === "remove" ? "Remove “" + p.title + "” from " + (titles[from] || from)
+      : (action === "add" ? "Add “" + p.title + "” to " : "Move “" + p.title + "” to ") + (titles[to] || to);
+    save(p.file, function (t) { return setCategories(t, next); }, msg);
+  }
+
+  function onMovePage(pg, from, action, to) {
+    var dest = action === "remove" ? "" : to;
+    var titles = model && model.titleOf || {};
+    save(pg.file, function (t) { return setNavMenu(t, dest); }, dest ? "Move “" + pg.title + "” to " + (titles[dest] || dest) : "Take “" + pg.title + "” out of its menu");
+  }
+
+  function save(file, edit, message) {
+    status("Saving…");
+    saving = saving.then(function () { return commitEdit(file, edit, message); }).then(function () {
+      status("Saved: " + message + ". The site updates in about a minute.");
+      return refresh(true);
     }).catch(function (err) {
-      content.textContent = "";
-      content.appendChild(h("p", { text: "Couldn't load the grouped view (" + err.message + "). Use “Plain list”.", style: { color: "#a33" } }));
+      status("Couldn't save (" + err.message + "). Reload and try again.", true);
     });
   }
 
-  function refresh() {
-    var m = LIST_ROUTE.exec(location.hash);
-    if (!m) { plain = false; close(); return; }
-    if (plain || !token()) return;
-    if (showing !== m[1]) open(m[1]);
+  function build(kind, data, structural) {
+    var isProps = kind === "properties";
+    var wrap = h("div", {});
+    var bar = h("div", { style: { display: "flex", alignItems: "center", gap: "8px", margin: "0 0 4px", minHeight: "27px", flexWrap: "wrap" } }, [
+      h("span", { text: "View:", style: { color: COLOR.muted, fontSize: "14px" } }),
+      textButton(isProps ? "By category" : "By menu", function () { plain = false; refresh(); }, true),
+      textButton("Plain list", function () { plain = true; applyMode(); }, false),
+      h("span", { style: { flex: "1" } }),
+      structural ? textLink(isProps ? "+ Add category" : "+ Add menu", isProps ? "#/collections/categories/new" : "#/collections/menus/new") : null,
+    ]);
+    wrap.appendChild(bar);
+    var hint = h("p", { "data-gl-status": "", text: "Drag a row onto another section to move it" + (isProps ? " (hold Alt to keep it in both)" : "") + ", or use the row's Move menu.", style: { margin: "6px 0 0", color: COLOR.muted, fontSize: "13px" } });
+    if (lastStatus.text) { hint.textContent = lastStatus.text; hint.style.color = lastStatus.bad ? "#d0021b" : COLOR.muted; }
+    wrap.appendChild(hint);
+
+    if (isProps) {
+      var g = groupProperties(data.content, data.categories, data.menuOrder);
+      var titleOf = {};
+      g.categories.forEach(function (c) { titleOf[c.slug] = c.title; });
+      model = { titleOf: titleOf };
+      var targets = g.categories.map(function (c) { return { slug: c.slug, title: c.title }; });
+      var rowFor = function (p, here) {
+        var others = p.categories.filter(function (s) { return s !== here; }).map(function (s) { return titleOf[s]; });
+        var note = [p.location, others.length ? "also in " + others.join(", ") : ""].filter(Boolean).join(" · ");
+        return rowEl(p, "#/collections/properties/entries/" + encodeURIComponent(p.file), note, here, targets, onMoveProperty);
+      };
+      var byFile = {};
+      g.categories.forEach(function (c) { c.properties.forEach(function (p) { byFile[p.file] = p; }); });
+      g.uncategorised.forEach(function (p) { byFile[p.file] = p; });
+      var drop = function (d, to, keep) {
+        var p = byFile[d.file];
+        if (!p || (d.from || "") === (to || "")) return;
+        if (!to) return onMoveProperty(p, d.from, "remove");
+        onMoveProperty(p, d.from, keep || !d.from ? "add" : "move", to);
+      };
+      g.categories.forEach(function (c) {
+        wrap.appendChild(sectionEl(c.title, c.slug, structural ? [textLink("Edit", "#/collections/categories/entries/" + encodeURIComponent(c.file))] : [],
+          c.properties.map(function (p) { return rowFor(p, c.slug); }), "No properties in this category yet.", drop));
+      });
+      if (g.uncategorised.length) {
+        wrap.appendChild(sectionEl("No category", "", [], g.uncategorised.map(function (p) { return rowFor(p, ""); }), "", drop));
+      }
+    } else {
+      var gp = groupPages(data.content, data.menus);
+      var titleOfM = {};
+      gp.menus.forEach(function (m) { titleOfM[m.slug] = m.title; });
+      model = { titleOf: titleOfM };
+      var targetsM = gp.menus.map(function (m) { return { slug: m.slug, title: m.title }; });
+      var pageByFile = {};
+      var pageRow = function (p, here) {
+        pageByFile[p.file] = p;
+        return rowEl(p, "#/collections/pages/entries/" + encodeURIComponent(p.file), p.label && p.label !== p.title ? "shown as “" + p.label + "”" : "", here, targetsM, onMovePage);
+      };
+      var dropP = function (d, to) {
+        var pg = pageByFile[d.file];
+        if (!pg || (d.from || "") === (to || "")) return;
+        onMovePage(pg, d.from, to ? "move" : "remove", to);
+      };
+      gp.menus.forEach(function (m) {
+        wrap.appendChild(sectionEl(m.title, m.slug, structural ? [textLink("Edit", "#/collections/menus/entries/" + encodeURIComponent(m.file))] : [],
+          m.pages.map(function (p) { return pageRow(p, m.slug); }), "No pages in this menu yet.", dropP));
+      });
+      wrap.appendChild(sectionEl("Not in a menu", "", [], gp.unplaced.map(function (p) { return pageRow(p, ""); }), "Every page is in a menu.", dropP));
+    }
+    return wrap;
   }
 
-  window.addEventListener("hashchange", refresh);
-  // Decap rewrites the hash after sign-in, so also look shortly after load.
-  setTimeout(refresh, 1500);
-  setTimeout(refresh, 4000);
-  refresh();
+  // ----------------------------------------------------------------- mount
+
+  function applyMode() {
+    var on = !!host && !plain;
+    if (on) document.documentElement.setAttribute("data-grouped-view", "on");
+    else document.documentElement.removeAttribute("data-grouped-view");
+    if (host) host.style.display = plain ? "none" : "";
+    if (plain) showPlainToggle(); else hidePlainToggle();
+  }
+
+  // In plain mode the panel is hidden, so give a way back in the same place.
+  var toggle = null;
+  function showPlainToggle() {
+    var main = document.querySelector('main[class*="CollectionMain"]');
+    if (!main || toggle) return;
+    toggle = h("div", { "data-grouped-host": "toggle", style: { margin: "0 0 4px" } }, [
+      h("span", { text: "View: ", style: { color: COLOR.muted, fontSize: "14px" } }),
+      textButton(hostKind === "properties" ? "By category" : "By menu", function () { plain = false; refresh(); }, false),
+      textButton("Plain list", function () {}, true),
+    ]);
+    main.insertBefore(toggle, main.children[1] || null);
+  }
+  function hidePlainToggle() {
+    if (toggle && toggle.parentNode) toggle.parentNode.removeChild(toggle);
+    toggle = null;
+  }
+
+  function unmount() {
+    if (host && host.parentNode) host.parentNode.removeChild(host);
+    hidePlainToggle();
+    host = null;
+    hostKind = null;
+    document.documentElement.removeAttribute("data-grouped-view");
+  }
+
+  function refresh(keepScroll) {
+    var m = LIST_ROUTE.exec(location.hash);
+    var main = document.querySelector('main[class*="CollectionMain"]');
+    if (!m || !main || !token()) { if (host || toggle) unmount(); plain = m ? plain : false; return Promise.resolve(); }
+    ensureStyle();
+    var kind = m[1];
+    if (host && (hostKind !== kind || host.parentNode !== main)) unmount();
+    if (!host) {
+      host = h("div", { "data-grouped-host": "panel" }, [h("p", { text: "Loading…", style: { color: COLOR.muted, fontSize: "14px" } })]);
+      hostKind = kind;
+      // Same width as Decap's own cards (the page header above it).
+      host.style.maxWidth = main.children[0].getBoundingClientRect().width + "px";
+      main.insertBefore(host, main.children[1] || null);
+    }
+    applyMode();
+    if (plain) return Promise.resolve();
+    var y = window.scrollY;
+    var current = host;
+    return loadAll().then(function (data) {
+      if (host !== current) return;
+      host.textContent = "";
+      host.appendChild(build(kind, data, canEditStructure()));
+      if (keepScroll) window.scrollTo(0, y);
+    }).catch(function (err) {
+      if (host !== current) return;
+      host.textContent = "";
+      host.appendChild(h("p", { text: "Couldn't load the grouped view (" + err.message + ").", style: { color: "#d0021b", fontSize: "14px" } }));
+      host.appendChild(textButton("Show plain list", function () { plain = true; applyMode(); }, true));
+    });
+  }
+
+  var pending = false;
+  function schedule() {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(function () {
+      pending = false;
+      var m = LIST_ROUTE.exec(location.hash);
+      var main = document.querySelector('main[class*="CollectionMain"]');
+      var mounted = host && host.parentNode === main && hostKind === (m && m[1]);
+      if ((m && main && !mounted && !(plain && toggle && toggle.parentNode === main)) || (!m && (host || toggle))) refresh();
+    });
+  }
+
+  window.addEventListener("hashchange", schedule);
+  new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
+  schedule();
 })(typeof window !== "undefined" ? window : this);
