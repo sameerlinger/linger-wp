@@ -1,6 +1,6 @@
 ---
 type: page
-navMenu: know-us
+navMenu: about-us
 menuLabel: "Testimonials"
 menuOrder: 50
 title: "Testimonials : They Loved Linger!"
