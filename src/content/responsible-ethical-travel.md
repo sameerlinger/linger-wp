@@ -1,6 +1,6 @@
 ---
 type: page
-navMenu: know-us
+navMenu: about-us
 menuLabel: "Travelling Responsibly"
 menuOrder: 20
 title: "Responsible Travel"
