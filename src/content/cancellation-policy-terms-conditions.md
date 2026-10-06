@@ -2,6 +2,7 @@
 type: page
 title: "Cancellation Policy, Terms & Conditions"
 slug: "cancellation-policy-terms-conditions"
+navMenu: about-us
 ---
 
 **Terms & Conditions**
