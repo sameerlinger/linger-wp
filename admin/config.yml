@@ -84,6 +84,25 @@ collections:
         name: "title"
         widget: "string"
         hint: "A new page's web address is made from its title when it's first saved (e.g. \"Monsoon Offers\" becomes linger.in/monsoon-offers/) and stays the same after, even if the title changes."
+      - label: "Show in menu"
+        name: "navMenu"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Reservations", value: "reservations" }
+          - { label: "Know Us", value: "know-us" }
+        hint: "Adds a link to this page in that top menu. Leave blank to keep the page out of the menus (it's still reachable by its web address)."
+      - label: "Menu label"
+        name: "menuLabel"
+        widget: "string"
+        required: false
+        hint: "Only if the menu link should read differently from the page title, e.g. \"Offers\". Leave blank to use the title."
+      - label: "Menu order"
+        name: "menuOrder"
+        widget: "number"
+        value_type: "int"
+        required: false
+        hint: "Lower numbers come first within the menu (existing links use 10, 20, 30...). Leave blank to go last."
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "categories"

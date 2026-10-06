@@ -1,5 +1,8 @@
 ---
 type: page
+navMenu: know-us
+menuLabel: "Testimonials"
+menuOrder: 50
 title: "Testimonials : They Loved Linger!"
 slug: "testimonials-they-loved-linger"
 ---
