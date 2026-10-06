@@ -1,4 +1,5 @@
 ---
+type: property
 title: The Feel-Good-Farm
 slug: feelgoodfarm-doddaballapura
 dormant: false

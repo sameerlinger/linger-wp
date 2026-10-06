@@ -1,4 +1,5 @@
 ---
+type: page
 title: "What To Expect At Linger Locations"
 slug: "what-to-expect"
 ---

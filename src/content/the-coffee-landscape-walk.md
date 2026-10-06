@@ -1,4 +1,5 @@
 ---
+type: property
 title: The Coffee Landscape Walk
 cover: /images/the-coffee-landscape-walk/2026-03-08-07.28.35.jpg
 summary: Understanding coffee, from the pov of the place

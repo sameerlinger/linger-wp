@@ -1,4 +1,5 @@
 ---
+type: page
 title: "Responsible Travel"
 slug: "responsible-ethical-travel"
 ---

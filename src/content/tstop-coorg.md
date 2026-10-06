@@ -1,4 +1,5 @@
 ---
+type: property
 title: T Stop, Quiet Forests
 slug: tstop-coorg
 cover: /images/t-stop-coorg/1e869ab0-3466-4d6d-93b1-c7f817fcc409.jpeg

@@ -1,4 +1,5 @@
 ---
+type: property
 title: Open Shell Farm
 slug: open-shell-farm-bandipur
 summary: A permaculture farm adjoining the Bandipura forest.

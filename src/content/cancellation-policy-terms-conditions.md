@@ -1,4 +1,5 @@
 ---
+type: page
 title: "Cancellation Policy, Terms & Conditions"
 slug: "cancellation-policy-terms-conditions"
 ---

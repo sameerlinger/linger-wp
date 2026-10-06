@@ -1,4 +1,5 @@
 ---
+type: page
 title: "Long Stays & Workations"
 slug: "long-stays-workations"
 ---

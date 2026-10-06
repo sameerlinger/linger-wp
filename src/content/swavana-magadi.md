@@ -1,4 +1,5 @@
 ---
+type: property
 title: SwaVana by SwaYYam
 slug: swavana-magadi
 categories: ["near-bangalore"]

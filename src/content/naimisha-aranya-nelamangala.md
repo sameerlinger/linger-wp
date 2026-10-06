@@ -1,4 +1,5 @@
 ---
+type: property
 title: Naimisha Aranya
 slug: naimisha-aranya-nelamangala
 categories: ["near-bangalore"]

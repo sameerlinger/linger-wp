@@ -1,4 +1,5 @@
 ---
+type: property
 title: Nature Weekends @ Linger
 slug: Explore the biodiversity with trained naturalists
 cover: /images/nature-weekends-linger/meadows.jpg

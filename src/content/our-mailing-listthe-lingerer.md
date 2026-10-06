@@ -1,4 +1,5 @@
 ---
+type: page
 title: "Our Mailing List/The Lingerer"
 slug: "our-mailing-listthe-lingerer"
 ---

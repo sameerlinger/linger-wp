@@ -1,4 +1,5 @@
 ---
+type: page
 title: "Testimonials : They Loved Linger!"
 slug: "testimonials-they-loved-linger"
 ---

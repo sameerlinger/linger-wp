@@ -1,4 +1,5 @@
 ---
+type: property
 title: Bekkinakaadu
 slug: bekkinakaadu-magadi
 cover: /images/bekkinakaadu-magadi/Steps.jpeg

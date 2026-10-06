@@ -1,4 +1,5 @@
 ---
+type: property
 title: Balur Estate, since 1840
 slug: balur
 categories: ["coffee-estates"]

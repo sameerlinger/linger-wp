@@ -1,4 +1,5 @@
 ---
+type: property
 title: "Varshini Estate : Hill Top Bliss"
 slug: varshini-estate-sakleshpur
 categories: ["coffee-estates"]

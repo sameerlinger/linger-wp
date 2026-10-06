@@ -1,4 +1,5 @@
 ---
+type: page
 title: "Tough Times & Hope"
 slug: "vacation-offer-deal"
 ---

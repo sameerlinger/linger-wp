@@ -1,4 +1,5 @@
 ---
+type: property
 title: Khetiyo, Unexplored Corbett
 slug: khetiyo-corbett-garhwal
 cover: /images/khetiyo-corbett/river.jpeg

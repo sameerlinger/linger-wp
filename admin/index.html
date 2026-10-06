@@ -166,9 +166,9 @@
 
     var dormantSlugs = null; // fetched lazily, cached for the page's lifetime
     function currentEntrySlug() {
-      // Decap's default hash route for editing an entry in the "pages"
-      // collection: #/collections/pages/entries/<slug>
-      var m = location.hash.match(/^#\/collections\/pages\/entries\/([^/?]+)/);
+      // Decap's default hash route for editing an entry in the "properties"
+      // collection: #/collections/properties/entries/<slug>
+      var m = location.hash.match(/^#\/collections\/properties\/entries\/([^/?]+)/);
       return m ? decodeURIComponent(m[1]) : null;
     }
     function refresh() {
