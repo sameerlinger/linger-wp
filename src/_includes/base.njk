@@ -44,7 +44,7 @@
       </ul>
     </details>
     {% elif item.kind == "menu" %}
-    {% if collections.menuLinks[item.menu.slug] %}
+    {% if collections.menuLinks[item.menu.slug].length %}
     <details class="nav-drop">
       <summary>{{ item.menu.name }}</summary>
       <ul>
@@ -52,23 +52,6 @@
       </ul>
     </details>
     {% endif %}
-    {% elif item.id == "reservations" %}
-    <details class="nav-drop">
-      <summary>Reservations</summary>
-      <ul>
-        <li><a href="mailto:stay@linger.in">stay@linger.in</a></li>
-        <li><a href="https://wa.me/918548065772">WhatsApp 8548065772</a></li>
-        <li><a href="tel:+919590050001">+91-959-005-0001</a></li>
-        {% for l in collections.menuLinks["reservations"] %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
-      </ul>
-    </details>
-    {% elif item.id == "know-us" %}
-    <details class="nav-drop">
-      <summary>Know Us</summary>
-      <ul>
-        {% for l in collections.menuLinks["know-us"] %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
-      </ul>
-    </details>
     {% endif %}
     {% endfor %}
   </nav>

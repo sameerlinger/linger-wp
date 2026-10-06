@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "type": "builtin",
+      "type": "menu",
       "menu": "reservations"
     },
     {
@@ -25,8 +25,8 @@
       "category": "Curated experiences at the properties"
     },
     {
-      "type": "builtin",
-      "menu": "know-us"
+      "type": "menu",
+      "menu": "about-us"
     }
   ]
 }

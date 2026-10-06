@@ -89,7 +89,7 @@ collections:
         widget: "relation"
         collection: "menus"
         search_fields: ["title"]
-        value_field: "slug"
+        value_field: "{{slug}}"
         display_fields: ["title"]
         required: false
         hint: "Adds a link to this page in that top menu. Leave blank to keep the page out of the menus (it's still reachable by its web address). Add new menus under \"Menus\" below."
@@ -109,7 +109,7 @@ collections:
   - name: "menus"
     label: "Menus"
     label_singular: "Menu"
-    description: "Top-menu dropdowns that pages can be placed under. Reservations and Know Us are built in. To change where a dropdown sits in the menu, use Homepage > Menu order."
+    description: "Top-menu dropdowns (Reservations, About Us, ...). Add custom links to a dropdown here; pages are placed in them from the Pages list. To change where a dropdown sits in the menu, use Homepage > Menu order."
     folder: "src/content/menus"
     create: true
     delete: true
@@ -117,8 +117,18 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string", hint: "The dropdown's name in the top menu." }
-      - { label: "Slug", name: "slug", widget: "string", hint: "Used internally to link pages to this menu - lowercase, hyphenated, no spaces." }
+      - { label: "Title", name: "title", widget: "string", hint: "The dropdown's name in the top menu. Rename it freely - pages stay in it." }
+      - label: "Links"
+        name: "links"
+        label_singular: "link"
+        widget: "list"
+        required: false
+        summary: "{{fields.label}}"
+        hint: "Extra links in this dropdown that aren't pages: an email (mailto:stay@linger.in), phone (tel:+919590050001), WhatsApp (https://wa.me/918548065772) or any web address. Pages placed in this menu are added automatically, mixed in by Order."
+        fields:
+          - { label: "Text shown", name: "label", widget: "string" }
+          - { label: "Link", name: "url", widget: "string", hint: "e.g. mailto:stay@linger.in, tel:+919590050001, https://wa.me/918548065772, https://example.com or /blog/" }
+          - { label: "Order", name: "order", widget: "number", value_type: "int", required: false, hint: "Lower comes first; pages default to 1000 unless they have their own Menu order." }
 
   - name: "categories"
     label: "Categories"
@@ -173,7 +183,7 @@ collections:
                     search_fields: ["title"]
                     value_field: "slug"
                     display_fields: ["title"]
-              - label: "Menu header"
+              - label: "Menu dropdown"
                 name: "menu"
                 widget: "object"
                 summary: "Menu: {{fields.menu}}"
@@ -183,19 +193,8 @@ collections:
                     widget: "relation"
                     collection: "menus"
                     search_fields: ["title"]
-                    value_field: "slug"
+                    value_field: "{{slug}}"
                     display_fields: ["title"]
-              - label: "Built-in menu"
-                name: "builtin"
-                widget: "object"
-                summary: "Menu: {{fields.menu}}"
-                fields:
-                  - label: "Menu"
-                    name: "menu"
-                    widget: "select"
-                    options:
-                      - { label: "Reservations", value: "reservations" }
-                      - { label: "Know Us", value: "know-us" }
 
       - name: "banner"
         label: "Offers / Announcement Banner"
