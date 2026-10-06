@@ -1,6 +1,6 @@
 ---
 type: page
-navMenu: know-us
+navMenu: about-us
 menuLabel: "What To Expect"
 menuOrder: 10
 title: "What To Expect At Linger Locations"
