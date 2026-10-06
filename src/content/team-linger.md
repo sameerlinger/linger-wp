@@ -1,6 +1,6 @@
 ---
 type: page
-navMenu: know-us
+navMenu: about-us
 menuLabel: "Team Linger"
 menuOrder: 40
 title: "Team Linger"
