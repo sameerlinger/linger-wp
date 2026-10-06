@@ -14,8 +14,6 @@
 // no browser dependencies so it can be checked from Node (module.exports at
 // the bottom).
 (function (root) {
-  var BUILTIN_MENU_ORDER = ["reservations", "know-us"];
-
   // "---\nyaml\n---\nbody" -> the yaml parsed, or {} if there's none.
   function parseFrontmatter(text, yaml) {
     var m = /^---\r?\n([\s\S]*?)\r?\n---/.exec(text || "");
@@ -76,17 +74,23 @@
     return { categories: cats, uncategorised: uncategorised, titles: bySlug };
   }
 
-  function groupPages(entries, menus) {
+  // menus: src/content/menus files. A menu is keyed by its file name (that's
+  // what a page's navMenu holds), and shown in Menu order's position.
+  function groupPages(entries, menus, menuOrder) {
+    var position = {};
+    (menuOrder || []).forEach(function (item, n) {
+      if (item && item.type === "menu" && !(item.menu in position)) position[item.menu] = n;
+    });
     var list = menus
-      .filter(function (m) { return m.data.slug && m.data.title; })
+      .filter(function (m) { return m.data.title; })
       .map(function (m) {
-        return { file: m.file, slug: String(m.data.slug), title: m.data.title, order: num(m.data.order, 999), pages: [] };
+        var links = (Array.isArray(m.data.links) ? m.data.links : []).filter(function (l) { return l && l.label; });
+        return { file: m.file, slug: m.file, title: m.data.title, links: links, pages: [] };
       })
       .sort(function (a, b) {
-        var ia = BUILTIN_MENU_ORDER.indexOf(a.slug);
-        var ib = BUILTIN_MENU_ORDER.indexOf(b.slug);
-        if (ia !== -1 || ib !== -1) return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
-        return a.order - b.order || byTitle(a, b);
+        var pa = a.slug in position ? position[a.slug] : Infinity;
+        var pb = b.slug in position ? position[b.slug] : Infinity;
+        return (pa === pb ? 0 : pa < pb ? -1 : 1) || byTitle(a, b);
       });
     var bySlug = {};
     list.forEach(function (m) { bySlug[m.slug] = m; });
@@ -317,6 +321,19 @@
     return li;
   }
 
+  // A custom link (email, phone, Blog...) kept in the menu itself - not a page,
+  // so it isn't draggable; it's edited from the menu's own form.
+  function linkRowEl(l, editHash, structural) {
+    var inner = [
+      h("span", { text: l.label, style: { color: COLOR.text, fontSize: "14px", fontWeight: "500" } }),
+      h("span", { text: "  link · " + (l.url || ""), style: { color: COLOR.muted, fontSize: "13px" } }),
+    ];
+    var li = h("li", { style: { background: "#fff", borderRadius: "5px", boxShadow: SHADOW, margin: "0 0 10px", listStyle: "none" } });
+    li.appendChild(structural ? h("a", { href: editHash, style: { display: "block", padding: "16px 20px", textDecoration: "none" } }, inner)
+      : h("div", { style: { padding: "16px 20px" } }, inner));
+    return li;
+  }
+
   function sectionEl(title, here, buttons, rows, emptyText, onDropItem) {
     var head = h("div", { style: { display: "flex", alignItems: "baseline", gap: "14px", margin: "26px 0 10px" } }, [
       h("h2", { text: title, style: { margin: "0", color: COLOR.text, fontSize: "18px", fontWeight: "600" } }),
@@ -404,7 +421,7 @@
         wrap.appendChild(sectionEl("No category", "", [], g.uncategorised.map(function (p) { return rowFor(p, ""); }), "", drop));
       }
     } else {
-      var gp = groupPages(data.content, data.menus);
+      var gp = groupPages(data.content, data.menus, data.menuOrder);
       var titleOfM = {};
       gp.menus.forEach(function (m) { titleOfM[m.slug] = m.title; });
       model = { titleOf: titleOfM };
@@ -420,8 +437,10 @@
         onMovePage(pg, d.from, to ? "move" : "remove", to);
       };
       gp.menus.forEach(function (m) {
-        wrap.appendChild(sectionEl(m.title, m.slug, structural ? [textLink("Edit", "#/collections/menus/entries/" + encodeURIComponent(m.file))] : [],
-          m.pages.map(function (p) { return pageRow(p, m.slug); }), "No pages in this menu yet.", dropP));
+        var editHash = "#/collections/menus/entries/" + encodeURIComponent(m.file);
+        var linkRows = m.links.map(function (l) { return linkRowEl(l, editHash, structural); });
+        wrap.appendChild(sectionEl(m.title, m.slug, structural ? [textLink("Edit title & links", editHash)] : [],
+          linkRows.concat(m.pages.map(function (p) { return pageRow(p, m.slug); })), "No pages or links in this menu yet.", dropP));
       });
       wrap.appendChild(sectionEl("Not in a menu", "", [], gp.unplaced.map(function (p) { return pageRow(p, ""); }), "Every page is in a menu.", dropP));
     }

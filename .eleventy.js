@@ -182,12 +182,9 @@ const propertySlugs = new Set(properties.map((p) => p.slug));
 const contentSlugs = require("./lib/contentSlugs");
 const dormantSlugs = require("./lib/dormantSlugs");
 
-const BUILTIN_MENUS = ["reservations", "know-us"];
-
 // Read fresh on every build (not require()d) so a CMS edit is picked up in
-// --serve too. Shape: {"items": [{"type": "builtin", "menu": "..."} |
-// {"type": "category", "category": "<category slug>"} |
-// {"type": "menu", "menu": "<menu header slug>"}]}.
+// --serve too. Shape: {"items": [{"type": "category", "category": "<category slug>"} |
+// {"type": "menu", "menu": "<menu file name>"}]}.
 function readMenuOrder() {
   try {
     const items = JSON.parse(fs.readFileSync(path.join(__dirname, "src/_data/menu.json"), "utf8")).items;
@@ -326,19 +323,22 @@ module.exports = function (eleventyConfig) {
   // belong to several sections at once.
   eleventyConfig.addCollection("regions", (api) => buildRegions(api));
 
-  // Pages that opted into a nav dropdown via "Show in menu" (Pages in the
-  // CMS), keyed by menu slug, sorted by "Menu order" then title. The Blog
-  // link isn't a content file, so it's slotted into Know Us at a fixed spot.
+  // What goes in each top-menu dropdown, keyed by menu file name
+  // (src/content/menus/<name>.md): the menu's own links (email, phone, Blog,
+  // anything added under Menus in the CMS) plus every page whose "Show in
+  // menu" points at it, sorted by order then label.
   eleventyConfig.addCollection("menuLinks", (api) => {
-    const menus = { reservations: [], "know-us": [{ url: "/blog/", label: "Our Blog", order: 30 }] };
+    const order = (v) => (v !== "" && v != null && Number.isFinite(Number(v)) ? Number(v) : 1000);
+    const menus = {};
+    for (const m of api.getFilteredByGlob("src/content/menus/*.md")) {
+      menus[m.fileSlug] = (Array.isArray(m.data.links) ? m.data.links : [])
+        .filter((l) => l && l.url && l.label)
+        .map((l) => ({ url: String(l.url), label: String(l.label), order: order(l.order) }));
+    }
     for (const p of api.getFilteredByGlob("src/content/*.md")) {
       const key = p.data.navMenu;
-      if (typeof key !== "string" || !key) continue;
-      (menus[key] = menus[key] || []).push({
-        url: `/${p.fileSlug}/`,
-        label: p.data.menuLabel || p.data.title,
-        order: Number.isFinite(Number(p.data.menuOrder)) ? Number(p.data.menuOrder) : 1000,
-      });
+      if (typeof key !== "string" || !menus[key]) continue;
+      menus[key].push({ url: `/${p.fileSlug}/`, label: p.data.menuLabel || p.data.title, order: order(p.data.menuOrder) });
     }
     for (const list of Object.values(menus)) list.sort((a, b) => a.order - b.order || a.label.localeCompare(b.label));
     return menus;
@@ -352,34 +352,33 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("menuItems", async (api) => {
     const regions = await buildRegions(api);
     const bySlug = new Map(regions.map((r) => [r.slug, r]));
-    // Menu headers added in the CMS (src/content/menus/*.md), minus the two
-    // built-ins, which have their own fixed items in base.njk.
-    const customMenus = api
+    // Dropdowns that aren't property categories: every file in
+    // src/content/menus (Reservations, About Us, anything added in the CMS).
+    // The name shown is the file's title; its key is the file name.
+    const menus = api
       .getFilteredByGlob("src/content/menus/*.md")
-      .filter((m) => m.data.slug && m.data.title && !BUILTIN_MENUS.includes(m.data.slug))
-      .sort((a, b) => (Number(a.data.order) || 999) - (Number(b.data.order) || 999) || a.data.title.localeCompare(b.data.title))
-      .map((m) => ({ slug: m.data.slug, name: m.data.title }));
-    const customBySlug = new Map(customMenus.map((m) => [m.slug, m]));
+      .filter((m) => m.data.title)
+      .sort((a, b) => a.data.title.localeCompare(b.data.title))
+      .map((m) => ({ slug: m.fileSlug, name: m.data.title }));
+    const menuBySlug = new Map(menus.map((m) => [m.slug, m]));
     const items = [];
     const used = new Set();
     for (const entry of readMenuOrder()) {
-      if (entry.type === "builtin" && BUILTIN_MENUS.includes(entry.menu) && !used.has(entry.menu)) {
-        items.push({ kind: "builtin", id: entry.menu });
-        used.add(entry.menu);
-      } else if (entry.type === "category" && bySlug.has(entry.category) && !used.has(`cat:${entry.category}`)) {
+      if (entry.type === "category" && bySlug.has(entry.category) && !used.has(`cat:${entry.category}`)) {
         items.push({ kind: "category", region: bySlug.get(entry.category) });
         used.add(`cat:${entry.category}`);
-      } else if (entry.type === "menu" && customBySlug.has(entry.menu) && !used.has(`menu:${entry.menu}`)) {
-        items.push({ kind: "menu", menu: customBySlug.get(entry.menu) });
+      } else if (entry.type === "menu" && menuBySlug.has(entry.menu) && !used.has(`menu:${entry.menu}`)) {
+        items.push({ kind: "menu", menu: menuBySlug.get(entry.menu) });
         used.add(`menu:${entry.menu}`);
       }
     }
+    // Anything not placed yet: a new category right after the last listed
+    // one, a new menu at the end - so nothing silently disappears.
     const unlisted = regions.filter((r) => !used.has(`cat:${r.slug}`)).map((region) => ({ kind: "category", region }));
     let lastCategory = -1;
     items.forEach((item, i) => { if (item.kind === "category") lastCategory = i; });
     items.splice(lastCategory === -1 ? items.length : lastCategory + 1, 0, ...unlisted);
-    for (const id of BUILTIN_MENUS) if (!used.has(id)) items.push({ kind: "builtin", id });
-    for (const m of customMenus) if (!used.has(`menu:${m.slug}`)) items.push({ kind: "menu", menu: m });
+    for (const m of menus) if (!used.has(`menu:${m.slug}`)) items.push({ kind: "menu", menu: m });
     return items;
   });
 
