@@ -1,4 +1,4 @@
 ---
-title: Know Us
-slug: know-us
+title: About Us
+slug: about-us
 ---
