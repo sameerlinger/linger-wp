@@ -180,7 +180,10 @@
     opts = opts || {};
     var headers = { Authorization: "token " + token(), Accept: opts.accept || "application/vnd.github+json" };
     if (opts.body) headers["Content-Type"] = "application/json";
-    return fetch(REPO_API + path, { method: method, headers: headers, body: opts.body ? JSON.stringify(opts.body) : undefined })
+    // no-store: these are the same URLs Decap itself reads (blobs) but in a
+    // different format (raw text vs its JSON). Letting the browser cache ours
+    // makes Decap get our copy back, and its entries load empty / garbled.
+    return fetch(REPO_API + path, { method: method, headers: headers, cache: "no-store", body: opts.body ? JSON.stringify(opts.body) : undefined })
       .then(function (res) {
         if (!res.ok) {
           return res.json().catch(function () { return {}; }).then(function (j) {
