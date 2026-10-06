@@ -43,6 +43,15 @@
         {% endfor %}
       </ul>
     </details>
+    {% elif item.kind == "menu" %}
+    {% if collections.menuLinks[item.menu.slug] %}
+    <details class="nav-drop">
+      <summary>{{ item.menu.name }}</summary>
+      <ul>
+        {% for l in collections.menuLinks[item.menu.slug] %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+      </ul>
+    </details>
+    {% endif %}
     {% elif item.id == "reservations" %}
     <details class="nav-drop">
       <summary>Reservations</summary>
