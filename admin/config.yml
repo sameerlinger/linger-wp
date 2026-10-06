@@ -16,15 +16,18 @@ media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "pages"
-    label: "Properties & Pages"
+  - name: "properties"
+    label: "Properties"
+    label_singular: "Property"
     folder: "src/content"
+    filter: { field: "type", value: "property" }
     create: true
     delete: true
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "property" }
       - label: "Title"
         name: "title"
         widget: "string"
@@ -62,6 +65,44 @@ collections:
         field: { label: "Event", name: "event", widget: "string" }
         required: false
         hint: "Only for pages in the Experiences category, which get a \"Want to know more?\" form at the bottom. Leave blank to list this page's bold headings automatically; add names here to use your own list instead."
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    description: "Standalone pages such as policies, team and offers. Properties and experiences are under \"Properties\"."
+    folder: "src/content"
+    filter: { field: "type", value: "page" }
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "page" }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "A new page's web address is made from its title when it's first saved (e.g. \"Monsoon Offers\" becomes linger.in/monsoon-offers/) and stays the same after, even if the title changes."
+      - label: "Show in menu"
+        name: "navMenu"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Reservations", value: "reservations" }
+          - { label: "Know Us", value: "know-us" }
+        hint: "Adds a link to this page in that top menu. Leave blank to keep the page out of the menus (it's still reachable by its web address)."
+      - label: "Menu label"
+        name: "menuLabel"
+        widget: "string"
+        required: false
+        hint: "Only if the menu link should read differently from the page title, e.g. \"Offers\". Leave blank to use the title."
+      - label: "Menu order"
+        name: "menuOrder"
+        widget: "number"
+        value_type: "int"
+        required: false
+        hint: "Lower numbers come first within the menu (existing links use 10, 20, 30...). Leave blank to go last."
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "categories"

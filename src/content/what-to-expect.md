@@ -1,4 +1,8 @@
 ---
+type: page
+navMenu: know-us
+menuLabel: "What To Expect"
+menuOrder: 10
 title: "What To Expect At Linger Locations"
 slug: "what-to-expect"
 ---

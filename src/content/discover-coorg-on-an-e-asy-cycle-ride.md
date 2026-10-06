@@ -1,4 +1,5 @@
 ---
+type: property
 title: Discover Coorg on an E(asy)Cycle Ride
 cover: /images/discover-coorg-on-an-e-asy-cycle-ride/2026-04-18-13.27.45.jpg
 location: From The Linger Farm, Chettimani, around Bhagamandala

@@ -357,6 +357,24 @@ module.exports = function (eleventyConfig) {
   // the others in its category. Unlike "regions" above it keeps dormant
   // properties and empty categories - a report looks back at past years, and
   // a property going dormant today shouldn't drop out of last year's numbers.
+  // Pages that opted into a nav dropdown via "Show in menu" (Pages in the
+  // CMS), sorted by "Menu order" then title. The Blog link isn't a content
+  // file, so it's slotted into Know Us at a fixed position.
+  eleventyConfig.addCollection("menuLinks", (api) => {
+    const menus = { reservations: [], "know-us": [{ url: "/blog/", label: "Our Blog", order: 30 }] };
+    for (const p of api.getFilteredByGlob("src/content/*.md")) {
+      const list = menus[p.data.navMenu];
+      if (!list) continue;
+      list.push({
+        url: `/${p.fileSlug}/`,
+        label: p.data.menuLabel || p.data.title,
+        order: Number.isFinite(Number(p.data.menuOrder)) ? Number(p.data.menuOrder) : 1000,
+      });
+    }
+    for (const list of Object.values(menus)) list.sort((a, b) => a.order - b.order || a.label.localeCompare(b.label));
+    return menus;
+  });
+
   eleventyConfig.addCollection("propertyCategoryFeed", (api) => {
     const categories = api
       .getFilteredByGlob("src/content/categories/*.md")

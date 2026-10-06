@@ -1,4 +1,5 @@
 ---
+type: property
 title: Bamboo Rustles
 slug: bamboo-rustles-krishnagiri
 summary: Pit Viper research, and gecko capital of the region!

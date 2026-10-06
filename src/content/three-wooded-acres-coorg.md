@@ -1,4 +1,5 @@
 ---
+type: property
 title: Three Wooded Acres
 slug: three-wooded-acres-coorg
 categories: ["coffee-estates"]

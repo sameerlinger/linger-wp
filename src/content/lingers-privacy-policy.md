@@ -1,4 +1,5 @@
 ---
+type: page
 title: "Linger's Privacy Policy"
 slug: "lingers-privacy-policy"
 ---

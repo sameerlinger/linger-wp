@@ -1,4 +1,5 @@
 ---
+type: property
 title: Tamarind Valley Collective
 slug: tamarindvalleycollective-farmstay
 cover: /images/tamarind-valley-collective/2024-12-28-10.37.18.jpg

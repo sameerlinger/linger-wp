@@ -1,4 +1,8 @@
 ---
+type: page
+navMenu: know-us
+menuLabel: "Team Linger"
+menuOrder: 40
 title: "Team Linger"
 slug: "team-linger"
 ---

@@ -1,4 +1,5 @@
 ---
+type: property
 title: The Linger Farm
 slug: lingerfarm-coorg
 cover: /images/the-linger-farm-chettimani/2021-09-22-14.31.33.jpg

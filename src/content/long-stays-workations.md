@@ -1,4 +1,8 @@
 ---
+type: page
+navMenu: reservations
+menuLabel: "Long Stays & Workations"
+menuOrder: 10
 title: "Long Stays & Workations"
 slug: "long-stays-workations"
 ---

@@ -1,4 +1,5 @@
 ---
+type: property
 title: Chestnut Grove, Uttarakhand
 slug: chestnutgrove-bageshwar
 categories: ["himalayas"]

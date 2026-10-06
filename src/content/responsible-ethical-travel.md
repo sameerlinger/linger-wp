@@ -1,4 +1,8 @@
 ---
+type: page
+navMenu: know-us
+menuLabel: "Travelling Responsibly"
+menuOrder: 20
 title: "Responsible Travel"
 slug: "responsible-ethical-travel"
 ---

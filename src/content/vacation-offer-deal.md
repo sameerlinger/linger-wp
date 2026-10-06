@@ -1,4 +1,8 @@
 ---
+type: page
+navMenu: reservations
+menuLabel: "Offers"
+menuOrder: 20
 title: "Tough Times & Hope"
 slug: "vacation-offer-deal"
 ---

@@ -1,4 +1,5 @@
 ---
+type: property
 title: The Earth House
 slug: palampur-himachal
 cover: /images/the-earth-house-palampur/teh1rainyday.jpg
