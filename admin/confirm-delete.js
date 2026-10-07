@@ -26,6 +26,7 @@
     var overlay = document.createElement("div");
     overlay.setAttribute("role", "alertdialog");
     overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("data-confirm-delete", "");
     overlay.style.cssText = "position:fixed;inset:0;z-index:100000;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif";
     var box = document.createElement("div");
     box.style.cssText = "background:#fff;border-radius:6px;padding:24px;width:min(420px,90vw);box-shadow:0 8px 30px rgba(0,0,0,.3);color:#313d3e";
@@ -78,6 +79,7 @@
 
   document.addEventListener("click", function (e) {
     if (allowNext) return; // our own re-click
+    if (e.target.closest && e.target.closest("[data-confirm-delete]")) return; // our own dialog's buttons
     var item = deleteItem(e.target);
     if (!item) return;
     e.preventDefault();
