@@ -352,12 +352,29 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background:
-    linear-gradient(180deg, rgba(15, 22, 15, 0.35) 0%, rgba(15, 22, 15, 0.55) 60%, rgba(15, 22, 15, 0.8) 100%),
-    var(--hero-image, url("/images/varshini-estate-sakleshpur/WowScape-1024x576.jpg")) center 65% / cover no-repeat;
+  background: var(--hero-image, url("/images/varshini-estate-sakleshpur/WowScape-1024x576.jpg")) center 65% / cover no-repeat;
   color: #fff;
+  overflow: hidden;
 }
-.hero-inner { max-width: 680px; padding: 2rem 1.5rem; }
+/* Darkening overlay, above the rotating photos (.hero-slide) and below the text. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(15, 22, 15, 0.35) 0%, rgba(15, 22, 15, 0.55) 60%, rgba(15, 22, 15, 0.8) 100%);
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center 65%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+.hero-slide.is-visible { opacity: 1; }
+.hero-inner { position: relative; z-index: 2; max-width: 680px; padding: 2rem 1.5rem; }
 .hero-kicker {
   text-transform: uppercase;
   letter-spacing: 0.14em;
