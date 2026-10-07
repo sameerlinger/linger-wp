@@ -172,6 +172,8 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
         checkIn: checkIn,
         checkOut: checkOut,
         guests: Number(form.guests.value),
+        kidsUnder5: Number(form.kidsUnder5.value) || 0,
+        kids5to12: Number(form.kids5to12.value) || 0,
         honeypot: form.company.value,
       }),
     })
