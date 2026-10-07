@@ -14,18 +14,51 @@ permalink: /index.html
 </section>
 <script>
 (function () {
-  var images = {{ heroImages.images | dump | safe }};
-  if (!images.length) return;
+  var all = {{ heroImages.images | dump | safe }};
+  if (!all.length) return;
+  var hero = document.getElementById("hero");
   var last = null;
   try { last = sessionStorage.getItem("heroImage"); } catch (e) {}
-  var choices = images.length > 1 ? images.filter(function (src) { return src !== last; }) : images;
-  var pick = choices[Math.floor(Math.random() * choices.length)];
-  try { sessionStorage.setItem("heroImage", pick); } catch (e) {}
-  var img = new Image();
-  img.onload = function () {
-    document.getElementById("hero").style.setProperty("--hero-image", 'url("' + pick + '")');
-  };
-  img.src = pick;
+  // A random handful, not the whole pool: the first is the one shown on load
+  // (never the same as the previous visit's), the rest rotate in after the
+  // page has finished loading, so the first view costs what it always did.
+  var pool = all.slice();
+  for (var i = pool.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = pool[i]; pool[i] = pool[j]; pool[j] = t;
+  }
+  if (pool.length > 1 && pool[0] === last) pool.push(pool.shift());
+  var slides = pool.slice(0, 5);
+  try { sessionStorage.setItem("heroImage", slides[0]); } catch (e) {}
+
+  var first = new Image();
+  first.onload = function () { hero.style.setProperty("--hero-image", 'url("' + slides[0] + '")'); };
+  first.src = slides[0];
+
+  var still = slides.length < 2 ||
+    (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) ||
+    (navigator.connection && navigator.connection.saveData);
+  if (still) return;
+
+  var index = 0, shown = null;
+  function next() {
+    if (document.hidden) return;
+    var src = slides[(index + 1) % slides.length];
+    var img = new Image();
+    img.onload = function () {
+      index = (index + 1) % slides.length;
+      var layer = document.createElement("div");
+      layer.className = "hero-slide";
+      layer.style.backgroundImage = 'url("' + src + '")';
+      hero.insertBefore(layer, hero.firstChild);
+      layer.offsetWidth; // start the fade from opacity 0
+      layer.classList.add("is-visible");
+      if (shown) { var old = shown; setTimeout(function () { old.remove(); }, 1600); }
+      shown = layer;
+    };
+    img.src = src;
+  }
+  window.addEventListener("load", function () { setInterval(next, 6000); });
 })();
 </script>
 
