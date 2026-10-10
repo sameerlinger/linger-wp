@@ -321,6 +321,13 @@ module.exports = function (eleventyConfig) {
   // frontmatter list (a relation-widget field in admin/config.yml) rather
   // than a category owning a fixed property list - so one property can
   // belong to several sections at once.
+  eleventyConfig.addCollection("destinations", (api) =>
+    api
+      .getFilteredByGlob("src/content/*.md")
+      .filter((i) => i.data.type === "destination")
+      .sort((a, b) => a.data.title.localeCompare(b.data.title))
+      .map((i) => ({ url: i.url, title: i.data.title }))
+  );
   eleventyConfig.addCollection("regions", (api) => buildRegions(api));
 
   // What goes in each top-menu dropdown, keyed by menu file name

@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<div class="prose">
+{{ content | safe }}
+</div>
+{% set visible = [] %}
+{% for slug in stays %}{% if slug not in dormantSlugs %}{% set visible = (visible.push(slug), visible) %}{% endif %}{% endfor %}
+{% if visible.length %}
+<section class="region-section">
+  <h2>Our stays</h2>
+  <div class="property-grid">
+  {% for slug in visible %}
+    <a class="property-card" href="/{{ slug }}/">
+      {% set cover = slug | coverImage %}
+      {% set loc = slug | pageLocation %}
+      {% if cover %}
+      <div class="property-card-media">
+        <img src="{{ cover }}" alt="{{ slug | propertyTitle(properties) }}" loading="lazy">
+        {% if loc %}<span class="property-card-location">{{ loc }}</span>{% endif %}
+      </div>
+      {% endif %}
+      <span class="property-card-title">{{ slug | propertyTitle(properties) }}</span>
+      {% set summary = slug | pageSummary %}
+      {% if summary %}<span class="property-card-summary">{{ summary }}</span>{% endif %}
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}

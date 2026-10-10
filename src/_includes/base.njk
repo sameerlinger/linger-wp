@@ -66,6 +66,11 @@
       <a href="https://wa.me/918548065772">WhatsApp 8548065772</a> &middot;
       <a href="tel:+919590050001">+91-959-005-0001</a>
     </p>
+    {% if collections.destinations.length %}
+    <p class="footer-destinations">
+      {% for d in collections.destinations %}<a href="{{ d.url }}">{{ d.title }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}
+    </p>
+    {% endif %}
     <p class="footer-copy">&copy; {{ currentYear }} Linger</p>
   </div>
 </footer>

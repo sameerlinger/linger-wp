@@ -110,6 +110,35 @@ collections:
       - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "Optional. The grey text under the title in Google results. Leave blank to use the one-line description or the first paragraph. Around 150 characters works best." }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "destinations"
+    label: "Destinations"
+    label_singular: "Destination"
+    description: "Search-friendly pages for a place or kind of stay, e.g. \"Homestays in Coorg\". Each shows an intro and cards for the properties you pick, and is linked from the footer."
+    folder: "src/content"
+    filter: { field: "type", value: "destination" }
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "destination" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "destination.njk" }
+      - { label: "Title", name: "title", widget: "string", hint: "Shown as the page heading, so use the words people search for, e.g. \"Homestays in Coorg\". The web address is made from it when first saved." }
+      - label: "Stays to show"
+        name: "stays"
+        widget: "relation"
+        collection: "properties"
+        search_fields: ["title"]
+        value_field: "{{slug}}"
+        display_fields: ["title"]
+        multiple: true
+        required: false
+        hint: "The properties listed on this page, in this order."
+      - { label: "Search title (SEO)", name: "seo_title", widget: "string", required: false, hint: "The title Google shows. Around 60 characters works best." }
+      - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "The grey text under the title in Google. Around 150 characters works best." }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Intro text. Start with a heading like \"# Homestays in Coorg\"." }
+
   - name: "menus"
     label: "Menus"
     label_singular: "Menu"
