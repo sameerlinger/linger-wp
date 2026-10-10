@@ -595,6 +595,9 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 .footer-contact { font-size: 0.9rem; margin-bottom: 1rem; }
 .footer-contact a { color: #fff; text-decoration: none; }
 .footer-contact a:hover { text-decoration: underline; }
+.footer-destinations { font-size: 0.9rem; margin: 0 0 1rem; line-height: 1.8; }
+.footer-destinations a { color: inherit; text-decoration: none; }
+.footer-destinations a:hover { text-decoration: underline; }
 .footer-copy { font-size: 0.8rem; color: #a9bcac; margin: 0; }
 
 /* ---------- Lightbox ---------- */
