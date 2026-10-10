@@ -62,6 +62,14 @@ permalink: /index.html
 })();
 </script>
 
+{% if collections.destinations.length %}
+<nav class="destination-links region-section" aria-label="Browse by destination">
+  <h2>Find a stay by destination</h2>
+  <ul>
+    {% for d in collections.destinations %}<li><a href="{{ d.url }}">{{ d.title }}</a></li>{% endfor %}
+  </ul>
+</nav>
+{% endif %}
 <div id="regions"></div>
 
 {% for region in collections.regions %}
