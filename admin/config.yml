@@ -65,6 +65,8 @@ collections:
         field: { label: "Event", name: "event", widget: "string" }
         required: false
         hint: "Only for pages in the Experiences category, which get a \"Want to know more?\" form at the bottom. Leave blank to list this page's bold headings automatically; add names here to use your own list instead."
+      - { label: "Search title (SEO)", name: "seo_title", widget: "string", required: false, hint: "Optional. The title Google shows, e.g. \"Homestay in Coorg with coffee estate walks | The Linger Farm\". Leave blank to build it from the title and location. Around 60 characters works best." }
+      - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "Optional. The grey text under the title in Google results. Leave blank to use the one-line description or the first paragraph. Around 150 characters works best." }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
@@ -104,6 +106,8 @@ collections:
         value_type: "int"
         required: false
         hint: "Lower numbers come first within the menu (existing links use 10, 20, 30...). Leave blank to go last."
+      - { label: "Search title (SEO)", name: "seo_title", widget: "string", required: false, hint: "Optional. The title Google shows, e.g. \"Homestay in Coorg with coffee estate walks | The Linger Farm\". Leave blank to build it from the title and location. Around 60 characters works best." }
+      - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "Optional. The grey text under the title in Google results. Leave blank to use the one-line description or the first paragraph. Around 150 characters works best." }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "menus"
@@ -235,4 +239,6 @@ collections:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Categories", name: "categories", widget: "list", default: [] }
+      - { label: "Search title (SEO)", name: "seo_title", widget: "string", required: false, hint: "Optional. The title Google shows, e.g. \"Homestay in Coorg with coffee estate walks | The Linger Farm\". Leave blank to build it from the title and location. Around 60 characters works best." }
+      - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "Optional. The grey text under the title in Google results. Leave blank to use the one-line description or the first paragraph. Around 150 characters works best." }
       - { label: "Body", name: "body", widget: "markdown" }

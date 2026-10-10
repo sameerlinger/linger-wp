@@ -531,6 +531,32 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Pages without a summary/seo_description get one from their first
+  // real paragraph (lib/seo.js leaves a placeholder for this).
+  const seo = require("./lib/seo");
+  eleventyConfig.addShortcode("seo", function () {
+    const imgs = (this.ctx && this.ctx.heroImages && this.ctx.heroImages.images) || [];
+    return seo.call(
+      this,
+      (s) => eleventyConfig.getFilter("coverImage")(s),
+      (s, p) => eleventyConfig.getFilter("isProperty")(s, p),
+      imgs[0]
+    );
+  });
+  eleventyConfig.addTransform("autoDescription", function (content) {
+    if (!this.page || !this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+    if (!content.includes(seo.AUTO)) return content;
+    const $ = cheerio.load(content);
+    let text = "";
+    $(".post-body p, .prose p").each((_, el) => {
+      const t = $(el).text().replace(/\s+/g, " ").trim();
+      if (t.length >= 50) { text = t; return false; }
+    });
+    const desc = text ? (text.length > 158 ? text.slice(0, 157).replace(/\s+\S*$/, "") + "…" : text) : seo.DEFAULT_DESC;
+    const safe = desc.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return content.split(seo.AUTO).join(safe);
+  });
+
   eleventyConfig.addTransform("inlineGalleries", function (content) {
     if (!this.page || !this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
     if (!content.includes('class="prose"') && !content.includes('class="post-body"')) return content;
