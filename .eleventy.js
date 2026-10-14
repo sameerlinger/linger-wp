@@ -445,6 +445,24 @@ module.exports = function (eleventyConfig) {
     (properties || []).some((p) => p.slug === slug)
   );
 
+  // Icon list for a property page: the two flags synced from the booking
+  // engine (pets, driver) plus the CMS "Activities & features" checkboxes.
+  // Fixed order, only the ones that are on.
+  eleventyConfig.addFilter("featureList", (features, synced) => {
+    const f = features || {};
+    const s = synced || {};
+    return [
+      s.petFriendly && { key: "pets", label: "Pet friendly" },
+      s.driverAccommodation && { key: "driver", label: "Driver accommodation" },
+      f.wifi && { key: "wifi", label: "Wi-Fi" },
+      f.hikes && { key: "hikes", label: "Hikes" },
+      f.naturalist && { key: "naturalist", label: "In-house naturalist" },
+      f.farmActivity && { key: "farm", label: "Farm activity" },
+      f.bbq && { key: "bbq", label: "BBQ" },
+      f.cycling && { key: "cycling", label: "Cycling" },
+    ].filter(Boolean);
+  });
+
   // True for a page listed under the Experiences category - the one whose
   // file is src/content/categories/experiences.md, matched by its Slug (what
   // a page's "categories" list holds). Read fresh each build, like menu.json.
