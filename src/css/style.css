@@ -703,6 +703,7 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   list-style: none;
 }
 .strip-arrow { display: none; }
+.strip-label { display: none; }
 .feature-icon {
   position: relative;
   width: var(--icon);
@@ -750,7 +751,24 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   }
   .feature-icons::-webkit-scrollbar { display: none; }
   .feature-icon { flex: none; scroll-snap-align: start; }
-  .feature-icon::after { display: none; } /* the scroller would clip the tooltip */
+  .feature-icon::after { display: none; } /* the scroller would clip the hover tooltip... */
+  /* ...so a tap shows its label here instead, outside the scroller. */
+  .strip-label {
+    display: block;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    white-space: nowrap;
+    background: var(--fg);
+    color: var(--bg);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+  }
+  .strip-label.show { opacity: 1; }
   .has-more .strip-arrow {
     display: block;
     width: 18px;

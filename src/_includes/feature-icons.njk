@@ -16,6 +16,7 @@
 {% set more = featureList.length > 5 %}
 <div class="feature-strip{% if more %} has-more{% endif %}" style="--visible: {{ 5 if more else featureList.length }}">
   {% if more %}<button type="button" class="strip-arrow strip-prev" aria-label="Previous features" disabled>&lsaquo;</button>{% endif %}
+  <span class="strip-label" role="status" aria-live="polite"></span>
   <ul class="feature-icons" aria-label="Activities and features">
     {% for f in featureList %}
     <li class="feature-icon" tabindex="0" data-label="{{ f.label }}" title="{{ f.label }}">
