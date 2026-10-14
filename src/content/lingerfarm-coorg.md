@@ -14,7 +14,6 @@ features:
   - farmActivity
   - bbq
   - cycling
-  - naturalist
 ---
 # The Linger Farm, Chettimani
 
