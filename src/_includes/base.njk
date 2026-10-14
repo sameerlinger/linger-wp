@@ -280,6 +280,13 @@ document.querySelectorAll(".feature-strip.has-more").forEach(function (strip) {
 // "Send Query" floater on experience and property pages: jumps to the form
 // (the element its href points at), and hides while the form is on screen.
 var floater = document.querySelector(".query-floater");
+// Sit just below the sticky header, whatever height it wraps to.
+var siteHeader = document.querySelector(".site-header");
+var placeFloater = function () {
+  if (floater && siteHeader) floater.style.top = siteHeader.offsetHeight + 12 + "px";
+};
+placeFloater();
+window.addEventListener("resize", placeFloater);
 var interestSection = floater && document.getElementById(floater.getAttribute("href").slice(1));
 if (floater && interestSection && "IntersectionObserver" in window) {
   new IntersectionObserver(function (entries) {

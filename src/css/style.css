@@ -326,27 +326,26 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 .query-floater {
   position: fixed;
   right: 0;
-  top: 38%;
-  transform: translateY(-50%);
+  top: 104px; /* just below the sticky header; the page script sets the exact value */
   z-index: 40;
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.7rem 0.9rem 0.7rem 1rem;
+  padding: 0.4rem 0.6rem 0.4rem 0.7rem;
   border-radius: 999px 0 0 999px;
   background: var(--accent);
   color: #fff;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.72rem;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(20, 30, 20, 0.2);
   opacity: 0.6;
   transition: opacity 0.2s ease, background 0.2s ease;
 }
 .query-floater:hover { background: var(--accent-dark); color: #fff; opacity: 1; }
-.query-floater span { font-size: 1.1rem; line-height: 1; }
+.query-floater span { font-size: 0.85rem; line-height: 1; }
 .query-floater.hidden { opacity: 0; pointer-events: none; }
-@media (max-width: 640px) { .query-floater { font-size: 0.85rem; padding: 0.6rem 0.75rem 0.6rem 0.85rem; } }
+@media (max-width: 640px) { .query-floater { font-size: 0.68rem; padding: 0.35rem 0.5rem 0.35rem 0.6rem; } }
 
 /* ---------- Hero ---------- */
 
