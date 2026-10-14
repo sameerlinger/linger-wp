@@ -20,7 +20,7 @@ layout: base.njk
         <label>Property<select name="property">
           <option value="any">Any property</option>
           {% for p in properties | bookableProperties(dormantSlugs) %}
-          <option value="{{ p.slug }}"{% if p.slug == page.fileSlug %} selected{% endif %}>{{ p.title }}</option>
+          <option value="{{ p.slug }}"{% if propertyFeatures[p.slug].petFriendly %} data-pets="1"{% endif %}{% if propertyFeatures[p.slug].driverAccommodation %} data-driver="1"{% endif %}{% if p.slug == page.fileSlug %} selected{% endif %}>{{ p.title }}</option>
           {% endfor %}
         </select></label>
       </div>
@@ -35,6 +35,11 @@ layout: base.njk
         <label>Adults<input type="number" name="guests" min="1" max="50" step="1" required></label>
         <label>Kids (0–5)<input type="number" name="kidsUnder5" min="0" max="50" step="1" value="0"></label>
         <label>Kids (5–10)<input type="number" name="kids5to12" min="0" max="50" step="1" value="0"></label>
+      </div>
+      {# Shown by the page script for a property that takes pets / a driver. #}
+      <div class="enquiry-extras" hidden>
+        <label class="extra-pets" hidden><input type="checkbox" name="pets"> Travelling with pets</label>
+        <label class="extra-driver" hidden><input type="checkbox" name="driver"> Driver needs accommodation</label>
       </div>
       <!-- Honeypot: hidden from real visitors, invisible to screen readers, but a
            bot filling every field will fill this too — see the server-side check. -->

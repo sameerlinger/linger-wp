@@ -108,6 +108,8 @@
   var SYNC_ENDPOINT = "https://linger-wp-oauth.onrender.com/sync-deploy";
   var DORMANT_ENDPOINT = "https://linger-booking-engine.onrender.com/api/public/dormant-properties";
 
+  var FEATURES_ENDPOINT = "https://linger-booking-engine.onrender.com/api/public/property-features";
+
   function el(tag, styles, text) {
     var e = document.createElement(tag);
     Object.assign(e.style, styles);
@@ -187,8 +189,44 @@
     refresh();
   }
 
+  // --- Read-only strip: pet friendliness / driver accommodation are set in
+  // LingerApp, so show what they currently are while editing a property. ---
+  function initSyncedFeatures() {
+    var strip = el("div", {
+      display: "none", position: "fixed", bottom: "8px", left: "8px", zIndex: 9999,
+      background: "#fff", border: "1px solid #ccc", borderRadius: "6px",
+      padding: "6px 10px", font: "13px sans-serif", boxShadow: "0 1px 4px rgba(0,0,0,0.15)",
+    });
+    document.body.appendChild(strip);
+    var features = null;
+    function currentEntrySlug() {
+      var m = location.hash.match(/^#\/collections\/properties\/entries\/([^/?]+)/);
+      return m ? decodeURIComponent(m[1]) : null;
+    }
+    function refresh() {
+      var slug = currentEntrySlug();
+      if (!slug) { strip.style.display = "none"; return; }
+      var apply = function () {
+        var f = features && features[slug];
+        if (!f) { strip.style.display = "none"; return; }
+        strip.textContent = "From LingerApp: pet friendly " + (f.petFriendly ? "\u2713" : "\u2717") +
+          " \u00b7 driver accommodation " + (f.driverAccommodation ? "\u2713" : "\u2717") +
+          " (edit there; shows on the site after the next sync)";
+        strip.style.display = "block";
+      };
+      if (features) { apply(); return; }
+      fetch(FEATURES_ENDPOINT)
+        .then(function (res) { return res.json(); })
+        .then(function (data) { features = data && data.properties || {}; apply(); })
+        .catch(function () { /* informational only */ });
+    }
+    window.addEventListener("hashchange", refresh);
+    refresh();
+  }
+
   initSyncButton();
   initDormantBanner();
+  initSyncedFeatures();
 })();
 </script>
 </body>

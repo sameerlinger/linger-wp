@@ -1,0 +1,20 @@
+{# Icon row for a property page: label + inline SVG (24x24, stroke). Call
+   with `featureList` = [{ key, label }]. Kept as plain markup so it needs no
+   JS and no icon font. #}
+{% set featureIcons = {
+  pets: '<circle cx="5" cy="11" r="1.6"/><circle cx="9" cy="6.5" r="1.6"/><circle cx="15" cy="6.5" r="1.6"/><circle cx="19" cy="11" r="1.6"/><path d="M7.5 17c0-3 2.2-5 4.5-5s4.5 2 4.5 5c0 2-1.6 3-4.5 3s-4.5-1-4.5-3z"/>',
+  driver: '<path d="M5 16l1.5-5.5A2 2 0 0 1 8.4 9h7.2a2 2 0 0 1 1.9 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1.5"/><circle cx="7" cy="18" r=".6"/><circle cx="17" cy="18" r=".6"/><path d="M8 9l.8-2.4A1.5 1.5 0 0 1 10.2 5.5h3.6a1.5 1.5 0 0 1 1.4 1.1L16 9"/>',
+  wifi: '<path d="M2.5 9a15 15 0 0 1 19 0"/><path d="M5.5 12.5a10.5 10.5 0 0 1 13 0"/><path d="M8.7 16a6 6 0 0 1 6.6 0"/><circle cx="12" cy="19.2" r=".8"/>',
+  hikes: '<path d="M2 20l6.5-11 4 6.5 2.5-4L22 20z"/><path d="M8.5 9l1.5 2.5"/>',
+  naturalist: '<path d="M7 7l-3 9a3 3 0 0 0 6 .5V10"/><path d="M17 7l3 9a3 3 0 0 1-6 .5V10"/><path d="M10 12h4"/><path d="M7 7h3v3M17 7h-3v3"/>',
+  farm: '<path d="M12 21v-9"/><path d="M12 12c0-3.5-2.5-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"/><path d="M12 14.5c0-3 2.2-5 5.5-5 0 3-2.2 5-5.5 5z"/>',
+  bbq: '<path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 19l-1.5 2.5M16 19l1.5 2.5"/><path d="M9 7c0-1.5 1.5-1.5 1.5-3M13.5 7c0-1.5 1.5-1.5 1.5-3"/>',
+  cycling: '<circle cx="5.5" cy="16" r="3.5"/><circle cx="18.5" cy="16" r="3.5"/><path d="M5.5 16L9 8h6l3.5 8"/><path d="M9 8L12 16l3-8"/><path d="M7.5 6h2.5"/>'
+} %}
+<ul class="feature-icons" aria-label="Activities and features">
+  {% for f in featureList %}
+  <li class="feature-icon" tabindex="0" data-label="{{ f.label }}" title="{{ f.label }}">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="{{ f.label }}">{{ featureIcons[f.key] | safe }}</svg>
+  </li>
+  {% endfor %}
+</ul>
