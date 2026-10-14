@@ -684,13 +684,16 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 
 .feature-icons {
   position: fixed;
+  --icon: 42px;
+  --gap: 0.5rem;
   left: 1.5rem;
   bottom: 1.5rem;
-  max-width: calc(100vw - 1.5rem - 56px - 1.5rem - 0.75rem);
+  /* Room for exactly --per-row icons, so the row wraps after that many. */
+  width: calc(var(--per-row) * var(--icon) + (var(--per-row) - 1) * var(--gap));
   display: flex;
   flex-wrap: wrap-reverse; /* wraps upward so the bottom row stays level with WhatsApp */
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--gap);
   min-height: 56px;
   margin: 0;
   padding: 0;
@@ -699,8 +702,8 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 }
 .feature-icon {
   position: relative;
-  width: 42px;
-  height: 42px;
+  width: var(--icon);
+  height: var(--icon);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -732,8 +735,7 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 .feature-icon:hover::after,
 .feature-icon:focus::after { opacity: 1; }
 @media (max-width: 640px) {
-  .feature-icons { left: 1rem; bottom: 1rem; gap: 0.35rem; min-height: 48px; max-width: calc(100vw - 1rem - 48px - 1rem - 0.5rem); }
-  .feature-icon { width: 34px; height: 34px; }
+  .feature-icons { --icon: 34px; --gap: 0.35rem; left: 1rem; bottom: 1rem; min-height: 48px; }
   .feature-icon svg { width: 18px; height: 18px; }
 }
 

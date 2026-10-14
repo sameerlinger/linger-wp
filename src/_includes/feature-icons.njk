@@ -11,7 +11,9 @@
   bbq: '<path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 19l-1.5 2.5M16 19l1.5 2.5"/><path d="M9 7c0-1.5 1.5-1.5 1.5-3M13.5 7c0-1.5 1.5-1.5 1.5-3"/>',
   cycling: '<circle cx="5.5" cy="16" r="3.5"/><circle cx="18.5" cy="16" r="3.5"/><path d="M5.5 16L9 8h6l3.5 8"/><path d="M9 8L12 16l3-8"/><path d="M7.5 6h2.5"/>'
 } %}
-<ul class="feature-icons" aria-label="Activities and features">
+{# At most 5 per row; past 5 it splits evenly (6 -> 3+3, 7 -> 4+3, 8 -> 4+4) so the second row is never a lone icon. #}
+{% set perRow = featureList.length if featureList.length <= 5 else ((featureList.length + 1) // 2) %}
+<ul class="feature-icons" style="--per-row: {{ perRow }}" aria-label="Activities and features">
   {% for f in featureList %}
   <li class="feature-icon" tabindex="0" data-label="{{ f.label }}" title="{{ f.label }}">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="{{ f.label }}">{{ featureIcons[f.key] | safe }}</svg>
