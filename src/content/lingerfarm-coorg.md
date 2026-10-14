@@ -1,13 +1,20 @@
 ---
+summary: Local flavours, the slow paced Coorg life and biodiversity!
+slug: lingerfarm-coorg
 type: property
 title: The Linger Farm
-slug: lingerfarm-coorg
 cover: /images/the-linger-farm-chettimani/2021-09-22-14.31.33.jpg
-summary: Local flavours, the slow paced Coorg life and biodiversity!
 location: Chettimani, Coorg
 categories:
   - coffee-estates
   - near-bangalore
+features:
+  wifi: true
+  hikes: true
+  farmActivity: true
+  bbq: true
+  cycling: true
+  naturalist: true
 ---
 # The Linger Farm, Chettimani
 
