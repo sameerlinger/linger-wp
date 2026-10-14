@@ -688,8 +688,6 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   --gap: 0.5rem;
   left: 1.5rem;
   bottom: 1.5rem;
-  /* Room for exactly --per-row icons, so the row wraps after that many. */
-  width: calc(var(--per-row) * var(--icon) + (var(--per-row) - 1) * var(--gap));
   display: flex;
   flex-wrap: wrap-reverse; /* wraps upward so the bottom row stays level with WhatsApp */
   align-items: center;
@@ -735,7 +733,12 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 .feature-icon:hover::after,
 .feature-icon:focus::after { opacity: 1; }
 @media (max-width: 640px) {
-  .feature-icons { --icon: 34px; --gap: 0.35rem; left: 1rem; bottom: 1rem; min-height: 48px; }
+  .feature-icons {
+    --icon: 34px; --gap: 0.35rem; left: 1rem; bottom: 1rem; min-height: 48px;
+    /* Phones only: room for exactly --per-row icons, so it wraps after that many
+       (max 5 a row, balanced second row - see feature-icons.njk). */
+    width: calc(var(--per-row) * var(--icon) + (var(--per-row) - 1) * var(--gap));
+  }
   .feature-icon svg { width: 18px; height: 18px; }
 }
 
