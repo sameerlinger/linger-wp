@@ -8,9 +8,8 @@ location: Monnengeri, near Madikeri (Coorg)
 categories:
   - coffee-estates
 features:
-  wifi: true
-  hikes: true
-  naturalist: false
+  - wifi
+  - hikes
 ---
 # Three Wooded Acres, Coorg
 

@@ -9,12 +9,12 @@ categories:
   - coffee-estates
   - near-bangalore
 features:
-  wifi: true
-  hikes: true
-  farmActivity: true
-  bbq: true
-  cycling: true
-  naturalist: true
+  - wifi
+  - hikes
+  - farmActivity
+  - bbq
+  - cycling
+  - naturalist
 ---
 # The Linger Farm, Chettimani
 

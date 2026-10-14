@@ -7,10 +7,8 @@ location: Sakleshpur
 categories:
   - coffee-estates
 features:
-  wifi: true
-  hikes: true
-  naturalist: false
-  farmActivity: false
+  - wifi
+  - hikes
 ---
 
 # Varshini Estate, Sakleshpur

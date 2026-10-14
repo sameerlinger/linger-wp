@@ -9,8 +9,8 @@ categories:
   - coffee-estates
   - wilderness
 features:
-  wifi: true
-  hikes: true
+  - wifi
+  - hikes
 ---
 
 # T Stop, Coorg

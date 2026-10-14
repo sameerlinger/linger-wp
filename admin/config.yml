@@ -61,18 +61,17 @@ collections:
         hint: "Which homepage sections this property appears under (pick one or more). Manage the list of sections themselves under \"Categories\" below. Leave blank to leave this property off the homepage grid."
       - label: "Activities & features"
         name: "features"
-        widget: "object"
-        collapsed: false
+        widget: "select"
+        multiple: true
         required: false
-        summary: "Icons shown on this property's page"
-        hint: "Tick what this property offers - each shows as an icon at the bottom-left of the page. Pet friendliness and driver accommodation aren't here: they come from this property's settings in LingerApp (the booking engine) and show automatically."
-        fields:
-          - { label: "Wi-Fi", name: "wifi", widget: "boolean", default: false, required: false }
-          - { label: "Hikes", name: "hikes", widget: "boolean", default: false, required: false }
-          - { label: "In-house naturalist", name: "naturalist", widget: "boolean", default: false, required: false }
-          - { label: "Farm activity", name: "farmActivity", widget: "boolean", default: false, required: false }
-          - { label: "BBQ", name: "bbq", widget: "boolean", default: false, required: false }
-          - { label: "Cycling", name: "cycling", widget: "boolean", default: false, required: false }
+        options:
+          - { label: "Wi-Fi", value: "wifi" }
+          - { label: "Hikes", value: "hikes" }
+          - { label: "In-house naturalist", value: "naturalist" }
+          - { label: "Farm activity", value: "farmActivity" }
+          - { label: "BBQ", value: "bbq" }
+          - { label: "Cycling", value: "cycling" }
+        hint: "Pick what this property offers - each shows as an icon at the bottom-left of the page. Pet friendliness and driver accommodation aren't here: they come from this property's settings in LingerApp (the booking engine) and show automatically."
       - label: "\"Want to know more?\" form choices"
         name: "formEvents"
         widget: "list"

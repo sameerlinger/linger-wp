@@ -449,7 +449,15 @@ module.exports = function (eleventyConfig) {
   // engine (pets, driver) plus the CMS "Activities & features" checkboxes.
   // Fixed order, only the ones that are on.
   eleventyConfig.addFilter("featureList", (features, synced) => {
-    const f = features || {};
+    const picked = new Set(Array.isArray(features) ? features : []);
+    const f = {
+      wifi: picked.has("wifi"),
+      hikes: picked.has("hikes"),
+      naturalist: picked.has("naturalist"),
+      farmActivity: picked.has("farmActivity"),
+      bbq: picked.has("bbq"),
+      cycling: picked.has("cycling"),
+    };
     const s = synced || {};
     return [
       s.petFriendly && { key: "pets", label: "Pet friendly" },
