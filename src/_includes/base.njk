@@ -280,15 +280,21 @@ document.querySelectorAll(".feature-strip.has-more").forEach(function (strip) {
 // "Send Query" floater on experience and property pages: jumps to the form
 // (the element its href points at), and hides while the form is on screen.
 var floater = document.querySelector(".query-floater");
-// Sit just below the sticky header, whatever height it wraps to.
+// Sit just below the page title while it's on screen (so it never covers the
+// menu, which opens over the top of the page), and just below the sticky header
+// once the title has scrolled away. Re-placed on scroll, resize and whenever the
+// header changes height (phone menu opening).
 var siteHeader = document.querySelector(".site-header");
+var pageTitle = document.querySelector("main h1");
 var placeFloater = function () {
-  if (floater && siteHeader) floater.style.top = siteHeader.offsetHeight + 12 + "px";
+  if (!floater) return;
+  var top = siteHeader ? siteHeader.offsetHeight + 12 : 104;
+  if (pageTitle) top = Math.max(top, pageTitle.getBoundingClientRect().bottom + 10);
+  floater.style.top = top + "px";
 };
 placeFloater();
 window.addEventListener("resize", placeFloater);
-// The phone menu grows the header when opened (and its sub-menus when expanded):
-// follow it so the button always stays below.
+window.addEventListener("scroll", placeFloater, { passive: true });
 if (siteHeader && "ResizeObserver" in window) new ResizeObserver(placeFloater).observe(siteHeader);
 var interestSection = floater && document.getElementById(floater.getAttribute("href").slice(1));
 if (floater && interestSection && "IntersectionObserver" in window) {

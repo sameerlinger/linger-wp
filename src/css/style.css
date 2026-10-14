@@ -326,8 +326,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 .query-floater {
   position: fixed;
   right: 0;
-  top: 104px; /* just below the sticky header; the page script sets the exact value */
-  z-index: 40;
+  top: 104px; /* just below the page title; the page script sets the exact value */
+  z-index: 9; /* under the header (10), so an open menu always covers it */
   display: flex;
   align-items: center;
   gap: 0.35rem;
