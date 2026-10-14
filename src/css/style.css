@@ -703,9 +703,9 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffc247; /* warm marigold - stands out against photos, distinct from WhatsApp green */
-  color: #2b1d00;
-  border: 2px solid #fff;
+  background: #5890a0; /* logo teal */
+  color: #fbf8ef;
+  border: 2px solid #c8c0a8; /* logo sand */
   border-radius: 50%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
   cursor: default;
