@@ -2,9 +2,15 @@
 type: property
 title: "Varshini Estate : Hill Top Bliss"
 slug: varshini-estate-sakleshpur
-categories: ["coffee-estates"]
 summary: An architectural marvel, 40 acres of a very diverse terrain estate.
 location: Sakleshpur
+categories:
+  - coffee-estates
+features:
+  wifi: true
+  hikes: true
+  naturalist: false
+  farmActivity: false
 ---
 
 # Varshini Estate, Sakleshpur
