@@ -8,10 +8,10 @@ location: Chikmagalur
 categories:
   - coffee-estates
 features:
-  wifi: true
-  hikes: true
-  bbq: true
-  farmActivity: true
+  - wifi
+  - hikes
+  - bbq
+  - farmActivity
 seo_title: Balur Estate - Coffee Heritage Homestay in Chikmagalur
 ---
 
