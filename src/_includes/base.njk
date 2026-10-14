@@ -287,6 +287,9 @@ var placeFloater = function () {
 };
 placeFloater();
 window.addEventListener("resize", placeFloater);
+// The phone menu grows the header when opened (and its sub-menus when expanded):
+// follow it so the button always stays below.
+if (siteHeader && "ResizeObserver" in window) new ResizeObserver(placeFloater).observe(siteHeader);
 var interestSection = floater && document.getElementById(floater.getAttribute("href").slice(1));
 if (floater && interestSection && "IntersectionObserver" in window) {
   new IntersectionObserver(function (entries) {
