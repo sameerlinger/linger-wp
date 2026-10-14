@@ -217,6 +217,11 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
           status.textContent = "Sorry, this property isn't currently taking bookings. Do try another one, or pick \"Any property\".";
           return;
         }
+        if (data && data.badEmail) {
+          status.dataset.state = "error";
+          status.textContent = "That email address doesn't look right - its domain doesn't seem to receive mail. Please check it for typos.";
+          return;
+        }
         if (data && data.full) {
           status.dataset.state = "error";
           status.textContent = (data.reason === "capacity"
