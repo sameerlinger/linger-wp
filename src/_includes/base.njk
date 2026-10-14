@@ -245,6 +245,21 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
   });
 });
 
+// Tapping a feature icon shows its name for a couple of seconds (phones; on
+// desktop the hover tooltip does this and .strip-label is hidden).
+document.querySelectorAll(".feature-strip").forEach(function (strip) {
+  var label = strip.querySelector(".strip-label");
+  var timer;
+  strip.querySelectorAll(".feature-icon").forEach(function (icon) {
+    icon.addEventListener("click", function () {
+      label.textContent = icon.dataset.label;
+      label.classList.add("show");
+      clearTimeout(timer);
+      timer = setTimeout(function () { label.classList.remove("show"); }, 2500);
+    });
+  });
+});
+
 // Phone feature-icon strip: the arrows page through the icons that don't fit
 // in the 5-icon window, and hide at either end.
 document.querySelectorAll(".feature-strip.has-more").forEach(function (strip) {
