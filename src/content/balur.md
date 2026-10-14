@@ -1,12 +1,17 @@
 ---
-summary: 400 acres of coffee heritage...
-slug: balur
 type: property
 title: Balur Estate, since 1840
 cover: /images/linger-balur-estate/2026-09-12-07.26.38.jpg
+summary: 400 acres of coffee heritage...
+slug: balur
 location: Chikmagalur
 categories:
   - coffee-estates
+features:
+  wifi: true
+  hikes: true
+  bbq: true
+  farmActivity: true
 seo_title: Balur Estate - Coffee Heritage Homestay in Chikmagalur
 ---
 
