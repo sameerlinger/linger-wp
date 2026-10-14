@@ -322,7 +322,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 .enquiry-status[data-state="error"] { color: #a4342a; font-weight: 600; }
 
 /* "Send Query" floater on experience pages - jumps down to the form. */
-#want-to-know-more { scroll-margin-top: 110px; }
+#want-to-know-more, #check-availability { scroll-margin-top: 110px; }
 .query-floater {
   position: fixed;
   right: 0;

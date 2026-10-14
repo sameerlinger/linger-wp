@@ -240,10 +240,10 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
   });
 });
 
-// "Send Query" floater on experience pages: jumps to the form, and hides
-// while the form is on screen.
+// "Send Query" floater on experience and property pages: jumps to the form
+// (the element its href points at), and hides while the form is on screen.
 var floater = document.querySelector(".query-floater");
-var interestSection = document.getElementById("want-to-know-more");
+var interestSection = floater && document.getElementById(floater.getAttribute("href").slice(1));
 if (floater && interestSection && "IntersectionObserver" in window) {
   new IntersectionObserver(function (entries) {
     floater.classList.toggle("hidden", entries[0].isIntersecting);
