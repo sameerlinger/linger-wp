@@ -1,9 +1,9 @@
 ---
-summary: Quiet. Bird haven. Right next to Madikeri!
-slug: three-wooded-acres-coorg
 type: property
 title: Three Wooded Acres
 cover: /images/three-wooded-acres-coorg/frontcottage.jpeg
+summary: Quiet. Bird haven. Right next to Madikeri!
+slug: three-wooded-acres-coorg
 location: Monnengeri, near Madikeri (Coorg)
 categories:
   - coffee-estates
@@ -41,20 +41,19 @@ In the small library you will also find an interesting collection of old and new
 In a very quiet, private cottage in the woods are 2 rooms to choose from. Each room has a large bed, and a very attractive attic space with an additional bed so a family of 4 can easily be comfortable in there. A common verandah connects both rooms, and there are individual sitouts for both as well.
 
 ![](/images/three-wooded-acres-coorg/2017-11-24-08.32.51-768x1024.jpg)
-
 ![](/images/three-wooded-acres-coorg/e8cb030f-574a-4483-a95d-a5f004f3b20b-1024x768.jpeg)
-
 ![](/images/three-wooded-acres-coorg/Sit-out-2-1-1024x680.jpg)
 
-**Red Cedar : A private c\*\***ottage deep in the woods\*\*
+**Red Cedar : A private cottage deep in the woods**
 
 Deeper in the woods is the newest cottage, with mud plastered walls, Mangalore tiles and a huge canopy that provides a huge variety of birds a  home throughout the day.  This can sleep a small family of 2 + a kid.
 
 ![](/images/three-wooded-acres-coorg/RedCedar.jpg)
-
 ![](/images/three-wooded-acres-coorg/sunthrutrees2-1024x512.jpg)
-
 ![](/images/three-wooded-acres-coorg/Redcedar-2-1024x692.jpg)
+![](/images/uploads/redcedar.jpg)
+![](/images/uploads/redcedar-pathway.jpg)
+![](/images/uploads/redcedar-sitout.jpg)
 
 **Pricing, per couple**
 
@@ -76,26 +75,26 @@ We offer long stay discounts and special pricing for multi-week stays. There's a
 
 ## Three Wooded Acres Pictures
 
-* ![](/images/three-wooded-acres-coorg/The-rare-Malabar-Trogon-at-TWA.jpg)
-* ![](/images/three-wooded-acres-coorg/mushroomsontree.jpg)
-* ![](/images/three-wooded-acres-coorg/RedCedar-1.jpg)
-* ![](/images/three-wooded-acres-coorg/woodsmorning.jpg)
-* ![](/images/three-wooded-acres-coorg/festival.jpg)
-* ![](/images/three-wooded-acres-coorg/greyhornbill.jpg)
-* ![](/images/three-wooded-acres-coorg/sunthrutrees2-1024x512-1.jpg)
-* ![](/images/three-wooded-acres-coorg/CottageRear.jpg)
-* ![](/images/three-wooded-acres-coorg/2017-11-24-08.32.51-768x1024.jpg)
-* ![](/images/three-wooded-acres-coorg/Sit-out-2-1-1024x680.jpg)
-* ![](/images/three-wooded-acres-coorg/Room-view-2-1024x680.jpg)
-* ![](/images/three-wooded-acres-coorg/Attic-bed-1-1024x680.jpg)
-* ![](/images/three-wooded-acres-coorg/Village-1.jpg)
-* ![](/images/three-wooded-acres-coorg/ForestWalk2.jpg)
-* ![](/images/three-wooded-acres-coorg/OldBhadrakaliAiyappaTemple3.jpg)
-* ![](/images/three-wooded-acres-coorg/2017-11-23-18.51.21-768x1024.jpg)
-* ![](/images/three-wooded-acres-coorg/woods.jpg)
-* ![](/images/three-wooded-acres-coorg/hike-1024x768.jpg)
-* ![](/images/three-wooded-acres-coorg/paddyfields-1024x768.jpg)
-* ![](/images/three-wooded-acres-coorg/TWA-Logo-Transparent.png)
+![](/images/three-wooded-acres-coorg/The-rare-Malabar-Trogon-at-TWA.jpg)
+![](/images/three-wooded-acres-coorg/mushroomsontree.jpg)
+![](/images/three-wooded-acres-coorg/RedCedar-1.jpg)
+![](/images/three-wooded-acres-coorg/woodsmorning.jpg)
+![](/images/three-wooded-acres-coorg/festival.jpg)
+![](/images/three-wooded-acres-coorg/greyhornbill.jpg)
+![](/images/three-wooded-acres-coorg/sunthrutrees2-1024x512-1.jpg)
+![](/images/three-wooded-acres-coorg/CottageRear.jpg)
+![](/images/three-wooded-acres-coorg/2017-11-24-08.32.51-768x1024.jpg)
+![](/images/three-wooded-acres-coorg/Sit-out-2-1-1024x680.jpg)
+![](/images/three-wooded-acres-coorg/Room-view-2-1024x680.jpg)
+![](/images/three-wooded-acres-coorg/Attic-bed-1-1024x680.jpg)
+![](/images/three-wooded-acres-coorg/Village-1.jpg)
+![](/images/three-wooded-acres-coorg/ForestWalk2.jpg)
+![](/images/three-wooded-acres-coorg/OldBhadrakaliAiyappaTemple3.jpg)
+![](/images/three-wooded-acres-coorg/2017-11-23-18.51.21-768x1024.jpg)
+![](/images/three-wooded-acres-coorg/woods.jpg)
+![](/images/three-wooded-acres-coorg/hike-1024x768.jpg)
+![](/images/three-wooded-acres-coorg/paddyfields-1024x768.jpg)
+![](/images/three-wooded-acres-coorg/TWA-Logo-Transparent.png)
 
 - - -
 
@@ -116,15 +115,10 @@ Here's the directions from Raja's Seat - the signals may be iffy so save in offl
 **Things to do Nearby**
 
 ![](/images/three-wooded-acres-coorg/flower.jpg)
-
 ![](/images/three-wooded-acres-coorg/greyhornbill-1.jpg)
-
 ![](/images/three-wooded-acres-coorg/ForestWalk2-1.jpg)
-
 ![](/images/three-wooded-acres-coorg/Bhadra-Kali-Temple-2.jpg)
-
 ![](/images/three-wooded-acres-coorg/kootholereservoir.jpg)
-
 ![](/images/three-wooded-acres-coorg/woodsmorning-1.jpg)
 
 Kishan's gardens are the best across all Linger properties and his knowledge around this really good! He'll happily take you through the garden and the woods and help identify (through local names) the trees, flowers and plants.
