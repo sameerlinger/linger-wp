@@ -2,7 +2,7 @@
 type: property
 title: Khetiyo, Unexplored Corbett
 slug: khetiyo-corbett-garhwal
-cover: /images/khetiyo-unexplored-corbett/464482402_8591405890928910_7743502068818168221_n.jpg
+cover: /images/khetiyo-unexplored-corbett/whatsapp-image-2024-03-20-at-16.16.02-2-.jpeg
 summary: Deep inside the unexplored side of Corbett....
 location: Corbett NP, Uttarakhand
 categories:
