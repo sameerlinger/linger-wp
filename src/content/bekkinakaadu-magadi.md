@@ -57,7 +57,6 @@ Bekkinakaadu has 3 rooms — one at the farmstead, two near the stream.
 ![](/images/uploads/whatsapp-image-2024-12-13-at-21.03.21.jpeg)
 ![](/images/uploads/maradamane-area.jpg)
 ![](/images/uploads/maradamane-balcony-1-.jpeg)
-![](/images/uploads/maradamane-area.jpg)
 
 **Hallimane, the Farm Room**, is nearer to the core work and dining area at the farm — large, quiet and private, on the upper floor.
 
