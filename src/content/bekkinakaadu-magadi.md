@@ -9,42 +9,55 @@ categories:
   - near-bangalore
   - wilderness
 ---
-
 # Bekkinakaadu, Magadi
 
 The Wild Cat's Forest — a 25-acre farm at the base of Savanadurga, just outside Bangalore.
 
----
+- - -
 
 ## Bekkinakaadu, an Introduction
 
 A stream connects two large reservoirs across this 25-acre farm at the foot of Savanadurga mountain, right up against forest land. The terrain rolls through slopes, peaks and scattered boulders that transport you to a completely different world — home to birds, bears, elephants and wildcats, and the setting for Kenneth Anderson's famous story of a panther in the Magadi region. All just outside Bangalore.
 
----
+- - -
 
 ## Accommodation & Tariff
 
 Bekkinakaadu has 3 rooms — one at the farmstead, two near the stream.
 
-|  |  |  |
-| --- | --- | --- |
-| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
-| **Thoremane** (wraparound verandah, swing, hammock) | ₹8,500 for a couple | Extra person: ₹2,750 |
-| **Maradamane** (kitchenette + wooden room upstairs) | ₹8,500 for a couple | Extra person: ₹2,750 |
-| **Hallimane, the Farm Room** (large, quiet, upper floor) | ₹8,500 for a couple | Extra person: ₹2,750 |
-| **Tenpy's Norah** (cabin, sleeps a couple + a kid) | ₹8,280 for a couple | All meals included |
+|                                                          |                      |                          |
+| -------------------------------------------------------- | -------------------- | ------------------------ |
+| **Room**                                                 | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Thoremane** (wraparound verandah, swing, hammock)      | ₹8,500 for a couple  | Extra person: ₹2,750     |
+| **Maradamane** (kitchenette + wooden room upstairs)      | ₹8,500 for a couple  | Extra person: ₹2,750     |
+| **Hallimane, the Farm Room** (large, quiet, upper floor) | ₹8,500 for a couple  | Extra person: ₹2,750     |
+| **Tenpy's Norah** (cabin, sleeps a couple + a kid)       | ₹8,280 for a couple  | All meals included       |
 
-- **Long Stay Benefit:** Subsequent nights at 10%, 15%, 20% and 25% off.
+* **Long Stay Benefit:** Subsequent nights at 10%, 15%, 20% and 25% off.
 
 **Thoremane** has a wraparound verandah, a swing and a hammock.
 
-![](/images/bekkinakaadu-magadi/2022-06-09-15.18.37-1024x486.jpg)
-![](/images/bekkinakaadu-magadi/ThoremaneBed-1024x576.jpeg)
-![](/images/bekkinakaadu-magadi/ThoremaneRoom-1024x576.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-17.54.50-1-.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-17.54.51.jpeg)
+![](/images/uploads/thoremane-sitout-area.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-17.54.51.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-17.54.51.jpeg)
+![](/images/uploads/thoremane-overview.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-17.55.41.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-17.54.50-2-.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-17.55.40.jpeg)
 
 **Maradamane** has a kitchenette on the ground level and a wooden room upstairs with a sit-out overlooking the forest.
 
 ![](/images/bekkinakaadu-magadi/house2-1024x767.jpeg)
+![](/images/uploads/maradamane-balcony-1-.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-21.03.19-1-.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-21.03.19.jpeg)
+![](/images/uploads/whatsapp-image-2022-11-28-at-10.38.49-am-1-.jpeg)
+![](/images/uploads/whatsapp-image-2024-12-13-at-21.03.21.jpeg)
+![](/images/uploads/maradamane-area.jpg)
+![](/images/uploads/maradamane-balcony-1-.jpeg)
+![](/images/uploads/maradamane-area.jpg)
 
 **Hallimane, the Farm Room**, is nearer to the core work and dining area at the farm — large, quiet and private, on the upper floor.
 
@@ -59,7 +72,7 @@ Tariff for 1 night is ₹8,500 for a couple, all inclusive (meals, stay, unlimit
 
 Tenpy's Norah is a cute and comfortable cabin at the farm, perfect for a couple (even one with a kid) looking for a quick weekend out of town — private, modern, with its own well laid-out bathroom. Priced at ₹8,280 for a couple with all meals.
 
----
+- - -
 
 ## Getting to Bekkinakaadu, Magadi
 
@@ -67,7 +80,7 @@ Thagachaguppe Village is right on Magadi Road, a few kms before Magadi Town — 
 
 ![](/images/bekkinakaadu-magadi/2022-07-09-16.32.33-1024x478.jpg)
 
----
+- - -
 
 ## The Place In Pictures
 
