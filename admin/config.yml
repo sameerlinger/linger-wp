@@ -80,6 +80,15 @@ collections:
         hint: "Only for pages in the Experiences category, which get a \"Want to know more?\" form at the bottom. Leave blank to list this page's bold headings automatically; add names here to use your own list instead."
       - { label: "Search title (SEO)", name: "seo_title", widget: "string", required: false, hint: "Optional. The title Google shows, e.g. \"Homestay in Coorg with coffee estate walks | The Linger Farm\". Leave blank to build it from the title and location. Around 60 characters works best." }
       - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "Optional. The grey text under the title in Google results. Leave blank to use the one-line description or the first paragraph. Around 150 characters works best." }
+      - label: "Questions & answers (FAQ)"
+        name: "faqs"
+        widget: "list"
+        required: false
+        summary: "{{fields.question}}"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+        hint: "Optional. Plain questions guests ask, e.g. \"Are pets allowed?\" or \"How far is it from Bangalore?\". Shown at the bottom of the page and picked up by Google and AI assistants like ChatGPT. Answer in one or two complete sentences that make sense on their own."
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
@@ -150,6 +159,15 @@ collections:
         hint: "The properties listed on this page, in this order."
       - { label: "Search title (SEO)", name: "seo_title", widget: "string", required: false, hint: "The title Google shows. Around 60 characters works best." }
       - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "The grey text under the title in Google. Around 150 characters works best." }
+      - label: "Questions & answers (FAQ)"
+        name: "faqs"
+        widget: "list"
+        required: false
+        summary: "{{fields.question}}"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+        hint: "Optional. Plain questions guests ask, e.g. \"Are pets allowed?\" or \"How far is it from Bangalore?\". Shown at the bottom of the page and picked up by Google and AI assistants like ChatGPT. Answer in one or two complete sentences that make sense on their own."
       - { label: "Body", name: "body", widget: "markdown", hint: "Intro text. Start with a heading like \"# Homestays in Coorg\"." }
 
   - name: "menus"

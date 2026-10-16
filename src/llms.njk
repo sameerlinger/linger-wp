@@ -1,0 +1,18 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# Linger
+
+> Linger runs authentic, low-density, quiet, pet-friendly homestays and farm stays across Coorg, near Bangalore, Bandipur, Chikmagalur and the Himalayas (Uttarakhand). Delightfully local weekends. Enquire for dates; there is no instant online checkout.
+
+Contact: stay@linger.in, +91-959-005-0001, WhatsApp +91-854-806-5772. Website: https://linger.in/
+
+## Browse by destination
+{% for d in collections.destinations %}- [{{ d.title }}](https://linger.in{{ d.url }})
+{% endfor %}
+## Our stays
+{% for p in properties | bookableProperties(dormantSlugs) %}- [{{ p.title }}](https://linger.in/{{ p.slug }}/)
+{% endfor %}
+## More
+- [Sitemap](https://linger.in/sitemap.xml)
