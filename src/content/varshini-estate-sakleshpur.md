@@ -10,7 +10,6 @@ features:
   - wifi
   - hikes
 ---
-
 # Varshini Estate, Sakleshpur
 
 ## Varshini Estate, Sakleshpur
@@ -18,7 +17,7 @@ features:
 Varshini Estate is a 30 acre coffee estate with large paddy fields and a lush wooded section. The highlight of the place is a traditional style courtyard - house made almost entirely in carefully selected and chiselled laterite, built painstakingly over 4 years!
 The views are stunning all around. The wind a constant companion. And the walks in every direction make it a perfect do nothing destination just 3.5-4 hours from Bangalore.
 
----
+- - -
 
 ## Accommodations & Tariff at Varshini Estate (Main House : Guddadamane and 2 Bamboo cottages)
 
@@ -28,15 +27,16 @@ The views are stunning all around. The wind a constant companion. And the walks 
 ![](/images/varshini-estate-sakleshpur/ExtendedRoom1-2-1024x768.jpeg)
 ![](/images/varshini-estate-sakleshpur/NewCottageRoom-2-1024x768.jpeg)
 ![](/images/varshini-estate-sakleshpur/NewCottageRoom-1-1024x768.jpeg)
+![](/images/uploads/whatsapp-image-2026-10-16-at-20.06.13.jpeg)
 
-|  |  |  |
-| --- | --- | --- |
-| **Room** | **Rate (1st Night)** | **Extra Guests / Notes** |
-| **Heritage House Room** (3 available) | ₹8,500 for a couple | Sleeps 2 + possible 3rd; Extra person: ₹3,000 |
-| **Cottages in the Woods** (2 larger + 1 small) | ₹8,500 for a couple | Sleeps 2–4; Extra person: ₹3,000 |
+|                                                |                      |                                               |
+| ---------------------------------------------- | -------------------- | --------------------------------------------- |
+| **Room**                                       | **Rate (1st Night)** | **Extra Guests / Notes**                      |
+| **Heritage House Room** (3 available)          | ₹8,500 for a couple  | Sleeps 2 + possible 3rd; Extra person: ₹3,000 |
+| **Cottages in the Woods** (2 larger + 1 small) | ₹8,500 for a couple  | Sleeps 2–4; Extra person: ₹3,000              |
 
-- **Child Policy:** Up to 2 kids under 5 complimentary, 5–12 at 50%.
-- **Long Stay Benefit:** From the 3rd night, 10%, 15%, 20% discount.
+* **Child Policy:** Up to 2 kids under 5 complimentary, 5–12 at 50%.
+* **Long Stay Benefit:** From the 3rd night, 10%, 15%, 20% discount.
 
 Three rooms in the heritage style house atop the hill can sleep 2 each, with a possible third extra person option. Each room opens into common verandah surrounding the central courtyard, and there are individual sitouts facing the outside as well.
 
@@ -44,11 +44,11 @@ Two private Cottages in the woods in the local architectural style are larger an
 
 **Pricing, per couple**
 
-- Rs.8500/- for the 1st night’s stay for a couple
-- (upto 2 kids under 5 years of age complimentary, kids 5-12 at 50%)
-- From the 3rd night onwards, subsequent nights at 10%, 15%, 20% long stay benefit.
-- Extra Person : 3000/-
-- *(Pricing valid for the current FY upto March 31st, except over Dec 19th – Jan 2nd)*
+* Rs.8500/- for the 1st night’s stay for a couple
+* (upto 2 kids under 5 years of age complimentary, kids 5-12 at 50%)
+* From the 3rd night onwards, subsequent nights at 10%, 15%, 20% long stay benefit.
+* Extra Person : 3000/-
+* *(Pricing valid for the current FY upto March 31st, except over Dec 19th – Jan 2nd)*
 
 Pricing is per couple, *seriously* all inclusive, including taxes. This includes everything at the property : all the meals, unlimited tea/coffee/non-packaged juices and snacks whenever your tummy grumbles, walks and treks around the property, bonfire, use of the library etc.
 
@@ -60,7 +60,7 @@ We offer long stay discounts and special pricing for multi-week stays.
 
 Do write in for more.
 
----
+- - -
 
 ## The Place in Pictures
 
@@ -71,19 +71,17 @@ Do write in for more.
 ![](/images/varshini-estate-sakleshpur/cottageSky-1024x768.jpeg)
 ![](/images/varshini-estate-sakleshpur/cropped-Stream2-1024x616.jpg)
 ![](/images/varshini-estate-sakleshpur/cropped-Nightshot-1024x615.jpg)
-
 ![](/images/varshini-estate-sakleshpur/65904943_2410066482610878_3305567952404742144_o-1024x683.jpg)
 ![](/images/varshini-estate-sakleshpur/64218614_2410066762610850_4737002473951068160_o-1024x683.jpg)
 ![](/images/varshini-estate-sakleshpur/65821538_2410066619277531_6482229698439938048_o-1024x683.jpg)
 ![](/images/varshini-estate-sakleshpur/65861539_2410066589277534_5663492392179728384_o-1024x683.jpg)
-
 ![](/images/varshini-estate-sakleshpur/JDN_0759-1024x683.jpg)
 ![](/images/varshini-estate-sakleshpur/JDN_0026_01-1024x682.jpg)
 ![](/images/varshini-estate-sakleshpur/WowScape2-1024x576.jpg)
 ![](/images/varshini-estate-sakleshpur/JDN_0638_01.jpg)
 ![](/images/varshini-estate-sakleshpur/JDN_0627_01-1024x678.jpg)
 
----
+- - -
 
 ## Activities around Varshini Estate, Sakleshpur
 
@@ -92,7 +90,7 @@ You can also explore the grasslands around, as well as the estate itself - the c
 A quick drive takes you to the Manjirabad Fort.
 But hey, we have a small, growing library, board games and you don't really need to do anything!
 
----
+- - -
 
 ## Getting To Varshini Estate, Sakleshpur
 
