@@ -3,6 +3,7 @@ layout: base.njk
 ---
 <div class="prose">
 {{ content | safe }}
+{% include "faqs.njk" %}
 </div>
 {% if page.fileSlug | isProperty(properties) %}
 <section class="enquiry" id="check-availability">

@@ -864,6 +864,9 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   .scroll-hint { display: flex; }
 }
 
+.prose .faq h3 { font-size: 1.05rem; margin: 1.4rem 0 0.3rem; }
+.prose .faq p { margin: 0; }
+
 /* Experience pages (layout experience.njk) */
 .experience-up { margin: 0 0 0.5rem; font-size: 0.9rem; }
 .experience-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin: -0.4rem 0 1.2rem; font-size: 0.95rem; color: #555; }
