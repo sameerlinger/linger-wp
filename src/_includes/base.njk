@@ -37,10 +37,7 @@
       <summary>{{ item.region.name }}</summary>
       <ul>
         {% for slug in item.region.properties %}
-        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a>
-          {% if item.region.children[slug] %}<ul class="nav-sub">
-            {% for c in item.region.children[slug] %}<li><a href="/{{ c }}/">{{ c | propertyTitle(properties) }}</a></li>{% endfor %}
-          </ul>{% endif %}</li>
+        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
         {% endfor %}
       </ul>
     </details>
