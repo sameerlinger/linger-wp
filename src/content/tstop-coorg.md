@@ -1,9 +1,9 @@
 ---
-summary: Forest on all sides, bliss in between.
-slug: tstop-coorg
 type: property
 title: T Stop, Quiet Forests
 cover: /images/t-stop-coorg/1e869ab0-3466-4d6d-93b1-c7f817fcc409.jpeg
+summary: Forest on all sides, bliss in between.
+slug: tstop-coorg
 location: Theralu, Coorg
 categories:
   - coffee-estates
@@ -12,60 +12,64 @@ features:
   - wifi
   - hikes
 ---
-
 # T Stop, Coorg
 
 An eco-friendly coffee estate where fireflies still dance at night like twinkling little stars.
 
----
+- - -
 
 ## T Stop, an Introduction
 
 Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the owners took over in 2009 and deliberately left alone — "you don't need to fix something that isn't broken." Off the beaten path and inspired by the spirit of *The Jungle Book*, it's an oasis for rediscovering the simple stuff: a functional coffee plantation, a natural lake, a library, and rest and peace for the weary (adventures for the brave). Forest hikes, pond swims and lazy reading afternoons are all part of the deal — and it's family and pet friendly.
 
 ![](/images/tstop-coorg/c4a716_223c83ee927748bd82db48e566f8af26~mv2.jpg)
+![](/images/uploads/arabica-_-robusta.jpg)
+![](/images/uploads/master-bedroom.jpeg)
+![](/images/uploads/master-bedroom-bath.jpeg)
 
----
+- - -
 
 ## Accommodation & Tariff
 
-|  |  |  |
-| --- | --- | --- |
-| **Room** | **Details** | **Notes** |
-| **The Room with a View** | King-size bed, attached bath, private balcony over hills and forest, in the main house near the open living area | — |
-| **The Cottages** (2) | King-size bed, attached bath, private balcony, small wading pool, open shower facing the jungle | Fully private |
-| **Tiny Scenic Garfield** | Queen bed + loft double bed, overlooking the lake | Sleeps a family of 4 |
+|                          |                                                                                                                  |                      |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------- | -------------------- |
+| **Room**                 | **Details**                                                                                                      | **Notes**            |
+| **The Room with a View** | King-size bed, attached bath, private balcony over hills and forest, in the main house near the open living area | —                    |
+| **The Cottages** (2)     | King-size bed, attached bath, private balcony, small wading pool, open shower facing the jungle                  | Fully private        |
+| **Tiny Scenic Garfield** | Queen bed + loft double bed, overlooking the lake                                                                | Sleeps a family of 4 |
 
 All rooms have an attached bathroom with a traditional "Bhana" — a copper vessel over a wood fire for hot water. For current rates, write in or book through the site's reservation page.
 
 ![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
 ![](/images/tstop-coorg/f17fff_2396ce81adde4f2b86d2457700f648fb~mv2.jpg)
 ![](/images/tstop-coorg/f17fff_699e93d52df842968d4f39a89d703bbc~mv2.jpg)
+![](/images/uploads/master-bedroom.jpeg)
+![](/images/uploads/master-bedroom-bath.jpeg)
 
----
+- - -
 
 ## Things To Do
 
 **Within the Estate**
 
-- Swimming in the lake
-- Books and board games in the Birdcage
-- Nature walks and bird watching
-- Joining in on the estate's ongoing agricultural work
-- A boundary walk, or a deeper forest trek
-- White-water rafting on the Barapole river
+* Swimming in the lake
+* Books and board games in the Birdcage
+* Nature walks and bird watching
+* Joining in on the estate's ongoing agricultural work
+* A boundary walk, or a deeper forest trek
+* White-water rafting on the Barapole river
 
 **Around T Stop**
 
-- **Iruppu Falls** (~22 km) — a waterfall in the Brahmagiri range, also known as Lakshmana Tirtha Falls, with an associated Shiva temple
-- **Nagarhole National Park** (~27 km) — tigers, Asian elephants, 250+ bird species, sandalwood and teak forest
-- **Glen Lorna Tea Estate** (~9 km) — a 1200-acre tea plantation with a British-era bungalow and processing facility
-- **White Water Rafting, Barapole River** (~8 km) — grade 2–4 rapids, plus zipline and other adventure activities
-- **Maha Mrityunjaya Temple** (~10 km) — an 800-year-old temple in Badagakeri village
+* **Iruppu Falls** (~22 km) — a waterfall in the Brahmagiri range, also known as Lakshmana Tirtha Falls, with an associated Shiva temple
+* **Nagarhole National Park** (~27 km) — tigers, Asian elephants, 250+ bird species, sandalwood and teak forest
+* **Glen Lorna Tea Estate** (~9 km) — a 1200-acre tea plantation with a British-era bungalow and processing facility
+* **White Water Rafting, Barapole River** (~8 km) — grade 2–4 rapids, plus zipline and other adventure activities
+* **Maha Mrityunjaya Temple** (~10 km) — an 800-year-old temple in Badagakeri village
 
 ![](/images/tstop-coorg/f17fff_de3869a96fba4310b21a2c176ab68d32~mv2.jpg)
 
----
+- - -
 
 ## The Place In Pictures
 
