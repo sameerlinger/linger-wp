@@ -82,6 +82,51 @@ collections:
       - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false, hint: "Optional. The grey text under the title in Google results. Leave blank to use the one-line description or the first paragraph. Around 150 characters works best." }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "experiences"
+    label: "Experiences"
+    label_singular: "Experience"
+    description: "Events and experiences with a date, a partner, photos and an \"I'm interested\" form. Responses go to the Events tab in the booking engine. For a series with editions (e.g. Nature Exploration Weekends), make the series page first, then each edition with the series chosen under \"Part of\"."
+    folder: "src/content"
+    filter: { field: "type", value: "experience" }
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "experience" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "experience.njk" }
+      - { label: "Categories", name: "categories", widget: "hidden", default: ["Curated experiences at the properties"] }
+      - { label: "Title", name: "title", widget: "string", hint: "The page heading and the name shown in the Events tab, e.g. \"Nature Exploration Weekend - Grasslands Edition\". The web address is made from it when first saved." }
+      - label: "Part of (series)"
+        name: "parent"
+        widget: "relation"
+        collection: "experiences"
+        search_fields: ["title"]
+        value_field: "{{slug}}"
+        display_fields: ["title"]
+        required: false
+        hint: "Only for an edition of a series: pick the series page. It then appears under the series in the Experiences menu and on the series page. Leave blank for a standalone experience or a series page itself."
+      - { label: "Partner", name: "partner", widget: "string", required: false, hint: "Who runs it with us, e.g. \"The Naturalist School\"." }
+      - { label: "Date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false, hint: "Leave blank if the date isn't fixed yet - the page says \"Date to be announced\"." }
+      - { label: "End date", name: "event_end", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false, hint: "Only for a multi-day event." }
+      - { label: "Where", name: "location", widget: "string", required: false, hint: "Place or property, e.g. \"The Timbaktu Bush Camp, Kalpavalli\"." }
+      - { label: "Cover photo", name: "cover", widget: "image", required: false, media_folder: "/src/images/{{slug}}", public_folder: "/images/{{slug}}", hint: "Shown on the homepage and when the page is shared." }
+      - { label: "One-line description", name: "summary", widget: "string", required: false, hint: "Shown under the photo on the homepage." }
+      - label: "Photos (carousel)"
+        name: "photos"
+        widget: "list"
+        required: false
+        summary: "{{fields.src}}"
+        media_folder: "/src/images/{{slug}}"
+        public_folder: "/images/{{slug}}"
+        fields:
+          - { label: "Photo", name: "src", widget: "image", media_folder: "/src/images/{{slug}}", public_folder: "/images/{{slug}}" }
+          - { label: "Describe the photo", name: "alt", widget: "string", required: false, hint: "For screen readers and search." }
+      - { label: "Search title (SEO)", name: "seo_title", widget: "string", required: false }
+      - { label: "Search description (SEO)", name: "seo_description", widget: "text", required: false }
+      - { label: "Description", name: "body", widget: "markdown", hint: "What it is, who it's for, what's included." }
+
   - name: "pages"
     label: "Pages"
     label_singular: "Page"

@@ -37,7 +37,10 @@
       <summary>{{ item.region.name }}</summary>
       <ul>
         {% for slug in item.region.properties %}
-        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a></li>
+        <li><a href="/{{ slug }}/">{{ slug | propertyTitle(properties) }}</a>
+          {% if item.region.children[slug] %}<ul class="nav-sub">
+            {% for c in item.region.children[slug] %}<li><a href="/{{ c }}/">{{ c | propertyTitle(properties) }}</a></li>{% endfor %}
+          </ul>{% endif %}</li>
         {% endfor %}
       </ul>
     </details>
@@ -324,9 +327,13 @@ document.querySelectorAll(".interest-form").forEach(function (form) {
       body: JSON.stringify({
         pageTitle: form.dataset.pageTitle,
         pageUrl: location.href,
-        event: form.event.value,
+        event: form.dataset.event || form.event.value,
+        eventDate: form.dataset.eventDate || "",
+        partner: form.dataset.partner || "",
         name: form.name.value,
         phone: form.phone.value,
+        email: form.elements.email ? form.elements.email.value : "",
+        people: form.elements.people ? form.elements.people.value : 1,
         honeypot: form.company.value,
       }),
     })
