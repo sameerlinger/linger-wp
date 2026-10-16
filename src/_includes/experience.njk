@@ -1,0 +1,47 @@
+---
+layout: base.njk
+---
+{% set dateText = event_date | eventDateText(event_end) %}
+{% set kids = collections.editions[page.fileSlug] %}
+<article class="prose experience">
+  {% if parent %}<p class="experience-up"><a href="/{{ parent }}/">&larr; {{ parent | propertyTitle(properties) }}</a></p>{% endif %}
+  <h1>{{ title }}</h1>
+  <p class="experience-meta">
+    <span class="experience-date">{{ dateText or "Date to be announced" }}</span>
+    {% if partner %}<span class="experience-partner">With {{ partner }}</span>{% endif %}
+    {% if location %}<span class="experience-place">{{ location }}</span>{% endif %}
+  </p>
+  {{ photos | experienceCarousel | safe }}
+  {{ content | safe }}
+  {% if kids and kids.length %}
+  <h2>Editions</h2>
+  <ul class="edition-list">
+    {% for k in kids %}
+    <li><a href="{{ k.url }}"><strong>{{ k.data.title }}</strong>
+      <span>{{ k.data.event_date | eventDateText(k.data.event_end) or "Date to be announced" }}{% if k.data.partner %} &middot; with {{ k.data.partner }}{% endif %}</span></a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>
+{% if event_date and (event_date | isoDay) < today %}
+<p class="experience-past">This one has already happened. Leave your details below and we'll let you know about the next one.</p>
+{% endif %}
+<section class="enquiry" id="interested">
+  <div class="enquiry-inner">
+    <h2>I'm interested</h2>
+    <p class="enquiry-sub">Leave your details and we'll be in touch{% if not dateText %} as soon as the date is set{% endif %}. No payment now.</p>
+    <form class="interest-form" data-page-title="{{ title }}" data-event="{{ title }}" data-event-date="{{ dateText }}" data-partner="{{ partner }}">
+      <div class="enquiry-row">
+        <label>Name<input type="text" name="name" required autocomplete="name" maxlength="200"></label>
+        <label>Phone<input type="tel" name="phone" required autocomplete="tel" minlength="6" maxlength="30"></label>
+      </div>
+      <div class="enquiry-row">
+        <label>Email<input type="email" name="email" required autocomplete="email" maxlength="200"></label>
+        <label>Number of people<input type="number" name="people" required min="1" max="50" step="1" value="2"></label>
+      </div>
+      <input type="text" name="company" class="enquiry-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="enquiry-submit">Count me in</button>
+      <p class="enquiry-status" role="status"></p>
+    </form>
+  </div>
+</section>

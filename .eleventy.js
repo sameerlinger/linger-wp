@@ -194,6 +194,22 @@ function readMenuOrder() {
   }
 }
 
+// "2026-11-22" (or a Date the YAML parser made of it) -> "2026-11-22"; "" if none/invalid.
+function isoDay(v) {
+  if (v instanceof Date) return isNaN(v) ? "" : v.toISOString().slice(0, 10);
+  return /^\d{4}-\d{2}-\d{2}/.test(String(v || "")) ? String(v).slice(0, 10) : "";
+}
+
+// Order for a series' editions: upcoming soonest first, then undated (TBD),
+// then past ones newest first. Judged at build time.
+function byEventDate(a, b) {
+  const today = new Date().toISOString().slice(0, 10);
+  const rank = (d) => (!d ? 1 : d >= today ? 0 : 2);
+  const da = isoDay(a.data.event_date);
+  const db = isoDay(b.data.event_date);
+  return rank(da) - rank(db) || (rank(da) === 2 ? db.localeCompare(da) : da.localeCompare(db)) || a.data.title.localeCompare(b.data.title);
+}
+
 // Categories ("regions") with the pages in each, in Menu order position;
 // categories not in the menu list come after, by their old Order number
 // then title. Used by both the homepage sections and the top menu.
@@ -217,15 +233,16 @@ async function buildRegions(api) {
   const propertyDocs = api
     .getFilteredByGlob("src/content/*.md")
     .filter((item) => !dormant.has(item.fileSlug));
+  // An edition (a page with a "parent") is reached from its series page, so
+  // it's left out of the menu and the homepage grid.
+  const inCategory = (p, cat) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug);
   return categoryDocs
     .map((cat) => ({
       name: cat.data.title,
       slug: cat.data.slug,
       // Only pass through a plain hex colour - it ends up in an inline style.
       color: /^#[0-9a-fA-F]{3,8}$/.test(cat.data.color || "") ? cat.data.color : null,
-      properties: propertyDocs
-        .filter((p) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug))
-        .map((p) => p.fileSlug),
+      properties: propertyDocs.filter((p) => inCategory(p, cat) && !p.data.parent).map((p) => p.fileSlug),
     }))
     // A freshly-created category with no properties assigned to it yet
     // would otherwise show up as an empty heading with nothing under it.
@@ -329,6 +346,40 @@ module.exports = function (eleventyConfig) {
       .map((i) => ({ url: i.url, title: i.data.title }))
   );
   eleventyConfig.addCollection("regions", (api) => buildRegions(api));
+
+  // Editions of a series page, keyed by the series' slug (the "parent" field
+  // on an experience), in byEventDate order.
+  eleventyConfig.addCollection("editions", (api) => {
+    const map = {};
+    for (const p of api.getFilteredByGlob("src/content/*.md").filter((x) => x.data.parent).sort(byEventDate)) {
+      (map[p.data.parent] = map[p.data.parent] || []).push(p);
+    }
+    return map;
+  });
+
+  // "22 Nov 2026" / "22-24 Nov 2026" / "" (no date yet - the template says TBD).
+  eleventyConfig.addFilter("eventDateText", (start, end) => {
+    const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const a = isoDay(start);
+    if (!a) return "";
+    const [ay, am, ad] = a.split("-").map(Number);
+    const b = isoDay(end);
+    if (!b || b <= a) return `${ad} ${MONTHS[am - 1]} ${ay}`;
+    const [by, bm, bd] = b.split("-").map(Number);
+    if (by === ay && bm === am) return `${ad}-${bd} ${MONTHS[am - 1]} ${ay}`;
+    return `${ad} ${MONTHS[am - 1]} ${by === ay ? "" : ay + " "}- ${bd} ${MONTHS[bm - 1]} ${by}`.replace("  ", " ");
+  });
+  eleventyConfig.addFilter("isoDay", isoDay);
+
+  // The experience page's photo carousel (same markup as inline galleries).
+  eleventyConfig.addFilter("experienceCarousel", (photos) => {
+    const imgs = (Array.isArray(photos) ? photos : [])
+      .map((p) => (typeof p === "string" ? { src: p } : p))
+      .filter((p) => p && p.src)
+      .map((p) => ({ src: p.src, alt: String(p.alt || "").replace(/"/g, "&quot;") }));
+    if (!imgs.length) return "";
+    return imgs.length > 1 ? carouselHtml(imgs) : singleImageHtml(imgs[0]);
+  });
 
   // What goes in each top-menu dropdown, keyed by menu file name
   // (src/content/menus/<name>.md): the menu's own links (email, phone, Blog,

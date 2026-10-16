@@ -324,9 +324,13 @@ document.querySelectorAll(".interest-form").forEach(function (form) {
       body: JSON.stringify({
         pageTitle: form.dataset.pageTitle,
         pageUrl: location.href,
-        event: form.event.value,
+        event: form.dataset.event || form.event.value,
+        eventDate: form.dataset.eventDate || "",
+        partner: form.dataset.partner || "",
         name: form.name.value,
         phone: form.phone.value,
+        email: form.elements.email ? form.elements.email.value : "",
+        people: form.elements.people ? form.elements.people.value : 1,
         honeypot: form.company.value,
       }),
     })
