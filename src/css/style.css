@@ -863,3 +863,16 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 
   .scroll-hint { display: flex; }
 }
+
+/* Experience pages (layout experience.njk) */
+.experience-up { margin: 0 0 0.5rem; font-size: 0.9rem; }
+.experience-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin: -0.4rem 0 1.2rem; font-size: 0.95rem; color: #555; }
+.experience-date { font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; color: var(--accent); align-self: center; }
+.edition-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+.edition-list a { display: block; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 10px; }
+.edition-list a:hover { background: rgba(58, 107, 74, 0.06); }
+.edition-list span { display: block; font-size: 0.88rem; color: #666; }
+/* Second level of the top menu: editions under their series */
+.nav-drop ul.nav-sub { position: static; min-width: 0; padding: 0 0 0 0.9rem; margin: 0; border: 0; box-shadow: none; background: none; }
+.nav-drop ul.nav-sub li a { font-size: 0.84rem; color: #555; }
+.experience-past { max-width: 760px; margin: 0 auto; padding: 0 1.25rem 3rem; color: #666; }
