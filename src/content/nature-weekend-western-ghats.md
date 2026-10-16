@@ -1,0 +1,19 @@
+---
+type: experience
+layout: experience.njk
+title: "The Western Ghats Edition"
+parent: nature-weekends-linger
+partner: The Naturalist School
+event_date: "2026-07-11"
+event_end: "2026-07-12"
+location: The Linger Farm, Chettimani
+cover: /images/uploads/11-12th-july.png
+photos:
+  - src: /images/uploads/11-12th-july.png
+    alt: "The Western Ghats Edition"
+categories:
+  - Curated experiences at the properties
+---
+We did the last one on 11-12th July at The Linger Farm, Chettimani.
+
+Vishaal from The Naturalist School led us on multiple walks exploring the amazing, rich biodiversity around. We walked in the rain, we walked at night, we uploaded on iNaturalist - including the first one of a particular mantis from India! We loved it, and learned a lot!
