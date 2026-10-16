@@ -1,16 +1,16 @@
 ---
 type: experience
 layout: experience.njk
+categories:
+  - Curated experiences at the properties
 title: "Foraging Day @ TVC : Be Picky About Your Food!"
-parent: nature-weekends-linger
-event_date: "2026-10-10"
+parent: ""
+event_date: ""
 location: Tamarind Valley Collective
 cover: /images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg
 photos:
   - src: /images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg
     alt: "Foraging Day @ TVC : Be Picky About Your Food!"
-categories:
-  - Curated experiences at the properties
 ---
 This 10th of October, come pick your food from the wild!
 
