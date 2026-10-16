@@ -23,21 +23,14 @@ layout: base.njk
   </ul>
   {% endif %}
 </article>
-{# A page takes interest while it is undated or still ahead; a series while any edition does (else it collects interest in "the next one"). #}
-{% set open = (not event_date) or (event_date | isoDay >= today) %}
-{% if kids and kids.length %}{% set open = true %}{% endif %}
-{% set anyOpen = false %}
-{% for k in kids %}{% if (not k.data.event_date) or (k.data.event_date | isoDay >= today) %}{% set anyOpen = true %}{% endif %}{% endfor %}
-{% set showForm = (open and not (kids and kids.length)) or (kids and kids.length and not anyOpen) %}
-{% if event_date and not open and not (kids and kids.length) %}
-<p class="experience-past">This one has already happened. <a href="/{{ parent }}/">See what's coming next &rarr;</a></p>
+{% if event_date and (event_date | isoDay) < today %}
+<p class="experience-past">This one has already happened. Leave your details below and we'll let you know about the next one.</p>
 {% endif %}
-{% if showForm %}
 <section class="enquiry" id="interested">
   <div class="enquiry-inner">
     <h2>I'm interested</h2>
     <p class="enquiry-sub">Leave your details and we'll be in touch{% if not dateText %} as soon as the date is set{% endif %}. No payment now.</p>
-    <form class="interest-form" data-page-title="{{ title }}" data-event="{{ title }}{% if kids and kids.length %} - next edition{% endif %}" data-event-date="{{ dateText if not (kids and kids.length) }}" data-partner="{{ partner }}">
+    <form class="interest-form" data-page-title="{{ title }}" data-event="{{ title }}" data-event-date="{{ dateText }}" data-partner="{{ partner }}">
       <div class="enquiry-row">
         <label>Name<input type="text" name="name" required autocomplete="name" maxlength="200"></label>
         <label>Phone<input type="tel" name="phone" required autocomplete="tel" minlength="6" maxlength="30"></label>
@@ -52,4 +45,3 @@ layout: base.njk
     </form>
   </div>
 </section>
-{% endif %}

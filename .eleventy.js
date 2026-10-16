@@ -233,8 +233,8 @@ async function buildRegions(api) {
   const propertyDocs = api
     .getFilteredByGlob("src/content/*.md")
     .filter((item) => !dormant.has(item.fileSlug));
-  // An edition (a page with a "parent") is listed under its series in the
-  // menu, not on its own: region.children maps a series slug to its editions.
+  // An edition (a page with a "parent") is reached from its series page, so
+  // it's left out of the menu and the homepage grid.
   const inCategory = (p, cat) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug);
   return categoryDocs
     .map((cat) => ({
@@ -243,10 +243,6 @@ async function buildRegions(api) {
       // Only pass through a plain hex colour - it ends up in an inline style.
       color: /^#[0-9a-fA-F]{3,8}$/.test(cat.data.color || "") ? cat.data.color : null,
       properties: propertyDocs.filter((p) => inCategory(p, cat) && !p.data.parent).map((p) => p.fileSlug),
-      children: propertyDocs
-        .filter((p) => inCategory(p, cat) && p.data.parent)
-        .sort(byEventDate)
-        .reduce((acc, p) => ((acc[p.data.parent] = acc[p.data.parent] || []).push(p.fileSlug), acc), {}),
     }))
     // A freshly-created category with no properties assigned to it yet
     // would otherwise show up as an empty heading with nothing under it.
