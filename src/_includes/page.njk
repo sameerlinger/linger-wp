@@ -2,6 +2,12 @@
 layout: base.njk
 ---
 <div class="prose">
+{% if story and page.fileSlug | isProperty(properties) %}
+<section class="story">
+<h2 id="the-story">The Story</h2>
+{{ story | markdown | safe }}
+</section>
+{% endif %}
 {{ content | safe }}
 {% include "faqs.njk" %}
 </div>

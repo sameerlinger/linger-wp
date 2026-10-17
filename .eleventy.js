@@ -518,6 +518,8 @@ module.exports = function (eleventyConfig) {
     return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
   });
 
+  const storyMd = markdownIt({ html: true, breaks: false, linkify: true });
+  eleventyConfig.addFilter("markdown", (text) => storyMd.render(text || ""));
   eleventyConfig.addFilter("plus1", (n) => n + 1);
 
   eleventyConfig.addFilter("propertyTitle", (slug, properties) => {
