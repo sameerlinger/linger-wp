@@ -44,6 +44,12 @@ collections:
         widget: "string"
         required: false
         hint: "Shown on the homepage under this property's photo. Leave blank to show nothing."
+      - label: "The Story"
+        name: "story"
+        widget: "markdown"
+        required: false
+        minimal: true
+        hint: "Optional. Shown under a \"The Story\" heading at the very top of this property's page, above everything else. Leave blank to show no story section."
       - label: "Location"
         name: "location"
         widget: "string"
