@@ -3,7 +3,6 @@ layout: base.njk
 ---
 <div class="prose">
 {{ content | safe }}
-{% include "faqs.njk" %}
 </div>
 {% set visible = [] %}
 {% for slug in stays %}{% if slug not in dormantSlugs %}{% set visible = (visible.push(slug), visible) %}{% endif %}{% endfor %}
@@ -29,3 +28,6 @@ layout: base.njk
   </div>
 </section>
 {% endif %}
+<div class="prose faq-wrap">
+{% include "faqs.njk" %}
+</div>

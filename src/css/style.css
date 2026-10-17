@@ -866,8 +866,12 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   .scroll-hint { display: flex; }
 }
 
-.prose .faq h3 { font-size: 1.05rem; margin: 1.4rem 0 0.3rem; }
-.prose .faq p { margin: 0; }
+.prose .faq details { border-bottom: 1px solid var(--border); }
+.prose .faq summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: 0.9rem 0; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.prose .faq summary::-webkit-details-marker { display: none; }
+.prose .faq summary::after { content: "+"; flex: none; }
+.prose .faq details[open] summary::after { content: "\2212"; }
+.prose .faq p { margin: 0 0 1rem; }
 
 /* Experience pages (layout experience.njk) */
 .experience-up { margin: 0 0 0.5rem; font-size: 0.9rem; }
