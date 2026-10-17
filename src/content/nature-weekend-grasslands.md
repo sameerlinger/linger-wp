@@ -1,16 +1,17 @@
 ---
 type: experience
 layout: experience.njk
-title: "The Grasslands Edition"
-event_date: "2026-08-15"
-event_end: "2026-08-16"
+categories:
+  - nature-weekends
+title: The Grasslands Edition
+partner: ""
+event_date: ""
+event_end: ""
 location: The Timbaktu Bush Camp, Kalpavalli
 cover: /images/uploads/bush-camp-kalpavalli-2-.png
 photos:
   - src: /images/uploads/bush-camp-kalpavalli-2-.png
-    alt: "The Grasslands Edition"
-categories:
-  - nature-weekends
+    alt: The Grasslands Edition
 ---
 The last Grasslands Exploration was at The Timbaktu Bush Camp, Kalpavalli over the 15th & 16th of August.
 
