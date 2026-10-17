@@ -12,6 +12,6 @@ photos:
   - src: /images/uploads/tvc3b1h.jpg
     alt: "3Bs&1H in The Melagiris - the Eastern Ghats meet the Western Ghats!"
 categories:
-  - Curated experiences at the properties
+  - nature-weekends
 ---
 This 3-4th October, The Tamarind Valley Collective is repeating the very popular biodiversity weekend! Deepa Mohan, an avid birder and nature educator, from Bangalore, and our own resident naturalist Madhavan will lead guided walks to watch and identify birds, butterflies, insects, and herps around the property.

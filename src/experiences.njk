@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Experiences
+permalink: /experiences/index.html
+seo_description: Nature weekends, farm days and other curated experiences at Linger, hosted with naturalists and local partners.
+---
+{% set firstCover = null %}
+{% for s in collections.experienceSections %}{% if not firstCover %}{% set firstCover = s.items[0].slug | coverImage %}{% endif %}{% endfor %}
+<section class="hero hero-short"{% if firstCover %} style="--hero-image: url('{{ firstCover }}')"{% endif %}>
+  <div class="hero-inner">
+    <p class="hero-kicker">Delightfully local</p>
+    <h1>Experiences</h1>
+    <p class="hero-sub">Weekends and days out with naturalists and local partners, hosted at our places.</p>
+  </div>
+</section>
+
+{% for section in collections.experienceSections %}
+<section class="region-section">
+  <h2>{{ section.name }}</h2>
+  <div class="property-grid"{% if section.color %} style="--category-bg: {{ section.color }}"{% endif %}>
+  {% for e in section.items %}
+    <a class="property-card" href="/{{ e.slug }}/">
+      {% set cover = e.slug | coverImage %}
+      {% set location = e.slug | pageLocation %}
+      {% if cover %}
+      <div class="property-card-media">
+        <img src="{{ cover }}" alt="{{ e.title }}" loading="lazy">
+        {% if location %}<span class="property-card-location">{{ location }}</span>{% endif %}
+      </div>
+      {% endif %}
+      <span class="property-card-title">{{ e.title }}</span>
+      <span class="property-card-date">{% if e.editions %}{{ e.editions }} edition{% if e.editions > 1 %}s{% endif %}{% if e.dateText %} &middot; next {{ e.dateText }}{% endif %}{% else %}{{ e.dateText or "Date to be announced" }}{% endif %}</span>
+      {% set summary = e.slug | pageSummary %}
+      {% if summary %}<span class="property-card-summary">{{ summary }}</span>{% endif %}
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% endfor %}

@@ -1,9 +1,10 @@
-// Grouped views for the Properties and Pages lists in the CMS.
+// Grouped views for the Properties, Experiences and Pages lists in the CMS.
 //
-// Decap's own list is flat, so on #/collections/properties and
-// #/collections/pages this draws a full-screen panel over it instead:
-// Properties bucketed by category (a property in several categories is listed
-// under each - it's the same entry, so every row opens the same editor),
+// Decap's own list is flat, so on #/collections/properties,
+// #/collections/experiences and #/collections/pages this draws a full-screen panel over it instead:
+// Properties and Experiences bucketed by their own categories (one in several
+// categories is listed under each - it's the same entry, so every row opens
+// the same editor),
 // Pages bucketed by the top menu they sit under. Editing, adding and
 // renaming categories / menu headers is done with Decap's own editors; this
 // panel only lists and links to them, so it can't change anything itself.
@@ -36,8 +37,9 @@
   }
 
   // entries: [{file, data}] for src/content/*.md; categories: same for
-  // src/content/categories; menuOrder: src/_data/menu.json's items.
-  function groupProperties(entries, categories, menuOrder) {
+  // src/content/categories (or experience-categories); menuOrder:
+  // src/_data/menu.json's items; type: "property" (default) or "experience".
+  function groupProperties(entries, categories, menuOrder, type) {
     var position = {};
     (menuOrder || []).forEach(function (item, n) {
       if (item && item.type === "category" && !(item.category in position)) position[item.category] = n;
@@ -56,7 +58,7 @@
     cats.forEach(function (c) { bySlug[c.slug] = c; });
     var uncategorised = [];
     entries
-      .filter(function (e) { return e.data.type === "property"; })
+      .filter(function (e) { return e.data.type === (type || "property"); })
       .map(function (e) {
         var list = Array.isArray(e.data.categories) ? e.data.categories.map(String) : [];
         return {
@@ -152,7 +154,7 @@
   // ---------------------------------------------------------------- browser
 
   var REPO_API = "https://linger-wp-oauth.onrender.com/github/repos/sameerlinger/linger-wp";
-  var LIST_ROUTE = /^#\/collections\/(properties|pages)\/?(\?.*)?$/;
+  var LIST_ROUTE = /^#\/collections\/(properties|experiences|pages)\/?(\?.*)?$/;
   var blobCache = {}; // blob sha -> text; a file's sha changes whenever it does
   var host = null; // our container inside Decap's <main>
   var hostKind = null;
@@ -197,7 +199,7 @@
   function loadAll() {
     return api("GET", "/git/trees/main?recursive=1").then(function (tree) {
       var files = tree.tree.filter(function (f) {
-        return f.type === "blob" && (/^src\/content\/(categories\/|menus\/)?[^/]+\.md$/.test(f.path) || f.path === "src/_data/menu.json");
+        return f.type === "blob" && (/^src\/content\/(categories\/|experience-categories\/|menus\/)?[^/]+\.md$/.test(f.path) || f.path === "src/_data/menu.json");
       });
       return Promise.all(files.map(function (f) {
         if (blobCache[f.sha] != null) return { path: f.path, text: blobCache[f.sha] };
@@ -207,15 +209,15 @@
         });
       }));
     }).then(function (docs) {
-      var out = { content: [], categories: [], menus: [], menuOrder: [] };
+      var out = { content: [], categories: [], expCategories: [], menus: [], menuOrder: [] };
       docs.forEach(function (d) {
         if (d.path === "src/_data/menu.json") {
           try { out.menuOrder = JSON.parse(d.text).items || []; } catch (e) {}
           return;
         }
-        var m = /^src\/content\/(?:(categories|menus)\/)?([^/]+)\.md$/.exec(d.path);
+        var m = /^src\/content\/(?:(categories|experience-categories|menus)\/)?([^/]+)\.md$/.exec(d.path);
         var item = { file: m[2], data: parseFrontmatter(d.text, window.jsyaml) };
-        (m[1] === "categories" ? out.categories : m[1] === "menus" ? out.menus : out.content).push(item);
+        (m[1] === "categories" ? out.categories : m[1] === "experience-categories" ? out.expCategories : m[1] === "menus" ? out.menus : out.content).push(item);
       });
       return out;
     });
@@ -382,14 +384,17 @@
   }
 
   function build(kind, data, structural) {
-    var isProps = kind === "properties";
+    var isProps = kind === "properties" || kind === "experiences";
+    var isExp = kind === "experiences";
+    // Where this kind's categories are edited in Decap (hidden from its sidebar).
+    var catCollection = isExp ? "experience_categories" : "categories";
     var wrap = h("div", {});
     var bar = h("div", { style: { display: "flex", alignItems: "center", gap: "8px", margin: "0 0 4px", minHeight: "27px", flexWrap: "wrap" } }, [
       h("span", { text: "View:", style: { color: COLOR.muted, fontSize: "14px" } }),
       textButton(isProps ? "By category" : "By menu", function () { plain = false; refresh(); }, true),
       textButton("Plain list", function () { plain = true; applyMode(); }, false),
       h("span", { style: { flex: "1" } }),
-      structural ? textLink(isProps ? "+ Add category" : "+ Add menu", isProps ? "#/collections/categories/new" : "#/collections/menus/new") : null,
+      structural ? textLink(isProps ? "+ Add category" : "+ Add menu", isProps ? "#/collections/" + catCollection + "/new" : "#/collections/menus/new") : null,
     ]);
     wrap.appendChild(bar);
     var hint = h("p", { "data-gl-status": "", text: "Drag a row onto another section to move it" + (isProps ? " (hold Alt to keep it in both)" : "") + ", or use the row's Move menu.", style: { margin: "6px 0 0", color: COLOR.muted, fontSize: "13px" } });
@@ -397,7 +402,7 @@
     wrap.appendChild(hint);
 
     if (isProps) {
-      var g = groupProperties(data.content, data.categories, data.menuOrder);
+      var g = groupProperties(data.content, isExp ? data.expCategories : data.categories, isExp ? [] : data.menuOrder, isExp ? "experience" : "property");
       var titleOf = {};
       g.categories.forEach(function (c) { titleOf[c.slug] = c.title; });
       model = { titleOf: titleOf };
@@ -405,7 +410,7 @@
       var rowFor = function (p, here) {
         var others = p.categories.filter(function (s) { return s !== here; }).map(function (s) { return titleOf[s]; });
         var note = [p.location, others.length ? "also in " + others.join(", ") : ""].filter(Boolean).join(" · ");
-        return rowEl(p, "#/collections/properties/entries/" + encodeURIComponent(p.file), note, here, targets, onMoveProperty);
+        return rowEl(p, "#/collections/" + kind + "/entries/" + encodeURIComponent(p.file), note, here, targets, onMoveProperty);
       };
       var byFile = {};
       g.categories.forEach(function (c) { c.properties.forEach(function (p) { byFile[p.file] = p; }); });
@@ -417,8 +422,8 @@
         onMoveProperty(p, d.from, keep || !d.from ? "add" : "move", to);
       };
       g.categories.forEach(function (c) {
-        wrap.appendChild(sectionEl(c.title, c.slug, structural ? [textLink("Edit", "#/collections/categories/entries/" + encodeURIComponent(c.file))] : [],
-          c.properties.map(function (p) { return rowFor(p, c.slug); }), "No properties in this category yet.", drop));
+        wrap.appendChild(sectionEl(c.title, c.slug, structural ? [textLink("Edit", "#/collections/" + catCollection + "/entries/" + encodeURIComponent(c.file))] : [],
+          c.properties.map(function (p) { return rowFor(p, c.slug); }), isExp ? "No experiences in this category yet." : "No properties in this category yet.", drop));
       });
       if (g.uncategorised.length) {
         wrap.appendChild(sectionEl("No category", "", [], g.uncategorised.map(function (p) { return rowFor(p, ""); }), "", drop));
@@ -467,7 +472,7 @@
     if (!main || toggle) return;
     toggle = h("div", { "data-grouped-host": "toggle", style: { margin: "0 0 4px" } }, [
       h("span", { text: "View: ", style: { color: COLOR.muted, fontSize: "14px" } }),
-      textButton(hostKind === "properties" ? "By category" : "By menu", function () { plain = false; refresh(); }, false),
+      textButton(hostKind !== "pages" ? "By category" : "By menu", function () { plain = false; refresh(); }, false),
       textButton("Plain list", function () {}, true),
     ]);
     main.insertBefore(toggle, main.children[1] || null);

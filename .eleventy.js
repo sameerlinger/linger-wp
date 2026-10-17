@@ -200,6 +200,19 @@ function isoDay(v) {
   return /^\d{4}-\d{2}-\d{2}/.test(String(v || "")) ? String(v).slice(0, 10) : "";
 }
 
+// "22 Nov 2026" / "22-24 Nov 2026" / "" (no date yet - the template says TBD).
+function eventDateText(start, end) {
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const a = isoDay(start);
+  if (!a) return "";
+  const [ay, am, ad] = a.split("-").map(Number);
+  const b = isoDay(end);
+  if (!b || b <= a) return `${ad} ${MONTHS[am - 1]} ${ay}`;
+  const [by, bm, bd] = b.split("-").map(Number);
+  if (by === ay && bm === am) return `${ad}-${bd} ${MONTHS[am - 1]} ${ay}`;
+  return `${ad} ${MONTHS[am - 1]} ${by === ay ? "" : ay + " "}- ${bd} ${MONTHS[bm - 1]} ${by}`.replace("  ", " ");
+}
+
 // Order for a series' editions: upcoming soonest first, then undated (TBD),
 // then past ones newest first. Judged at build time.
 function byEventDate(a, b) {
@@ -227,12 +240,13 @@ async function buildRegions(api) {
     .sort((a, b) =>
       rank(a) - rank(b) || legacyOrder(a) - legacyOrder(b) || a.data.title.localeCompare(b.data.title)
     );
-  // Any page given a category shows up, not just properties - e.g. an
-  // "Experiences" section of ordinary pages. (Being a property is what
-  // adds the booking enquiry form, see isProperty; that's separate.)
+  // Any page given a category shows up, not just properties. Experiences
+  // are left out: they have their own categories and their own page
+  // (see experienceSections). (Being a property is what adds the booking
+  // enquiry form, see isProperty; that's separate.)
   const propertyDocs = api
     .getFilteredByGlob("src/content/*.md")
-    .filter((item) => !dormant.has(item.fileSlug));
+    .filter((item) => !dormant.has(item.fileSlug) && item.data.type !== "experience");
   // An edition (a page with a "parent") is reached from its series page, so
   // it's left out of the menu and the homepage grid.
   const inCategory = (p, cat) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug);
@@ -357,18 +371,53 @@ module.exports = function (eleventyConfig) {
     return map;
   });
 
-  // "22 Nov 2026" / "22-24 Nov 2026" / "" (no date yet - the template says TBD).
-  eleventyConfig.addFilter("eventDateText", (start, end) => {
-    const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    const a = isoDay(start);
-    if (!a) return "";
-    const [ay, am, ad] = a.split("-").map(Number);
-    const b = isoDay(end);
-    if (!b || b <= a) return `${ad} ${MONTHS[am - 1]} ${ay}`;
-    const [by, bm, bd] = b.split("-").map(Number);
-    if (by === ay && bm === am) return `${ad}-${bd} ${MONTHS[am - 1]} ${ay}`;
-    return `${ad} ${MONTHS[am - 1]} ${by === ay ? "" : ay + " "}- ${bd} ${MONTHS[bm - 1]} ${by}`.replace("  ", " ");
+  // The /experiences/ page: experience categories (src/content/experience-
+  // categories, by Order then title) with their experiences, soonest first
+  // (byEventDate). A series stands for its editions: one card, dated by its
+  // next upcoming edition. Editions are reached from the series page.
+  // Experiences with no (or an unknown) category go in a last section.
+  eleventyConfig.addCollection("experienceSections", async (api) => {
+    const dormant = await dormantSlugs();
+    const all = api.getFilteredByGlob("src/content/*.md");
+    const editionsOf = {};
+    for (const p of all.filter((x) => x.data.parent).sort(byEventDate)) {
+      (editionsOf[p.data.parent] = editionsOf[p.data.parent] || []).push(p);
+    }
+    const toCard = (p) => {
+      const kids = editionsOf[p.fileSlug] || [];
+      const next = kids.find((k) => isoDay(k.data.event_date) >= new Date().toISOString().slice(0, 10));
+      const dated = kids.length ? next : p;
+      return {
+        slug: p.fileSlug,
+        title: p.data.title,
+        partner: p.data.partner || "",
+        dateText: dated ? eventDateText(dated.data.event_date, dated.data.event_end) : "",
+        editions: kids.length,
+        // for ordering only: the series sorts by its next edition
+        sortKey: { data: { title: p.data.title, event_date: dated ? dated.data.event_date : "" } },
+      };
+    };
+    const cards = all
+      .filter((p) => p.data.type === "experience" && !p.data.parent && !dormant.has(p.fileSlug))
+      .map((p) => ({ item: p, card: toCard(p) }))
+      .sort((a, b) => byEventDate(a.card.sortKey, b.card.sortKey));
+    const sections = api
+      .getFilteredByGlob("src/content/experience-categories/*.md")
+      .filter((c) => c.data.slug && c.data.title)
+      .sort((a, b) => (typeof a.data.order === "number" ? a.data.order : 999) - (typeof b.data.order === "number" ? b.data.order : 999) || a.data.title.localeCompare(b.data.title))
+      .map((c) => ({
+        name: c.data.title,
+        slug: c.data.slug,
+        color: /^#[0-9a-fA-F]{3,8}$/.test(c.data.color || "") ? c.data.color : null,
+        items: cards.filter((x) => (x.item.data.categories || []).includes(c.data.slug)).map((x) => x.card),
+      }));
+    const placed = new Set(sections.flatMap((s) => s.items.map((i) => i.slug)));
+    const rest = cards.filter((x) => !placed.has(x.card.slug)).map((x) => x.card);
+    if (rest.length) sections.push({ name: "More experiences", slug: "more", color: null, items: rest });
+    return sections.filter((s) => s.items.length);
   });
+
+  eleventyConfig.addFilter("eventDateText", eventDateText);
   eleventyConfig.addFilter("isoDay", isoDay);
 
   // The experience page's photo carousel (same markup as inline galleries).
@@ -428,6 +477,8 @@ module.exports = function (eleventyConfig) {
       } else if (entry.type === "menu" && menuBySlug.has(entry.menu) && !used.has(`menu:${entry.menu}`)) {
         items.push({ kind: "menu", menu: menuBySlug.get(entry.menu) });
         used.add(`menu:${entry.menu}`);
+      } else if (entry.type === "link" && entry.label && /^\//.test(entry.url || "")) {
+        items.push({ kind: "link", label: entry.label, url: entry.url });
       }
     }
     // Anything not placed yet: a new category right after the last listed
@@ -520,21 +571,6 @@ module.exports = function (eleventyConfig) {
       f.bbq && { key: "bbq", label: "BBQ" },
       f.cycling && { key: "cycling", label: "Cycling" },
     ].filter(Boolean);
-  });
-
-  // True for a page listed under the Experiences category - the one whose
-  // file is src/content/categories/experiences.md, matched by its Slug (what
-  // a page's "categories" list holds). Read fresh each build, like menu.json.
-  eleventyConfig.addFilter("inExperiences", (categories) => {
-    if (!Array.isArray(categories) || !categories.length) return false;
-    try {
-      const text = fs.readFileSync(path.join(__dirname, "src/content/categories/experiences.md"), "utf8");
-      const m = /^slug:[ \t]*(.*)$/m.exec(text);
-      const slug = m && m[1].trim().replace(/^(["'])(.*)\1$/, "$2");
-      return !!slug && categories.includes(slug);
-    } catch {
-      return false;
-    }
   });
 
   // Guards a hardcoded nav/footer link to a src/content/*.md page (as

@@ -41,6 +41,8 @@
         {% endfor %}
       </ul>
     </details>
+    {% elif item.kind == "link" %}
+    <a class="nav-link" href="{{ item.url }}">{{ item.label }}</a>
     {% elif item.kind == "menu" %}
     {% if collections.menuLinks[item.menu.slug].length %}
     <details class="nav-drop">

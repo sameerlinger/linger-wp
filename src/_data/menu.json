@@ -21,8 +21,9 @@
       "category": "himalayas"
     },
     {
-      "type": "category",
-      "category": "Curated experiences at the properties"
+      "type": "link",
+      "label": "Experiences",
+      "url": "/experiences/"
     },
     {
       "type": "menu",

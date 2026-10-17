@@ -12,7 +12,7 @@ photos:
   - src: /images/uploads/11-12th-july.png
     alt: "The Western Ghats Edition"
 categories:
-  - Curated experiences at the properties
+  - nature-weekends
 ---
 We did the last one on 11-12th July at The Linger Farm, Chettimani.
 

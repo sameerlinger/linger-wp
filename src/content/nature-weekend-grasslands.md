@@ -11,7 +11,7 @@ photos:
   - src: /images/uploads/bush-camp-kalpavalli-2-.png
     alt: "The Grasslands Edition"
 categories:
-  - Curated experiences at the properties
+  - nature-weekends
 ---
 The last Grasslands Exploration was at The Timbaktu Bush Camp, Kalpavalli over the 15th & 16th of August.
 
