@@ -1,12 +1,52 @@
 ---
 type: property
 title: Timbaktu Bush Camp
-slug: bush-camp-kalpavalli
 cover: /images/bush-camp-kalpavalli/AllSetuUp-1024x665.jpeg
 summary: A fascinating grassland, jusy 3 hrs from Bangalore
+slug: bush-camp-kalpavalli
+story: >-
+  Kalpavalli is the Timbaktu Collective’s community-led ecological restoration
+  programme that started in 1992 to revive degraded village commons in Andhra
+  Pradesh’s Sri Sathya Sai district. Its central achievement is the 4000 acre
+  Kalpavalli Community Conservation Area (KCCA) — formerly barren revenue
+  wasteland transformed into a functioning savannah grassland and wildlife
+  corridor.  Timbaktu Collective worked with villagers in Chennekothapalli,
+  Roddam, and Ramagiri mandals to protect and regenerate common lands affected
+  by deforestation, overgrazing, fires, and drought. It helped organize local
+  institutions, including the Kalpavalli Tree Growers’ Cooperative Society, who
+  now run the Bush Camp for education and awareness purposes.
+
+
+  The area now supports notable wildlife, including the vulnerable Indian grey wolf, blackbucks, leopard, sloth bear, and hyaena. Surveys cited by the Sanctuary Nature Foundation report 22 mammal species, 123 bird species, and 28 reptile and amphibian species. 
+
+
+  Kalpavalli is significant because it treated restoration as a \*\*commons problem\*\*, not merely a planting project. By giving villages a cooperative structure, paid/community forest-watch roles, agreed grazing and harvest rules, and fire protection, Timbaktu helped make conservation economically and socially durable. It also links ecology to livelihoods: local families benefit from grazing small ruminants, NTFP collection,  ecotourism, while the restored land provides water retention, soil moisture, carbon sequestration, pollination, and habitat benefits. 
+
+
+  When you visit the Bush Camp, you support this beautiful effort that brings communities and landscapes together into a healthy, balanced relationship!
+
+
+  More at `https://timbaktu.org/initiatives/kalpavalli/`
 location: Kalpavalli Hills, near Penukonda
 categories:
   - wilderness
+faqs:
+  - question: How far is Kalpavalli from Bangalore?
+    answer: About 180kms, just off the Hyderbad Highway close to the KIA factory.
+      The access is quick, but the last 8-10 kms take you to a completely
+      different world on mud roads and trails, away from maps and concrete. Plan
+      for about 3 hours to get there.
+  - question: What can we do there?
+    answer: The landscape is amazing for hikes, birding and hosts a wide variety of
+      wildlife. This is true, deep savannah experience and the team has trained,
+      well informed and passionate naturalists and experts who help you explore
+      this.
+  - question: Should we get our own tents?
+    answer: "Ah no. Accommodations are on an enclosed plinth with large, comfortable
+      beds each with their own mosquito net. There are plenty of common
+      washrooms and even showers in a common block - though we urge you to keep
+      water usage to a minimum give this is a water stressed region. It's very
+      outdoorsy but comfortable and spacious, overall. "
 ---
 
 # Bush Camp, Kalpavalli
