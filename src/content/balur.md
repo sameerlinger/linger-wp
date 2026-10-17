@@ -18,6 +18,26 @@ features:
   - bbq
   - farmActivity
 seo_title: Balur Estate - Coffee Heritage Homestay in Chikmagalur
+seo_description: Linger, Balur Estate is a heritage homestay in Mudigere,
+  Chikmagalur, just behind the Charmadi Ghats. It has over 400 acres of
+  rainforest friendly coffee, a heritage bungalow and is excellent for hikes,
+  treks, birdwatching. There are 2 lakes and a waterfall inside the property. In
+  both the monsoon and the winter, Balur Estate is extremely charming and a must
+  visit for families, friends coming for a reunion, small team offsites and
+  bikers exploring the Western Ghats.
+faqs:
+  - question: How many people can Balur Estate host?
+    answer: "Balur can ordinarily sleep upto 18 people in the luxurious 6 rooms, and
+      accommodations for more can be managed for single, close knit groups
+      travelling together. "
+  - question: What kind of food is served at Balur Estate?
+    answer: We serve authentic Malnad cuisine including seasonal delicacies
+      including pork, fish and chicken recipes. The coffee, of course is one of
+      the best you'll come across, and we can accommodate special meal requests
+      with prior notice.
+  - question: How much time does it take to reach Balur Estate from Bangalore?
+    answer: "Bangalore is about 300kms and thanks to fantastic roads it takes about
+      5 hours at a leisurely pace, with a quick coffee break, to get there. "
 ---
 
 
