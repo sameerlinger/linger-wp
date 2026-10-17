@@ -897,3 +897,4 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
   font-weight: 500;
   color: var(--accent-dark);
 }
+.region-intro { max-width: 46rem; margin: -0.25rem 0 1.25rem; color: var(--muted); }

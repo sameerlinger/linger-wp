@@ -2,7 +2,6 @@
 type: experience
 layout: experience.njk
 title: "3Bs&1H in The Melagiris - the Eastern Ghats meet the Western Ghats!"
-parent: nature-weekends-linger
 partner: Deepa Mohan
 event_date: "2026-10-03"
 event_end: "2026-10-04"

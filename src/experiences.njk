@@ -17,6 +17,7 @@ seo_description: Nature weekends, farm days and other curated experiences at Lin
 {% for section in collections.experienceSections %}
 <section class="region-section">
   <h2>{{ section.name }}</h2>
+  {% if section.description %}<p class="region-intro">{{ section.description }}</p>{% endif %}
   <div class="property-grid"{% if section.color %} style="--category-bg: {{ section.color }}"{% endif %}>
   {% for e in section.items %}
     <a class="property-card" href="/{{ e.slug }}/">
@@ -29,7 +30,7 @@ seo_description: Nature weekends, farm days and other curated experiences at Lin
       </div>
       {% endif %}
       <span class="property-card-title">{{ e.title }}</span>
-      <span class="property-card-date">{% if e.editions %}{{ e.editions }} edition{% if e.editions > 1 %}s{% endif %}{% if e.dateText %} &middot; next {{ e.dateText }}{% endif %}{% else %}{{ e.dateText or "Date to be announced" }}{% endif %}</span>
+      <span class="property-card-date">{{ e.dateText or "Date to be announced" }}</span>
       {% set summary = e.slug | pageSummary %}
       {% if summary %}<span class="property-card-summary">{{ summary }}</span>{% endif %}
     </a>

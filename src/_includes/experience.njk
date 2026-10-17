@@ -2,9 +2,8 @@
 layout: base.njk
 ---
 {% set dateText = event_date | eventDateText(event_end) %}
-{% set kids = collections.editions[page.fileSlug] %}
 <article class="prose experience">
-  {% if parent %}<p class="experience-up"><a href="/{{ parent }}/">&larr; {{ parent | propertyTitle(properties) }}</a></p>{% endif %}
+  <p class="experience-up"><a href="/experiences/">&larr; All experiences</a></p>
   <h1>{{ title }}</h1>
   <p class="experience-meta">
     <span class="experience-date">{{ dateText or "Date to be announced" }}</span>
@@ -13,15 +12,6 @@ layout: base.njk
   </p>
   {{ photos | experienceCarousel | safe }}
   {{ content | safe }}
-  {% if kids and kids.length %}
-  <h2>Editions</h2>
-  <ul class="edition-list">
-    {% for k in kids %}
-    <li><a href="{{ k.url }}"><strong>{{ k.data.title }}</strong>
-      <span>{{ k.data.event_date | eventDateText(k.data.event_end) or "Date to be announced" }}{% if k.data.partner %} &middot; with {{ k.data.partner }}{% endif %}</span></a></li>
-    {% endfor %}
-  </ul>
-  {% endif %}
 </article>
 {% if event_date and (event_date | isoDay) < today %}
 <p class="experience-past">This one has already happened. Leave your details below and we'll let you know about the next one.</p>

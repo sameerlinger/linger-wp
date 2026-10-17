@@ -213,7 +213,7 @@ function eventDateText(start, end) {
   return `${ad} ${MONTHS[am - 1]} ${by === ay ? "" : ay + " "}- ${bd} ${MONTHS[bm - 1]} ${by}`.replace("  ", " ");
 }
 
-// Order for a series' editions: upcoming soonest first, then undated (TBD),
+// Order for experiences: upcoming soonest first, then undated (TBD),
 // then past ones newest first. Judged at build time.
 function byEventDate(a, b) {
   const today = new Date().toISOString().slice(0, 10);
@@ -247,8 +247,6 @@ async function buildRegions(api) {
   const propertyDocs = api
     .getFilteredByGlob("src/content/*.md")
     .filter((item) => !dormant.has(item.fileSlug) && item.data.type !== "experience");
-  // An edition (a page with a "parent") is reached from its series page, so
-  // it's left out of the menu and the homepage grid.
   const inCategory = (p, cat) => Array.isArray(p.data.categories) && p.data.categories.includes(cat.data.slug);
   return categoryDocs
     .map((cat) => ({
@@ -256,7 +254,7 @@ async function buildRegions(api) {
       slug: cat.data.slug,
       // Only pass through a plain hex colour - it ends up in an inline style.
       color: /^#[0-9a-fA-F]{3,8}$/.test(cat.data.color || "") ? cat.data.color : null,
-      properties: propertyDocs.filter((p) => inCategory(p, cat) && !p.data.parent).map((p) => p.fileSlug),
+      properties: propertyDocs.filter((p) => inCategory(p, cat)).map((p) => p.fileSlug),
     }))
     // A freshly-created category with no properties assigned to it yet
     // would otherwise show up as an empty heading with nothing under it.
@@ -361,46 +359,22 @@ module.exports = function (eleventyConfig) {
   );
   eleventyConfig.addCollection("regions", (api) => buildRegions(api));
 
-  // Editions of a series page, keyed by the series' slug (the "parent" field
-  // on an experience), in byEventDate order.
-  eleventyConfig.addCollection("editions", (api) => {
-    const map = {};
-    for (const p of api.getFilteredByGlob("src/content/*.md").filter((x) => x.data.parent).sort(byEventDate)) {
-      (map[p.data.parent] = map[p.data.parent] || []).push(p);
-    }
-    return map;
-  });
-
   // The /experiences/ page: experience categories (src/content/experience-
   // categories, by Order then title) with their experiences, soonest first
-  // (byEventDate). A series stands for its editions: one card, dated by its
-  // next upcoming edition. Editions are reached from the series page.
-  // Experiences with no (or an unknown) category go in a last section.
+  // (byEventDate). Experiences with no (or an unknown) category go in a
+  // last section.
   eleventyConfig.addCollection("experienceSections", async (api) => {
     const dormant = await dormantSlugs();
-    const all = api.getFilteredByGlob("src/content/*.md");
-    const editionsOf = {};
-    for (const p of all.filter((x) => x.data.parent).sort(byEventDate)) {
-      (editionsOf[p.data.parent] = editionsOf[p.data.parent] || []).push(p);
-    }
-    const toCard = (p) => {
-      const kids = editionsOf[p.fileSlug] || [];
-      const next = kids.find((k) => isoDay(k.data.event_date) >= new Date().toISOString().slice(0, 10));
-      const dated = kids.length ? next : p;
-      return {
+    const cards = api
+      .getFilteredByGlob("src/content/*.md")
+      .filter((p) => p.data.type === "experience" && !dormant.has(p.fileSlug))
+      .sort(byEventDate)
+      .map((p) => ({
+        categories: p.data.categories || [],
         slug: p.fileSlug,
         title: p.data.title,
-        partner: p.data.partner || "",
-        dateText: dated ? eventDateText(dated.data.event_date, dated.data.event_end) : "",
-        editions: kids.length,
-        // for ordering only: the series sorts by its next edition
-        sortKey: { data: { title: p.data.title, event_date: dated ? dated.data.event_date : "" } },
-      };
-    };
-    const cards = all
-      .filter((p) => p.data.type === "experience" && !p.data.parent && !dormant.has(p.fileSlug))
-      .map((p) => ({ item: p, card: toCard(p) }))
-      .sort((a, b) => byEventDate(a.card.sortKey, b.card.sortKey));
+        dateText: eventDateText(p.data.event_date, p.data.event_end),
+      }));
     const sections = api
       .getFilteredByGlob("src/content/experience-categories/*.md")
       .filter((c) => c.data.slug && c.data.title)
@@ -408,12 +382,14 @@ module.exports = function (eleventyConfig) {
       .map((c) => ({
         name: c.data.title,
         slug: c.data.slug,
+        // Only pass through a plain hex colour - it ends up in an inline style.
         color: /^#[0-9a-fA-F]{3,8}$/.test(c.data.color || "") ? c.data.color : null,
-        items: cards.filter((x) => (x.item.data.categories || []).includes(c.data.slug)).map((x) => x.card),
+        description: c.data.description || "",
+        items: cards.filter((x) => x.categories.includes(c.data.slug)),
       }));
-    const placed = new Set(sections.flatMap((s) => s.items.map((i) => i.slug)));
-    const rest = cards.filter((x) => !placed.has(x.card.slug)).map((x) => x.card);
-    if (rest.length) sections.push({ name: "More experiences", slug: "more", color: null, items: rest });
+    const known = new Set(sections.map((s) => s.slug));
+    const rest = cards.filter((x) => !x.categories.some((c) => known.has(c)));
+    if (rest.length) sections.push({ name: "More experiences", slug: "more", color: null, description: "", items: rest });
     return sections.filter((s) => s.items.length);
   });
 
