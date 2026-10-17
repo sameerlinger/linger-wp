@@ -2,7 +2,7 @@
 type: experience
 layout: experience.njk
 categories:
-  - Curated experiences at the properties
+  - nature-weekends
 title: "Foraging Day @ TVC : Be Picky About Your Food!"
 parent: ""
 event_date: ""

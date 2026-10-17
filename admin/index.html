@@ -57,7 +57,7 @@
       .filter(function (c) { return c.name !== "homepage"; })
       .map(function (c) {
         c.delete = false;
-        if (c.name === "categories" || c.name === "menus") { c.hide = true; c.create = false; }
+        if (c.name === "categories" || c.name === "experience_categories" || c.name === "menus") { c.hide = true; c.create = false; }
         return c;
       });
     return config;

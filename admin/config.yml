@@ -94,7 +94,7 @@ collections:
   - name: "experiences"
     label: "Experiences"
     label_singular: "Experience"
-    description: "Events and experiences with a date, a partner, photos and an \"I'm interested\" form. Responses go to the Events tab in the booking engine. For a series with editions (e.g. Nature Exploration Weekends), make the series page first, then each edition with the series chosen under \"Part of\"."
+    description: "Events and experiences with a date, a partner, photos and an \"I'm interested\" form, shown on the Experiences page by category. Responses go to the Events tab in the booking engine. For a series with editions (e.g. Nature Exploration Weekends), make the series page first, then each edition with the series chosen under \"Part of\"."
     folder: "src/content"
     filter: { field: "type", value: "experience" }
     create: true
@@ -105,7 +105,16 @@ collections:
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "experience" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "experience.njk" }
-      - { label: "Categories", name: "categories", widget: "hidden", default: ["Curated experiences at the properties"] }
+      - label: "Categories"
+        name: "categories"
+        widget: "relation"
+        collection: "experience_categories"
+        search_fields: ["title"]
+        value_field: "slug"
+        display_fields: ["title"]
+        multiple: true
+        required: false
+        hint: "Which section of the Experiences page it appears in. Add or rename categories from the Experiences list (\"+ Add category\"). With none chosen it goes under \"More experiences\"."
       - { label: "Title", name: "title", widget: "string", hint: "The page heading and the name shown in the Events tab, e.g. \"Nature Exploration Weekend - Grasslands Edition\". The web address is made from it when first saved." }
       - label: "Part of (series)"
         name: "parent"
@@ -139,7 +148,7 @@ collections:
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
-    description: "Standalone pages such as policies, team and offers. Properties and experiences are under \"Properties\"."
+    description: "Standalone pages such as policies, team and offers. Properties are under \"Properties\" and experiences under \"Experiences\"."
     folder: "src/content"
     filter: { field: "type", value: "page" }
     create: true
@@ -239,8 +248,13 @@ collections:
           - { label: "Link", name: "url", widget: "string", hint: "e.g. mailto:stay@linger.in, tel:+919590050001, https://wa.me/918548065772, https://example.com or /blog/" }
           - { label: "Order", name: "order", widget: "number", value_type: "int", required: false, hint: "Lower comes first; pages default to 1000 unless they have their own Menu order." }
 
+  # Property categories and experience categories are managed from inside
+  # the Properties and Experiences lists ("+ Add category", "Edit"), so they
+  # are hidden from the sidebar (the editors still open by their address).
   - name: "categories"
-    label: "Categories"
+    label: "Property categories"
+    label_singular: "Property category"
+    hide: true
     folder: "src/content/categories"
     description: "To change the order of these on the homepage and in the menu, use Homepage > Menu order."
     create: true
@@ -256,6 +270,23 @@ collections:
         widget: "color"
         required: false
         hint: "Background colour of the panel behind this section's property boxes on the homepage (not the heading). Light, soft shades read best. Leave blank for plain white."
+
+  - name: "experience_categories"
+    label: "Experience categories"
+    label_singular: "Experience category"
+    hide: true
+    folder: "src/content/experience-categories"
+    description: "The sections of the Experiences page, in this Order."
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Shown as the section heading on the Experiences page." }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Used internally to link experiences to this section - lowercase, hyphenated, no spaces." }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", required: false, hint: "Lower comes first on the Experiences page." }
+      - { label: "Card colour", name: "color", widget: "color", required: false, hint: "Background colour of the panel behind this section's experience boxes. Light, soft shades read best. Leave blank for plain white." }
 
   - name: "homepage"
     label: "Homepage"
@@ -292,6 +323,13 @@ collections:
                     search_fields: ["title"]
                     value_field: "slug"
                     display_fields: ["title"]
+              - label: "Link"
+                name: "link"
+                widget: "object"
+                summary: "Link: {{fields.label}}"
+                fields:
+                  - { label: "Name", name: "label", widget: "string" }
+                  - { label: "Page address", name: "url", widget: "string", hint: "A page on this site, starting with a slash, e.g. /experiences/." }
               - label: "Menu dropdown"
                 name: "menu"
                 widget: "object"
