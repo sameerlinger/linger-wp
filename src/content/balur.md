@@ -38,6 +38,14 @@ faqs:
   - question: How much time does it take to reach Balur Estate from Bangalore?
     answer: "Bangalore is about 300kms and thanks to fantastic roads it takes about
       5 hours at a leisurely pace, with a quick coffee break, to get there. "
+  - question: Is Balur Estate a 5 star property? What are the amenities?
+    answer: "Balur Estate is a heritage coffee estate and we have kept the old world
+      charm intact. There are no TVs, sports activities outside of board games
+      and the focus is on an experience that gives you the taste of a planter's
+      life. Long walks in the estate, a tour of the plantation and processing
+      facilities, a hike to the source of the Hemavathi and top notch
+      hospitality have earned Balur the reputation of one the best, top rated
+      homestays in Chikmagalur. "
 ---
 
 
