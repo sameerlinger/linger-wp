@@ -9,7 +9,6 @@ layout: base.njk
 </section>
 {% endif %}
 {{ content | safe }}
-{% include "faqs.njk" %}
 </div>
 {% if page.fileSlug | isProperty(properties) %}
 <section class="enquiry" id="check-availability">
@@ -88,3 +87,6 @@ layout: base.njk
 </section>
 <a href="#want-to-know-more" class="query-floater">Send Query <span aria-hidden="true">&darr;</span></a>
 {% endif %}
+<div class="prose faq-wrap">
+{% include "faqs.njk" %}
+</div>
