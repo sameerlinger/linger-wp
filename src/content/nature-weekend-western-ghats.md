@@ -1,17 +1,17 @@
 ---
 type: experience
 layout: experience.njk
-title: "The Western Ghats Edition"
+categories:
+  - nature-weekends
+title: The Western Ghats Edition
 partner: The Naturalist School
-event_date: "2026-07-11"
-event_end: "2026-07-12"
+event_date: ""
+event_end: ""
 location: The Linger Farm, Chettimani
 cover: /images/uploads/11-12th-july.png
 photos:
   - src: /images/uploads/11-12th-july.png
-    alt: "The Western Ghats Edition"
-categories:
-  - nature-weekends
+    alt: The Western Ghats Edition
 ---
 We did the last one on 11-12th July at The Linger Farm, Chettimani.
 
