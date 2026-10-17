@@ -393,6 +393,22 @@ module.exports = function (eleventyConfig) {
     return sections.filter((s) => s.items.length);
   });
 
+  // Every experience once, soonest first - the Experiences page's interest
+  // form dropdown.
+  eleventyConfig.addCollection("experienceList", async (api) => {
+    const dormant = await dormantSlugs();
+    return api
+      .getFilteredByGlob("src/content/*.md")
+      .filter((p) => p.data.type === "experience" && !dormant.has(p.fileSlug))
+      .sort(byEventDate)
+      .map((p) => ({
+        title: p.data.title,
+        partner: p.data.partner || "",
+        date: isoDay(p.data.event_date),
+        dateText: eventDateText(p.data.event_date, p.data.event_end),
+      }));
+  });
+
   eleventyConfig.addFilter("eventDateText", eventDateText);
   eleventyConfig.addFilter("isoDay", isoDay);
 
