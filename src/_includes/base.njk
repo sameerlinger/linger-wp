@@ -320,6 +320,8 @@ document.querySelectorAll(".interest-form").forEach(function (form) {
     button.disabled = true;
     status.dataset.state = "";
     status.textContent = "Sending…";
+    // On the Experiences page the dropdown's option carries its date and partner.
+    var chosen = form.event && form.event.selectedOptions ? form.event.selectedOptions[0] : null;
     fetch(INTEREST_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -327,8 +329,8 @@ document.querySelectorAll(".interest-form").forEach(function (form) {
         pageTitle: form.dataset.pageTitle,
         pageUrl: location.href,
         event: form.dataset.event || form.event.value,
-        eventDate: form.dataset.eventDate || "",
-        partner: form.dataset.partner || "",
+        eventDate: form.dataset.eventDate || (chosen && chosen.dataset.date) || "",
+        partner: form.dataset.partner || (chosen && chosen.dataset.partner) || "",
         name: form.name.value,
         phone: form.phone.value,
         email: form.elements.email ? form.elements.email.value : "",
