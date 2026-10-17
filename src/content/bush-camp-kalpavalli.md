@@ -26,7 +26,7 @@ story: >-
   When you visit the Bush Camp, you support this beautiful effort that brings communities and landscapes together into a healthy, balanced relationship!
 
 
-  More at `https://timbaktu.org/initiatives/kalpavalli/`
+  More at [`https://timbaktu.org/initiatives/kalpavalli/`](https://timbaktu.org/initiatives/kalpavalli/)
 location: Kalpavalli Hills, near Penukonda
 categories:
   - wilderness
