@@ -70,6 +70,10 @@ layout: base.njk
         <label>Name<input type="text" name="name" required autocomplete="name" maxlength="200"></label>
         <label>Phone<input type="tel" name="phone" required autocomplete="tel" minlength="6" maxlength="30"></label>
       </div>
+      <div class="enquiry-row">
+        <label>Email<input type="email" name="email" required autocomplete="email" maxlength="200"></label>
+        <label>Number of people<input type="number" name="people" required min="1" max="50" step="1" value="2"></label>
+      </div>
       <input type="text" name="company" class="enquiry-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="enquiry-submit">Tell me more!</button>
       <p class="enquiry-status" role="status"></p>
