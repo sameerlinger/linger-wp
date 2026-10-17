@@ -5,7 +5,7 @@ cover: /images/linger-balur-estate/2026-09-12-07.26.38.jpg
 summary: 400 acres of coffee heritage...
 slug: balur
 story: >-
-  # Linger, Balur Estate, Mudigere, Chikmagalur
+  ## Balur Estate - A History of Coffee
 
 
   Balur Estate is a 400 acre coffee plantation since the 1840s - one of the oldest plantations on record! The Planter’s Bungalow has stood testimony to the changing seasons and centuries at Balur since 1853. The River Hemavathy originates just above the Estate. Its truly a pretty, fascinating piece of India’s Coffee Heritage, with 26 kms of internal roads, and earthen dam and 2 lakes inside, records of rainfall maintain for over a century and plantation operations that marry traditional management of estate blocks with modern processes and even specialized coffee! We welcome you to spend a few days and soak in the place, its history, and its solitude. We could describe it but it can only be experienced.
