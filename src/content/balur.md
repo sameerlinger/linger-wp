@@ -4,6 +4,11 @@ title: Balur Estate, since 1840
 cover: /images/linger-balur-estate/2026-09-12-07.26.38.jpg
 summary: 400 acres of coffee heritage...
 slug: balur
+story: >-
+  # Linger, Balur Estate, Mudigere, Chikmagalur
+
+
+  Balur Estate is a 400 acre coffee plantation since the 1840s - one of the oldest plantations on record! The Planter’s Bungalow has stood testimony to the changing seasons and centuries at Balur since 1853. The River Hemavathy originates just above the Estate. Its truly a pretty, fascinating piece of India’s Coffee Heritage, with 26 kms of internal roads, and earthen dam and 2 lakes inside, records of rainfall maintain for over a century and plantation operations that marry traditional management of estate blocks with modern processes and even specialized coffee! We welcome you to spend a few days and soak in the place, its history, and its solitude. We could describe it but it can only be experienced.
 location: Chikmagalur
 categories:
   - coffee-estates
@@ -15,29 +20,25 @@ features:
 seo_title: Balur Estate - Coffee Heritage Homestay in Chikmagalur
 ---
 
-# Linger, Balur Estate, Mudigere, Chikmagalur
 
-Balur Estate is a 400 acre coffee plantation since the 1840s. The Planter’s Bungalow has stood testimony to the changing seasons and centuries at Balur since 1853. The River Hemavathy originates just above the Estate. Its truly a pretty, fascinating piece of India’s Coffee Heritage. We welcome you to spend a few days and soak in the place, its history, and its solitude. We could describe it but it can only be experienced.
-
----
+- - -
 
 ## Accommodations & Tariff
 
-|  |  |  |
-| --- | --- | --- |
-| **Accommodation** | **Rate (1st Night)** | **Extra Guests / Notes** |
-| **Heritage Bungalow** (Planter's Room / Guest Suite) | ₹9,800 for a couple | Extra person: ₹3,185 |
-| **Cardamom Suites** (3 rooms) | ₹9,800 for a couple | Extra person: ₹3,185 |
-| **The Coffee Cottage** (private dining & service) | ₹11,600 for a couple | Extra person: ₹3,770 |
+|                                                      |                      |                          |
+| ---------------------------------------------------- | -------------------- | ------------------------ |
+| **Accommodation**                                    | **Rate (1st Night)** | **Extra Guests / Notes** |
+| **Heritage Bungalow** (Planter's Room / Guest Suite) | ₹9,800 for a couple  | Extra person: ₹3,185     |
+| **Cardamom Suites** (3 rooms)                        | ₹9,800 for a couple  | Extra person: ₹3,185     |
+| **The Coffee Cottage** (private dining & service)    | ₹11,600 for a couple | Extra person: ₹3,770     |
 
-- **Child Policy:** Up to 2 kids under 5 complimentary, 5–12 at 50%.
-- **Long Stay Benefit:** After the 2nd night, 10%, 15%, 20% discount.
+* **Child Policy:** Up to 2 kids under 5 complimentary, 5–12 at 50%.
+* **Long Stay Benefit:** After the 2nd night, 10%, 15%, 20% discount.
 
 **The Heritage Bungalow** has two options
 
-- The Planter’s Room : This can accommodate 2 guests comfortably, and additionally 2 kids as well.
-
-- The Guest Suite : This hosts 4 people in 2 rooms.
+* The Planter’s Room : This can accommodate 2 guests comfortably, and additionally 2 kids as well.
+* The Guest Suite : This hosts 4 people in 2 rooms.
 
 **The Coffee Cottage** : A large premium cottage renovated recently with a huge bedroom with a fireplace, a tall ceiling, large windows with lovely views, a sunroom with furniture that goes perfectly with the era this place is from. The bathroom here holds a nice surprise or two! The room has in room service in a an annexe dedicated for this purpose.
 
@@ -74,11 +75,11 @@ The Heritage Bungalow was built in 1853, and has a gorgeous common verandah, 2 d
 
 (This pricing is for all the options above and includes the accommodation, meals, activities. We will detail the same on the invoice.)
 
-- Rs.9800/- for the 1st night’s stay for a couple
-- (upto 2 kids under 5 years of age complimentary, kids 5-12 at 50%)
-- After the 2nd night, subsequent nights at 10%, 15%, 20% long stay benefit.
-- Extra Person : 3185/-
-- *(Pricing valid upto March 31st, except over Dec 15th – Jan 2nd)*
+* Rs.9800/- for the 1st night’s stay for a couple
+* (upto 2 kids under 5 years of age complimentary, kids 5-12 at 50%)
+* After the 2nd night, subsequent nights at 10%, 15%, 20% long stay benefit.
+* Extra Person : 3185/-
+* *(Pricing valid upto March 31st, except over Dec 15th – Jan 2nd)*
 
 **The Coffee Cottage (with private dining and service)**
 
@@ -93,11 +94,11 @@ This a luxurious, super private option
 
 (This pricing includes the accommodation, meals, activities. We will detail the same on the invoice.)
 
-- Rs.11600/- for the 1st night’s stay for a couple
-- (upto 2 kids under 5 years of age complimentary, kids 5-12 at 50%)
-- After the 2nd night, subsequent nights at 10%, 15%, 20% long stay benefit.
-- Extra Person : 3770/-
-- *(Pricing valid upto March 31st, except over Dec 15th – Jan 2nd)*
+* Rs.11600/- for the 1st night’s stay for a couple
+* (upto 2 kids under 5 years of age complimentary, kids 5-12 at 50%)
+* After the 2nd night, subsequent nights at 10%, 15%, 20% long stay benefit.
+* Extra Person : 3770/-
+* *(Pricing valid upto March 31st, except over Dec 15th – Jan 2nd)*
 
 Pricing is per couple, *seriously all inclusive*, including taxes. This includes everything at the property : all the meals, unlimited tea/coffee/non-packaged juices and snacks, walks and treks around the property, bonfire, use of the library etc.
 
@@ -107,7 +108,7 @@ Kids upto 5 years of age are our guests at no charge. Pets are welcome (for a sm
 
 We offer long stay discounts and special pricing for multi-week stays.Do write in for more.
 
----
+- - -
 
 ## Getting to Balur
 
@@ -127,7 +128,7 @@ Exactly 2 kms from this hairpin turn (and 9kms from Kottegehara) there’s a sma
 
 If you get to Javalli, or even a place where the road to the origin of River Hemavathi is marked, you’ve gone too far.
 
----
+- - -
 
 ## Kitchen
 
@@ -139,31 +140,31 @@ Our kitchen is open all day, so feel free to ask for coffee or tea to go with th
 
 If you have any special needs, or restrictions, do write in early to us.
 
----
+- - -
 
 ## Around There
 
 You can spend days at Balur Estate itself exploring the waterfalls, spotting birds, and just walking amidst absolute tranquility along its 26kms of estate roads. But should you wish to get around a little – the area is just pretty to explore in a car, or on a cycle, or even by foot!
 
-- The source of the Hemavathi : The river originates a couple of kilometres from the bungalow, just above the estate. There’s a quiet temple there you can spend some time at.
-- Huge pretty tea estates, and a visit to the Tea Factory (if permissions come through).
-- [Kudremukh](http://en.wikipedia.org/wiki/Kudremukh) – about 60kms away. The drive is pretty, and goes through [Kalasa](http://en.wikipedia.org/wiki/Kalasa) – a historically important temple town.
-- [Horanadu](http://en.wikipedia.org/wiki/Horanadu) – another centre of pilgrimage at the end of a very scenic drive.
-- [Sringeri](http://en.wikipedia.org/wiki/Shringeri) – an old, important math in the hills.
-- [Agumbe](http://en.wikipedia.org/wiki/Agumbe) – the “Cherrapunji of the South” which now actually gets more rain than the latter!
-- [Kemmangundi](http://en.wikipedia.org/wiki/Kemmangundi), the Hebbe Falls and [Bhadra Wildlife Sanctuary](http://en.wikipedia.org/wiki/Bhadra_Wildlife_Sanctuary)
+* The source of the Hemavathi : The river originates a couple of kilometres from the bungalow, just above the estate. There’s a quiet temple there you can spend some time at.
+* Huge pretty tea estates, and a visit to the Tea Factory (if permissions come through).
+* [Kudremukh](http://en.wikipedia.org/wiki/Kudremukh) – about 60kms away. The drive is pretty, and goes through [Kalasa](http://en.wikipedia.org/wiki/Kalasa) – a historically important temple town.
+* [Horanadu](http://en.wikipedia.org/wiki/Horanadu) – another centre of pilgrimage at the end of a very scenic drive.
+* [Sringeri](http://en.wikipedia.org/wiki/Shringeri) – an old, important math in the hills.
+* [Agumbe](http://en.wikipedia.org/wiki/Agumbe) – the “Cherrapunji of the South” which now actually gets more rain than the latter!
+* [Kemmangundi](http://en.wikipedia.org/wiki/Kemmangundi), the Hebbe Falls and [Bhadra Wildlife Sanctuary](http://en.wikipedia.org/wiki/Bhadra_Wildlife_Sanctuary)
 
 Its basically the setting Balur is in – bang in the middle of a huge expanse of green hills that receive a lot of rainfall, that make it a charming place you can spend a week exploring and not run out of options.
 
 But, of course, we recommend the hammock, long walks, cups of tea/coffee and a few books for a relaxed do-nothing time ….
 
----
+- - -
 
 ## The Weather at Balur Estate, Chikmagalur
 
 [BALUR ESTATE WEATHER](https://forecast7.com/en/13d1575d50/balur-estate/)
 
----
+- - -
 
 ## The Place in Pictures
 
