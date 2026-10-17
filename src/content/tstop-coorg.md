@@ -1,13 +1,12 @@
 ---
+summary: Forest on all sides, bliss in between.
+slug: tstop-coorg
 type: property
 title: T Stop, Quiet Forests
 cover: /images/t-stop-coorg/1e869ab0-3466-4d6d-93b1-c7f817fcc409.jpeg
-summary: Forest on all sides, bliss in between.
-slug: tstop-coorg
 location: Theralu, Coorg
 categories:
   - coffee-estates
-  - wilderness
 features:
   - wifi
   - hikes
