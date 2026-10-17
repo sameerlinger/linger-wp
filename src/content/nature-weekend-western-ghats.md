@@ -2,7 +2,6 @@
 type: experience
 layout: experience.njk
 title: "The Western Ghats Edition"
-parent: nature-weekends-linger
 partner: The Naturalist School
 event_date: "2026-07-11"
 event_end: "2026-07-12"

@@ -2,7 +2,6 @@
 type: experience
 layout: experience.njk
 title: "The Grasslands Edition"
-parent: nature-weekends-linger
 event_date: "2026-08-15"
 event_end: "2026-08-16"
 location: The Timbaktu Bush Camp, Kalpavalli

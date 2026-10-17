@@ -4,7 +4,6 @@ layout: experience.njk
 categories:
   - nature-weekends
 title: "Foraging Day @ TVC : Be Picky About Your Food!"
-parent: ""
 event_date: ""
 location: Tamarind Valley Collective
 cover: /images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg
