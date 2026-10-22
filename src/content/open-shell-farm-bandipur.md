@@ -55,10 +55,15 @@ At 10000/- a night all inclusive for a couple. Lower pricing 2nd night onwards.
 Extra person at 3250/-
 
 ![](/images/open-shell-farm-bandipur/Mann-Mane-outside-1024x768.jpeg)
-![](/images/open-shell-farm-bandipur/Guestroom2-892x1024.jpeg)
 ![](/images/open-shell-farm-bandipur/Guest-room-toilet.jpeg)
 ![](/images/open-shell-farm-bandipur/cropped-95f88742-4dbb-4cdf-8f7a-48740e1916af-1024x612.jpeg)
 ![](/images/open-shell-farm-bandipur/cropped-b3ac2a1b-12a7-4b33-92ff-baff1816d857-1024x615.jpeg)
+![](/images/uploads/dining-room.jpeg)
+![](/images/uploads/dining-room-with-attic.jpeg)
+![](/images/uploads/kitchen-2.jpeg)
+![](/images/uploads/whatsapp-image-2023-12-01-at-13.20.13.jpeg)
+![](/images/uploads/whatsapp-image-2023-12-01-at-13.20.12-1-.jpeg)
+![](/images/uploads/library.jpg)
 
 **Thotadh Mane**
 
