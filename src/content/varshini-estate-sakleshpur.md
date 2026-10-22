@@ -28,6 +28,13 @@ The views are stunning all around. The wind a constant companion. And the walks 
 ![](/images/varshini-estate-sakleshpur/NewCottageRoom-2-1024x768.jpeg)
 ![](/images/varshini-estate-sakleshpur/NewCottageRoom-1-1024x768.jpeg)
 ![](/images/uploads/whatsapp-image-2026-10-16-at-20.06.13.jpeg)
+![](/images/uploads/whatsapp-image-2024-01-02-at-12.01.49-1-.jpeg)
+![](/images/uploads/whatsapp-image-2025-04-21-at-07.57.06-1-.jpeg)
+![](/images/uploads/whatsapp-image-2025-04-21-at-07.57.04.jpeg)
+![](/images/uploads/whatsapp-image-2024-01-02-at-12.01.48-1-.jpeg)
+![](/images/uploads/varshini-entrance.jpeg)
+![](/images/uploads/whatsapp-image-2024-01-02-at-12.01.47.jpeg)
+![](/images/uploads/whatsapp-image-2024-01-02-at-12.01.47-2-.jpeg)
 
 |                                                |                      |                                               |
 | ---------------------------------------------- | -------------------- | --------------------------------------------- |
