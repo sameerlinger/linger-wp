@@ -205,6 +205,7 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
         // Only sent when the box is on screen (the property takes them).
         pets: petsBox && petsBox.checked && !petsBox.closest("[hidden]") ? 1 : 0,
         drivers: driverBox && driverBox.checked && !driverBox.closest("[hidden]") ? 1 : 0,
+        requests: form.requests ? form.requests.value : "",
         honeypot: form.company.value,
       }),
     })
