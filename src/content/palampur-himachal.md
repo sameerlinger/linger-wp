@@ -8,6 +8,8 @@ location: Palampur, Himachal
 categories:
   - himalayas
 ---
+
+
 # The Earth House, Palampur (Himachal)
 
 - - -
@@ -76,6 +78,64 @@ Pricing is per couple, all inclusive, including taxes, on twin occupancy in a ro
 Checkin/checkout is at 11am. Feel free to stay with us longer – we might ask for the room in case there’s a guest coming in after you the same day.
 Kids upto 5 stay complimentary and those 5-12 years of age are at 50% when  accompanying an adult - for the homestay accommodation and a nominal 750/- a day for the campsite. Pets are welcome at a nominal charge provided they stay off the linen/furniture, and you can ensure their safety and that of other guests around.
 We offer long stay discounts and special pricing for multi-week stays.Do write in for more.
+
+
+
+### **A week at Earth House: A gentle guide.**
+
+Experiences for every kind of traveller - Whether you prefer absolute stillness or an itinerary packed with discovery, Earth House has room for both.
+
+**Day 1 Arrival**
+
+Arrive, check in, and take some time to explore the property. In the evening, go for a light stroll or take a dip in the glacial stream, just a short walk down from the cottages. Spend the rest of the day relaxing in a hammock, under a tree.
+
+**Day 2 Village Immersion**
+
+After breakfast, head out on a guided village walk (2-3 hours) through the fields and bamboo forest to a nearby village. Experience local life- see handloom weaving, visit a traditional pan mill (a flour mill powered by glacial water), and learn about kuhls, the irrigation channels that bring water from the glaciers to the villages. Return by lunch, relax in the afternoon, and enjoy a bonfire in the evening.
+
+**Day 3 Hike through Rhododendron, Pine and Oak forests** (Start point of the trail is 6 kms from the property)
+
+Start early around 6:30 AM for a DIY hike to Birni Devi Temple (4-5 hours). The trail is steep with loose rocks, adding an exciting element of challenge for those who love an offbeat hiking experience. Take your time navigating the rocky sections, soak in the stunning mountain views, and enjoy the sense of accomplishment as you ascend to the temple in around 2–2.5 hours.
+
+We’ll pack a breakfast for you to enjoy along the way. After spending some time at the temple, make your way back down, allowing approximately 1.5 hours for the descent, and return by noon.
+
+**Keep your eyes open for Himalayan wildlife!** The region is home to elusive species such as the Himalayan brown bear, Himalayan fox, and leopard. With its rich birdlife and beautiful natural surroundings, this is also a fantastic trail for birding enthusiasts. While sightings of larger mammals are rare, the possibility of encountering signs of wildlife adds an extra layer of excitement to this hike.
+
+**Day 4 Jakhni Mata Mandir trek**
+
+After breakfast, go for a DIY trek to Jakhni Mata Mandir (8 km round trip, 2–3 hours). It’s an easy and scenic walk through forests and village paths. Return by lunch. In the evening, if you’re up for a short drive, explore the local market in Palampur (about 6 km away).
+
+**Day 5 Tea Estate or Pottery Experience**
+
+After breakfast, choose between two experiences:
+
+Visit Wah Tea Estate (8 km) for a tea tasting, a walk through the tea gardens, and some time at their café
+
+OR
+
+Head to Andrea Pottery Village (12 km) and try your hand at pottery while observing local artisans
+
+Return by lunch and spend a relaxed evening with a short walk nearby.
+
+**Day 6 Adventure at Bir Billing**
+
+Take a day trip to Bir Billing (30 km). Leave after breakfast and experience paragliding with certified pilots. Have lunch in Bir and return by evening.
+
+**Day 7 Slow Day or Nearby Exploration**
+
+Keep your final day flexible:
+
+Take it slow and enjoy the property one last time
+
+OR
+
+Visit Tsuglagkhang Complex in Dharamshala (40 km), home to the Dalai Lama temple
+
+OR
+
+Drive to Baijnath Temple (15 km), a historic Shiva temple known for its architecture and mythological significance
+
+
 
 - - -
 
