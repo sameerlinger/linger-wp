@@ -8,8 +8,6 @@ location: Palampur, Himachal
 categories:
   - himalayas
 ---
-
-
 # The Earth House, Palampur (Himachal)
 
 - - -
@@ -44,6 +42,9 @@ Two ecologically built Earth Houses house a total of 6 rooms. The construction e
 ![](/images/uploads/himalayan-bulbul.jpeg)
 ![](/images/uploads/himalayan-black-bulbul.jpeg)
 ![](/images/uploads/blue-whistling-thrush.jpeg)
+![](/images/uploads/yellow-billed-blue-magpie.jpeg)
+![](/images/uploads/white-capped-redstart.jpeg)
+![](/images/uploads/whatsapp-image-2026-03-25-at-10.47.46-1-.jpeg)
 
 - - -
 
@@ -69,17 +70,18 @@ Two ecologically built Earth Houses house a total of 6 rooms. The construction e
 
 Pricing is per couple, all inclusive, including taxes, on twin occupancy in a room. This includes *everything* at the property : all the meals, unlimited tea/non-packaged juices and snacks whenever your tummy grumbles, walks and treks around the property, bonfire, use of the library etc.
 
-**Launching Camping :**
+**Launching Camping :** 
 
-[![](/images/palampur-himachal/Camping-150x150.jpeg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Camping.jpeg) 
+![](/images/uploads/whatsapp-image-2025-04-18-at-12.49.52.jpeg)
+![](/images/uploads/whatsapp-image-2026-03-25-at-10.48.54.jpeg)
+![](/images/uploads/yellow-billed-blue-magpie.jpeg)
+![](/images/uploads/white-capped-redstart.jpeg)
 
 * ~~1950/-~~ Intro pricing 1450/- per person per night for min 4. Upto 8 in 4 tents in all. A room with a bathroom in the Riverside cottage will also be dedicated for you. You can pick from 4 different camping spots in the valley and hillside!
 
 Checkin/checkout is at 11am. Feel free to stay with us longer – we might ask for the room in case there’s a guest coming in after you the same day.
 Kids upto 5 stay complimentary and those 5-12 years of age are at 50% when  accompanying an adult - for the homestay accommodation and a nominal 750/- a day for the campsite. Pets are welcome at a nominal charge provided they stay off the linen/furniture, and you can ensure their safety and that of other guests around.
 We offer long stay discounts and special pricing for multi-week stays.Do write in for more.
-
-
 
 ### **A week at Earth House: A gentle guide.**
 
@@ -134,8 +136,6 @@ Visit Tsuglagkhang Complex in Dharamshala (40 km), home to the Dalai Lama temple
 OR
 
 Drive to Baijnath Temple (15 km), a historic Shiva temple known for its architecture and mythological significance
-
-
 
 - - -
 
