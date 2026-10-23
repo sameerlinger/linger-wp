@@ -24,12 +24,24 @@ Come over to spend a weekend, a week, or even a month. We promise you'll start t
 
 Two ecologically built Earth Houses house a total of 6 rooms. The construction ensures these are comfortable inside even in colder weather, and there's adequate space for a small family. Each house has its own sitout overlooking some stunning scenery, and you can always ask for breakfast under a tree!
 
-[![House2-1](/images/palampur-himachal/House2-1-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/House2-1.jpg) [![LongShot2](/images/palampur-himachal/LongShot2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot2.jpg) [![Room](/images/palampur-himachal/Room-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Room.jpg) [![LongShot3](/images/palampur-himachal/LongShot3-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot3.jpg)
+[![House2-1](/images/palampur-himachal/House2-1-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/House2-1.jpg)   [![LongShot3](/images/palampur-himachal/LongShot3-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot3.jpg)
 
 ![](/images/uploads/14692..jpeg)
 ![](/images/uploads/75ff90ee-7b3b-419c-8c0d-05913e592835.jpeg)
 ![](/images/uploads/linger-the-earth-house-3.jpg)
 ![](/images/uploads/whatsapp-image-2026-03-25-at-10.47.44.jpeg)
+![](/images/uploads/whatsapp-image-2025-04-18-at-12.49.40-2-.jpeg)
+![](/images/uploads/whatsapp-image-2026-03-25-at-10.48.56.jpeg)
+![](/images/uploads/whatsapp-image-2026-03-25-at-10.47.45-1-.jpeg)
+![](/images/uploads/whatsapp-image-2023-09-27-at-1.31.42-pm.jpeg)
+![](/images/uploads/whatsapp-image-2023-04-04-at-1.30.54-pm.jpeg)
+![](/images/uploads/whatsapp-image-2026-03-25-at-10.48.57-1-.jpeg)
+![](/images/uploads/linger-the-earth-house-3.jpg)
+![](/images/uploads/verditer-flycatcher.jpeg)
+![](/images/uploads/pied-bush-cat.jpeg)
+![](/images/uploads/himalayan-bulbul.jpeg)
+![](/images/uploads/himalayan-black-bulbul.jpeg)
+![](/images/uploads/blue-whistling-thrush.jpeg)
 
 - - -
 
@@ -44,9 +56,7 @@ Two ecologically built Earth Houses house a total of 6 rooms. The construction e
 * **Child Policy:** Up to 5 complimentary, 5–12 at 50% (homestay); ₹750/day flat at the campsite.
 * *(Pricing valid upto March 31st 2024, except over Dec 15th – Jan 2nd)*
 
-**Homestays : The Earth House 1 & 2:**
-
-[![LongShot2](/images/palampur-himachal/LongShot2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot2.jpg) [![Room](/images/palampur-himachal/Room-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Room.jpg) [![LongShot3](/images/palampur-himachal/LongShot3-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/LongShot3.jpg)
+**Homestays : The Earth House 1 & 2:**  
 
 * 2 days/1 night : Rs.5,800/-
 * 3 days/2 nights : Rs.11,020/-
@@ -59,7 +69,7 @@ Pricing is per couple, all inclusive, including taxes, on twin occupancy in a ro
 
 **Launching Camping :**
 
-[![](/images/palampur-himachal/Camping-150x150.jpeg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Camping.jpeg) [![](/images/palampur-himachal/hikeview2-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/hikeview2.jpg)[![](/images/palampur-himachal/hdr-150x150.jpg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/hdr.jpg)
+[![](/images/palampur-himachal/Camping-150x150.jpeg)](http://palampur-himachal.linger.in/wp-content/uploads/sites/13/Camping.jpeg) 
 
 * ~~1950/-~~ Intro pricing 1450/- per person per night for min 4. Upto 8 in 4 tents in all. A room with a bathroom in the Riverside cottage will also be dedicated for you. You can pick from 4 different camping spots in the valley and hillside!
 
