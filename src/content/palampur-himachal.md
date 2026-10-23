@@ -72,7 +72,6 @@ Pricing is per couple, all inclusive, including taxes, on twin occupancy in a ro
 
 **Launching Camping :** 
 
-![](/images/uploads/whatsapp-image-2025-04-18-at-12.49.52.jpeg)
 ![](/images/uploads/whatsapp-image-2026-03-25-at-10.48.54.jpeg)
 ![](/images/uploads/yellow-billed-blue-magpie.jpeg)
 ![](/images/uploads/white-capped-redstart.jpeg)
@@ -92,10 +91,14 @@ Experiences for every kind of traveller - Whether you prefer absolute stillness 
 Arrive, check in, and take some time to explore the property. In the evening, go for a light stroll or take a dip in the glacial stream, just a short walk down from the cottages. Spend the rest of the day relaxing in a hammock, under a tree.
 
 ![](/images/uploads/whatsapp-image-2026-10-23-at-16.47.23-2-.jpeg)
+![](/images/uploads/whatsapp-image-2026-10-23-at-16.47.20.jpeg)
 
 **Day 2 Village Immersion**
 
 After breakfast, head out on a guided village walk (2-3 hours) through the fields and bamboo forest to a nearby village. Experience local life- see handloom weaving, visit a traditional pan mill (a flour mill powered by glacial water), and learn about kuhls, the irrigation channels that bring water from the glaciers to the villages. Return by lunch, relax in the afternoon, and enjoy a bonfire in the evening.
+
+![](/images/uploads/whatsapp-image-2026-10-23-at-16.47.25-2-.jpeg)
+![](/images/uploads/whatsapp-image-2026-10-23-at-16.47.18-1-.jpeg)
 
 **Day 3 Hike through Rhododendron, Pine and Oak forests** (Start point of the trail is 6 kms from the property)
 
@@ -104,6 +107,10 @@ Start early around 6:30 AM for a DIY hike to Birni Devi Temple (4-5 hours). The 
 We’ll pack a breakfast for you to enjoy along the way. After spending some time at the temple, make your way back down, allowing approximately 1.5 hours for the descent, and return by noon.
 
 **Keep your eyes open for Himalayan wildlife!** The region is home to elusive species such as the Himalayan brown bear, Himalayan fox, and leopard. With its rich birdlife and beautiful natural surroundings, this is also a fantastic trail for birding enthusiasts. While sightings of larger mammals are rare, the possibility of encountering signs of wildlife adds an extra layer of excitement to this hike.
+
+![](/images/uploads/whatsapp-image-2026-10-23-at-16.47.20-1-.jpeg)
+![](/images/uploads/whatsapp-image-2026-10-23-at-16.47.19.jpeg)
+![](/images/uploads/whatsapp-image-2025-04-18-at-12.49.52.jpeg)
 
 **Day 4 Jakhni Mata Mandir trek**
 
