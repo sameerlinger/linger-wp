@@ -91,6 +91,8 @@ Experiences for every kind of traveller - Whether you prefer absolute stillness 
 
 Arrive, check in, and take some time to explore the property. In the evening, go for a light stroll or take a dip in the glacial stream, just a short walk down from the cottages. Spend the rest of the day relaxing in a hammock, under a tree.
 
+![](/images/uploads/whatsapp-image-2026-10-23-at-16.47.23-2-.jpeg)
+
 **Day 2 Village Immersion**
 
 After breakfast, head out on a guided village walk (2-3 hours) through the fields and bamboo forest to a nearby village. Experience local life- see handloom weaving, visit a traditional pan mill (a flour mill powered by glacial water), and learn about kuhls, the irrigation channels that bring water from the glaciers to the villages. Return by lunch, relax in the afternoon, and enjoy a bonfire in the evening.
