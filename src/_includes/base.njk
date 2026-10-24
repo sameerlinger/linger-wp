@@ -182,6 +182,14 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
       status.textContent = "Check-out must be after check-in.";
       return;
     }
+    // Seniors are adults too: the booking system takes the total adults and how many of them are 60+.
+    var seniors = Number(form.seniors.value) || 0;
+    var adults = (Number(form.guests.value) || 0) + seniors;
+    if (adults < 1) {
+      status.dataset.state = "error";
+      status.textContent = "Please tell us how many adults are travelling.";
+      return;
+    }
     var property = form.property.options[form.property.selectedIndex];
     var petsBox = form.querySelector('input[name="pets"]');
     var driverBox = form.querySelector('input[name="driver"]');
@@ -199,7 +207,8 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
         phone: form.phone.value,
         checkIn: checkIn,
         checkOut: checkOut,
-        guests: Number(form.guests.value),
+        guests: adults,
+        seniors: seniors,
         kidsUnder5: Number(form.kidsUnder5.value) || 0,
         kids5to12: Number(form.kids5to12.value) || 0,
         // Only sent when the box is on screen (the property takes them).
