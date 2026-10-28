@@ -182,7 +182,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   cursor: zoom-in;
 }
 .carousel-track img {
-  height: 190px;
+  height: 247px;
   width: auto;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(20, 30, 20, 0.1);
