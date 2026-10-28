@@ -162,6 +162,22 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
 .prose th, .prose td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; text-align: left; }
 .prose th { background: #f1efe9; }
 
+/* Zoom badge on every click-to-enlarge photo. */
+a.lightbox-trigger { position: relative; }
+a.lightbox-trigger::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5L21 21M10.5 7.5v6M7.5 10.5h6'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+  pointer-events: none;
+  transition: background-color 0.2s ease;
+}
+a.lightbox-trigger:hover::after { background-color: rgba(0, 0, 0, 0.8); }
+
 /* ---------- Carousel ---------- */
 
 .carousel { position: relative; margin: 1.5rem auto; }
