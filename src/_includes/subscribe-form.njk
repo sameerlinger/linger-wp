@@ -1,0 +1,15 @@
+{# Mailing-list signup. Set `subId` (unique per form on the page) before including.
+   Posts to the operations app; the script in base.njk wires up every .subscribe-form. #}
+<form class="subscribe-form" novalidate>
+  <div class="enquiry-row">
+    <label for="{{ subId }}-name">Name (optional)<input type="text" id="{{ subId }}-name" name="name" autocomplete="name" maxlength="200"></label>
+  </div>
+  <div class="enquiry-row">
+    <label for="{{ subId }}-email">Email<input type="email" id="{{ subId }}-email" name="email" required autocomplete="email" maxlength="200" aria-describedby="{{ subId }}-error"></label>
+  </div>
+  <p class="subscribe-error" id="{{ subId }}-error" aria-live="polite"></p>
+  <input type="text" name="website" class="enquiry-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button type="submit" class="enquiry-submit">Keep me posted</button>
+  <p class="subscribe-note">We'll email you to confirm. Every email has an unsubscribe link.{% if "lingers-privacy-policy" | pageExists %} See our <a href="/lingers-privacy-policy/">privacy policy</a>.{% endif %}</p>
+</form>
+<p class="subscribe-thanks" tabindex="-1" role="status" hidden>Thanks! Check your email and tap the button to confirm.</p>

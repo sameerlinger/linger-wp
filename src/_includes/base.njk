@@ -73,6 +73,7 @@
       {% for d in collections.destinations %}<a href="{{ d.url }}">{{ d.title }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}
     </p>
     {% endif %}
+    {% if "our-mailing-listthe-lingerer" | pageExists %}<p class="footer-destinations"><a href="/our-mailing-listthe-lingerer/">Subscribe</a></p>{% endif %}
     <p class="footer-copy">&copy; {{ currentYear }} Linger</p>
   </div>
 </footer>
@@ -84,6 +85,15 @@
     {% if banner.linkUrl %}<a href="{{ banner.linkUrl }}">{{ banner.linkText or "Learn more" }}</a>{% endif %}
   </p>
 </div>
+{% endif %}
+{% if subscribePopup.enabled and page.fileSlug != "our-mailing-listthe-lingerer" and "our-mailing-listthe-lingerer" | pageExists %}
+<dialog class="subscribe-popup" id="subscribe-popup" aria-labelledby="subscribe-popup-title" data-delay="{{ subscribePopup.delaySeconds or 15 }}">
+  <button type="button" class="subscribe-popup-close" aria-label="Close">&times;</button>
+  <h2 id="subscribe-popup-title">{{ subscribePopup.heading or "News and offers from Linger" }}</h2>
+  <p class="enquiry-sub">{{ subscribePopup.message or "Now and then. Unsubscribe any time." }}</p>
+  {% set subId = "sub-popup" %}
+  {% include "subscribe-form.njk" %}
+</dialog>
 {% endif %}
 {% if page.fileSlug | isProperty(properties) %}
 {% set featureList = features | featureList(propertyFeatures[page.fileSlug]) %}
@@ -319,6 +329,79 @@ if (floater && interestSection) {
     e.preventDefault();
     interestSection.scrollIntoView({ behavior: "smooth" });
   });
+}
+
+var SUBSCRIBE_ENDPOINT = "https://operations.linger.in/api/subscribe";
+var SUBSCRIBED_KEY = "lingerSubscribed";
+document.querySelectorAll(".subscribe-form").forEach(function (form) {
+  var button = form.querySelector(".enquiry-submit");
+  var errorEl = form.querySelector(".subscribe-error");
+  var thanks = form.nextElementSibling;
+  function showError(msg) {
+    errorEl.textContent = msg;
+    form.elements.email.setAttribute("aria-invalid", "true");
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    errorEl.textContent = "";
+    form.elements.email.removeAttribute("aria-invalid");
+    var email = form.elements.email.value.trim();
+    if (!email || !form.elements.email.validity.valid) {
+      showError("Please enter a valid email address.");
+      form.elements.email.focus();
+      return;
+    }
+    button.disabled = true;
+    fetch(SUBSCRIBE_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: form.elements.name.value.trim(),
+        email: email,
+        website: form.elements.website.value,
+      }),
+    })
+      .then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (r) {
+        if (r.ok) {
+          form.hidden = true;
+          thanks.hidden = false;
+          thanks.focus();
+          try { localStorage.setItem(SUBSCRIBED_KEY, "1"); } catch (err) {}
+          return;
+        }
+        showError((r.data && r.data.error) || "Something went wrong, please try again.");
+        button.disabled = false;
+      })
+      .catch(function () {
+        showError("Couldn't reach us, please try again.");
+        button.disabled = false;
+      });
+  });
+});
+
+// Optional popup (Homepage > Subscribe popup in the CMS): once per visitor
+// per 30 days after it's closed, never after they've subscribed.
+var subPopup = document.getElementById("subscribe-popup");
+if (subPopup && typeof subPopup.showModal === "function") {
+  var POPUP_KEY = "lingerSubscribePopupClosed";
+  var skip = false;
+  try {
+    var closedAt = Number(localStorage.getItem(POPUP_KEY)) || 0;
+    skip = localStorage.getItem(SUBSCRIBED_KEY) === "1" || Date.now() - closedAt < 30 * 864e5;
+  } catch (err) {}
+  if (!skip) {
+    setTimeout(function () {
+      if (!document.querySelector(".lightbox.open")) subPopup.showModal();
+    }, (Number(subPopup.dataset.delay) || 15) * 1000);
+  }
+  subPopup.addEventListener("close", function () {
+    try { localStorage.setItem(POPUP_KEY, String(Date.now())); } catch (err) {}
+  });
+  subPopup.querySelector(".subscribe-popup-close").addEventListener("click", function () { subPopup.close(); });
+  subPopup.addEventListener("click", function (e) { if (e.target === subPopup) subPopup.close(); });
 }
 
 var INTEREST_ENDPOINT = "https://linger-booking-engine.onrender.com/api/public/event-interest";
