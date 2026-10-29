@@ -385,7 +385,7 @@ document.querySelectorAll(".subscribe-form").forEach(function (form) {
 // Optional popup (Homepage > Subscribe popup in the CMS): once per visitor
 // per 30 days after it's closed, never after they've subscribed.
 var subPopup = document.getElementById("subscribe-popup");
-if (subPopup && typeof subPopup.showModal === "function") {
+if (subPopup && typeof subPopup.show === "function") {
   var POPUP_KEY = "lingerSubscribePopupClosed";
   var skip = false;
   try {
@@ -394,14 +394,14 @@ if (subPopup && typeof subPopup.showModal === "function") {
   } catch (err) {}
   if (!skip) {
     setTimeout(function () {
-      if (!document.querySelector(".lightbox.open")) subPopup.showModal();
+      if (!document.querySelector(".lightbox.open")) { subPopup.show(); if (document.activeElement) document.activeElement.blur(); }
     }, (Number(subPopup.dataset.delay) || 15) * 1000);
   }
   subPopup.addEventListener("close", function () {
     try { localStorage.setItem(POPUP_KEY, String(Date.now())); } catch (err) {}
   });
   subPopup.querySelector(".subscribe-popup-close").addEventListener("click", function () { subPopup.close(); });
-  subPopup.addEventListener("click", function (e) { if (e.target === subPopup) subPopup.close(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && subPopup.open) subPopup.close(); });
 }
 
 var INTEREST_ENDPOINT = "https://linger-booking-engine.onrender.com/api/public/event-interest";
