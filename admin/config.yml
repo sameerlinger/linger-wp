@@ -367,6 +367,15 @@ collections:
             default: "Learn more"
             hint: "Only shown if Link URL is set above."
 
+      - name: "subscribePopup"
+        label: "Subscribe popup"
+        file: "src/_data/subscribePopup.json"
+        fields:
+          - { label: "Show popup", name: "enabled", widget: "boolean", default: false, hint: "Turn on to show a mailing-list signup popup on every page except the Subscribe page. Visitors who close it or subscribe aren't shown it again for 30 days." }
+          - { label: "Seconds before it appears", name: "delaySeconds", widget: "number", value_type: "int", min: 3, default: 15 }
+          - { label: "Heading", name: "heading", widget: "string", required: false, default: "News and offers from Linger" }
+          - { label: "Message", name: "message", widget: "string", required: false, default: "Now and then. Unsubscribe any time." }
+
   - name: "posts"
     label: "Blog Posts"
     folder: "src/content/blog"

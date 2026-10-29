@@ -1,12 +1,10 @@
 ---
 type: page
-title: "Our Mailing List/The Lingerer"
+title: "Subscribe"
 slug: "our-mailing-listthe-lingerer"
 navMenu: about-us
 ---
 
-We'll send updates, travel tales and articles, offers and more once a month. Sign up!
+# Subscribe
 
-Enter your email address
-
-[powered by TinyLetter](https://tinyletter.com)
+News and offers from Linger, now and then. Unsubscribe any time.

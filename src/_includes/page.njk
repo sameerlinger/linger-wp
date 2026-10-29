@@ -91,6 +91,14 @@ layout: base.njk
 </section>
 <a href="#want-to-know-more" class="query-floater">Send Query <span aria-hidden="true">&darr;</span></a>
 {% endif %}
+{% if page.fileSlug == "our-mailing-listthe-lingerer" %}
+<section class="enquiry subscribe-section">
+  <div class="enquiry-inner">
+    {% set subId = "sub-page" %}
+    {% include "subscribe-form.njk" %}
+  </div>
+</section>
+{% endif %}
 <div class="prose faq-wrap">
 {% include "faqs.njk" %}
 </div>
