@@ -321,6 +321,10 @@ a.lightbox-trigger:hover::after { background-color: rgba(0, 0, 0, 0.8); }
 .enquiry-extras { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-bottom: 1rem; text-align: left; }
 .enquiry-extras[hidden], .enquiry-extras label[hidden] { display: none; }
 .enquiry-extras label { font-size: 0.9rem; color: var(--fg); display: flex; align-items: center; gap: 0.45rem; }
+.enquiry-row.extra-daytrip[hidden] { display: none; }
+.extra-daytrip .check-label { font-size: 0.9rem; color: var(--fg); display: flex; flex-direction: row; align-items: center; gap: 0.45rem; text-align: left; }
+.extra-daytrip input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--accent); }
+.enquiry-form input:disabled { opacity: 0.45; cursor: not-allowed; }
 .enquiry-extras input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--accent); }
 .enquiry-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .enquiry-submit {

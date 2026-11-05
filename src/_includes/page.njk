@@ -26,7 +26,7 @@ layout: base.njk
         <label>Property<select name="property">
           <option value="any">Any property</option>
           {% for p in properties | bookableProperties(dormantSlugs) %}
-          <option value="{{ p.slug }}"{% if propertyFeatures[p.slug].petFriendly %} data-pets="1"{% endif %}{% if propertyFeatures[p.slug].driverAccommodation %} data-driver="1"{% endif %}{% if p.slug == page.fileSlug %} selected{% endif %}>{{ p.title }}</option>
+          <option value="{{ p.slug }}"{% if propertyFeatures[p.slug].petFriendly %} data-pets="1"{% endif %}{% if propertyFeatures[p.slug].driverAccommodation %} data-driver="1"{% endif %}{% if propertyFeatures[p.slug].dayTrips %} data-daytrip="1"{% endif %}{% if p.slug == page.fileSlug %} selected{% endif %}>{{ p.title }}</option>
           {% endfor %}
         </select></label>
       </div>
@@ -34,6 +34,10 @@ layout: base.njk
         <label>Name<input type="text" name="name" required autocomplete="name"></label>
         <label>Email<input type="email" name="email" required autocomplete="email"></label>
         <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel" maxlength="30"></label>
+      </div>
+      {# Shown by the page script for a property that offers day trips. #}
+      <div class="enquiry-row extra-daytrip" hidden>
+        <label class="check-label"><input type="checkbox" name="dayTrip"> Day trip (no overnight stay)</label>
       </div>
       <div class="enquiry-row">
         <label>Check-in<input type="date" name="checkIn" required></label>

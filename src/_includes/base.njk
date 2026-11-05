@@ -182,12 +182,31 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
     form.property.addEventListener("change", syncExtras);
     syncExtras();
   }
-  form.addEventListener("reset", function () { setTimeout(syncExtras, 0); });
+  // Day trip box: only for a property with day trips; ticking it turns off
+  // the check-out date (a day trip is same-day).
+  var dayTripRow = form.querySelector(".extra-daytrip");
+  var dayTripBox = form.querySelector('input[name="dayTrip"]');
+  var syncDayTrip = function () {
+    if (!dayTripRow) return;
+    var opt = form.property.options[form.property.selectedIndex];
+    dayTripRow.hidden = opt.dataset.daytrip !== "1";
+    if (dayTripRow.hidden) dayTripBox.checked = false;
+    form.checkOut.disabled = dayTripBox.checked;
+    form.checkOut.required = !dayTripBox.checked;
+    if (dayTripBox.checked) form.checkOut.value = "";
+  };
+  if (dayTripRow) {
+    form.property.addEventListener("change", syncDayTrip);
+    dayTripBox.addEventListener("change", syncDayTrip);
+    syncDayTrip();
+  }
+  form.addEventListener("reset", function () { setTimeout(function () { syncExtras(); syncDayTrip(); }, 0); });
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var checkIn = form.checkIn.value;
-    var checkOut = form.checkOut.value;
-    if (checkOut <= checkIn) {
+    var dayTrip = Boolean(dayTripBox && dayTripBox.checked && !dayTripRow.hidden);
+    var checkOut = dayTrip ? checkIn : form.checkOut.value;
+    if (!dayTrip && checkOut <= checkIn) {
       status.dataset.state = "error";
       status.textContent = "Check-out must be after check-in.";
       return;
@@ -217,6 +236,7 @@ document.querySelectorAll(".enquiry-form").forEach(function (form) {
         phone: form.phone.value,
         checkIn: checkIn,
         checkOut: checkOut,
+        dayTrip: dayTrip,
         guests: adults,
         seniors: seniors,
         kidsUnder5: Number(form.kidsUnder5.value) || 0,
