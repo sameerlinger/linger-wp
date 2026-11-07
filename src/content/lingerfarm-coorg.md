@@ -3,7 +3,7 @@ summary: Close to the birthplace of the Cauvery. Food & biodiversity!
 slug: lingerfarm-coorg
 type: property
 title: The Linger Farm
-cover: /images/the-linger-farm-chettimani/2021-09-22-14.31.33.jpg
+cover: /images/the-linger-farm/untitled.jpg
 location: Chettimani, Coorg
 categories:
   - coffee-estates
