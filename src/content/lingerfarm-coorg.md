@@ -1,5 +1,5 @@
 ---
-summary: Local flavours, the slow paced Coorg life and biodiversity!
+summary: Close to the birthplace of the Cauvery. Food & biodiversity!
 slug: lingerfarm-coorg
 type: property
 title: The Linger Farm
