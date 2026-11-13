@@ -17,6 +17,7 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "properties"
+    summary: "{{title}}{{draft | ternary(' (DRAFT)', '')}}"
     label: "Properties"
     label_singular: "Property"
     folder: "src/content"
@@ -28,6 +29,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "property" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false, hint: "Switch on to keep this page off the website while you work on it (it is not linked anywhere and its web address shows nothing). Save it, come back later, then switch off to publish. You can also delete it." }
       - label: "Title"
         name: "title"
         widget: "string"
@@ -98,6 +100,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "experiences"
+    summary: "{{title}}{{draft | ternary(' (DRAFT)', '')}}"
     label: "Experiences"
     label_singular: "Experience"
     description: "Events and experiences with a date, a partner, photos and an \"I'm interested\" form, shown on the Experiences page by category. Responses go to the Events tab in the booking engine."
@@ -110,6 +113,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "experience" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false, hint: "Switch on to keep this page off the website while you work on it (it is not linked anywhere and its web address shows nothing). Save it, come back later, then switch off to publish. You can also delete it." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "experience.njk" }
       - label: "Categories"
         name: "categories"
@@ -143,6 +147,7 @@ collections:
       - { label: "Description", name: "body", widget: "markdown", hint: "What it is, who it's for, what's included." }
 
   - name: "pages"
+    summary: "{{title}}{{draft | ternary(' (DRAFT)', '')}}"
     label: "Pages"
     label_singular: "Page"
     description: "Standalone pages such as policies, team and offers. Properties are under \"Properties\" and experiences under \"Experiences\"."
@@ -155,6 +160,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "page" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false, hint: "Switch on to keep this page off the website while you work on it (it is not linked anywhere and its web address shows nothing). Save it, come back later, then switch off to publish. You can also delete it." }
       - label: "Title"
         name: "title"
         widget: "string"
@@ -184,6 +190,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "destinations"
+    summary: "{{title}}{{draft | ternary(' (DRAFT)', '')}}"
     label: "Destinations"
     label_singular: "Destination"
     description: "Search-friendly pages for a place or kind of stay, e.g. \"Homestays in Coorg\". Each shows an intro and cards for the properties you pick, and is linked from the footer."
@@ -196,6 +203,7 @@ collections:
     format: "frontmatter"
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "destination" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false, hint: "Switch on to keep this page off the website while you work on it (it is not linked anywhere and its web address shows nothing). Save it, come back later, then switch off to publish. You can also delete it." }
       - { label: "Layout", name: "layout", widget: "hidden", default: "destination.njk" }
       - { label: "Title", name: "title", widget: "string", hint: "Shown as the page heading, so use the words people search for, e.g. \"Homestays in Coorg\". The web address is made from it when first saved." }
       - label: "Stays to show"
@@ -377,6 +385,7 @@ collections:
           - { label: "Message", name: "message", widget: "string", required: false, default: "Now and then. Unsubscribe any time." }
 
   - name: "posts"
+    summary: "{{title}}{{draft | ternary(' (DRAFT)', '')}}"
     label: "Blog Posts"
     folder: "src/content/blog"
     create: true
@@ -385,6 +394,7 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, required: false, hint: "Switch on to keep this page off the website while you work on it (it is not linked anywhere and its web address shows nothing). Save it, come back later, then switch off to publish. You can also delete it." }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
