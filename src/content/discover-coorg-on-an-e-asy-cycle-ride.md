@@ -11,11 +11,9 @@ seo_description: The best way to discover Coorg is slowly, on a cycle, along
   backroads exploring the countryside. A bite and coffee at a bakery, many
   picture spots! Electric Assist cycles make it real easy.
 ---
-
-
 <div class="photo-text photo-left"><img src="/images/uploads/2026-08-21-15.28.32.jpg" alt=""><div class="photo-text-body">
 
-A 2-3 hour ride that starts from The Linger Farm, Chattimani, explores the slopes around Bhagamandala (2 options from the Temple Ride and the Forest Ride), with a coffee and snack break in between. 
+A 2-3 hour ride that starts from The Linger Farm, Chettimani, explores the slopes around Bhagamandala (2 options from the Temple Ride and the Forest Ride), with a coffee and snack break in between. 
 
 You ride up and the down Kodagu's slopes with gorgeous views around, almost no traffic, and lovely weather to accompany you. We tell you stories about the place, we stop for Instaworthy pics, and we breathe in the really clean air deep into our lungs!
 
