@@ -1,10 +1,15 @@
 ---
 type: experience
-title: Discover Coorg on an E(asy)Cycle Ride
-cover: /images/discover-coorg-on-an-e-asy-cycle-ride/2026-04-18-13.27.45.jpg
-location: From The Linger Farm, Chettimani, around Bhagamandala
 categories:
   - at-the-farm
+title: Discover Coorg on an E(asy)Cycle Ride
+event_date: 2026-11-28
+location: From The Linger Farm, Chettimani, around Bhagamandala
+cover: /images/discover-coorg-on-an-e-asy-cycle-ride/2026-04-18-13.27.45.jpg
+seo_title: Coorg, cycling, outdoors, nature, trails
+seo_description: The best way to discover Coorg is slowly, on a cycle, along
+  backroads exploring the countryside. A bite and coffee at a bakery, many
+  picture spots! Electric Assist cycles make it real easy.
 ---
 
 
