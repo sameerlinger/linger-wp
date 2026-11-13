@@ -134,7 +134,7 @@ if (siteBanner) {
 document.querySelectorAll(".carousel-track").forEach(function (track) {
   var prev = track.parentElement.querySelector(".carousel-prev");
   var next = track.parentElement.querySelector(".carousel-next");
-  function step() { return track.querySelector("img") ? track.querySelector("img").getBoundingClientRect().width + 12 : 200; }
+  function step() { var el = track.querySelector("img") || track.querySelector(".upcoming-card"); return el ? el.getBoundingClientRect().width + 12 : 200; }
   if (prev) prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
   if (next) next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
 });

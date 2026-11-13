@@ -229,6 +229,28 @@ a.lightbox-trigger:hover::after { background-color: rgba(0, 0, 0, 0.8); }
 .carousel-next { right: -4px; }
 @media (max-width: 640px) { .carousel-btn { display: none; } }
 
+.upcoming-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(20, 30, 20, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.upcoming-card:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(20, 30, 20, 0.14); }
+.upcoming-date { font-size: 0.8rem; font-weight: 600; color: var(--accent-dark); }
+.upcoming-title { font-size: 1.05rem; font-weight: 600; line-height: 1.3; }
+.upcoming-location { font-size: 0.85rem; color: var(--muted); }
+.upcoming .carousel { margin: 0.5rem 0 0; }
+
 .content-image { margin: 1.25rem auto; text-align: center; }
 .content-image a { display: inline-block; cursor: zoom-in; }
 .content-image img {
