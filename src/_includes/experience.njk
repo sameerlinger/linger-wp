@@ -10,13 +10,16 @@ layout: base.njk
     {% if partner %}<span class="experience-partner">With {{ partner }}</span>{% endif %}
     {% if location %}<span class="experience-place">{{ location }}</span>{% endif %}
   </p>
-  {% if prices and prices.length %}
-  <ul class="experience-prices">
-    {% for p in prices %}<li><span class="experience-price-amount">{{ p.amount | inr }}</span>{% if p.label %} <span class="experience-price-label">{{ p.label }}</span>{% endif %}</li>{% endfor %}
-  </ul>
-  {% endif %}
   {{ photos | experienceCarousel | safe }}
   {{ content | safe }}
+  {% if prices and prices.length %}
+  <section class="experience-pricing" aria-labelledby="event-pricing">
+    <h2 id="event-pricing">Event Pricing</h2>
+    <ul class="experience-prices">
+      {% for p in prices %}<li><span class="experience-price-label">{{ p.label or "Per person" }}</span><span class="experience-price-amount">{{ p.amount | inr }}</span></li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </article>
 {% if event_date and (event_date | isoDay) < today %}
 <p class="experience-past">This one has already happened. Leave your details below and we'll let you know about the next one.</p>

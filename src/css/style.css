@@ -955,9 +955,13 @@ a.category-pill:hover { background: rgba(58, 107, 74, 0.2); }
 /* Experience pages (layout experience.njk) */
 .experience-up { margin: 0 0 0.5rem; font-size: 0.9rem; }
 .experience-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin: -0.4rem 0 1.2rem; font-size: 0.95rem; color: #555; }
-.experience-prices { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin: 0 0 1.2rem; padding: 0; }
-.experience-prices li { font-size: 0.95rem; color: #555; }
-.experience-price-amount { font-weight: 600; color: #222; font-size: 1.05rem; }
+.experience-pricing { margin: 2.2rem 0 0; padding: 1.4rem 1.6rem; background: var(--card-bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; }
+.experience-pricing h2 { margin: 0 0 0.8rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; color: var(--accent-dark); }
+.experience-prices { list-style: none; margin: 0; padding: 0; }
+.experience-prices li { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.6rem 0; border-top: 1px solid var(--border); }
+.experience-prices li:first-child { border-top: 0; padding-top: 0; }
+.experience-price-label { color: var(--muted); font-size: 0.98rem; }
+.experience-price-amount { font-family: var(--serif); font-size: 1.3rem; color: var(--fg); white-space: nowrap; }
 .experience-date { font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; color: var(--accent); align-self: center; }
 .edition-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
 .edition-list a { display: block; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 10px; }
