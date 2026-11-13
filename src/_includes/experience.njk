@@ -10,6 +10,11 @@ layout: base.njk
     {% if partner %}<span class="experience-partner">With {{ partner }}</span>{% endif %}
     {% if location %}<span class="experience-place">{{ location }}</span>{% endif %}
   </p>
+  {% if prices and prices.length %}
+  <ul class="experience-prices">
+    {% for p in prices %}<li><span class="experience-price-amount">{{ p.amount | inr }}</span>{% if p.label %} <span class="experience-price-label">{{ p.label }}</span>{% endif %}</li>{% endfor %}
+  </ul>
+  {% endif %}
   {{ photos | experienceCarousel | safe }}
   {{ content | safe }}
 </article>

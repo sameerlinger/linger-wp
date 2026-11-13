@@ -130,6 +130,15 @@ collections:
       - { label: "Date", name: "event_date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false, hint: "Leave blank if the date isn't fixed yet - the page says \"Date to be announced\"." }
       - { label: "End date", name: "event_end", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false, hint: "Only for a multi-day event." }
       - { label: "Where", name: "location", widget: "string", required: false, hint: "Place or property, e.g. \"The Timbaktu Bush Camp, Kalpavalli\"." }
+      - label: "Prices"
+        name: "prices"
+        widget: "list"
+        required: false
+        summary: "{{fields.label}} - {{fields.amount}}"
+        fields:
+          - { label: "What it covers", name: "label", widget: "string", required: false, hint: "e.g. \"per person, shared dorm\" or \"day pass\"." }
+          - { label: "Price (₹)", name: "amount", widget: "number", value_type: "int", min: 0 }
+        hint: "Shown under the date. Filled in from the booking engine's Events planner when ticket prices are set there; you can also edit it here."
       - { label: "Cover photo", name: "cover", widget: "image", required: false, media_folder: "/src/images/{{slug}}", public_folder: "/images/{{slug}}", hint: "Shown on the homepage and when the page is shared." }
       - { label: "One-line description", name: "summary", widget: "string", required: false, hint: "Shown under the photo on the homepage." }
       - label: "Photos (carousel)"
