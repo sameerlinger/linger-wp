@@ -393,6 +393,24 @@ module.exports = function (eleventyConfig) {
     return sections.filter((s) => s.items.length);
   });
 
+  // Upcoming dated experiences, soonest first (the carousel at the top of
+  // /experiences/). Judged at build time, like byEventDate.
+  eleventyConfig.addCollection("upcomingExperiences", async (api) => {
+    const dormant = await dormantSlugs();
+    const today = new Date().toISOString().slice(0, 10);
+    return api
+      .getFilteredByGlob("src/content/*.md")
+      .filter((p) => p.data.type === "experience" && !dormant.has(p.fileSlug))
+      .filter((p) => { const d = isoDay(p.data.event_date); const e = isoDay(p.data.event_end); return d && (e || d) >= today; })
+      .sort((a, b) => isoDay(a.data.event_date).localeCompare(isoDay(b.data.event_date)) || a.data.title.localeCompare(b.data.title))
+      .map((p) => ({
+        slug: p.fileSlug,
+        title: p.data.title,
+        location: p.data.location || "",
+        dateText: eventDateText(p.data.event_date, p.data.event_end),
+      }));
+  });
+
   // Every experience once, soonest first - the Experiences page's interest
   // form dropdown.
   eleventyConfig.addCollection("experienceList", async (api) => {
