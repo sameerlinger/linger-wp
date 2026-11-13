@@ -14,24 +14,7 @@ seo_description: Nature weekends, farm days and other curated experiences at Lin
   </div>
 </section>
 
-{% if collections.upcomingExperiences.length %}
-<section class="region-section upcoming">
-  <h2>Coming up</h2>
-  <div class="carousel">
-    <button class="carousel-btn carousel-prev" type="button" aria-label="Previous">&lsaquo;</button>
-    <div class="carousel-track">
-      {% for e in collections.upcomingExperiences %}
-      <a class="upcoming-card" href="/{{ e.slug }}/">
-        <span class="upcoming-date">{{ e.dateText }}</span>
-        <span class="upcoming-title">{{ e.title }}</span>
-        {% if e.location %}<span class="upcoming-location">{{ e.location }}</span>{% endif %}
-      </a>
-      {% endfor %}
-    </div>
-    <button class="carousel-btn carousel-next" type="button" aria-label="Next">&rsaquo;</button>
-  </div>
-</section>
-{% endif %}
+{% include "upcoming-events.njk" %}
 
 {% for section in collections.experienceSections %}
 <section class="region-section">

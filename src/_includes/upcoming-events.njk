@@ -1,0 +1,31 @@
+{% if collections.upcomingExperiences.length %}
+<section class="region-section upcoming" id="upcoming">
+  <h2>Coming up{% if upcomingLink %} <a class="upcoming-all" href="/experiences/">All experiences &rarr;</a>{% endif %}</h2>
+  <div class="carousel">
+    <button class="carousel-btn carousel-prev" type="button" aria-label="Previous">&lsaquo;</button>
+    <div class="carousel-track">
+      {% for e in collections.upcomingExperiences %}
+      <a class="upcoming-card" href="/{{ e.slug }}/" data-end="{{ e.end }}">
+        <span class="upcoming-date">{{ e.dateText }}</span>
+        <span class="upcoming-title">{{ e.title }}</span>
+        {% if e.location %}<span class="upcoming-location">{{ e.location }}</span>{% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    <button class="carousel-btn carousel-next" type="button" aria-label="Next">&rsaquo;</button>
+  </div>
+</section>
+<script>
+// "Upcoming" is fixed when the site is built; drop events that have ended
+// since, so the carousel stays right between deploys.
+(function () {
+  var section = document.getElementById("upcoming");
+  var d = new Date();
+  var today = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+  var cards = section.querySelectorAll(".upcoming-card");
+  var left = 0;
+  cards.forEach(function (c) { if (c.dataset.end && c.dataset.end < today) c.remove(); else left++; });
+  if (!left) section.remove();
+})();
+</script>
+{% endif %}
