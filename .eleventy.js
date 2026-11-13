@@ -673,7 +673,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addTransform("inlineGalleries", function (content) {
     if (!this.page || !this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
-    if (!content.includes('class="prose"') && !content.includes('class="post-body"')) return content;
+    // "prose" may be one of several classes (experience pages use
+    // class="prose experience"), so match the class word, not the attribute.
+    if (!/class="[^"]*\b(prose|post-body)\b/.test(content)) return content;
     return groupInlineGalleries(content);
   });
 
