@@ -11,6 +11,7 @@ cover: /images/foraging-day-tvc-be-picky-about-your-food/whatsapp-image-2026-11-
 photos:
   - src: /images/uploads/whatsapp-image-2026-09-22-at-8.52.47-pm.jpeg
     alt: "Foraging Day @ TVC : Be Picky About Your Food!"
+  - src: /images/foraging-day-tvc-be-picky-about-your-food/c1e202f5-a927-4c7c-ac37-849b0baa9eed.jpeg
 ---
 This 28th of October, come pick your food from the wild! Learn about wild edibles, about regenerative landscapes that also provide for us, and about living with the land.
 
