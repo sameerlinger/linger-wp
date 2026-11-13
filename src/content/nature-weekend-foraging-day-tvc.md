@@ -11,6 +11,11 @@ cover: /images/foraging-day-tvc-be-picky-about-your-food/whatsapp-image-2026-11-
 photos:
   - src: /images/foraging-day-tvc-be-picky-about-your-food/whatsapp-image-2026-11-06-at-1.17.37-pm.jpeg
     alt: "Foraging Day @ TVC : Be Picky About Your Food!"
+prices:
+  - label: "Day Visit"
+    amount: 2500
+  - label: "Overnight"
+    amount: 4500
 ---
 This 28th of October, come pick your food from the wild! Learn about wild edibles, about regenerative landscapes that also provide for us, and about living with the land.
 
