@@ -16,10 +16,8 @@ This 28th of October, come pick your food from the wild! Learn about wild edible
 
 This is at the Tamarind Valley Collective where 50+ members came together and enabled a really ravaged, desertified landscape to be regenerated. It is now habitat for a 100 bird species, 25+ reptile species, gaur, elephants and various other fauna, while it's green and also provides a lot of naturally grown, organic food. Come learn to forage the wild for your food on this very special journey!
 
-
-
 Pics from our earlier event where we had so much fun, and great food of course!
 
-
-
+![](/images/uploads/a258e061-c791-4ae5-b14e-318e6bf489f8.jpeg)
+![](/images/uploads/17fbca81-435b-4912-b2d1-d38bf3a1d10c.jpeg)
 ![](/images/uploads/c1e202f5-a927-4c7c-ac37-849b0baa9eed.jpeg)
