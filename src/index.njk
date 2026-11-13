@@ -62,6 +62,8 @@ permalink: /index.html
 })();
 </script>
 
+{% set upcomingLink = true %}{% include "upcoming-events.njk" %}
+
 {% if collections.destinations.length %}
 <nav class="destination-links region-section" aria-label="Browse by destination">
   <h2>Browse by destination</h2>

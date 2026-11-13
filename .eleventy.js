@@ -408,6 +408,7 @@ module.exports = function (eleventyConfig) {
         title: p.data.title,
         location: p.data.location || "",
         dateText: eventDateText(p.data.event_date, p.data.event_end),
+        end: isoDay(p.data.event_end) || isoDay(p.data.event_date),
       }));
   });
 
