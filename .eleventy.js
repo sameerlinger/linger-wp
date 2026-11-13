@@ -426,6 +426,8 @@ module.exports = function (eleventyConfig) {
         end: isoDay(p.data.event_end) || "",
         draft: !!p.data.draft,
         categories: Array.isArray(p.data.categories) ? p.data.categories : [],
+        // The page text as written in the CMS (markdown), to prefill an event's description.
+        description: String(p.template?.frontMatter?.content || "").trim(),
       })),
   }));
 
