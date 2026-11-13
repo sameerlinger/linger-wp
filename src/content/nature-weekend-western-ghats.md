@@ -16,6 +16,15 @@ photos:
   - src: /images/the-western-ghats-edition/2024-03-12-23.36.57.jpg
   - src: /images/the-western-ghats-edition/untitled.jpg
   - src: /images/the-western-ghats-edition/jewelled.jpg
+prices:
+  - label: "Extended Stay (Sat morning - Sunday evening) for a couple"
+    amount: 8950
+  - label: "Extra Person"
+    amount: 3250
+  - label: "Kids 5-10 years of age"
+    amount: 2500
+  - label: "One biodiversity walk + lunch & coffee"
+    amount: 1199
 ---
 The Winter Edition is happening on the 21st - 22nd to November.  If you missed the previous one, this is a great time to be at the farm again!
 
