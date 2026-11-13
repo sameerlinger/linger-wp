@@ -445,12 +445,15 @@ module.exports = function (eleventyConfig) {
         end: isoDay(p.data.event_end) || "",
         draft: !!p.data.draft,
         categories: Array.isArray(p.data.categories) ? p.data.categories : [],
+        prices: Array.isArray(p.data.prices) ? p.data.prices : [],
         // The page text as written in the CMS (markdown), to prefill an event's description.
         description: String(p.template?.frontMatter?.content || "").trim(),
       })),
   }));
 
   eleventyConfig.addFilter("eventDateText", eventDateText);
+  // 2500 -> "₹2,500" (experience prices).
+  eleventyConfig.addFilter("inr", (v) => `₹${Number(v).toLocaleString("en-IN", { maximumFractionDigits: 0 })}`);
   eleventyConfig.addFilter("isoDay", isoDay);
 
   // The experience page's photo carousel (same markup as inline galleries).
