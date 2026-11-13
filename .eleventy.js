@@ -409,6 +409,26 @@ module.exports = function (eleventyConfig) {
       }));
   });
 
+  // /experiences-feed.json: every experience (drafts included, flagged) so the
+  // booking engine's event planner can start an event from an existing one
+  // and write its dates back. Dates are YYYY-MM-DD or "" when not fixed yet.
+  eleventyConfig.addCollection("experienceFeed", (api) => ({
+    experiences: api
+      .getFilteredByGlob("src/content/*.md")
+      .filter((p) => p.data.type === "experience")
+      .sort(byEventDate)
+      .map((p) => ({
+        slug: p.fileSlug,
+        title: p.data.title,
+        partner: p.data.partner || "",
+        location: p.data.location || "",
+        date: isoDay(p.data.event_date) || "",
+        end: isoDay(p.data.event_end) || "",
+        draft: !!p.data.draft,
+        categories: Array.isArray(p.data.categories) ? p.data.categories : [],
+      })),
+  }));
+
   eleventyConfig.addFilter("eventDateText", eventDateText);
   eleventyConfig.addFilter("isoDay", isoDay);
 
