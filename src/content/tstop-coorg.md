@@ -24,11 +24,7 @@ Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the
 ![](/images/tstop-coorg/c4a716_223c83ee927748bd82db48e566f8af26~mv2.jpg)
 ![](/images/uploads/main-hosue.png)
 
-!\[](/images/uploads/screenshot-2026-11-14-at-5.28.26 pm.png)
-!\[](/images/uploads/screenshot-2026-11-14-at-5.28.49 pm.png)
-!\[](/images/uploads/screenshot-2026-11-14-at-5.29.14 pm.png)
-!\[](/images/uploads/screenshot-2026-11-14-at-5.29.53 pm.png)
-!\[](/images/uploads/screenshot-2026-11-14-at-5.30.35 pm.png)
+
 
 - - -
 
@@ -74,9 +70,6 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ### **Robusta cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private. 
-
-!\[](/images/uploads/screenshot-2026-11-14-at-6.00.47 pm.png)
-!\[](/images/uploads/screenshot-2026-11-14-at-6.01.05 pm.png)
 ![](/images/uploads/arabica-_-robusta.jpg)
 ![](/images/uploads/bath.jpeg)
 !\[](/images/uploads/screenshot-2026-11-14-at-6.01.28 pm.png)
@@ -84,12 +77,9 @@ Attached bath, private balcony, small wading pool, open shower facing the jungle
 ### **Arabica cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
-
-!\[](/images/uploads/screenshot-2026-11-14-at-6.12.44 pm.png)
-!\[](/images/uploads/screenshot-2026-11-14-at-6.13.50 pm.png)
 ![](/images/uploads/arabica-_-robusta.jpg)
 ![](/images/uploads/bath.jpeg)
-!\[](/images/uploads/screenshot-2026-11-14-at-6.14.19 pm.png)
+
 
 ### **Tiny Scenic Garfield**
 
