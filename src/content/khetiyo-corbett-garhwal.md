@@ -116,7 +116,6 @@ Luthiya village
 **Safari in Lohachaur**
 Lohachaur is the start of the hilly areas of corbett. Owing to its gradient, this range has a winding safari route that overlooks the ram ganga valley until it merges into the mandal river just 500 metres from Khetiyo. An old forest bungalow built in the British era overlooks the valley and can be booked in advance. This area is known for its elephants and birding. Two of the star attractions of Corbett - the Pallassus Fish Eagle and the Great HornBill are very frequently sighted in this area. The presence of the fish eagle is a very strong indicator of the quality of the water as its preybase requires a very high level of purity. Khetiyo estate is located about 2 km from the Lohachaur forest bungalow.
 
-
 **Safari in Halduparao**
 For those who do not want to miss out on the Jeep safari into the Corbett National Park, Halduparao is an ideal location. This part of the park is visited only by the serious enthusiasts. It s known for its birding and elephant sightings. This range forms the North Western edge of the Corbett National Park and has a quaint forest bungalow overlooking a tributary of the sonanadi river. One of the most beautiful ranges and an ideal safari for the interested wildlifer. The chances of sighting the big cats is always a draw of luck and one should not go looking for it. However, this range offers some stunning array of birds and the biggest mammals on land - the elephants. The guest house needs to be booked in advance for entry to this range.
 the region is known for elephants in summer
@@ -130,15 +129,11 @@ The roadhead at Luthiya forms a part of the state highway network and drives aro
 **Birdwatching**
 If you are a keen birdwatcher, Khetiyo is your paradise. Following is a list compiled by one of our guests during his 3 night stay.
 
-![](/images/uploads/screenshot-2026-11-14-at-4.36.01 pm.png)
+## Who you might meet here.
 
-![](/images/uploads/screenshot-2026-11-14-at-4.36.15 pm.png)
+![](/images/uploads/wildlife-checklist.png)
 
-![](/images/uploads/screenshot-2026-11-14-at-4.36.32 pm.png)
-
-![](/images/uploads/screenshot-2026-11-14-at-4.36.39 pm.png)
-
-
+Birds, butterflies, dragonflies, reptiles and mammals recorded in and around the forest. 
 
 Birds
 
