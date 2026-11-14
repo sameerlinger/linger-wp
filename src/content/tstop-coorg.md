@@ -24,31 +24,17 @@ Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the
 ![](/images/tstop-coorg/c4a716_223c83ee927748bd82db48e566f8af26~mv2.jpg)
 ![](/images/uploads/main-hosue.png)
 
-
-
 - - -
 
 ## Accommodation & Tariff
 
-| **Room**                       | **Pricing**           | **Occupancy** |
-| ------------------------------ | --------------------- | ------------- |
-| **Main House: Master bedroom** | ₹8,500 for a couple\  |               |
-| Extra person: ₹3,000           | Sleeps upto 3 pax     |               |
 
-| **Main House: Guest room**      | ₹7,000 for a couple   | Sleeps upto 2 pax |
-| ------------------------------- | --------------------- | ----------------- |
-| **Cottages: Robusta & Arabica** | ₹8,500 for a couple\  |                   |
-| Extra person: ₹3,000            | Sleeps upto 4 pax     |                   |
-| **Tiny Garfield**               | ₹8,500 for a couple\  |                   |
-| Extra person: ₹3,000            | Sleeps upto 4 pax     |                   |
 
-5 rooms across 4 cottages. All rooms have an attached bathroom with a traditional "Bhana" — a copper vessel over a wood fire for hot water. 
+### The Main House
 
-### **Main House: Master bedroom & Guest room**
+The Main House features two adjoining rooms – a spacious master bedroom and a guest bedroom – that together comfortably accommodate up to five guests. With both rooms located next to each other, it is an ideal choice for a family of five, a couple travelling with two children, or a couple accompanied by senior family members who prefer to stay close together while enjoying the privacy of separate rooms.
 
-The Main House features two adjoining rooms – a spacious master bedroom and a guest bedroom – that together comfortably accommodate up to 5 guests. With both rooms located next to each other, it is an ideal choice for a family of five, a couple travelling with two children, or a couple accompanied by senior family members who prefer to stay close together while enjoying the privacy of separate rooms.
-
-A lovely living space just outside the bedrooms offers a cosy spot to relax and spend time together. Guests also have access to a shared children's play area and an upstairs library, making it a wonderful space for families.
+A lovely living space just outside the bedrooms offers a cosy spot to relax and spend time together. Guests also have access to a shared children's play area and an upstairs library.
 
 Adding to its charm, the common spaces offer beautiful views of the lake and the hills.
 
@@ -57,10 +43,7 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ![](/images/uploads/master-bedroom.jpeg)
 ![](/images/uploads/master-bedroom-bath.jpeg)
 ![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
-
-
 ![](/images/uploads/main-house-common-space.jpeg)
-
 
 #### **Guest room**
 
@@ -70,15 +53,17 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ### **Robusta cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private. 
-![](/images/uploads/arabica-_-robusta.jpg)
-![](/images/uploads/bath.jpeg)
-!\[](/images/uploads/screenshot-2026-11-14-at-6.01.28 pm.png)
+
+
+
+
 
 ### **Arabica cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
-![](/images/uploads/arabica-_-robusta.jpg)
-![](/images/uploads/bath.jpeg)
+
+
+
 
 
 ### **Tiny Scenic Garfield**
