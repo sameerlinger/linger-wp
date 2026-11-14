@@ -1,9 +1,9 @@
 ---
-summary: Forest on all sides, bliss in between.
-slug: tstop-coorg
 type: property
 title: T Stop, Quiet Forests
 cover: /images/t-stop-coorg/1e869ab0-3466-4d6d-93b1-c7f817fcc409.jpeg
+summary: Forest on all sides, bliss in between.
+slug: tstop-coorg
 location: Theralu, Coorg
 categories:
   - coffee-estates
@@ -22,28 +22,65 @@ An eco-friendly coffee estate where fireflies still dance at night like twinklin
 Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the owners took over in 2009 and deliberately left alone — "you don't need to fix something that isn't broken." Off the beaten path and inspired by the spirit of *The Jungle Book*, it's an oasis for rediscovering the simple stuff: a functional coffee plantation, a natural lake, a library, and rest and peace for the weary (adventures for the brave). Forest hikes, pond swims and lazy reading afternoons are all part of the deal — and it's family and pet friendly.
 
 ![](/images/tstop-coorg/c4a716_223c83ee927748bd82db48e566f8af26~mv2.jpg)
-![](/images/uploads/arabica-_-robusta.jpg)
-![](/images/uploads/master-bedroom.jpeg)
-![](/images/uploads/master-bedroom-bath.jpeg)
+![](/images/uploads/main-hosue.png)
+![](/images/uploads/screenshot-2026-11-14-at-5.28.26 pm.png)
+![](/images/uploads/screenshot-2026-11-14-at-5.28.49 pm.png)
+![](/images/uploads/screenshot-2026-11-14-at-5.29.14 pm.png)
+![](/images/uploads/screenshot-2026-11-14-at-5.29.53 pm.png)
+![](/images/uploads/screenshot-2026-11-14-at-5.30.35 pm.png)
 
 - - -
 
 ## Accommodation & Tariff
 
-|                          |                                                                                                                  |                      |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------- | -------------------- |
-| **Room**                 | **Details**                                                                                                      | **Notes**            |
-| **The Room with a View** | King-size bed, attached bath, private balcony over hills and forest, in the main house near the open living area | —                    |
-| **The Cottages** (2)     | King-size bed, attached bath, private balcony, small wading pool, open shower facing the jungle                  | Fully private        |
-| **Tiny Scenic Garfield** | Queen bed + loft double bed, overlooking the lake                                                                | Sleeps a family of 4 |
+| **Room**                        | **Pricing**                               | **Occupancy**     |
+| ------------------------------- | ----------------------------------------- | ----------------- |
+| **Main House: Master bedroom**  | ₹8,500 for a couple\
+Extra person: ₹3,000 | Sleeps upto 3 pax |
 
-All rooms have an attached bathroom with a traditional "Bhana" — a copper vessel over a wood fire for hot water. For current rates, write in or book through the site's reservation page.
+| **Main House: Guest room**            | ₹7,000 for a couple                       | Sleeps upto 2 pax |
+| ------------------------------------- | ----------------------------------------- | ----------------- |
+| **Cottages: Robusta & Arabica**       | ₹8,500 for a couple\
+Extra person: ₹3,000 | Sleeps upto 4 pax |
+| **Tiny Garfield**                     | ₹8,500 for a couple\
+Extra person: ₹3,000 | Sleeps upto 4 pax |
 
-![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
-![](/images/tstop-coorg/f17fff_2396ce81adde4f2b86d2457700f648fb~mv2.jpg)
-![](/images/tstop-coorg/f17fff_699e93d52df842968d4f39a89d703bbc~mv2.jpg)
+
+
+5 rooms across 4 cottages. All rooms have an attached bathroom with a traditional "Bhana" — a copper vessel over a wood fire for hot water. 
+
+### **Main House: Master bedroom & Guest room**
+
+The Main House features two adjoining rooms – a spacious master bedroom and a guest bedroom – that together comfortably accommodate up to 5 guests. With both rooms located next to each other, it is an ideal choice for a family of five, a couple travelling with two children, or a couple accompanied by senior family members who prefer to stay close together while enjoying the privacy of separate rooms.
+
+A lovely living space just outside the bedrooms offers a cosy spot to relax and spend time together. Guests also have access to a shared children's play area and an upstairs library, making it a wonderful space for families.
+
+Adding to its charm, the common spaces offer beautiful views of the lake and the hills.
+
+##### Master bedroom:
+
 ![](/images/uploads/master-bedroom.jpeg)
 ![](/images/uploads/master-bedroom-bath.jpeg)
+![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
+![](/images/uploads/main-house-common-space.jpeg)
+
+### **Robusta cottage**
+
+Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private. 
+
+Can sleep upto 4 pax.
+
+### **Arabica cottage**
+
+Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
+
+Can sleep upto 4 pax.
+
+### **Tiny Scenic Garfield**
+
+Queen bed + loft double bed, overlooking the lake.
+
+Can sleep upto 4 pax.
 
 - - -
 
