@@ -75,27 +75,30 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private. 
 
-![](/images/uploads/screenshot-2026-11-14-at-6.00.47 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-6.01.05 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-6.00.47 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-6.01.05 pm.png)
 ![](/images/uploads/arabica-_-robusta.jpg)
 ![](/images/uploads/bath.jpeg)
-![](/images/uploads/screenshot-2026-11-14-at-6.01.28 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-6.01.28 pm.png)
 
 ### **Arabica cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
 
-![](/images/uploads/screenshot-2026-11-14-at-6.12.44 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-6.13.50 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-6.12.44 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-6.13.50 pm.png)
 ![](/images/uploads/arabica-_-robusta.jpg)
 ![](/images/uploads/bath.jpeg)
-![](/images/uploads/screenshot-2026-11-14-at-6.14.19 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-6.14.19 pm.png)
 
 ### **Tiny Scenic Garfield**
 
 Queen bed + loft double bed, overlooking the lake.
 
-
+![](/images/uploads/garfield.png)
+![](/images/uploads/dsc_8064.png)
+![](/images/uploads/dsc_7910.png)
+![](/images/uploads/dsc_7883.png)
 
 - - -
 
