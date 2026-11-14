@@ -131,7 +131,7 @@ If you are a keen birdwatcher, Khetiyo is your paradise. Following is a list com
 
 ## Who you might meet here.
 
-![](/images/uploads/wildlife-checklist.png)
+![](/images/uploads/wildlife-checklist-landscape.png)
 
 Birds, butterflies, dragonflies, reptiles and mammals recorded in and around the forest. 
 
