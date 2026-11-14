@@ -37,14 +37,14 @@ We’re always ‘learning by doing’, come see for yourself!
 
 The Open Shell Farm hosts visitors to help them to get introduced to permaculture and learn about sustainable living. There's an introduction to the farm, the principles and techniques that have helped create a beautiful, productive space in what otherwise is a water stressed region. You can also volunteer to help with the farm activities - the list varies by season and the current plans at the farm.
 
-|                   |                      |                                                      |
-| ----------------- | -------------------- | ---------------------------------------------------- |
-| **Accommodation** | **Rate (1st Night)** | **Extra Guests / Notes**                             |
-| **The Mann Mane** | ₹10,000 for a couple | Sleeps up to 4; Extra person: ₹3,250                 |
-| **Thotadh Mane**  | ₹7,670 for a couple  | Couple + kid; Extra person: ₹2,750 (not recommended) |
+|                                           |                      |                                      |
+| ----------------------------------------- | -------------------- | ------------------------------------ |
+| **Accommodation**                         | **Rate (1st Night)** | **Extra Guests / Notes**             |
+| **The Mann Mane (2 rooms with an attic)** | ₹10,000 for a couple | Sleeps up to 8; Extra person: ₹3,250 |
+| **Thotadh Mane**                          | ₹7,670 for a couple  | Sleep upto 2                         |
 
 * **Child Policy:** Up to 5 free, 5–12 at 50%. Not pet-friendly (unleashed farm dogs).
-* Lower pricing from the 2nd night onwards.
+* Long stay pricing from the 3rd night onwards. 3rd night is at 10%, 4th night at 15% and 5th onwards at 20%.
 
 **The Mann Mane**
 
@@ -55,13 +55,13 @@ At 10000/- a night all inclusive for a couple. Lower pricing 2nd night onwards.
 Extra person at 3250/-
 
 ![](/images/open-shell-farm-bandipur/Mann-Mane-outside-1024x768.jpeg)
+![](/images/uploads/whatsapp-image-2023-12-01-at-13.20.13.jpeg)
 ![](/images/open-shell-farm-bandipur/Guest-room-toilet.jpeg)
 ![](/images/open-shell-farm-bandipur/cropped-95f88742-4dbb-4cdf-8f7a-48740e1916af-1024x612.jpeg)
 ![](/images/open-shell-farm-bandipur/cropped-b3ac2a1b-12a7-4b33-92ff-baff1816d857-1024x615.jpeg)
 ![](/images/uploads/dining-room.jpeg)
 ![](/images/uploads/dining-room-with-attic.jpeg)
 ![](/images/uploads/kitchen-2.jpeg)
-![](/images/uploads/whatsapp-image-2023-12-01-at-13.20.13.jpeg)
 ![](/images/uploads/whatsapp-image-2023-12-01-at-13.20.12-1-.jpeg)
 ![](/images/uploads/library.jpg)
 
