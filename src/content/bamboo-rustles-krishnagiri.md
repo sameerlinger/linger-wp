@@ -35,17 +35,25 @@ Boutique earth cottages, built with minimal cement and steel — coconut wood, t
 * Meals are a basic set menu; limited customization with advance notice.
 * A chemical-free jungle pool is available with advance notice (4-person minimum).
 
+
+
 ### **Earth Cottage: Bahunia & Gulmohar rooms**
 
 ![](/images/uploads/b.jpg)
-![](/images/bamboo-rustles-krishnagiri/7f607c3a-8e99-4ea0-b550-16c876e30425-77gUamd5nMGPjHmv.jpg)
-![](/images/bamboo-rustles-krishnagiri/kids-pool1-qe598L5weNOdqwKH.jpg)
 ![](/images/uploads/img_4417.jpg)
 ![](/images/uploads/img_4421.jpg)
+![](/images/bamboo-rustles-krishnagiri/7f607c3a-8e99-4ea0-b550-16c876e30425-77gUamd5nMGPjHmv.jpg)
 ![](/images/uploads/img_4419.jpg)
 ![](/images/uploads/whatsapp-image-2026-04-03-at-12.00.28.jpeg)
+![](/images/uploads/img_4418.jpg)
 
+### **Stone Cottage: Badam room**
 
+![](/images/uploads/img_4299.jpg)
+![](/images/uploads/img_4412.jpg)
+![](/images/uploads/img_4415.jpg)
+![](/images/uploads/img_4301.jpg)
+![](/images/uploads/img_4410.jpg)
 
 #### **GUIDED EXPERIENCES AT BAMBOO RUSTLES** 
 
