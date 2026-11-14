@@ -42,8 +42,8 @@ Boutique earth cottages, built with minimal cement and steel — coconut wood, t
 ![](/images/uploads/b.jpg)
 ![](/images/uploads/img_4417.jpg)
 ![](/images/uploads/img_4421.jpg)
-![](/images/bamboo-rustles-krishnagiri/7f607c3a-8e99-4ea0-b550-16c876e30425-77gUamd5nMGPjHmv.jpg)
 ![](/images/uploads/img_4419.jpg)
+![](/images/bamboo-rustles-krishnagiri/7f607c3a-8e99-4ea0-b550-16c876e30425-77gUamd5nMGPjHmv.jpg)
 ![](/images/uploads/whatsapp-image-2026-04-03-at-12.00.28.jpeg)
 ![](/images/uploads/img_4418.jpg)
 
@@ -54,6 +54,15 @@ Boutique earth cottages, built with minimal cement and steel — coconut wood, t
 ![](/images/uploads/img_4415.jpg)
 ![](/images/uploads/img_4301.jpg)
 ![](/images/uploads/img_4410.jpg)
+
+#### Peepal Cottage
+
+![](/images/uploads/a.jpg)
+![](/images/uploads/img_4406.jpg)
+![](/images/uploads/img_4409.jpg)
+![](/images/uploads/img_4410.jpg)
+
+
 
 #### **GUIDED EXPERIENCES AT BAMBOO RUSTLES** 
 
