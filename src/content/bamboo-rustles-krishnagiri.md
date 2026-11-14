@@ -32,10 +32,8 @@ Boutique earth cottages, built with minimal cement and steel — coconut wood, t
 | **2 days / 2 nights** (recommended) | ₹7,500 + 5% GST per person/night | ₹14,700 for a couple, all-inclusive   |
 
 * **Child Policy:** Under 5 complimentary, ages 5–12 at 50% with an adult.
-* Meals are a basic set menu; limited customization with advance notice.
+* 4 rooms across 3 cottages, each with an en-suite bathroom.
 * A chemical-free jungle pool is available with advance notice (4-person minimum).
-
-
 
 ### **Earth Cottage: Bahunia & Gulmohar rooms**
 
@@ -62,30 +60,37 @@ Boutique earth cottages, built with minimal cement and steel — coconut wood, t
 ![](/images/uploads/img_4409.jpg)
 ![](/images/uploads/img_4410.jpg)
 
+#### **GUIDED EXPERIENCES AT BAMBOO RUSTLES**
 
-
-#### **GUIDED EXPERIENCES AT BAMBOO RUSTLES** 
-
-1. Night Walk and Herping 
+**Night Walk and Herping** 
 
 Walk the trails after dark with a torch and look for geckos, lizards, frogs and snakes. The scrub forest at night shows you a side of the camp that daylight hides. Night · On foot 
 
-1. Morning Birding and Tree Walk 
+**Morning Birding and Tree Walk** 
 
 Start the day with the birds. Stroll through the camp, spot the species that call this habitat home, and learn to recognise the native trees along the way. Morning · On foot 
 
-1. Hilltop Morning Trek 
+**Hilltop Morning Trek** 
 
 A short morning climb to the hill top right behind the camp, with open views over the hillocks and scrub forest. Morning · Short trek 
 
-1. Camera Trapping with Our Biologist See how shy animals are recorded without being disturbed. Our biologist shows you how camera traps are set up and what they capture. Demonstration · Led by a biologist 
-2. Trek to the Temple 
+**Camera Trapping with Our Biologist** 
+
+See how shy animals are recorded without being disturbed. Our biologist shows you how camera traps are set up and what they capture. Demonstration · Led by a biologist 
+
+**Trek to the Temple** 
 
 A long walk of 4 km each way to a temple. Take your time, and carry water and a camera. Long trek · 4 km one way 
 
-1. Sunset Picnic at the Lake Pack a picnic and unwind by the lake as the sun goes down. Evening · Bring your own vehicle (1 km) 
-2. Mallapakonda Hill Drive Head to Mallapakonda hill for the scenic view and a fun ride through a small ghat section. Day trip · Bring your own vehicle (10 km) 
-3. Road Cruise Herping at Night 
+**Sunset Picnic at the Lake** 
+
+Pack a picnic and unwind by the lake as the sun goes down. Evening · Bring your own vehicle (1 km) 
+
+**Mallapakonda Hill Drive** 
+
+Head to Mallapakonda hill for the scenic view and a fun ride through a small ghat section. Day trip · Bring your own vehicle (10 km) 
+
+**Road Cruise Herping at Night** 
 
 Cruise slowly along quiet roads after dark, scanning for snakes, frogs and other reptiles and amphibians that come out at night. Night · By road 
 
