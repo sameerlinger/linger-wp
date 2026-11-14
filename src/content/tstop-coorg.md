@@ -34,17 +34,17 @@ Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the
 
 ## Accommodation & Tariff
 
-| **Room**                       | **Pricing**          | **Occupancy** |
-| ------------------------------ | -------------------- | ------------- |
-| **Main House: Master bedroom** | ₹8,500 for a couple\ |               |
-| Extra person: ₹3,000           | Sleeps upto 3 pax    |               |
+| **Room**                       | **Pricing**           | **Occupancy** |
+| ------------------------------ | --------------------- | ------------- |
+| **Main House: Master bedroom** | ₹8,500 for a couple\  |               |
+| Extra person: ₹3,000           | Sleeps upto 3 pax     |               |
 
-| **Main House: Guest room**      | ₹7,000 for a couple  | Sleeps upto 2 pax |
-| ------------------------------- | -------------------- | ----------------- |
-| **Cottages: Robusta & Arabica** | ₹8,500 for a couple\ |                   |
-| Extra person: ₹3,000            | Sleeps upto 4 pax    |                   |
-| **Tiny Garfield**               | ₹8,500 for a couple\ |                   |
-| Extra person: ₹3,000            | Sleeps upto 4 pax    |                   |
+| **Main House: Guest room**      | ₹7,000 for a couple   | Sleeps upto 2 pax |
+| ------------------------------- | --------------------- | ----------------- |
+| **Cottages: Robusta & Arabica** | ₹8,500 for a couple\  |                   |
+| Extra person: ₹3,000            | Sleeps upto 4 pax     |                   |
+| **Tiny Garfield**               | ₹8,500 for a couple\  |                   |
+| Extra person: ₹3,000            | Sleeps upto 4 pax     |                   |
 
 5 rooms across 4 cottages. All rooms have an attached bathroom with a traditional "Bhana" — a copper vessel over a wood fire for hot water. 
 
@@ -61,9 +61,10 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ![](/images/uploads/master-bedroom.jpeg)
 ![](/images/uploads/master-bedroom-bath.jpeg)
 ![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
-![](/images/uploads/screenshot-2026-11-14-at-5.57.40 pm.png)
+
+!\[](/images/uploads/screenshot-2026-11-14-at-5.57.40 pm.png)
 ![](/images/uploads/main-house-common-space.jpeg)
-![](/images/uploads/screenshot-2026-11-14-at-5.57.51 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-5.57.51 pm.png)
 
 #### **Guest room**
 
@@ -74,19 +75,23 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private. 
 
-Can sleep upto 4 pax.
+![](/images/uploads/screenshot-2026-11-14-at-6.00.47 pm.png)
+![](/images/uploads/screenshot-2026-11-14-at-6.01.05 pm.png)
+![](/images/uploads/arabica-_-robusta.jpg)
+![](/images/uploads/bath.jpeg)
+![](/images/uploads/screenshot-2026-11-14-at-6.01.28 pm.png)
 
 ### **Arabica cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
 
-Can sleep upto 4 pax.
+
 
 ### **Tiny Scenic Garfield**
 
 Queen bed + loft double bed, overlooking the lake.
 
-Can sleep upto 4 pax.
+
 
 - - -
 
