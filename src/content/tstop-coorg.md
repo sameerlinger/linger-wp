@@ -21,8 +21,14 @@ An eco-friendly coffee estate where fireflies still dance at night like twinklin
 
 Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the owners took over in 2009 and deliberately left alone — "you don't need to fix something that isn't broken." Off the beaten path and inspired by the spirit of *The Jungle Book*, it's an oasis for rediscovering the simple stuff: a functional coffee plantation, a natural lake, a library, and rest and peace for the weary (adventures for the brave). Forest hikes, pond swims and lazy reading afternoons are all part of the deal — and it's family and pet friendly.
 
+![](/images/uploads/a.png)
 ![](/images/tstop-coorg/c4a716_223c83ee927748bd82db48e566f8af26~mv2.jpg)
 ![](/images/uploads/main-hosue.png)
+![](/images/uploads/b.png)
+![](/images/uploads/c.png)
+![](/images/uploads/d.png)
+![](/images/uploads/e.png)
+![](/images/uploads/f.png)
 
 - - -
 
