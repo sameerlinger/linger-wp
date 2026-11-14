@@ -29,6 +29,7 @@ Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the
 ![](/images/uploads/d.png)
 ![](/images/uploads/e.png)
 ![](/images/uploads/f.png)
+![](/images/uploads/whatsapp-image-2024-02-19-at-5.14.21-pm-1-.jpeg)
 
 - - -
 
@@ -95,6 +96,9 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ### **Robusta cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private. 
+
+![](/images/uploads/a1.png)
+![](/images/uploads/bath.jpeg)
 
 
 
