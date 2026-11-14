@@ -79,7 +79,7 @@ A lovely living space just outside the bedrooms offers a cosy spot to relax and 
 
 Adding to its charm, the common spaces offer beautiful views of the lake and the hills.
 
-##### Master bedroom:
+#### Master bedroom
 
 ![](/images/uploads/master-bedroom.jpeg)
 ![](/images/uploads/master-bedroom-bath.jpeg)
@@ -93,7 +93,7 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ![](/images/uploads/guest-room.jpeg)
 ![](/images/uploads/guest-room-bath.jpeg)
 
-### **Robusta cottage**
+#### **Robusta cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private. 
 
@@ -101,7 +101,7 @@ Attached bath, private balcony, small wading pool, open shower facing the jungle
 ![](/images/uploads/bath.jpeg)
 ![](/images/uploads/arabica-_-robusta.jpg)
 
-### **Arabica cottage**
+#### **Arabica cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
 
@@ -110,7 +110,7 @@ Attached bath, private balcony, small wading pool, open shower facing the jungle
 ![](/images/uploads/arabica-_-robusta.jpg)
 ![](/images/uploads/bath.jpeg)
 
-### **Tiny Scenic Garfield**
+#### **Tiny Scenic Garfield**
 
 Queen bed + loft double bed, overlooking the lake.
 
