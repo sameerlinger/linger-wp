@@ -45,39 +45,34 @@ Boutique earth cottages, built with minimal cement and steel — coconut wood, t
 ![](/images/uploads/img_4419.jpg)
 ![](/images/uploads/whatsapp-image-2026-04-03-at-12.00.28.jpeg)
 
-<div class="photo-text photo-left"><img src="/images/uploads/whatsapp-image-2026-04-03-at-11.59.09-2-.jpeg" alt=""><div class="photo-text-body">
 
-**GUIDED EXPERIENCES AT BAMBOO RUSTLES** 
+
+#### **GUIDED EXPERIENCES AT BAMBOO RUSTLES** 
 
 1. Night Walk and Herping 
 
 Walk the trails after dark with a torch and look for geckos, lizards, frogs and snakes. The scrub forest at night shows you a side of the camp that daylight hides. Night · On foot 
 
-2. Morning Birding and Tree Walk 
+1. Morning Birding and Tree Walk 
 
 Start the day with the birds. Stroll through the camp, spot the species that call this habitat home, and learn to recognise the native trees along the way. Morning · On foot 
 
-3. Hilltop Morning Trek 
+1. Hilltop Morning Trek 
 
 A short morning climb to the hill top right behind the camp, with open views over the hillocks and scrub forest. Morning · Short trek 
 
-4. Camera Trapping with Our Biologist See how shy animals are recorded without being disturbed. Our biologist shows you how camera traps are set up and what they capture. Demonstration · Led by a biologist 
-
-5. Trek to the Temple 
+1. Camera Trapping with Our Biologist See how shy animals are recorded without being disturbed. Our biologist shows you how camera traps are set up and what they capture. Demonstration · Led by a biologist 
+2. Trek to the Temple 
 
 A long walk of 4 km each way to a temple. Take your time, and carry water and a camera. Long trek · 4 km one way 
 
-6. Sunset Picnic at the Lake Pack a picnic and unwind by the lake as the sun goes down. Evening · Bring your own vehicle (1 km) 
-
-7. Mallapakonda Hill Drive Head to Mallapakonda hill for the scenic view and a fun ride through a small ghat section. Day trip · Bring your own vehicle (10 km) 
-
-8. Road Cruise Herping at Night 
+1. Sunset Picnic at the Lake Pack a picnic and unwind by the lake as the sun goes down. Evening · Bring your own vehicle (1 km) 
+2. Mallapakonda Hill Drive Head to Mallapakonda hill for the scenic view and a fun ride through a small ghat section. Day trip · Bring your own vehicle (10 km) 
+3. Road Cruise Herping at Night 
 
 Cruise slowly along quiet roads after dark, scanning for snakes, frogs and other reptiles and amphibians that come out at night. Night · By road 
 
 ...and more. Ask our team what is on during your stay.
-
-</div></div>
 
 - - -
 
