@@ -28,6 +28,42 @@ Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the
 
 ## Accommodation & Tariff
 
+### **Rooms & Rates (per night)**
+
+**2 rooms in the Main House**
+
+Master Bedroom (sleeps upto 3): Rs. 8500 for a couple. Extra person at Rs. 3000
+
+Guest room (sleeps upto 2): Rs. 7000 for a couple. 
+
+**3 Independent Cottages** 
+
+Robusta cottage (sleeps upto 4): Rs. 8500 for a couple. Extra person at Rs. 3000
+
+Arabica cottage (sleeps upto 4): Rs. 8500 for a couple. Extra person at Rs. 3000
+
+Tiny Garfield (sleeps upto 4): Rs. 8500 for a couple. Extra person at Rs. 3000
+
+
+
+**Long Stay Benefit:** 3rd night onwards come with a discount (3rd night at 10%, 4th night at 15%, 5th night onwards at 20%).
+
+**Child Policy:** Up to 2 kids under 5 stay free. For children aged 5–12, the rate is 50% of adult tariff.
+
+### **What’s Included**
+
+* All meals (breakfast, lunch, dinner)
+* Unlimited tea, coffee & snacks
+* Use of common spaces, games & library
+* Guided walks / nature strolls on the farm
+* Bonfire (when arranged & season permitting)
+
+**Booking & Payment**
+
+* **Deposit Policy:** A partial advance is required to confirm your booking.
+* **Payment Options:** We accept UPI and bank transfer.
+* **Cancellations** made **up to 7 days** before arrival receive a **75% refund**. Cancellations **up to 48 hours** before arrival receive a **50% refund**. Unfortunately, **no refund** can be provided for cancellations made **within 48 hours** of arrival.
+
 
 
 ### The Main House
