@@ -51,8 +51,6 @@ Arabica cottage (sleeps upto 4): Rs. 8500 for a couple. Extra person at Rs. 3000
 
 Tiny Garfield (sleeps upto 4): Rs. 8500 for a couple. Extra person at Rs. 3000
 
-
-
 **Long Stay Benefit:** 3rd night onwards come with a discount (3rd night at 10%, 4th night at 15%, 5th night onwards at 20%).
 
 **Child Policy:** Up to 2 kids under 5 stay free. For children aged 5–12, the rate is 50% of adult tariff.
@@ -70,8 +68,6 @@ Tiny Garfield (sleeps upto 4): Rs. 8500 for a couple. Extra person at Rs. 3000
 * **Deposit Policy:** A partial advance is required to confirm your booking.
 * **Payment Options:** We accept UPI and bank transfer.
 * **Cancellations** made **up to 7 days** before arrival receive a **75% refund**. Cancellations **up to 48 hours** before arrival receive a **50% refund**. Unfortunately, **no refund** can be provided for cancellations made **within 48 hours** of arrival.
-
-
 
 ### The Main House
 
@@ -99,18 +95,11 @@ Attached bath, private balcony, small wading pool, open shower facing the jungle
 
 ![](/images/uploads/a1.png)
 ![](/images/uploads/bath.jpeg)
-
-
-
-
+![](/images/uploads/arabica-_-robusta.jpg)
 
 ### **Arabica cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
-
-
-
-
 
 ### **Tiny Scenic Garfield**
 
