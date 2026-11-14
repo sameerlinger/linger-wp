@@ -131,8 +131,11 @@ The roadhead at Luthiya forms a part of the state highway network and drives aro
 If you are a keen birdwatcher, Khetiyo is your paradise. Following is a list compiled by one of our guests during his 3 night stay.
 
 ![](/images/uploads/screenshot-2026-11-14-at-4.36.01 pm.png)
+
 ![](/images/uploads/screenshot-2026-11-14-at-4.36.15 pm.png)
+
 ![](/images/uploads/screenshot-2026-11-14-at-4.36.32 pm.png)
+
 ![](/images/uploads/screenshot-2026-11-14-at-4.36.39 pm.png)
 
 
