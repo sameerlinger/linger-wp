@@ -37,6 +37,8 @@ Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the
 
 ### **Rooms & Rates (per night)**
 
+5 rooms across 4 cottages. All rooms have an attached bathroom with a traditional "Bhana" — a copper vessel over a wood fire for hot water.
+
 **2 rooms in the Main House**
 
 Master Bedroom (sleeps upto 3): Rs. 8500 for a couple. Extra person at Rs. 3000
