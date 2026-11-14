@@ -62,9 +62,9 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ![](/images/uploads/master-bedroom-bath.jpeg)
 ![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
 
-!\[](/images/uploads/screenshot-2026-11-14-at-5.57.40 pm.png)
+
 ![](/images/uploads/main-house-common-space.jpeg)
-!\[](/images/uploads/screenshot-2026-11-14-at-5.57.51 pm.png)
+
 
 #### **Guest room**
 
@@ -99,6 +99,8 @@ Queen bed + loft double bed, overlooking the lake.
 ![](/images/uploads/dsc_8064.png)
 ![](/images/uploads/dsc_7910.png)
 ![](/images/uploads/dsc_7883.png)
+![](/images/uploads/dsc_7881.png)
+![](/images/uploads/dsc_7895.png.webp)
 
 - - -
 
