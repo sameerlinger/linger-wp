@@ -85,7 +85,11 @@ Attached bath, private balcony, small wading pool, open shower facing the jungle
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
 
-
+![](/images/uploads/screenshot-2026-11-14-at-6.12.44 pm.png)
+![](/images/uploads/screenshot-2026-11-14-at-6.13.50 pm.png)
+![](/images/uploads/arabica-_-robusta.jpg)
+![](/images/uploads/bath.jpeg)
+![](/images/uploads/screenshot-2026-11-14-at-6.14.19 pm.png)
 
 ### **Tiny Scenic Garfield**
 
