@@ -23,29 +23,28 @@ Nestled between hills and jungle in Coorg, T Stop is a working coffee estate the
 
 ![](/images/tstop-coorg/c4a716_223c83ee927748bd82db48e566f8af26~mv2.jpg)
 ![](/images/uploads/main-hosue.png)
-![](/images/uploads/screenshot-2026-11-14-at-5.28.26 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-5.28.49 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-5.29.14 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-5.29.53 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-5.30.35 pm.png)
+
+!\[](/images/uploads/screenshot-2026-11-14-at-5.28.26 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-5.28.49 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-5.29.14 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-5.29.53 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-5.30.35 pm.png)
 
 - - -
 
 ## Accommodation & Tariff
 
-| **Room**                        | **Pricing**                               | **Occupancy**     |
-| ------------------------------- | ----------------------------------------- | ----------------- |
-| **Main House: Master bedroom**  | ₹8,500 for a couple\
-Extra person: ₹3,000 | Sleeps upto 3 pax |
+| **Room**                       | **Pricing**          | **Occupancy** |
+| ------------------------------ | -------------------- | ------------- |
+| **Main House: Master bedroom** | ₹8,500 for a couple\ |               |
+| Extra person: ₹3,000           | Sleeps upto 3 pax    |               |
 
-| **Main House: Guest room**            | ₹7,000 for a couple                       | Sleeps upto 2 pax |
-| ------------------------------------- | ----------------------------------------- | ----------------- |
-| **Cottages: Robusta & Arabica**       | ₹8,500 for a couple\
-Extra person: ₹3,000 | Sleeps upto 4 pax |
-| **Tiny Garfield**                     | ₹8,500 for a couple\
-Extra person: ₹3,000 | Sleeps upto 4 pax |
-
-
+| **Main House: Guest room**      | ₹7,000 for a couple  | Sleeps upto 2 pax |
+| ------------------------------- | -------------------- | ----------------- |
+| **Cottages: Robusta & Arabica** | ₹8,500 for a couple\ |                   |
+| Extra person: ₹3,000            | Sleeps upto 4 pax    |                   |
+| **Tiny Garfield**               | ₹8,500 for a couple\ |                   |
+| Extra person: ₹3,000            | Sleeps upto 4 pax    |                   |
 
 5 rooms across 4 cottages. All rooms have an attached bathroom with a traditional "Bhana" — a copper vessel over a wood fire for hot water. 
 
@@ -62,7 +61,14 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ![](/images/uploads/master-bedroom.jpeg)
 ![](/images/uploads/master-bedroom-bath.jpeg)
 ![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
+![](/images/uploads/screenshot-2026-11-14-at-5.57.40 pm.png)
 ![](/images/uploads/main-house-common-space.jpeg)
+![](/images/uploads/screenshot-2026-11-14-at-5.57.51 pm.png)
+
+#### **Guest room**
+
+![](/images/uploads/guest-room.jpeg)
+![](/images/uploads/guest-room-bath.jpeg)
 
 ### **Robusta cottage**
 
