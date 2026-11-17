@@ -85,8 +85,9 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 ![](/images/uploads/master-bedroom-bath.jpeg)
 ![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
 ![](/images/uploads/main-house-common-space.jpeg)
-![](/images/uploads/screenshot-2026-11-14-at-8.16.11 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-8.16.52 pm.png)
+
+!\[](/images/uploads/screenshot-2026-11-14-at-8.16.11 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-8.16.52 pm.png)
 
 #### **Guest room**
 
@@ -100,13 +101,14 @@ Attached bath, private balcony, small wading pool, open shower facing the jungle
 ![](/images/uploads/a1.png)
 ![](/images/uploads/bath.jpeg)
 ![](/images/uploads/arabica-_-robusta.jpg)
+![](/images/uploads/screenshot-2026-11-17-at-2.56.50 pm.png)
 
 #### **Arabica cottage**
 
 Attached bath, private balcony, small wading pool, open shower facing the jungle. Fully private.
 
-![](/images/uploads/screenshot-2026-11-14-at-8.14.07 pm.png)
-![](/images/uploads/screenshot-2026-11-14-at-8.13.48 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-8.14.07 pm.png)
+!\[](/images/uploads/screenshot-2026-11-14-at-8.13.48 pm.png)
 ![](/images/uploads/arabica-_-robusta.jpg)
 ![](/images/uploads/bath.jpeg)
 
