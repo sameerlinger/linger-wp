@@ -81,6 +81,8 @@ Adding to its charm, the common spaces offer beautiful views of the lake and the
 
 #### Master bedroom
 
+![](/images/uploads/screenshot-2026-11-14-at-8.16.11 pm.png)
+![](/images/uploads/screenshot-2026-11-14-at-8.16.52 pm.png)
 ![](/images/uploads/master-bedroom.jpeg)
 ![](/images/uploads/master-bedroom-bath.jpeg)
 ![](/images/tstop-coorg/f17fff_0cbe0d3a1f9d4640ad5a0e6eb99a41eb~mv2.jpg)
