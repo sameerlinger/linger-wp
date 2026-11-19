@@ -144,6 +144,12 @@ document.querySelectorAll(".carousel-track").forEach(function (track) {
   track.addEventListener("scroll", sync, { passive: true });
   window.addEventListener("resize", sync);
   window.addEventListener("load", sync);
+  track.querySelectorAll("img").forEach(function (im) { im.addEventListener("load", sync); });
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(sync);
+    ro.observe(track);
+    Array.prototype.forEach.call(track.children, function (c) { ro.observe(c); });
+  }
   sync();
 });
 
