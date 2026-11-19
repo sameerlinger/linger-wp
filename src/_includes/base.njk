@@ -137,6 +137,14 @@ document.querySelectorAll(".carousel-track").forEach(function (track) {
   function step() { var el = track.querySelector("img") || track.querySelector(".upcoming-card"); return el ? el.getBoundingClientRect().width + 12 : 200; }
   if (prev) prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
   if (next) next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
+  function sync() {
+    if (prev) prev.hidden = track.scrollLeft < 8;
+    if (next) next.hidden = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+  }
+  track.addEventListener("scroll", sync, { passive: true });
+  window.addEventListener("resize", sync);
+  window.addEventListener("load", sync);
+  sync();
 });
 
 var lightbox = document.getElementById("lightbox");

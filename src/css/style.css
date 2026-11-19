@@ -210,24 +210,28 @@ a.lightbox-trigger:hover::after { background-color: rgba(0, 0, 0, 0.8); }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 34px;
-  height: 34px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
-  background: rgba(255,255,255,0.85);
-  color: var(--accent-dark);
-  font-size: 1.2rem;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 0 0 3px;
+  transition: opacity 0.2s ease, background 0.2s ease;
   line-height: 1;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.carousel-btn:hover { background: #fff; }
-.carousel-prev { left: -4px; }
-.carousel-next { right: -4px; }
-@media (max-width: 640px) { .carousel-btn { display: none; } }
+.carousel-btn:hover { background: rgba(0,0,0,0.7); }
+.carousel-btn[hidden] { display: none; }
+.carousel-prev { left: 8px; }
+.carousel-next { right: 8px; }
+@media (max-width: 640px) { .carousel-btn { width: 34px; height: 34px; font-size: 1.4rem; } }
 
 .upcoming-card {
   flex: 0 0 auto;
