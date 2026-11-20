@@ -84,6 +84,25 @@ Kids upto 5 are our guests at no charge. Kids 5-12 at 50%. At this point, OSF is
 
 Pricing is inclusive of all meals, tours, learning and activities at/around the farm. It does not include the wildlife safari that's conducted by the forest department.
 
+**Food**
+
+Food at Open Shell Farm is rooted in fresh, local and seasonal ingredients, much of which is grown right on the farm using organic, chemical-free methods. Meals may include fresh salads, vegetables, broths, curries, homemade pickles, ragi mudde and rice preparations.
+
+Guests may also get an opportunity to harvest seasonal produce and experience the journey from the farm to the kitchen.
+
+**Experiences**
+
+Open Shell Farm offers a wonderful opportunity to understand regenerative living and connect with the natural landscape. Experiences may include:
+
+* Exploring the farm and its diverse native flora
+* Learning about permaculture and agroecology
+* Participating in seasonal farm activities and harvesting
+* Joining workshops or learning sessions, when scheduled
+* Spending time with the farm's resident dogs, cats and cows
+* Exploring the surrounding wilderness and heading out for a Bandipur safari
+
+The Bandipur safari gate is approximately 45 minutes away, making the farm a lovely base for guests looking to combine a wildlife safari with a more immersive farm stay.
+
 - - -
 
 ## Location & Getting There
