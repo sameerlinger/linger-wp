@@ -69,6 +69,35 @@ layout: base.njk
 <a href="#check-availability" class="query-floater">Send Query <span aria-hidden="true">&darr;</span></a>
 {% endif %}
 {% endif %}
+{% if isQueryPage %}
+<section class="enquiry" id="interested">
+  <div class="enquiry-inner">
+    <h2>Interested in an experience?</h2>
+    <p class="enquiry-sub">Share your interest - we'll let you know when the next one happens. Pick an experience and leave your details and we'll be in touch. No payment now.</p>
+    <form class="interest-form" data-page-title="{{ title }}">
+      <div class="enquiry-row">
+        <label>I'm interested in<select name="event" required>
+          {% for e in collections.experienceList %}
+          <option value="{{ e.title }}"{% if e.date %} data-date="{{ e.dateText }}"{% endif %}{% if e.partner %} data-partner="{{ e.partner }}"{% endif %}>{{ e.title }}{% if e.dateText %} ({{ e.dateText }}){% endif %}</option>
+          {% endfor %}
+          <option value="Something else / anything coming up">Something else / anything coming up</option>
+        </select></label>
+      </div>
+      <div class="enquiry-row">
+        <label>Name<input type="text" name="name" required autocomplete="name" maxlength="200"></label>
+        <label>Phone<input type="tel" name="phone" required autocomplete="tel" minlength="6" maxlength="30"></label>
+      </div>
+      <div class="enquiry-row">
+        <label>Email<input type="email" name="email" required autocomplete="email" maxlength="200"></label>
+        <label>Number of people<input type="number" name="people" required min="1" max="50" step="1" value="2"></label>
+      </div>
+      <input type="text" name="company" class="enquiry-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="enquiry-submit">Count me in</button>
+      <p class="enquiry-status" role="status"></p>
+    </form>
+  </div>
+</section>
+{% endif %}
 {% if type == "experience" %}
 <section class="enquiry" id="want-to-know-more">
   <div class="enquiry-inner">
